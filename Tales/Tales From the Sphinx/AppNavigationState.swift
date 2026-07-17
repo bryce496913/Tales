@@ -53,7 +53,7 @@ enum StoryCatalog {
         title: "The Trial of Anubis",
         subtitle: "Enter the underworld, recover the sacred scales, and determine the weight of your heart.",
         summary: "The scales of Anubis have been shattered. Journey through the Egyptian underworld, recover their stolen pieces, and face choices shaped by morality, memory, power, mercy, and truth.",
-        availability: .comingSoon,
+        availability: .available,
         coverImageName: nil,
         iconSystemName: "scalemass.fill",
         estimatedLength: "28 Story Nodes",
