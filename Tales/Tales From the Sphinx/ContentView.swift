@@ -3,6 +3,7 @@ import SwiftUI
 struct AppRootView: View {
     @EnvironmentObject private var appNavigationState: AppNavigationState
     @EnvironmentObject private var sphinxNavigationState: SphinxNavigationState
+    @EnvironmentObject private var anubisNavigationState: TrialOfAnubisNavigationState
     @State private var isSplashActive = true
 
     var body: some View {
@@ -70,7 +71,7 @@ struct AppMainMenuView: View {
                 MenuButton(title: "Choose a Story") { appNavigationState.showStoryLibrary() }
                 MenuButton(title: "Options") { appNavigationState.showOptions() }
             }.goldCard()
-            Text("2 stories in the library • 1 available now").font(.caption).foregroundColor(AppTheme.mutedText)
+            Text("2 stories in the library • 2 available now").font(.caption).foregroundColor(AppTheme.mutedText)
             Spacer(minLength: 30)
         }.padding(AppTheme.screenPadding).opacity(appeared ? 1 : 0).offset(y: appeared ? 0 : 18) }
         .onAppear { withAnimation(.easeOut(duration: 0.55)) { appeared = true } }
@@ -80,12 +81,14 @@ struct AppMainMenuView: View {
 struct StoryLibraryView: View {
     @EnvironmentObject private var appNavigationState: AppNavigationState
     @EnvironmentObject private var sphinxNavigationState: SphinxNavigationState
+    @EnvironmentObject private var anubisNavigationState: TrialOfAnubisNavigationState
     private let columns = [GridItem(.adaptive(minimum: 280, maximum: 360), spacing: 18)]
     var body: some View { ZStack { EgyptianBackground(); ScrollView { VStack(alignment: .leading, spacing: 18) {
         Button { appNavigationState.returnToMainMenu() } label: { Label("Main Menu", systemImage: "chevron.left") }.buttonStyle(StoryChoiceButtonStyle()).frame(maxWidth: 220)
         Text("Story Library").font(.system(.largeTitle, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold)
-        LazyVGrid(columns: columns, spacing: 18) { ForEach(StoryCatalog.stories) { story in StoryCardView(story: story, hasSavedProgress: story.id == .talesFromTheSphinx && sphinxNavigationState.hasSavedProgress) { appNavigationState.showStoryDetail(story.id) } } }
+        LazyVGrid(columns: columns, spacing: 18) { ForEach(StoryCatalog.stories) { story in StoryCardView(story: story, hasSavedProgress: savedProgress(for: story.id)) { appNavigationState.showStoryDetail(story.id) } } }
     }.frame(maxWidth: 820).padding(AppTheme.screenPadding) } } }
+    private func savedProgress(for storyID: StoryID) -> Bool { storyID == .talesFromTheSphinx ? sphinxNavigationState.hasSavedProgress : anubisNavigationState.hasSavedProgress }
 }
 
 struct StoryCardView: View {
@@ -104,6 +107,7 @@ struct StoryDetailView: View {
     let story: StoryDescriptor
     @EnvironmentObject private var appNavigationState: AppNavigationState
     @EnvironmentObject private var sphinxNavigationState: SphinxNavigationState
+    @EnvironmentObject private var anubisNavigationState: TrialOfAnubisNavigationState
     @State private var confirmingNewAdventure = false
     var body: some View { ZStack { EgyptianBackground(); ScrollView { VStack(spacing: 18) {
         StoryCoverView(story: story).frame(height: 260)
@@ -112,20 +116,22 @@ struct StoryDetailView: View {
             if let endings = story.endingCount { Text("\(endings) Endings").foregroundColor(AppTheme.mutedText) }
         }.frame(maxWidth: .infinity, alignment: .leading).goldCard()
         if story.availability == .available {
-            if sphinxNavigationState.hasSavedProgress { MenuButton(title: "Continue Adventure") { appNavigationState.playStory(story.id); sphinxNavigationState.continueAdventure() } }
-            MenuButton(title: "New Adventure") { if sphinxNavigationState.hasSavedProgress { confirmingNewAdventure = true } else { startNew() } }
+            if hasSavedProgress { MenuButton(title: "Continue Adventure") { appNavigationState.playStory(story.id); continueStory() } }
+            MenuButton(title: "New Adventure") { if hasSavedProgress { confirmingNewAdventure = true } else { startNew() } }
         } else { ComingSoonStoryView(story: story) }
         MenuButton(title: "Back to Story Library") { appNavigationState.showStoryLibrary() }
     }.frame(maxWidth: 720).padding(AppTheme.screenPadding) } }
-    .confirmationDialog("Start a new adventure? Current in-progress Sphinx route will be overwritten, but completed endings remain.", isPresented: $confirmingNewAdventure, titleVisibility: .visible) { Button("Start New Adventure", role: .destructive) { startNew() }; Button("Cancel", role: .cancel) {} } }
-    private func startNew() { appNavigationState.playStory(story.id); sphinxNavigationState.startNewAdventure() }
+    .confirmationDialog("Start a new adventure? Current in-progress route for this story will be overwritten, but completed endings remain.", isPresented: $confirmingNewAdventure, titleVisibility: .visible) { Button("Start New Adventure", role: .destructive) { startNew() }; Button("Cancel", role: .cancel) {} } }
+    private var hasSavedProgress: Bool { story.id == .talesFromTheSphinx ? sphinxNavigationState.hasSavedProgress : anubisNavigationState.hasSavedProgress }
+    private func continueStory() { if story.id == .talesFromTheSphinx { sphinxNavigationState.continueAdventure() } else { anubisNavigationState.continueAdventure() } }
+    private func startNew() { appNavigationState.playStory(story.id); if story.id == .talesFromTheSphinx { sphinxNavigationState.startNewAdventure() } else { anubisNavigationState.startNewAdventure() } }
 }
 
 struct ComingSoonStoryView: View { let story: StoryDescriptor; var body: some View { Text("Coming Soon — preview only. Gameplay is not available yet.").foregroundColor(AppTheme.mutedText).goldCard().accessibilityLabel("\(story.title) is coming soon. No play button is available.") } }
 
 struct StoryCoverView: View { let story: StoryDescriptor; var body: some View { ZStack { if let image = story.coverImageName { Image(uiImage: UIImage(named: image) ?? UIImage()).resizable().scaledToFill() } else { LinearGradient(colors: [AppTheme.backgroundTop, AppTheme.cardAlt, AppTheme.backgroundBottom], startPoint: .topLeading, endPoint: .bottomTrailing); Image(systemName: story.iconSystemName ?? "book.closed.fill").font(.system(size: 64)).foregroundColor(AppTheme.gold) } }.clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius)).overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1)).accessibilityHidden(true) } }
 
-struct StoryHostView: View { let storyID: StoryID; var body: some View { switch storyID { case .talesFromTheSphinx: SphinxStoryRootView(); case .trialOfAnubis: TrialOfAnubisPlaceholderView() } } }
+struct StoryHostView: View { let storyID: StoryID; var body: some View { switch storyID { case .talesFromTheSphinx: SphinxStoryRootView(); case .trialOfAnubis: TrialOfAnubisStoryRootView() } } }
 
 struct SphinxStoryRootView: View {
     @EnvironmentObject private var sphinxNavigationState: SphinxNavigationState
@@ -138,7 +144,6 @@ struct SphinxStoryMenuView: View {
     var body: some View { ZStack { EgyptianBackground(); VStack(spacing: 22) { Image(uiImage:#imageLiteral(resourceName: "Title-Screen-Art.png")).resizable().scaledToFit().padding(10).background(RoundedRectangle(cornerRadius: 28).fill(AppTheme.cardAlt)); Text("Tales From the Sphinx").font(.system(size: 38, weight: .bold, design: .serif)).foregroundColor(AppTheme.gold).multilineTextAlignment(.center); Text("An Egyptian adventure of mystery, treasure, and danger").foregroundColor(AppTheme.mutedText).multilineTextAlignment(.center).goldCard(); if sphinxNavigationState.hasSavedProgress { MenuButton(title: "Continue Adventure") { sphinxNavigationState.continueAdventure() } }; MenuButton(title: sphinxNavigationState.hasSavedProgress ? "New Adventure" : "New Game") { sphinxNavigationState.startNewAdventure() }; MenuButton(title: "Back to Story Library") { appNavigationState.showStoryLibrary() }; MenuButton(title: "Tales Main Menu") { sphinxNavigationState.returnToStoryMenu(); appNavigationState.returnToMainMenu() } }.padding(AppTheme.screenPadding) } }
 }
 
-struct TrialOfAnubisPlaceholderView: View { @EnvironmentObject private var appNavigationState: AppNavigationState; var body: some View { ZStack { EgyptianBackground(); VStack(spacing: 18) { Image(systemName: "scalemass.fill").font(.system(size: 72)).foregroundColor(AppTheme.gold); Text("The Trial of Anubis").font(.system(.largeTitle, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold).multilineTextAlignment(.center); Text("Coming Soon").font(.headline).foregroundColor(AppTheme.sand); Text(StoryCatalog.trialOfAnubis.summary).foregroundColor(AppTheme.warmText).multilineTextAlignment(.center).goldCard(); MenuButton(title: "Return to Story Library") { appNavigationState.showStoryLibrary() } }.padding(AppTheme.screenPadding) } } }
 struct MissingStoryView: View { let storyID: StoryID; var body: some View { Text("Unknown story: \(storyID.rawValue)") } }
 
-struct AppRootView_Previews: PreviewProvider { static var previews: some View { AppRootView().environmentObject(AppNavigationState()).environmentObject(GameOptions()).environmentObject(SphinxNavigationState(defaults: UserDefaults(suiteName: "preview")!)) } }
+struct AppRootView_Previews: PreviewProvider { static var previews: some View { AppRootView().environmentObject(AppNavigationState()).environmentObject(GameOptions()).environmentObject(SphinxNavigationState(defaults: UserDefaults(suiteName: "preview")!)).environmentObject(TrialOfAnubisNavigationState(defaults: UserDefaults(suiteName: "preview-anubis")!)) } }

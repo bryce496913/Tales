@@ -9,28 +9,52 @@ Tales is the V3 SwiftUI shell for hosting independent interactive adventures beh
 | Story | Story ID | Status | Canonical architecture |
 | --- | --- | --- | --- |
 | Tales From the Sphinx | `tales-from-the-sphinx` | Available and playable | `Tales_From_the_Sphinx_Story.md` |
-| The Trial of Anubis | `trial-of-anubis` | Architecture complete; implementation coming soon | `The_Trial_of_Anubis_Story_Architecture.md` |
+| The Trial of Anubis | `trial-of-anubis` | Available / Playable | `Tales/The Trial of Anubis/Documentation/The_Trial_of_Anubis_Story_Architecture.md` |
+
+## The Trial of Anubis
+
+The Trial of Anubis is the second playable story in Tales.
+
+- **Story ID:** `trial-of-anubis`
+- **Story version:** `1.0`
+- **Core nodes:** 28 (`ANU-001` through `ANU-028`)
+- **Terminal endings:** 5
+- **Save key:** `Tales.story.trial-of-anubis.save.v1`
+- **Canonical Markdown files:**
+  - `Tales/The Trial of Anubis/Documentation/The_Trial_of_Anubis_Full_Story_Views.md`
+  - `Tales/The Trial of Anubis/Documentation/The_Trial_of_Anubis_Story_Architecture.md`
+
+### State systems
+
+The Trial of Anubis tracks story-specific state independently from Tales From the Sphinx:
+
+- **Heart Weight:** clamped to `-6...6` and displayed as Light Heart, Balanced Heart, or Heavy Heart rather than as a raw score.
+- **Memories:** begin at `3`; memory loss is applied immediately and can route directly to the Lost Soul ending when memories reach zero.
+- **Allegiance:** `undecided`, `anubis`, `rebel`, or `self`.
+- **Scale pieces:** Feather Arm, Heart Pan, and Balance Stone recovery flags persist through save and continue.
+- **Items and knowledge:** Golden Scarab, Fang of Ammit, Underworld Power, and Hidden Title of Anubis are surfaced to the player when held or learned.
+- **Conditional choices:** unavailable secret choices are hidden until their requirements are met.
+
+### Ending IDs
+
+Completed endings are recorded once in the Anubis save state as a story-specific `Set<TrialOfAnubisEnding>` and do not affect Tales From the Sphinx progress.
+
+- `anubis_true_restored`
+- `anubis_dark_ammit`
+- `anubis_rebel_escape`
+- `anubis_trickster_cheat`
+- `anubis_lost_soul`
+
+Restarting The Trial of Anubis resets only the active Anubis run and preserves discovered Anubis endings. Returning to the app menu and resetting global options do not erase completed-ending history.
+
+> Developer warning: Never change an ANU node ID, ending ID, route destination, or effect without updating both canonical Markdown files and the route tests.
 
 ## High-level structure
 
-The current Xcode project still keeps many Swift files under the existing `Tales/Tales From the Sphinx/` group to avoid unsafe file-reference churn during the V3 menu pass, but the code is separated conceptually into these boundaries:
-
 ```text
 Tales/
-├── App/                      AppRootView, TalesApp, AppRoute, AppNavigationState, TalesSplashView
-├── Features/
-│   ├── MainMenu/             AppMainMenuView
-│   ├── StoryLibrary/         StoryLibraryView, StoryCardView, StoryDetailView, ComingSoonStoryView
-│   └── Options/              OptionsView and global app preferences
-├── Shared/
-│   ├── Models/               StoryID, StoryDescriptor, StoryAvailability
-│   ├── Catalog/              StoryCatalog
-│   ├── DesignSystem/         AppTheme, EgyptianBackground
-│   ├── Components/           MenuButton, ChoiceButton, shared story UI
-│   └── Settings/             GameOptions
-└── Stories/
-    ├── TalesFromTheSphinx/   SphinxStoryRootView, SphinxStoryMenuView, SphinxNavigationState, SphinxRoute, pages
-    └── TrialOfAnubis/        TrialOfAnubisPlaceholderView and architecture documentation
+├── Tales From the Sphinx/     Existing Sphinx story, shared app shell, shared components
+└── The Trial of Anubis/       Anubis story root, route/state models, content, views, endings, documentation
 ```
 
 ## Story identity and saves
@@ -46,13 +70,13 @@ Tales From the Sphinx progress is isolated under:
 Tales.story.tales-from-the-sphinx.save.v3
 ```
 
-A safe one-time migration copies compatible legacy data from:
+The Trial of Anubis progress is isolated under:
 
 ```text
-Tales.story.save.v2
+Tales.story.trial-of-anubis.save.v1
 ```
 
-The legacy value is not deleted after a successful copy. Global `GameOptions` remain app-wide and are not migrated into story saves.
+Global `GameOptions` remain app-wide and are not migrated into story saves.
 
 ## Asset naming requirements
 
@@ -60,21 +84,6 @@ Existing Tales From the Sphinx art includes generic bundle names such as `One.pn
 
 ```text
 anubis_cover.png
-anubis_node_01.png
-anubis_ending_mercy.png
+anubis_node_001.png
+anubis_end_true.png
 ```
-
-## Adding another story
-
-1. Add a case to `StoryID` using a stable raw-value persistence key.
-2. Add a `StoryDescriptor` in `StoryCatalog`.
-3. Add uniquely prefixed assets; never collide with existing generic Sphinx image names.
-4. Add a story module with its own root view, menu, routes, and navigation/progress state.
-5. Register the story in `StoryHostView`.
-6. Add story-specific progress storage and migrations as needed.
-7. Add canonical architecture documentation.
-8. Add route, graph, catalog, navigation, and persistence tests.
-
-## The Trial of Anubis
-
-`The_Trial_of_Anubis_Story_Architecture.md` is the canonical design source for the future implementation. The V3 app shell only exposes it as a coming-soon preview and does not implement the 28 story nodes or 5 endings yet.

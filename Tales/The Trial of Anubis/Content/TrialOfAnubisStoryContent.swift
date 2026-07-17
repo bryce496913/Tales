@@ -1,0 +1,893 @@
+import Foundation
+
+enum TrialOfAnubisStoryContent {
+    static let nodes: [TrialOfAnubisRoute: TrialOfAnubisNode] = [
+        .anu001: TrialOfAnubisNode(id: .anu001, title: "The Silent Desert", narrative: """
+The desert is silent.
+
+No wind moves across the dunes. No insects stir beneath the sand. Even the stars have vanished, leaving the sky as black and empty as a sealed tomb.
+
+The only sound is the slow beat of your own heart.
+
+You do not remember falling asleep. You do not remember walking here. Yet behind you, a trail of footprints stretches across the cold sand until it disappears into darkness.
+
+Ahead, half-buried beneath a dune, stands a doorway of polished black stone.
+
+Jackal-headed figures are carved around its frame. Each holds a feather in one hand and a human heart in the other. Their painted golden eyes seem to follow you as you approach.
+
+A thin crack appears between the doors.
+
+Sand spills inward, although there is no wind.
+
+Then the doorway opens by itself.
+
+A voice speaks from somewhere deep below.
+
+“Your heart has been expected.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-001-approach-the-black-doorway", source: .anu001, title: "Approach the black doorway", detail: nil, destination: .anu002, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-001-walk-away-into-the-desert", source: .anu001, title: "Walk away into the desert", detail: nil, destination: .anu003, effects: [.loseMemories(1)], requirement: nil, feedback: "A memory slips away before you can name it.")
+        ]),
+        .anu002: TrialOfAnubisNode(id: .anu002, title: "The Black Doorway", narrative: """
+You stop at the threshold.
+
+Beyond the doorway, a staircase descends into darkness. Blue flames burn in shallow bowls along the walls, but they give off no heat. Their light reveals hieroglyphs cut so deeply into the stone that they resemble wounds.
+
+The carvings show a great scale standing between two worlds.
+
+On one side, the living kneel beneath the sun.
+
+On the other, the dead wait beneath a field of stars.
+
+At the center stands a jackal-headed god, holding the balance steady.
+
+But the final image has been violently destroyed. The scale is broken. The dead pour upward. A many-jawed beast rises beneath them.
+
+From somewhere below comes the scrape of stone against stone.
+
+Then the voice speaks again.
+
+“You may enter willingly.”
+
+A pause.
+
+“Or you may enter afraid.”
+
+The blue flames lean toward the staircase as though caught in a breath from below.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-002-enter-the-doorway", source: .anu002, title: "Enter the doorway", detail: nil, destination: .anu003, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-002-call-into-the-darkness", source: .anu002, title: "Call into the darkness", detail: nil, destination: .anu004, effects: [], requirement: nil, feedback: nil)
+        ]),
+        .anu003: TrialOfAnubisNode(id: .anu003, title: "The Jackal Temple", narrative: """
+Whether you entered the doorway or tried to escape the desert, the path has brought you here.
+
+The staircase ends inside a buried temple.
+
+Rows of black jackal statues line the chamber. Each sits upright with its paws together and its ears raised. Their golden collars are untouched by dust.
+
+Between them, a narrow path leads toward a circular opening in the floor.
+
+To your right, a side chamber glitters with reflected gold. You see the outline of treasure chests, ceremonial blades, jeweled masks, and a single scarab resting beneath a beam of pale light.
+
+Behind you, the staircase is gone.
+
+There is only a wall carved with your own silhouette.
+
+The jackal statues turn their heads toward you one by one.
+
+From the opening in the floor, the hidden voice says:
+
+“Choose what you came seeking.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-003-follow-the-jackal-statues", source: .anu003, title: "Follow the jackal statues", detail: nil, destination: .anu004, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-003-search-the-temple-for-treasure", source: .anu003, title: "Search the temple for treasure", detail: nil, destination: .anu013, effects: [.adjustHeartWeight(1)], requirement: nil, feedback: "A pleasant weight settles behind your ribs.")
+        ]),
+        .anu004: TrialOfAnubisNode(id: .anu004, title: "The Voice Below", narrative: """
+The circular opening leads to a spiral stair cut around a shaft without a visible bottom.
+
+As you descend, the voice travels beside you.
+
+It does not echo. It speaks as if its mouth were beside your ear.
+
+“Why did you enter my temple?”
+
+The question should have a simple answer.
+
+Curiosity.
+
+Fear.
+
+An accident.
+
+But each explanation fades before you can speak it. You sense that the voice is not asking how you arrived. It is asking what part of you opened the door.
+
+The blue flames along the stair brighten.
+
+For an instant, every step bears a different memory from your life: a kindness no one noticed, a lie that was never discovered, a moment you fled, a moment you stayed.
+
+Far below, two amber eyes open in the darkness.
+
+“Answer.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-004-answer-honestly", source: .anu004, title: "Answer honestly", detail: """
+You admit that you do not fully know. Perhaps you were curious. Perhaps afraid. Perhaps some part of you wanted to be chosen.
+""", destination: .anu005, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "Your heart beats more freely."),
+            TrialOfAnubisChoice(id: "ANU-004-lie-about-why-you-are-here", source: .anu004, title: "Lie about why you are here", detail: """
+You invent a noble purpose and speak it with confidence.
+""", destination: .anu005, effects: [.adjustHeartWeight(1), .setLiedToAnubis(true)], requirement: nil, feedback: "The lie settles inside you like a stone.")
+        ]),
+        .anu005: TrialOfAnubisNode(id: .anu005, title: "Anubis Revealed", narrative: """
+The stair opens into a hall so vast that its ceiling disappears into darkness.
+
+Thousands of unlit braziers surround a platform of black stone. At its center stands a figure taller than any man.
+
+His body is wrapped in black and gold linen. Obsidian armor covers his shoulders and chest. His head is that of a jackal, and his eyes glow like embers beneath a funeral moon.
+
+Anubis.
+
+Behind him rests a broken scale.
+
+One pan lies cracked upon the floor. The other is missing. The central balance stone has been torn from its frame, leaving jagged fractures across the sacred mechanism.
+
+Beyond the platform, shadowy figures drift through open gates. Some cry for names they have forgotten. Others whisper names that belong to the living.
+
+Anubis looks down at you.
+
+“The dead no longer wait for judgment,” he says. “The scales have been shattered, and their pieces carried into the broken places of my realm.”
+
+He steps closer.
+
+“Without judgment, memory decays. The dead cross into life. The living are drawn toward death.”
+
+A growl rolls through the hall.
+
+In the darkness behind the scale, something enormous shifts its chains.
+
+“You will return what was taken.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-005-kneel-and-listen", source: .anu005, title: "Kneel and listen", detail: nil, destination: .anu006, effects: [.setAllegiance(.anubis)], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-005-demand-to-be-released", source: .anu005, title: "Demand to be released", detail: nil, destination: .anu007, effects: [.setAllegiance(.`self`)], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-005-ask-what-power-is-offered", source: .anu005, title: "Ask what power is offered", detail: nil, destination: .anu006, effects: [.setAllegiance(.rebel), .adjustHeartWeight(1)], requirement: nil, feedback: "Anubis notices the hunger behind your question.")
+        ]),
+        .anu006: TrialOfAnubisNode(id: .anu006, title: "Terms of Judgment", narrative: """
+Anubis raises one hand.
+
+Three images form in the air between you.
+
+The first is a long golden arm shaped like a feather. It turns slowly inside a hall crowded with whispering souls.
+
+The second is a dark bronze pan suspended above thousands of beating hearts.
+
+The third is a stone carved with the symbol of balance, guarded by a creature whose face has been erased.
+
+“The Feather Arm. The Heart Pan. The Balance Stone.”
+
+The images fracture and vanish.
+
+“These pieces were not stolen by one hand,” Anubis says. “Fear took one. Greed took another. Rebellion claimed the last.”
+
+You look toward the open gates.
+
+“And if I restore them?”
+
+“The dead will return to judgment.”
+
+“And me?”
+
+Anubis studies you in silence.
+
+“If your purpose is honest, you will return to the living.”
+
+His eyes narrow.
+
+“If you seek payment, name it only after you understand the price.”
+
+Behind him, the chained creature exhales. The braziers tremble.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-006-agree-to-restore-the-scales", source: .anu006, title: "Agree to restore the scales", detail: nil, destination: .anu008, effects: [.setAllegiance(.anubis), .adjustHeartWeight(-1)], requirement: nil, feedback: "The path ahead feels terrible, but clear."),
+            TrialOfAnubisChoice(id: "ANU-006-agree-only-for-a-reward", source: .anu006, title: "Agree only for a reward", detail: nil, destination: .anu008, effects: [.setAllegiance(.`self`), .adjustHeartWeight(1)], requirement: nil, feedback: "The promise of reward follows you into the dark.")
+        ]),
+        .anu007: TrialOfAnubisNode(id: .anu007, title: "Refuse the God", narrative: """
+“I did not choose this,” you say. “Send me back.”
+
+The amber light in Anubis’s eyes dims.
+
+“You entered a door that opens only for those already standing between choices.”
+
+“I am alive.”
+
+“For now.”
+
+He gestures toward the drifting souls beyond the platform. Among them, you glimpse familiar faces—people you know, people you have lost, and people who cannot possibly be dead.
+
+The vision changes too quickly to trust.
+
+“The collapse has touched your world,” Anubis says. “Each moment the scales remain broken, the boundary weakens. Soon, returning you will be beyond even my power.”
+
+A doorway appears behind you.
+
+It leads not to the desert but into a corridor filled with pale fog. Within it, voices call your name in tones of love, accusation, and grief.
+
+“You may still refuse,” Anubis says. “But refusal is also a choice, and every choice is weighed.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-007-accept-after-anubis-warns-you", source: .anu007, title: "Accept after Anubis warns you", detail: nil, destination: .anu008, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-007-flee-into-the-darkness", source: .anu007, title: "Flee into the darkness", detail: nil, destination: .anu017, effects: [.loseMemories(1)], requirement: nil, feedback: "You run toward a voice you recognize and forget why it mattered.")
+        ]),
+        .anu008: TrialOfAnubisNode(id: .anu008, title: "River of the Dead", narrative: """
+The first gate opens onto the bank of a black river.
+
+Its surface reflects no light. Shapes drift beneath it—hands, faces, crowns, broken weapons, and fragments of houses that vanished centuries ago.
+
+The opposite bank lies beneath an archway of blue fire.
+
+Between you and it, the river moves without sound.
+
+A narrow dock extends into the water. A bronze bell hangs from a post beside it. There is no boat, but deep grooves in the wood suggest that one has arrived here countless times.
+
+As you approach, the water whispers with stolen voices.
+
+Some beg you to enter.
+
+Some warn you not to touch it.
+
+One voice sounds exactly like your own.
+
+Far downstream, a thin boat moves through the darkness. A faceless figure stands at its stern, guiding it with a long black pole.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-008-call-for-the-ferryman", source: .anu008, title: "Call for the ferryman", detail: """
+You strike the bronze bell.
+""", destination: .anu009, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-008-swim-through-the-black-water", source: .anu008, title: "Swim through the black water", detail: nil, destination: .anu010, effects: [.loseMemories(1), .adjustHeartWeight(1)], requirement: nil, feedback: "The river takes something from you and leaves cold anger in its place.")
+        ]),
+        .anu009: TrialOfAnubisNode(id: .anu009, title: "The Ferryman’s Price", narrative: """
+The boat reaches the dock without disturbing the water.
+
+The ferryman is wrapped in damp linen. No face shows beneath the cloth. Where eyes should be, two shallow hollows hold shifting reflections of your past.
+
+He extends one hand.
+
+“Passage has a price.”
+
+“I have no coin.”
+
+“Coin is for the living.”
+
+The ferryman opens his palm.
+
+Inside it lies a small, bright memory: sunlight through a window, laughter in another room, the feeling of being safe without knowing why.
+
+It is yours.
+
+The ferryman closes his fingers around it.
+
+“A memory,” he says. “A promise. Or fear.”
+
+The river behind him fills with pale faces.
+
+One of them presses against the surface near the boat, unable to rise.
+
+“Choose what you can afford to lose.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-009-give-the-ferryman-a-memory", source: .anu009, title: "Give the ferryman a memory", detail: nil, destination: .anu010, effects: [.loseMemories(1)], requirement: nil, feedback: "You know something precious is gone, but not what it was."),
+            TrialOfAnubisChoice(id: "ANU-009-promise-to-free-a-trapped-soul", source: .anu009, title: "Promise to free a trapped soul", detail: nil, destination: .anu010, effects: [.setMercyOath(true)], requirement: nil, feedback: "The ferryman accepts your promise as though it were already a deed."),
+            TrialOfAnubisChoice(id: "ANU-009-threaten-the-ferryman", source: .anu009, title: "Threaten the ferryman", detail: nil, destination: .anu010, effects: [.adjustHeartWeight(2)], requirement: nil, feedback: "The ferryman obeys, but every face beneath the water turns toward you.")
+        ]),
+        .anu010: TrialOfAnubisNode(id: .anu010, title: "Hall of Whispers", narrative: """
+Beyond the river stands a hall made from thousands of narrow stone passages.
+
+Every wall is carved with names.
+
+Some are royal. Some ordinary. Some have been scratched away so thoroughly that only scars remain.
+
+Whispers move through the corridors.
+
+“I was forgotten.”
+
+“I was innocent.”
+
+“I was feared.”
+
+“I was loved.”
+
+“I did what I had to.”
+
+The voices overlap until they become a wind of confession.
+
+Ahead, a faint golden light pulses behind a sealed door. The symbol carved above it matches the Feather Arm shown by Anubis.
+
+But from a passage to your left comes the sound of someone crying.
+
+Not the distant sorrow of the dead. This is close, frightened, and exhausted.
+
+“Please,” the voice says. “I still remember my name.”
+
+The golden light brightens, urging you onward.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-010-follow-the-crying-voice", source: .anu010, title: "Follow the crying voice", detail: nil, destination: .anu011, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-010-ignore-the-voices-and-seek-the-scales", source: .anu010, title: "Ignore the voices and seek the scales", detail: nil, destination: .anu012, effects: [.adjustHeartWeight(1)], requirement: nil, feedback: "The crying stops. Your footsteps sound heavier.")
+        ]),
+        .anu011: TrialOfAnubisNode(id: .anu011, title: "The Crying Soul", narrative: """
+You find a young soul pinned beneath a fallen stone tablet.
+
+Their form flickers between ages. A child reaches for you, then an old woman, then a soldier covered in dust. Their face cannot decide which life it belongs to.
+
+Chains of written names bind the tablet to the floor.
+
+“I was crossing for judgment when the hall broke,” the soul says. “The whispers are stealing me. Soon I will not remember which name is mine.”
+
+The golden chamber lies close. You can feel the first scale piece beyond the wall.
+
+Freeing the soul will take time.
+
+The soul notices your hesitation.
+
+“I know where the beast was chained,” they say quickly. “I heard the thieves speaking. Help me, and I will tell you.”
+
+The whispers crowd closer.
+
+Some urge mercy.
+
+Others say the dead have already had their lives.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-011-free-the-trapped-soul", source: .anu011, title: "Free the trapped soul", detail: """
+You break the chains without asking for anything.
+""", destination: .anu012, effects: [.setSavedLostSoul(true), .adjustHeartWeight(-2)], requirement: nil, feedback: "The soul remembers its name. Your heart feels almost weightless."),
+            TrialOfAnubisChoice(id: "ANU-011-ask-the-soul-for-information-first", source: .anu011, title: "Ask the soul for information first", detail: """
+You demand the truth before lifting the stone, then free them.
+""", destination: .anu012, effects: [.setSavedLostSoul(true), .adjustHeartWeight(-1)], requirement: nil, feedback: "Mercy given with conditions is still mercy, though not without weight."),
+            TrialOfAnubisChoice(id: "ANU-011-leave-the-soul-trapped", source: .anu011, title: "Leave the soul trapped", detail: nil, destination: .anu012, effects: [.adjustHeartWeight(2)], requirement: nil, feedback: "The soul calls after you until the whispers take its voice.")
+        ]),
+        .anu012: TrialOfAnubisNode(id: .anu012, title: "Feather Arm Chamber", narrative: """
+The sealed door opens into a circular chamber.
+
+At its center, suspended above a shaft of blue fire, rests the Feather Arm of the sacred scale. It is longer than your body, made of gold so pale it appears almost white.
+
+The arm turns slowly, although nothing supports it.
+
+Around the chamber, painted figures kneel with their hearts held open in their hands.
+
+The shadows behind them move independently.
+
+As you step closer, one painted figure turns its head.
+
+A low growl passes through the walls.
+
+You sense a hidden passage beyond the murals, leading deeper into the underworld. Scratches in the floor suggest that something with heavy claws was dragged through it.
+
+The Feather Arm waits within reach.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-012-lift-the-feather-arm", source: .anu012, title: "Lift the Feather Arm", detail: nil, destination: .anu013, effects: [.setFirstScalePiece(true)], requirement: nil, feedback: "The first piece answers your touch with a clear metallic note."),
+            TrialOfAnubisChoice(id: "ANU-012-inspect-the-shadows", source: .anu012, title: "Inspect the shadows", detail: """
+You recover the Feather Arm, then follow the claw marks and discover signs that Ammit’s chains were broken from the outside.
+""", destination: .anu014, effects: [.setFirstScalePiece(true), .setAmmitClue(true)], requirement: nil, feedback: "The beast may not have freed itself.")
+        ]),
+        .anu013: TrialOfAnubisNode(id: .anu013, title: "Golden Scarab Vault", narrative: """
+A hidden wall slides aside.
+
+Beyond it lies a vault untouched by decay.
+
+Gold masks stare from shelves. Ceremonial cups overflow with jewels. Small statues of forgotten gods stand in rows, their names deliberately chiseled away.
+
+At the center of the room, beneath a narrow beam of white light, rests a golden scarab.
+
+Unlike the other treasure, it is warm.
+
+When you pick it up—or merely draw close—you hear a heartbeat inside it.
+
+A voice whispers:
+
+“Carry me, and no balance need bind you.”
+
+The scarab’s wings open slightly. Light leaks from beneath them, revealing tiny symbols of alteration, concealment, and false measure.
+
+You understand without knowing how: this object could interfere with sacred judgment.
+
+It could also be destroyed.
+
+Something trapped inside it wants to be released.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-013-take-the-golden-scarab", source: .anu013, title: "Take the Golden Scarab", detail: nil, destination: .anu014, effects: [.setGoldenScarab(true), .adjustHeartWeight(2)], requirement: nil, feedback: "The scarab is small, but your heart strains beneath its weight."),
+            TrialOfAnubisChoice(id: "ANU-013-leave-the-treasure-untouched", source: .anu013, title: "Leave the treasure untouched", detail: nil, destination: .anu014, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "The vault loses its hold on you."),
+            TrialOfAnubisChoice(id: "ANU-013-break-the-scarab-and-release-the-light", source: .anu013, title: "Break the scarab and release the light", detail: """
+You crush it beneath the Feather Arm. A bright spirit escapes and wraps you briefly in protective fire.
+""", destination: .anu014, effects: [.adjustHeartWeight(-1), .setScarabProtection(true)], requirement: nil, feedback: "The released light circles you once, then disappears beneath your skin.")
+        ]),
+        .anu014: TrialOfAnubisNode(id: .anu014, title: "Chamber of Stolen Hearts", narrative: """
+The hidden passage opens into a red-black cavern.
+
+Thousands of human hearts hang from chains descending from the ceiling.
+
+Some beat slowly.
+
+Some race in panic.
+
+Some are still.
+
+Each is enclosed within a glass vessel marked with a name. The chains converge above a stone platform where the missing Heart Pan once rested.
+
+A deep vibration moves through the chamber, and every heart beats at once.
+
+You step among them.
+
+Faces appear in the glass—not faces of the dead, but memories belonging to them. A mother holding a child. A thief burying stolen bread. A ruler ordering a death. A stranger offering shelter.
+
+Then you see a vessel bearing your own name.
+
+Inside it, a heart beats in perfect time with the one in your chest.
+
+Behind the platform, a massive chain disappears through a broken doorway.
+
+A growl answers the heartbeat.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-014-search-the-suspended-hearts", source: .anu014, title: "Search the suspended hearts", detail: """
+You examine your own vessel and learn that part of your judgment has already begun.
+""", destination: .anu015, effects: [.setOwnHeartTruth(true)], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-014-cut-the-chains-holding-the-hearts", source: .anu014, title: "Cut the chains holding the hearts", detail: """
+You strike the bindings. Dozens of vessels descend safely to the floor, freeing their hearts from the machinery.
+""", destination: .anu016, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "The freed hearts beat together like distant applause.")
+        ]),
+        .anu015: TrialOfAnubisNode(id: .anu015, title: "Ammit Unchained", narrative: """
+The broken doorway leads into a chamber scored by claws.
+
+Ammit rises from the darkness.
+
+Her head is that of a crocodile, broad and armored. Her forequarters belong to a lion, her hind body to a hippopotamus. Broken chains drag from her limbs, each link carved with a divine name.
+
+Her jaws open.
+
+Inside them, you see no throat—only a depth filled with fading stars.
+
+“The living one,” she says.
+
+Her voice is not the roar you expected. It is old, tired, and hungry beyond reason.
+
+“You carry judgment’s scent.”
+
+She lowers her head until one golden eye fills your vision.
+
+“Anubis calls me monster. Yet he made hunger my purpose. He weighs the heart. I carry out the sentence.”
+
+Her claws close around the stone beside you.
+
+“Tell me why I should not begin with yours.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-015-calm-ammit-and-speak-without-fear", source: .anu015, title: "Calm Ammit and speak without fear", detail: """
+You acknowledge her hunger without surrendering to it.
+""", destination: .anu016, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "For one breath, the Devourer remembers restraint."),
+            TrialOfAnubisChoice(id: "ANU-015-attack-ammit", source: .anu015, title: "Attack Ammit", detail: """
+You strike as she lunges and tear loose one of her black fangs.
+""", destination: .anu016, effects: [.setAmmitFang(true), .adjustHeartWeight(2)], requirement: nil, feedback: "The fang burns in your hand. Ammit’s roar follows you."),
+            TrialOfAnubisChoice(id: "ANU-015-offer-the-golden-scarab", source: .anu015, title: "Offer the Golden Scarab", detail: """
+**Condition:** Available only when `tookGoldenScarab == true`.
+
+Ammit bites down on the scarab. Its false heartbeat shatters, satisfying her hunger long enough for you to escape.
+""", destination: .anu016, effects: [.setGoldenScarab(false), .adjustHeartWeight(-2)], requirement: .hasGoldenScarab, feedback: "A burden leaves your heart as the scarab disappears between her jaws.")
+        ]),
+        .anu016: TrialOfAnubisNode(id: .anu016, title: "The Broken Chain", narrative: """
+You reach the far side of Ammit’s chamber.
+
+A section of her sacred chain lies across the path. Several links have been cut cleanly, not broken by force. Black energy leaks from the severed names carved into the metal.
+
+When you touch the chain, you see a vision.
+
+A robed scribe kneels beside the scales.
+
+A hidden figure whispers from behind a veil.
+
+The scribe removes the Heart Pan.
+
+Ammit’s chain breaks.
+
+Then the vision ends.
+
+A fragment of dark power floats above the severed link. It pulses like smoke held inside glass.
+
+You could repair the chain, restoring part of the order that contained Ammit.
+
+Or you could take the fragment.
+
+Its power would belong to no god once held by a living hand.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-016-repair-the-broken-chain", source: .anu016, title: "Repair the broken chain", detail: nil, destination: .anu017, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "A divine name seals beneath your hand. Ammit’s distant roar grows quieter."),
+            TrialOfAnubisChoice(id: "ANU-016-take-a-fragment-of-underworld-power", source: .anu016, title: "Take a fragment of underworld power", detail: nil, destination: .anu017, effects: [.setUnderworldPower(true), .adjustHeartWeight(1)], requirement: nil, feedback: "Cold power enters your blood and refuses to leave.")
+        ]),
+        .anu017: TrialOfAnubisNode(id: .anu017, title: "Maze of False Memories", narrative: """
+The passage narrows, then dissolves into fog.
+
+Walls appear only when you look away from them. Doors open onto places that cannot exist beneath the desert: your childhood home, a crowded street, a room where someone waits with their back turned.
+
+The maze is built from memory.
+
+Not all of it is yours.
+
+You hear Anubis’s warning in the distance:
+
+“Names decay first. Then faces. Then purpose.”
+
+Two paths form.
+
+To the left, warm light spills from an open doorway. You smell familiar food and hear laughter from a time when the world felt safe.
+
+To the right, a cold corridor leads toward a moment you have tried not to remember. At its end, someone says your name with disappointment.
+
+The fog closes behind you.
+
+There is no path that avoids the past.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-017-follow-the-memory-of-home", source: .anu017, title: "Follow the memory of home", detail: nil, destination: .anu018, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-017-follow-the-memory-of-your-greatest-failure", source: .anu017, title: "Follow the memory of your greatest failure", detail: nil, destination: .anu019, effects: [], requirement: nil, feedback: nil)
+        ]),
+        .anu018: TrialOfAnubisNode(id: .anu018, title: "Memory of Home", narrative: """
+You step into a place you know.
+
+Every detail is perfect.
+
+The angle of sunlight. The worn edge of a table. The sound of someone moving in the next room. A familiar voice calls you by a name spoken with affection.
+
+For a moment, the underworld feels impossible.
+
+You could stay here.
+
+No scales. No gods. No hungry beast. No judgment.
+
+A person you once loved—or still love—enters the room. Their face is exactly as you remember it, except their shadow points in the wrong direction.
+
+“You came back,” they say.
+
+Behind them, the wall flickers.
+
+For an instant, you see the maze feeding on the memory, copying it each time you look away.
+
+The figure reaches for your hand.
+
+“Do not leave again.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-018-accept-that-the-memory-may-be-false", source: .anu018, title: "Accept that the memory may be false", detail: """
+You let the scene break rather than surrender to the comfort it offers.
+""", destination: .anu020, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "Truth hurts, but it does not own you."),
+            TrialOfAnubisChoice(id: "ANU-018-stay-inside-the-memory", source: .anu018, title: "Stay inside the memory", detail: """
+The figure embraces you. Warmth becomes fog. When you awaken, a piece of your life is missing.
+""", destination: .anu019, effects: [.loseMemories(1)], requirement: nil, feedback: "You remember being loved, but not by whom.")
+        ]),
+        .anu019: TrialOfAnubisNode(id: .anu019, title: "Memory of Failure", narrative: """
+The corridor opens onto a moment you wish had happened differently.
+
+The maze changes its details to fit you.
+
+Perhaps someone trusted you and you failed them.
+
+Perhaps fear made you silent.
+
+Perhaps pride made you cruel.
+
+Perhaps you chose the easier path and allowed another person to bear the cost.
+
+The scene repeats.
+
+This time, everyone turns to look at you.
+
+A voice asks:
+
+“Whose fault was it?”
+
+The question is unfair. No failure belongs to one person alone. There were circumstances, pressures, mistakes made by others.
+
+The maze offers faces to blame.
+
+Each waits silently for you to choose one.
+
+Behind them, the path to the Heart Pan begins to close.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-019-admit-responsibility", source: .anu019, title: "Admit responsibility", detail: """
+You name your part without claiming blame that is not yours.
+""", destination: .anu020, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "The memory remains painful, but it stops controlling the path."),
+            TrialOfAnubisChoice(id: "ANU-019-blame-someone-else", source: .anu019, title: "Blame someone else", detail: """
+The chosen face fades. So does another piece of your own memory.
+""", destination: .anu020, effects: [.adjustHeartWeight(1), .loseMemories(1)], requirement: nil, feedback: "The maze accepts your accusation and takes a truth in exchange.")
+        ]),
+        .anu020: TrialOfAnubisNode(id: .anu020, title: "The Heart Pan", narrative: """
+The fog collapses.
+
+You stand in a chamber shaped like the inside of a heart.
+
+Bronze walls contract with a slow, rhythmic pulse. At the center hangs the missing Heart Pan, suspended by threads of red light.
+
+Beneath it, thousands of names are carved into the floor.
+
+Some are crossed out.
+
+Some repeat.
+
+Some belong to people not yet born.
+
+The pan lowers when you approach.
+
+Its surface reflects not your face, but every version of you that might have existed: kinder, crueler, braver, more afraid.
+
+A line of fresh writing appears beneath your feet.
+
+It is your name.
+
+Beside it is a second name you do not recognize, followed by the symbol of a royal scribe.
+
+The Heart Pan waits to be claimed.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-020-recover-the-heart-pan", source: .anu020, title: "Recover the Heart Pan", detail: nil, destination: .anu021, effects: [.setSecondScalePiece(true)], requirement: nil, feedback: "The second piece joins the first with a deep bronze tone."),
+            TrialOfAnubisChoice(id: "ANU-020-examine-the-names-beneath-it", source: .anu020, title: "Examine the names beneath it", detail: """
+You recover the pan and discover that the theft was recorded before it occurred, suggesting a conspiracy within the Hall of Judgment.
+""", destination: .anu021, effects: [.setSecondScalePiece(true), .setConspiracyClue(true)], requirement: nil, feedback: "Someone planned the breaking of the scales long before your arrival.")
+        ]),
+        .anu021: TrialOfAnubisNode(id: .anu021, title: "The Scribe’s Secret", narrative: """
+A hidden door opens behind the Heart Pan.
+
+Inside sits an underworld scribe surrounded by endless rolls of papyrus.
+
+His body is thin and birdlike. Ink stains his hands to the wrists. A blank mask covers his face, but words move across it as he speaks.
+
+“I recorded your arrival,” he says.
+
+“You knew I was coming?”
+
+“I recorded it before you were born.”
+
+He gestures to a scroll bearing your name.
+
+Lines of writing describe choices you have already made. Below them, the text continues—but the future lines rearrange whenever you try to read them.
+
+“The scales were not merely stolen,” the scribe says. “They were allowed to break.”
+
+“By Anubis?”
+
+The words on his mask scatter.
+
+“Truth has a cost. Trust, force, or memory. Those are the currencies left to us.”
+
+He places one ink-black finger on the scroll.
+
+“Choose how you wish to learn.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-021-trust-the-underworld-scribe", source: .anu021, title: "Trust the underworld scribe", detail: nil, destination: .anu022, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-021-threaten-the-scribe", source: .anu021, title: "Threaten the scribe", detail: nil, destination: .anu022, effects: [.adjustHeartWeight(1)], requirement: nil, feedback: "The scribe reveals the truth, but records the threat beside your name."),
+            TrialOfAnubisChoice(id: "ANU-021-trade-a-memory-for-the-truth", source: .anu021, title: "Trade a memory for the truth", detail: nil, destination: .anu022, effects: [.loseMemories(1)], requirement: nil, feedback: "The scribe takes a memory and writes it into a scroll you may never read.")
+        ]),
+        .anu022: TrialOfAnubisNode(id: .anu022, title: "The True Name", narrative: """
+The scribe leads you into a chamber without walls.
+
+Above, constellations form the shape of a jackal.
+
+Below, the darkness reflects them perfectly.
+
+“In the beginning,” the scribe says, “the gods were not called by the names mortals gave them. Their true titles were commands written into creation.”
+
+He speaks a phrase too vast to understand.
+
+The stars bend.
+
+You feel the hidden title of Anubis settle into your mind—not his ordinary name, but the name that means:
+
+**He Who Opens the Final Door and Must Obey the Balance.**
+
+The knowledge is dangerous.
+
+Spoken openly, it could compel the mechanisms of judgment.
+
+Kept secret, it remains a weapon no one knows you possess.
+
+The scribe’s mask turns blank.
+
+“Now the name belongs to you.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-022-speak-anubis-s-hidden-title", source: .anu022, title: "Speak Anubis’s hidden title", detail: """
+You test the words. The darkness trembles, and distant gates open.
+""", destination: .anu023, effects: [.setLearnedTrueName(true)], requirement: nil, feedback: "The underworld hears you."),
+            TrialOfAnubisChoice(id: "ANU-022-keep-the-name-secret", source: .anu022, title: "Keep the name secret", detail: """
+You bury the title in silence.
+""", destination: .anu023, effects: [.setLearnedTrueName(true), .adjustHeartWeight(-1)], requirement: nil, feedback: "Power withheld weighs less than power displayed.")
+        ]),
+        .anu023: TrialOfAnubisNode(id: .anu023, title: "The Rebel’s Offer", narrative: """
+The constellations vanish.
+
+A figure steps from behind the scribe’s hanging scrolls.
+
+They wear the broken mask of a priest and carry a staff carved from one of Ammit’s old chains. Their body shifts between human and shadow.
+
+“I wondered which path you would take,” the rebel says.
+
+The scribe lowers his head but does not interfere.
+
+“The gods call this disorder,” the rebel continues. “But what is judgment except power made sacred by repetition?”
+
+Images appear around you.
+
+Anubis weighing frightened souls.
+
+Ammit devouring those deemed unworthy.
+
+Kings passing into eternity while forgotten laborers wait without names.
+
+“The scales do not measure goodness,” the rebel says. “They measure obedience to an order built by those who control the balance.”
+
+A shard of underworld power forms above their palm.
+
+“Take the final piece. Return to the Hall. Then decide whether any god deserves to judge you.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-023-reject-the-rebel-s-offer", source: .anu023, title: "Reject the rebel’s offer", detail: nil, destination: .anu024, effects: [.setAllegiance(.anubis)], requirement: nil, feedback: "Whatever its flaws, you choose to restore the order before deciding its future."),
+            TrialOfAnubisChoice(id: "ANU-023-accept-power-to-challenge-anubis", source: .anu023, title: "Accept power to challenge Anubis", detail: nil, destination: .anu024, effects: [.setUnderworldPower(true), .setAllegiance(.rebel), .adjustHeartWeight(1)], requirement: nil, feedback: "Power gathers around you like a second shadow."),
+            TrialOfAnubisChoice(id: "ANU-023-pretend-to-accept", source: .anu023, title: "Pretend to accept", detail: nil, destination: .anu024, effects: [.setAllegiance(.`self`), .adjustHeartWeight(1)], requirement: nil, feedback: "You offer the rebel a lie and keep your purpose hidden.")
+        ]),
+        .anu024: TrialOfAnubisNode(id: .anu024, title: "Balance Stone Chamber", narrative: """
+The final chamber lies at the center of a ruined temple.
+
+The Balance Stone floats above a mechanism of interlocking rings. It is small enough to hold in one hand, yet the entire chamber leans around it.
+
+On one side, dust falls upward.
+
+On the other, blue flame pours like water.
+
+Guarding the mechanism is a towering figure made of stone and linen. Its face has been erased, leaving a smooth surface marked only by a vertical crack.
+
+As you enter, the guardian raises a ceremonial blade.
+
+“Only the judged may carry balance,” it says.
+
+“I have not been judged.”
+
+“Then you may not leave.”
+
+The rings turn faster.
+
+The Balance Stone pulses in time with your heart.
+
+You see two ways to take it: patiently release the locking seals, or tear it free before the guardian strikes.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-024-take-the-balance-stone-carefully", source: .anu024, title: "Take the Balance Stone carefully", detail: """
+You align the rings and release the stone without breaking the mechanism.
+""", destination: .anu025, effects: [.setFinalScalePiece(true)], requirement: nil, feedback: "The final piece settles into your palm without resistance."),
+            TrialOfAnubisChoice(id: "ANU-024-rip-it-from-the-guardian-mechanism", source: .anu024, title: "Rip it from the guardian mechanism", detail: """
+You seize the stone. The rings fracture, and the chamber lurches violently.
+""", destination: .anu025, effects: [.setFinalScalePiece(true), .adjustHeartWeight(1)], requirement: nil, feedback: "You have the piece, but the chamber begins to die around you.")
+        ]),
+        .anu025: TrialOfAnubisNode(id: .anu025, title: "The Final Guardian", narrative: """
+The guardian blocks the only exit.
+
+Cracks spread across its body. Through them, pale light reveals thousands of trapped names.
+
+“I was made to protect balance,” it says. “Without the stone, I have no purpose.”
+
+Its blade lowers slightly.
+
+“Return it.”
+
+Behind you, the chamber collapses one ring at a time.
+
+You could destroy the guardian and escape.
+
+You could spare it, risking pursuit.
+
+Or, with the true title of Anubis, you might command the guardian to recognize a new purpose.
+
+The guardian kneels on one cracked leg.
+
+“Judge me, living one.”
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-025-spare-the-final-guardian", source: .anu025, title: "Spare the final guardian", detail: """
+You refuse to destroy a being whose purpose has already been taken from it.
+""", destination: .anu026, effects: [.adjustHeartWeight(-1)], requirement: nil, feedback: "The guardian lowers its blade and opens the path."),
+            TrialOfAnubisChoice(id: "ANU-025-destroy-the-final-guardian", source: .anu025, title: "Destroy the final guardian", detail: """
+You strike the central crack. The guardian shatters, releasing the names trapped within it.
+""", destination: .anu026, effects: [.adjustHeartWeight(2)], requirement: nil, feedback: "The path opens through violence. The released names do not thank you."),
+            TrialOfAnubisChoice(id: "ANU-025-command-it-using-the-true-name", source: .anu025, title: "Command it using the true name", detail: """
+**Condition:** Available only when `learnedTrueName == true`.
+
+You invoke Anubis’s hidden title and command the guardian to protect the path between judgment and mercy.
+""", destination: .anu026, effects: [], requirement: .learnedTrueName, feedback: "The guardian bows to a law older than obedience.")
+        ]),
+        .anu026: TrialOfAnubisNode(id: .anu026, title: "Return to the Hall", narrative: """
+The three scale pieces resonate.
+
+The Feather Arm shines in pale gold.
+
+The Heart Pan beats with a sound like distant thunder.
+
+The Balance Stone pulls them toward one another.
+
+A doorway opens, returning you to the Hall of Judgment.
+
+Anubis waits beside the broken scale.
+
+Around him, countless souls crowd the darkness. Some recognize the pieces and begin to kneel. Others recoil as though they hoped judgment would never return.
+
+Ammit watches from behind the pillars.
+
+The rebel’s words remain with you.
+
+So does the scribe’s secret name.
+
+Anubis extends his hand.
+
+“You have crossed fear, hunger, memory, and power,” he says. “Return the pieces.”
+
+The hall grows still.
+
+You understand that you are no longer merely carrying the scales.
+
+You are carrying leverage.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-026-return-the-scale-pieces-to-anubis", source: .anu026, title: "Return the scale pieces to Anubis", detail: nil, destination: .anu027, effects: [], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-026-hide-one-piece-and-bargain", source: .anu026, title: "Hide one piece and bargain", detail: """
+You conceal part of the mechanism and demand safe passage, reward, or authority.
+""", destination: .anu027, effects: [.adjustHeartWeight(1), .setAllegiance(.`self`)], requirement: nil, feedback: "Anubis accepts the bargain’s existence, but not its innocence."),
+            TrialOfAnubisChoice(id: "ANU-026-enter-the-hall-of-judgment-armed", source: .anu026, title: "Enter the Hall of Judgment armed", detail: """
+**Condition:** Available when `possessesAmmitFang == true` or `acceptedUnderworldPower == true`.
+""", destination: .anu027, effects: [.setAllegiance(.rebel)], requirement: .hasWeaponOrUnderworldPower, feedback: "The souls draw back. Even Anubis shifts his stance.")
+        ]),
+        .anu027: TrialOfAnubisNode(id: .anu027, title: "The Weighing Begins", narrative: """
+The restored scales rise from the floor.
+
+The Feather Arm locks into place.
+
+The Heart Pan hangs opposite the feather of Ma’at.
+
+The Balance Stone turns once, and the entire underworld becomes still.
+
+Anubis stands beside the scale.
+
+Behind him, Ammit lowers herself to the floor, watching with terrible patience.
+
+Every promise you made returns to you.
+
+Every lie.
+
+Every act of mercy.
+
+Every moment you chose yourself over another.
+
+Every truth you accepted when a lie would have been easier.
+
+Your heart burns inside your chest as though it knows it is being called.
+
+Anubis extends one hand.
+
+“Place your heart upon the scales.”
+
+The hidden title of the god waits behind your teeth.
+
+The Golden Scarab, if you still possess it, gives a false heartbeat.
+
+The Fang of Ammit aches with dark power.
+
+The final choice is yours, but it is not the only choice that matters.
+""", choices: [
+            TrialOfAnubisChoice(id: "ANU-027-submit-to-honest-judgment", source: .anu027, title: "Submit to honest judgment", detail: nil, destination: .anu028, effects: [.setFinalChoice(.honestJudgment)], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-027-challenge-anubis", source: .anu027, title: "Challenge Anubis", detail: nil, destination: .anu028, effects: [.setFinalChoice(.rebel)], requirement: nil, feedback: nil),
+            TrialOfAnubisChoice(id: "ANU-027-manipulate-the-scales", source: .anu027, title: "Manipulate the scales", detail: nil, destination: .anu028, effects: [.setFinalChoice(.cheat), .adjustHeartWeight(2)], requirement: nil, feedback: "The scale moves before your heart touches it.")
+        ]),
+        .anu028: TrialOfAnubisNode(id: .anu028, title: "Final Decision", narrative: """
+This node contains no ordinary story choices.
+
+The Hall of Judgment reacts to the player’s accumulated state. The final choice determines what the player attempts, but the result is resolved from all prior actions.
+
+### Deterministic Ending Order
+
+1. If `memoriesRemaining <= 0` → `END-LOST`
+2. Strong rebel route → `END-REBEL`
+3. Strong trickster route → `END-TRICKSTER`
+4. Full true-ending route → `END-TRUE`
+5. If `heartWeight >= 4` → `END-AMMIT`
+6. Weaker valid rebel route → `END-REBEL`
+7. Weaker valid cheat route → `END-TRICKSTER`
+8. Fallback:
+   - `heartWeight <= 1` → `END-TRUE`
+   - otherwise → `END-AMMIT`
+
+Before displaying the ending, record the ending ID as reached.
+
+---
+
+# Terminal Endings
+""", choices: [
+            
+        ])
+    ]
+    static func node(for route: TrialOfAnubisRoute) -> TrialOfAnubisNode? { nodes[route] }
+}
