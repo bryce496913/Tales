@@ -2,10 +2,10 @@ import SwiftUI
 
 struct StoryNavigationButton: View {
     let title: String
-    let route: StoryRoute
+    let route: SphinxRoute
     var width: CGFloat? = nil
     var height: CGFloat? = nil
-    @EnvironmentObject private var navigationState: AppNavigationState
+    @EnvironmentObject private var navigationState: SphinxNavigationState
 
     var body: some View {
         ChoiceButton(title, width: width, height: height) {
@@ -16,8 +16,8 @@ struct StoryNavigationButton: View {
 
 struct RandomStoryNavigationButton: View {
     let title: String
-    let routes: [StoryRoute]
-    @EnvironmentObject private var navigationState: AppNavigationState
+    let routes: [SphinxRoute]
+    @EnvironmentObject private var navigationState: SphinxNavigationState
 
     var body: some View {
         ChoiceButton(title) {

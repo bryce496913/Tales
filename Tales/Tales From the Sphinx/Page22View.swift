@@ -18,7 +18,7 @@ struct Page22View: View {
 struct Page22View_Previews: PreviewProvider {
     static var previews: some View {
         Page22View()
-            .environmentObject(AppNavigationState())
+            .environmentObject(SphinxNavigationState())
             .environmentObject(GameOptions())
     }
 }
