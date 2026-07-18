@@ -5,6 +5,7 @@ struct TrialOfAnubisTypewriterText: View {
     var speed: TrialOfAnubisTypewriterSpeed = .normal
     var startDelay: TimeInterval = 0.25
     var onComplete: (() -> Void)? = nil
+    var reduceMotionOverride: Bool? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var visibleText = ""
@@ -13,7 +14,7 @@ struct TrialOfAnubisTypewriterText: View {
     @State private var currentText = ""
 
     var body: some View {
-        Text(reduceMotion ? text : visibleText)
+        Text(effectiveReduceMotion ? text : visibleText)
             .font(.system(.body, design: .serif))
             .foregroundColor(AppTheme.warmText)
             .lineSpacing(5)
@@ -29,6 +30,10 @@ struct TrialOfAnubisTypewriterText: View {
             .onChange(of: reduceMotion) { _ in startIfNeeded(forceRestart: true) }
     }
 
+    private var effectiveReduceMotion: Bool {
+        reduceMotionOverride ?? reduceMotion
+    }
+
     private func startIfNeeded(forceRestart: Bool = false) {
         if forceRestart || currentText != text {
             currentText = text
@@ -37,7 +42,7 @@ struct TrialOfAnubisTypewriterText: View {
         }
         typingTask?.cancel()
 
-        guard !reduceMotion else {
+        guard !effectiveReduceMotion else {
             completeOnce()
             return
         }
@@ -88,11 +93,13 @@ struct TrialOfAnubisTypewriterText_Previews: PreviewProvider {
             .background(AppTheme.card)
             .previewDisplayName("Partial reveal")
 
-            TrialOfAnubisTypewriterText(text: "Reduce Motion shows the full passage immediately.")
-                .padding()
-                .background(AppTheme.card)
-                .environment(\.accessibilityReduceMotion, true)
-                .previewDisplayName("Reduce Motion")
+            TrialOfAnubisTypewriterText(
+                text: "Reduce Motion shows the full passage immediately.",
+                reduceMotionOverride: true
+            )
+            .padding()
+            .background(AppTheme.card)
+            .previewDisplayName("Reduce Motion")
         }
     }
 }
