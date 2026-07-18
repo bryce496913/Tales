@@ -129,7 +129,39 @@ struct StoryDetailView: View {
 
 struct ComingSoonStoryView: View { let story: StoryDescriptor; var body: some View { Text("Coming Soon — preview only. Gameplay is not available yet.").foregroundColor(AppTheme.mutedText).goldCard().accessibilityLabel("\(story.title) is coming soon. No play button is available.") } }
 
-struct StoryCoverView: View { let story: StoryDescriptor; var body: some View { ZStack { if let image = story.coverImageName { Image(uiImage: UIImage(named: image) ?? UIImage()).resizable().scaledToFill() } else { LinearGradient(colors: [AppTheme.backgroundTop, AppTheme.cardAlt, AppTheme.backgroundBottom], startPoint: .topLeading, endPoint: .bottomTrailing); Image(systemName: story.iconSystemName ?? "book.closed.fill").font(.system(size: 64)).foregroundColor(AppTheme.gold) } }.clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius)).overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1)).accessibilityHidden(true) } }
+struct StoryCoverView: View {
+    let story: StoryDescriptor
+
+    var body: some View {
+        GeometryReader { proxy in
+            ZStack {
+                if let imageName = story.coverImageName, let image = UIImage(named: imageName) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                } else {
+                    LinearGradient(colors: [AppTheme.backgroundTop, AppTheme.cardAlt, AppTheme.backgroundBottom], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    VStack(spacing: 8) {
+                        Image(systemName: story.iconSystemName ?? "book.closed.fill")
+                            .font(.system(size: 64))
+                            .foregroundColor(AppTheme.gold)
+                        if let imageName = story.coverImageName {
+                            Text(imageName)
+                                .font(.caption.weight(.semibold))
+                                .foregroundColor(AppTheme.mutedText)
+                        }
+                    }
+                }
+            }
+            .frame(width: proxy.size.width, height: proxy.size.height)
+            .clipped()
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius))
+            .overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1))
+        }
+        .accessibilityHidden(true)
+    }
+}
 
 struct StoryHostView: View { let storyID: StoryID; var body: some View { switch storyID { case .talesFromTheSphinx: SphinxStoryRootView(); case .trialOfAnubis: TrialOfAnubisStoryRootView() } } }
 

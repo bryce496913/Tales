@@ -120,6 +120,34 @@
 		B190456D9F21D1F161B3FA00 /* ANU017View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190456D9F21D1F161B3FA00 /* ANU017View.swift */; };
 		B18233DF43AA004A5A97A300 /* ANU020View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18233DF43AA004A5A97A300 /* ANU020View.swift */; };
 		B1C9D29AAAB6E35F7CA86800 /* ANU019View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9D29AAAB6E35F7CA86800 /* ANU019View.swift */; };
+		C0A200000000000000000000 /* ANU001.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000000 /* ANU001.png */; };
+		C0A200000000000000000001 /* ANU002.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000001 /* ANU002.png */; };
+		C0A200000000000000000002 /* ANU003.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000002 /* ANU003.png */; };
+		C0A200000000000000000003 /* ANU004.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000003 /* ANU004.png */; };
+		C0A200000000000000000004 /* ANU005.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000004 /* ANU005.png */; };
+		C0A200000000000000000005 /* ANU006.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000005 /* ANU006.png */; };
+		C0A200000000000000000006 /* ANU007.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000006 /* ANU007.png */; };
+		C0A200000000000000000007 /* ANU008.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000007 /* ANU008.png */; };
+		C0A200000000000000000008 /* ANU009.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000008 /* ANU009.png */; };
+		C0A200000000000000000009 /* ANU010.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000009 /* ANU010.png */; };
+		C0A20000000000000000000A /* ANU011.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000A /* ANU011.png */; };
+		C0A20000000000000000000B /* ANU012.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000B /* ANU012.png */; };
+		C0A20000000000000000000C /* ANU013.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000C /* ANU013.png */; };
+		C0A20000000000000000000D /* ANU014.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000D /* ANU014.png */; };
+		C0A20000000000000000000E /* ANU015.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000E /* ANU015.png */; };
+		C0A20000000000000000000F /* ANU016.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000000F /* ANU016.png */; };
+		C0A200000000000000000010 /* ANU017.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000010 /* ANU017.png */; };
+		C0A200000000000000000011 /* ANU018.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000011 /* ANU018.png */; };
+		C0A200000000000000000012 /* ANU019.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000012 /* ANU019.png */; };
+		C0A200000000000000000013 /* ANU020.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000013 /* ANU020.png */; };
+		C0A200000000000000000014 /* ANU021.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000014 /* ANU021.png */; };
+		C0A200000000000000000015 /* ANU022.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000015 /* ANU022.png */; };
+		C0A200000000000000000016 /* ANU023.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000016 /* ANU023.png */; };
+		C0A200000000000000000017 /* ANU024.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000017 /* ANU024.png */; };
+		C0A200000000000000000018 /* ANU025.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000018 /* ANU025.png */; };
+		C0A200000000000000000019 /* ANU026.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A100000000000000000019 /* ANU026.png */; };
+		C0A20000000000000000001A /* ANU027.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000001A /* ANU027.png */; };
+		C0A20000000000000000001B /* ANU-Title-Screen-Art.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A10000000000000000001B /* ANU-Title-Screen-Art.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +265,34 @@
 		A190456D9F21D1F161B3FA00 /* ANU017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU017View.swift"; sourceTree = "<group>"; };
 		A18233DF43AA004A5A97A300 /* ANU020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU020View.swift"; sourceTree = "<group>"; };
 		A1C9D29AAAB6E35F7CA86800 /* ANU019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU019View.swift"; sourceTree = "<group>"; };
+		C0A100000000000000000000 /* ANU001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU001.png"; sourceTree = "<group>"; };
+		C0A100000000000000000001 /* ANU002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU002.png"; sourceTree = "<group>"; };
+		C0A100000000000000000002 /* ANU003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU003.png"; sourceTree = "<group>"; };
+		C0A100000000000000000003 /* ANU004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU004.png"; sourceTree = "<group>"; };
+		C0A100000000000000000004 /* ANU005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU005.png"; sourceTree = "<group>"; };
+		C0A100000000000000000005 /* ANU006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU006.png"; sourceTree = "<group>"; };
+		C0A100000000000000000006 /* ANU007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU007.png"; sourceTree = "<group>"; };
+		C0A100000000000000000007 /* ANU008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU008.png"; sourceTree = "<group>"; };
+		C0A100000000000000000008 /* ANU009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU009.png"; sourceTree = "<group>"; };
+		C0A100000000000000000009 /* ANU010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU010.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000A /* ANU011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU011.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000B /* ANU012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU012.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000C /* ANU013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU013.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000D /* ANU014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU014.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000E /* ANU015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU015.png"; sourceTree = "<group>"; };
+		C0A10000000000000000000F /* ANU016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU016.png"; sourceTree = "<group>"; };
+		C0A100000000000000000010 /* ANU017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU017.png"; sourceTree = "<group>"; };
+		C0A100000000000000000011 /* ANU018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU018.png"; sourceTree = "<group>"; };
+		C0A100000000000000000012 /* ANU019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU019.png"; sourceTree = "<group>"; };
+		C0A100000000000000000013 /* ANU020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU020.png"; sourceTree = "<group>"; };
+		C0A100000000000000000014 /* ANU021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU021.png"; sourceTree = "<group>"; };
+		C0A100000000000000000015 /* ANU022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU022.png"; sourceTree = "<group>"; };
+		C0A100000000000000000016 /* ANU023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU023.png"; sourceTree = "<group>"; };
+		C0A100000000000000000017 /* ANU024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU024.png"; sourceTree = "<group>"; };
+		C0A100000000000000000018 /* ANU025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU025.png"; sourceTree = "<group>"; };
+		C0A100000000000000000019 /* ANU026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU026.png"; sourceTree = "<group>"; };
+		C0A10000000000000000001A /* ANU027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU027.png"; sourceTree = "<group>"; };
+		C0A10000000000000000001B /* ANU-Title-Screen-Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU-Title-Screen-Art.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +433,34 @@
 		A1ANUBISGROUP0000000001 /* The Trial of Anubis */ = {
 			isa = PBXGroup;
 			children = (
+				C0A100000000000000000000 /* ANU001.png */,
+				C0A100000000000000000001 /* ANU002.png */,
+				C0A100000000000000000002 /* ANU003.png */,
+				C0A100000000000000000003 /* ANU004.png */,
+				C0A100000000000000000004 /* ANU005.png */,
+				C0A100000000000000000005 /* ANU006.png */,
+				C0A100000000000000000006 /* ANU007.png */,
+				C0A100000000000000000007 /* ANU008.png */,
+				C0A100000000000000000008 /* ANU009.png */,
+				C0A100000000000000000009 /* ANU010.png */,
+				C0A10000000000000000000A /* ANU011.png */,
+				C0A10000000000000000000B /* ANU012.png */,
+				C0A10000000000000000000C /* ANU013.png */,
+				C0A10000000000000000000D /* ANU014.png */,
+				C0A10000000000000000000E /* ANU015.png */,
+				C0A10000000000000000000F /* ANU016.png */,
+				C0A100000000000000000010 /* ANU017.png */,
+				C0A100000000000000000011 /* ANU018.png */,
+				C0A100000000000000000012 /* ANU019.png */,
+				C0A100000000000000000013 /* ANU020.png */,
+				C0A100000000000000000014 /* ANU021.png */,
+				C0A100000000000000000015 /* ANU022.png */,
+				C0A100000000000000000016 /* ANU023.png */,
+				C0A100000000000000000017 /* ANU024.png */,
+				C0A100000000000000000018 /* ANU025.png */,
+				C0A100000000000000000019 /* ANU026.png */,
+				C0A10000000000000000001A /* ANU027.png */,
+				C0A10000000000000000001B /* ANU-Title-Screen-Art.png */,
 				A1824177266DD974EF00E800 /* TrialOfAnubisViews.swift */,
 				A14570B320E741DB2DB39B00 /* TrialOfAnubisCore.swift */,
 				A1A0E832B393A984BEF6AD00 /* AnubisLostSoulEndingView.swift */,
@@ -476,6 +560,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A200000000000000000000 /* ANU001.png in Resources */,
+				C0A200000000000000000001 /* ANU002.png in Resources */,
+				C0A200000000000000000002 /* ANU003.png in Resources */,
+				C0A200000000000000000003 /* ANU004.png in Resources */,
+				C0A200000000000000000004 /* ANU005.png in Resources */,
+				C0A200000000000000000005 /* ANU006.png in Resources */,
+				C0A200000000000000000006 /* ANU007.png in Resources */,
+				C0A200000000000000000007 /* ANU008.png in Resources */,
+				C0A200000000000000000008 /* ANU009.png in Resources */,
+				C0A200000000000000000009 /* ANU010.png in Resources */,
+				C0A20000000000000000000A /* ANU011.png in Resources */,
+				C0A20000000000000000000B /* ANU012.png in Resources */,
+				C0A20000000000000000000C /* ANU013.png in Resources */,
+				C0A20000000000000000000D /* ANU014.png in Resources */,
+				C0A20000000000000000000E /* ANU015.png in Resources */,
+				C0A20000000000000000000F /* ANU016.png in Resources */,
+				C0A200000000000000000010 /* ANU017.png in Resources */,
+				C0A200000000000000000011 /* ANU018.png in Resources */,
+				C0A200000000000000000012 /* ANU019.png in Resources */,
+				C0A200000000000000000013 /* ANU020.png in Resources */,
+				C0A200000000000000000014 /* ANU021.png in Resources */,
+				C0A200000000000000000015 /* ANU022.png in Resources */,
+				C0A200000000000000000016 /* ANU023.png in Resources */,
+				C0A200000000000000000017 /* ANU024.png in Resources */,
+				C0A200000000000000000018 /* ANU025.png in Resources */,
+				C0A200000000000000000019 /* ANU026.png in Resources */,
+				C0A20000000000000000001A /* ANU027.png in Resources */,
+				C0A20000000000000000001B /* ANU-Title-Screen-Art.png in Resources */,
 				FE0267652B28A22F00F5C31D /* Twenty-Four.png in Resources */,
 				FE02674F2B28A22F00F5C31D /* hieroglyphics_(Left).png in Resources */,
 				FE02674D2B28A22F00F5C31D /* Two.png in Resources */,
