@@ -93,7 +93,7 @@ struct TrialOfAnubisPageView: View {
         .onDisappear { appeared = false; textComplete = false }
     }
 
-    private var transitionStyle: StoryTransitionStyle { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? .sandFade : .standard.entryTransition }
+    private var transitionStyle: StoryTransitionStyle { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? .sandFade : StoryPageEffects.standard.entryTransition }
     private var choicesVisible: Bool { textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }
 
