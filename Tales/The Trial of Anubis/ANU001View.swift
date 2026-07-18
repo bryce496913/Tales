@@ -7,7 +7,11 @@ struct ANU001View: View {
             title: "The Silent Desert",
             text: """
                 The desert is completely silent. There is no wind, no stars and no sound apart from the slow beat of your own heart. You do not remember how you got here, but a trail of footprints follows you across the cold sand. Ahead, half-buried beneath a dune, stands a black stone doorway carved with golden-eyed jackals. As you move closer, the doorway slowly opens by itself and a voice calls from the darkness, “Your heart has been expected.”
-            """
+            """,
+            effects: TrialOfAnubisPageEffects(
+                entryTransition: .sandFade,
+                choicesWaitForText: true
+            )
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(

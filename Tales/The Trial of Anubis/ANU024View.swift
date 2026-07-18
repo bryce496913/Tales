@@ -7,7 +7,11 @@ struct ANU024View: View {
             title: "Balance Stone Chamber",
             text: """
                 The final piece floats above a machine of turning stone rings. The Balance Stone is small enough to fit in your hand, but the entire room leans around it. A giant guardian made from stone and linen stands beside the mechanism with a ceremonial blade. Its face has been erased and it warns that only the judged may carry balance. You can either carefully unlock the mechanism or tear the stone free before the guardian attacks.
-            """
+            """,
+            effects: TrialOfAnubisPageEffects(
+                entryTransition: .stoneDoor,
+                choicesWaitForText: true
+            )
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
