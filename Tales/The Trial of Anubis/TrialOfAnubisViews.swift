@@ -17,12 +17,100 @@ struct TrialOfAnubisDestinationView: View { let route: TrialOfAnubisRoute
     case .anu001: ANU001View(); case .anu002: ANU002View(); case .anu003: ANU003View(); case .anu004: ANU004View(); case .anu005: ANU005View(); case .anu006: ANU006View(); case .anu007: ANU007View(); case .anu008: ANU008View(); case .anu009: ANU009View(); case .anu010: ANU010View(); case .anu011: ANU011View(); case .anu012: ANU012View(); case .anu013: ANU013View(); case .anu014: ANU014View(); case .anu015: ANU015View(); case .anu016: ANU016View(); case .anu017: ANU017View(); case .anu018: ANU018View(); case .anu019: ANU019View(); case .anu020: ANU020View(); case .anu021: ANU021View(); case .anu022: ANU022View(); case .anu023: ANU023View(); case .anu024: ANU024View(); case .anu025: ANU025View(); case .anu026: ANU026View(); case .anu027: ANU027View(); case .anu028: ANU028View(); case .endTrue: AnubisTrueEndingView(); case .endAmmit: AnubisAmmitEndingView(); case .endRebel: AnubisRebelEndingView(); case .endTrickster: AnubisTricksterEndingView(); case .endLost: AnubisLostSoulEndingView() } }
 }
 
-struct TrialOfAnubisPageView: View { let nodeID: TrialOfAnubisRoute; @EnvironmentObject private var nav: TrialOfAnubisNavigationState; @EnvironmentObject private var options: GameOptions; @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    var body: some View { ZStack(alignment: .top) { EgyptianBackground(); if let node = TrialOfAnubisStoryContent.node(for: nodeID) { ScrollView { VStack(spacing: 16) { TrialOfAnubisPlaceholderCard(imageName: node.imageName, title: node.title); TrialOfAnubisStatusView(state: nav.state); VStack(alignment: .leading, spacing: 14) { Text(node.id.rawValue).font(.caption.weight(.bold)).foregroundColor(AppTheme.mutedText); Text(node.title).font(.system(.title, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold).accessibilityAddTraits(.isHeader); Text(node.narrative).foregroundColor(AppTheme.warmText).font(.body).textSelection(.enabled).accessibilityLabel(node.narrative) }.frame(maxWidth: .infinity, alignment: .leading).goldCard(); VStack(spacing: 12) { ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) { TrialOfAnubisChoiceButton(choice: $0) } } }.frame(maxWidth: 760).padding(AppTheme.screenPadding) } } else { Text("Missing Anubis route: \(nodeID.rawValue)").foregroundColor(AppTheme.gold).goldCard().onAppear { assertionFailure("Invalid Anubis route \(nodeID.rawValue)") } }; if let feedback = nav.feedback { TrialOfAnubisFeedbackBanner(feedback: feedback).padding(.top, 8).allowsHitTesting(false) } } }
+struct TrialOfAnubisPageView: View {
+    let nodeID: TrialOfAnubisRoute
+    @EnvironmentObject private var nav: TrialOfAnubisNavigationState
+    @EnvironmentObject private var gameOptions: GameOptions
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var appeared = false
+    @State private var textComplete = false
+
+    var body: some View {
+        StoryTransitionContainer(style: transitionStyle) {
+            ZStack(alignment: .top) {
+                EgyptianBackground().ignoresSafeArea()
+
+                if let node = TrialOfAnubisStoryContent.node(for: nodeID) {
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 18) {
+                            StaticStoryImage(imageName: node.imageName)
+                            TrialOfAnubisStatusView(state: nav.state)
+                            VStack(alignment: .leading, spacing: 12) {
+                                Text(node.id.rawValue)
+                                    .font(.caption.weight(.bold))
+                                    .foregroundColor(AppTheme.mutedText)
+                                Text(node.title)
+                                    .font(.system(.title2, design: .serif).weight(.bold))
+                                    .foregroundColor(AppTheme.gold)
+                                    .accessibilityAddTraits(.isHeader)
+                                TypewriterText(
+                                    text: node.narrative,
+                                    speed: gameOptions.typewriterSpeed.speed,
+                                    startDelay: reduceMotion ? 0 : 0.45,
+                                    isEnabled: gameOptions.typewriterEnabled && !reduceMotion
+                                ) { textComplete = true }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .goldCard()
+                            .contentShape(Rectangle())
+
+                            VStack(spacing: 12) {
+                                ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) {
+                                    TrialOfAnubisChoiceButton(choice: $0)
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .opacity(choicesVisible ? 1 : 0)
+                            .disabled(!choicesVisible)
+                            .animation(.easeOut(duration: gameOptions.pageTransitionsEnabled && !reduceMotion ? 0.3 : 0.05), value: choicesVisible)
+                        }
+                        .padding(.horizontal, AppTheme.screenPadding)
+                        .padding(.top, 18)
+                        .padding(.bottom, 24)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 10)
+                    }
+                    .zIndex(1)
+                } else {
+                    Text("Missing Anubis route: \(nodeID.rawValue)")
+                        .foregroundColor(AppTheme.gold)
+                        .goldCard()
+                        .onAppear { assertionFailure("Invalid Anubis route \(nodeID.rawValue)") }
+                }
+
+                if let feedback = nav.feedback {
+                    TrialOfAnubisFeedbackBanner(feedback: feedback)
+                        .padding(.top, 8)
+                        .allowsHitTesting(false)
+                        .zIndex(2)
+                }
+            }
+        }
+        .onAppear {
+            textComplete = reduceMotion || !gameOptions.typewriterEnabled
+            withAnimation(.easeOut(duration: gameOptions.pageTransitionsEnabled && !reduceMotion ? 0.45 : 0.05)) { appeared = true }
+        }
+        .onDisappear { appeared = false; textComplete = false }
+    }
+
+    private var transitionStyle: StoryTransitionStyle { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? .sandFade : .standard.entryTransition }
+    private var choicesVisible: Bool { textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }
 
-struct TrialOfAnubisChoiceButton: View { let choice: TrialOfAnubisChoice; @EnvironmentObject private var nav: TrialOfAnubisNavigationState
-    var body: some View { Button { HapticManager.shared.playChoiceTap(); nav.selectChoice(choice) } label: { VStack(alignment: .leading, spacing: 6) { Text(choice.title).font(.headline); if let detail = choice.detail { Text(detail).font(.subheadline).opacity(0.85) } }.frame(maxWidth: .infinity, minHeight: 44, alignment: .leading) }.buttonStyle(StoryChoiceButtonStyle()).accessibilityLabel([choice.title, choice.detail].compactMap{$0}.joined(separator: ". ")) }
+struct TrialOfAnubisChoiceButton: View {
+    let choice: TrialOfAnubisChoice
+    @EnvironmentObject private var nav: TrialOfAnubisNavigationState
+
+    var body: some View {
+        ChoiceButton(accessibilityTitle, action: {
+            nav.selectChoice(choice)
+        })
+        .accessibilityLabel(accessibilityTitle)
+    }
+
+    private var accessibilityTitle: String {
+        [choice.title, choice.detail].compactMap { $0 }.joined(separator: ". ")
+    }
 }
 struct TrialOfAnubisStatusView: View { let state: TrialOfAnubisState; var body: some View { VStack(alignment: .leading, spacing: 6) { Text("Heart: \(heart)"); Text("Memories: \(max(0,state.memoriesRemaining)) / 3"); Text("Sacred Scale Pieces: \(pieces) / 3"); if !items.isEmpty { Text("Items: \(items.joined(separator: ", "))") } }.font(.caption.weight(.semibold)).foregroundColor(AppTheme.sand).frame(maxWidth: .infinity, alignment: .leading).goldCard(padding: 10).accessibilityLabel("\(heart). Memories \(max(0,state.memoriesRemaining)) of 3. Sacred Scale Pieces \(pieces) of 3. \(items.isEmpty ? "No major items held" : "Items: \(items.joined(separator: ", "))")") }
     private var heart: String { state.heartWeight <= -3 ? "Light Heart" : (state.heartWeight >= 3 ? "Heavy Heart" : "Balanced Heart") }

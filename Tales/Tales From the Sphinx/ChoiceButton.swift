@@ -6,7 +6,6 @@ struct ChoiceButton: View {
     var height: CGFloat? = nil
     let action: () -> Void
     @State private var isNavigating = false
-    @Environment(\.isEnabled) private var isEnabled
 
     init(_ title: String, width: CGFloat? = nil, height: CGFloat? = nil, action: @escaping () -> Void) {
         self.title = title; self.width = width; self.height = height; self.action = action
@@ -14,7 +13,7 @@ struct ChoiceButton: View {
 
     var body: some View {
         Button {
-            guard !isNavigating, isEnabled else { return }
+            guard !isNavigating else { return }
             isNavigating = true
             HapticManager.shared.playChoiceTap()
             action()
@@ -32,6 +31,6 @@ struct ChoiceButton: View {
                 .frame(maxWidth: width == nil ? .infinity : nil, minHeight: height == nil ? 54 : nil)
         }
         .buttonStyle(StoryChoiceButtonStyle())
-        .disabled(isNavigating || !isEnabled)
+        .disabled(isNavigating)
     }
 }
