@@ -296,6 +296,10 @@
 		FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisResetButtons.swift; sourceTree = "<group>"; };
 		FEA400000000000000000055 /* TrialOfAnubisRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRootView.swift; sourceTree = "<group>"; };
 		FEA400000000000000000057 /* TrialOfAnubisRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRoute.swift; sourceTree = "<group>"; };
+		FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPageEffects.swift; sourceTree = "<group>"; };
+		FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTypewriterSpeed.swift; sourceTree = "<group>"; };
+		FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTypewriterText.swift; sourceTree = "<group>"; };
+		FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTransitionContainer.swift; sourceTree = "<group>"; };
 		FEA600000000000000000059 /* The_Trial_of_Anubis_Simplified_Two_Choice_Story.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Trial_of_Anubis_Simplified_Two_Choice_Story.md; sourceTree = "<group>"; };
 		FEA70000000000000000005A /* ANU001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU001.png; sourceTree = "<group>"; };
 		FEA70000000000000000005C /* ANU002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU002.png; sourceTree = "<group>"; };
