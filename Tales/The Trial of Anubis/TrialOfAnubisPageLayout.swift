@@ -5,39 +5,63 @@ struct TrialOfAnubisPageLayout<Choices: View>: View {
     let imageName: String
     let title: String
     let text: String
+    var effects: TrialOfAnubisPageEffects = .standard
     @ViewBuilder let choices: Choices
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var textComplete = false
+
     var body: some View {
-        ZStack {
-            EgyptianBackground()
+        TrialOfAnubisTransitionContainer(style: effects.entryTransition) {
+            ZStack {
+                EgyptianBackground()
 
-            ScrollView {
-                VStack(spacing: 18) {
-                    TrialOfAnubisStaticImage(imageName: imageName)
-                        .frame(maxWidth: AppTheme.maximumStoryContentWidth)
+                ScrollView {
+                    VStack(spacing: 18) {
+                        TrialOfAnubisStaticImage(imageName: imageName)
+                            .frame(maxWidth: AppTheme.maximumStoryContentWidth)
 
-                    VStack(alignment: .leading, spacing: 14) {
-                        Text(title)
-                            .font(.system(.largeTitle, design: .serif).weight(.bold))
-                            .foregroundColor(AppTheme.gold)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .multilineTextAlignment(.center)
+                        VStack(alignment: .leading, spacing: 14) {
+                            Text(title)
+                                .font(.system(.largeTitle, design: .serif).weight(.bold))
+                                .foregroundColor(AppTheme.gold)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .multilineTextAlignment(.center)
+                                .accessibilityAddTraits(.isHeader)
 
-                        Text(text)
-                            .font(.system(.body, design: .serif))
-                            .foregroundColor(AppTheme.warmText)
-                            .lineSpacing(5)
+                            TrialOfAnubisTypewriterText(text: text, startDelay: reduceMotion ? 0 : 0.25) {
+                                textComplete = true
+                            }
+                        }
+                        .goldCard()
+                        .frame(maxWidth: AppTheme.maximumTextWidth)
+
+                        if choicesVisible {
+                            VStack(spacing: 12) {
+                                choices
+                            }
+                            .frame(maxWidth: AppTheme.maximumButtonWidth)
+                            .transition(.opacity.combined(with: .move(edge: .bottom)))
+                        }
                     }
-                    .goldCard()
-                    .frame(maxWidth: AppTheme.maximumTextWidth)
-
-                    choices
-                        .frame(maxWidth: AppTheme.maximumButtonWidth)
+                    .padding(AppTheme.screenPadding)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(AppTheme.screenPadding)
-                .frame(maxWidth: .infinity)
             }
         }
+        .onAppear { resetPresentationState() }
+        .onChange(of: text) { _ in resetPresentationState() }
+        .onChange(of: reduceMotion) { _ in resetPresentationState() }
+        .onDisappear { textComplete = false }
+        .animation(.easeOut(duration: reduceMotion ? 0.05 : 0.25), value: choicesVisible)
+    }
+
+    private var choicesVisible: Bool {
+        reduceMotion || !effects.choicesWaitForText || textComplete
+    }
+
+    private func resetPresentationState() {
+        textComplete = reduceMotion || !effects.choicesWaitForText
     }
 }
 
@@ -82,22 +106,42 @@ struct TrialOfAnubisStaticImage: View {
         .clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1))
         .shadow(color: AppTheme.shadow, radius: 18, x: 0, y: 10)
+        .accessibilityLabel("Story illustration")
     }
 }
 
 struct TrialOfAnubisPageLayout_Previews: PreviewProvider {
     static var previews: some View {
-        TrialOfAnubisPreviewContainer {
-            TrialOfAnubisPageLayout(
-                imageName: "ANU001.png",
-                title: "The Silent Desert",
-                text: "The desert is completely silent."
-            ) {
-                TrialOfAnubisChoicesStack {
-                    TrialOfAnubisNavigationButton(title: "Approach the black doorway", destination: .anu002)
-                    TrialOfAnubisNavigationButton(title: "Walk away into the desert", destination: .anu003)
+        Group {
+            TrialOfAnubisPreviewContainer {
+                TrialOfAnubisPageLayout(
+                    imageName: "ANU001.png",
+                    title: "The Silent Desert",
+                    text: "The desert is completely silent.",
+                    effects: TrialOfAnubisPageEffects(entryTransition: .sandFade, choicesWaitForText: true)
+                ) {
+                    TrialOfAnubisChoicesStack {
+                        TrialOfAnubisNavigationButton(title: "Approach the black doorway", destination: .anu002)
+                        TrialOfAnubisNavigationButton(title: "Walk away into the desert", destination: .anu003)
+                    }
                 }
             }
+            .previewDisplayName("Before text completion")
+
+            TrialOfAnubisPreviewContainer {
+                TrialOfAnubisPageLayout(
+                    imageName: "ANU001.png",
+                    title: "The Silent Desert",
+                    text: "The desert is completely silent.",
+                    effects: TrialOfAnubisPageEffects(entryTransition: .sandFade, choicesWaitForText: false)
+                ) {
+                    TrialOfAnubisChoicesStack {
+                        TrialOfAnubisNavigationButton(title: "Approach the black doorway", destination: .anu002)
+                        TrialOfAnubisNavigationButton(title: "Walk away into the desert", destination: .anu003)
+                    }
+                }
+            }
+            .previewDisplayName("After text completion")
         }
     }
 }
