@@ -12,27 +12,11 @@
 
 ## ANU-001 — The Silent Desert
 
-The desert is silent.
+**Suggested Image:** `ANU001.png`
 
-No wind moves across the dunes. No insects stir beneath the sand. Even the stars have vanished, leaving the sky as black and empty as a sealed tomb.
+**Text:**
 
-The only sound is the slow beat of your own heart.
-
-You do not remember falling asleep. You do not remember walking here. Yet behind you, a trail of footprints stretches across the cold sand until it disappears into darkness.
-
-Ahead, half-buried beneath a dune, stands a doorway of polished black stone.
-
-Jackal-headed figures are carved around its frame. Each holds a feather in one hand and a human heart in the other. Their painted golden eyes seem to follow you as you approach.
-
-A thin crack appears between the doors.
-
-Sand spills inward, although there is no wind.
-
-Then the doorway opens by itself.
-
-A voice speaks from somewhere deep below.
-
-“Your heart has been expected.”
+The desert is completely silent. There is no wind, no stars and no sound apart from the slow beat of your own heart. You do not remember how you got here, but a trail of footprints follows you across the cold sand. Ahead, half-buried beneath a dune, stands a black stone doorway carved with golden-eyed jackals. As you move closer, the doorway slowly opens by itself and a voice calls from the darkness, “Your heart has been expected.”
 
 ### Choices
 
@@ -49,31 +33,11 @@ A voice speaks from somewhere deep below.
 
 ## ANU-002 — The Black Doorway
 
-You stop at the threshold.
+**Suggested Image:** `ANU002.png`
 
-Beyond the doorway, a staircase descends into darkness. Blue flames burn in shallow bowls along the walls, but they give off no heat. Their light reveals hieroglyphs cut so deeply into the stone that they resemble wounds.
+**Text:**
 
-The carvings show a great scale standing between two worlds.
-
-On one side, the living kneel beneath the sun.
-
-On the other, the dead wait beneath a field of stars.
-
-At the center stands a jackal-headed god, holding the balance steady.
-
-But the final image has been violently destroyed. The scale is broken. The dead pour upward. A many-jawed beast rises beneath them.
-
-From somewhere below comes the scrape of stone against stone.
-
-Then the voice speaks again.
-
-“You may enter willingly.”
-
-A pause.
-
-“Or you may enter afraid.”
-
-The blue flames lean toward the staircase as though caught in a breath from below.
+At the threshold, a staircase descends into darkness. Blue flames burn in shallow bowls along the walls, but they give off no heat. Their light reveals hieroglyphs cut so deeply into the stone that they resemble wounds. The carvings show a great scale standing between two worlds. On one side, the living kneel beneath the sun. On the other, the dead wait beneath a field of stars. At the center stands a jackal-headed god, holding the balance steady. But the final image has been violently destroyed. The scale is broken. The dead pour upward. A many-jawed beast rises beneath them. From somewhere below comes the scrape of stone against stone. Then the voice speaks again. “You may enter willingly.” A pause. “Or you may enter afraid.” The blue flames lean toward the staircase as though caught in a breath from below.
 
 ### Choices
 
@@ -89,25 +53,11 @@ The blue flames lean toward the staircase as though caught in a breath from belo
 
 ## ANU-003 — The Jackal Temple
 
-Whether you entered the doorway or tried to escape the desert, the path has brought you here.
+**Suggested Image:** `ANU003.png`
 
-The staircase ends inside a buried temple.
+**Text:**
 
-Rows of black jackal statues line the chamber. Each sits upright with its paws together and its ears raised. Their golden collars are untouched by dust.
-
-Between them, a narrow path leads toward a circular opening in the floor.
-
-To your right, a side chamber glitters with reflected gold. You see the outline of treasure chests, ceremonial blades, jeweled masks, and a single scarab resting beneath a beam of pale light.
-
-Behind you, the staircase is gone.
-
-There is only a wall carved with your own silhouette.
-
-The jackal statues turn their heads toward you one by one.
-
-From the opening in the floor, the hidden voice says:
-
-“Choose what you came seeking.”
+Whether you entered the doorway or tried to escape the desert, the path has brought you here. The staircase ends inside a buried temple. Rows of black jackal statues line the chamber. Each sits upright with its paws together and its ears raised. Their golden collars are untouched by dust. Between them, a narrow path leads toward a circular opening in the floor. To your right, a side chamber glitters with reflected gold. You see the outline of treasure chests, ceremonial blades, jeweled masks, and a single scarab resting beneath a beam of pale light. Behind you, the staircase is gone. There is only a wall carved with your own silhouette. The jackal statues turn their heads toward you one by one. From the opening in the floor, the hidden voice says: “Choose what you came seeking.”
 
 ### Choices
 
@@ -124,31 +74,11 @@ From the opening in the floor, the hidden voice says:
 
 ## ANU-004 — The Voice Below
 
-The circular opening leads to a spiral stair cut around a shaft without a visible bottom.
+**Suggested Image:** `ANU004.png`
 
-As you descend, the voice travels beside you.
+**Text:**
 
-It does not echo. It speaks as if its mouth were beside your ear.
-
-“Why did you enter my temple?”
-
-The question should have a simple answer.
-
-Curiosity.
-
-Fear.
-
-An accident.
-
-But each explanation fades before you can speak it. You sense that the voice is not asking how you arrived. It is asking what part of you opened the door.
-
-The blue flames along the stair brighten.
-
-For an instant, every step bears a different memory from your life: a kindness no one noticed, a lie that was never discovered, a moment you fled, a moment you stayed.
-
-Far below, two amber eyes open in the darkness.
-
-“Answer.”
+A spiral stair circles a shaft that seems to have no bottom. As you descend, the voice travels beside you. It does not echo. It speaks as if its mouth were beside your ear. “Why did you enter my temple?” The question should have a simple answer. Curiosity. Fear. An accident. But each explanation fades before you can speak it. You sense that the voice is not asking how you arrived. It is asking what part of you opened the door. The blue flames along the stair brighten. For an instant, every step bears a different memory from your life: a kindness no one noticed, a lie that was never discovered, a moment you fled, a moment you stayed. Far below, two amber eyes open in the darkness. “Answer.”
 
 ### Choices
 
@@ -172,33 +102,11 @@ You invent a noble purpose and speak it with confidence.
 
 ## ANU-005 — Anubis Revealed
 
-The stair opens into a hall so vast that its ceiling disappears into darkness.
+**Suggested Image:** `ANU005.png`
 
-Thousands of unlit braziers surround a platform of black stone. At its center stands a figure taller than any man.
+**Text:**
 
-His body is wrapped in black and gold linen. Obsidian armor covers his shoulders and chest. His head is that of a jackal, and his eyes glow like embers beneath a funeral moon.
-
-Anubis.
-
-Behind him rests a broken scale.
-
-One pan lies cracked upon the floor. The other is missing. The central balance stone has been torn from its frame, leaving jagged fractures across the sacred mechanism.
-
-Beyond the platform, shadowy figures drift through open gates. Some cry for names they have forgotten. Others whisper names that belong to the living.
-
-Anubis looks down at you.
-
-“The dead no longer wait for judgment,” he says. “The scales have been shattered, and their pieces carried into the broken places of my realm.”
-
-He steps closer.
-
-“Without judgment, memory decays. The dead cross into life. The living are drawn toward death.”
-
-A growl rolls through the hall.
-
-In the darkness behind the scale, something enormous shifts its chains.
-
-“You will return what was taken.”
+The stair opens into a hall so vast that its ceiling disappears into darkness. Unlit braziers surround a platform of black stone. At its center stands a figure taller than any man. His body is wrapped in black and gold linen. Obsidian armor covers his shoulders and chest. His head is that of a jackal, and his eyes glow like embers beneath a funeral moon. Anubis. Behind him rests a broken scale. One pan lies cracked upon the floor. The other is missing. The central balance stone has been torn from its frame, leaving jagged fractures across the sacred mechanism. Beyond the platform, shadowy figures drift through open gates. Some cry for names they have forgotten. Others whisper names that belong to the living. Anubis looks down at you. “The dead no longer wait for judgment,” he says. “The scales have been shattered, and their pieces carried into the broken places of my realm.” He steps closer. “Without judgment, memory decays. The dead cross into life. The living are drawn toward death.” A growl rolls through the hall. In the darkness behind the scale, something enormous shifts its chains. “You will return what was taken.”
 
 ### Choices
 
@@ -221,39 +129,11 @@ In the darkness behind the scale, something enormous shifts its chains.
 
 ## ANU-006 — Terms of Judgment
 
-Anubis raises one hand.
+**Suggested Image:** `ANU006.png`
 
-Three images form in the air between you.
+**Text:**
 
-The first is a long golden arm shaped like a feather. It turns slowly inside a hall crowded with whispering souls.
-
-The second is a dark bronze pan suspended above thousands of beating hearts.
-
-The third is a stone carved with the symbol of balance, guarded by a creature whose face has been erased.
-
-“The Feather Arm. The Heart Pan. The Balance Stone.”
-
-The images fracture and vanish.
-
-“These pieces were not stolen by one hand,” Anubis says. “Fear took one. Greed took another. Rebellion claimed the last.”
-
-You look toward the open gates.
-
-“And if I restore them?”
-
-“The dead will return to judgment.”
-
-“And me?”
-
-Anubis studies you in silence.
-
-“If your purpose is honest, you will return to the living.”
-
-His eyes narrow.
-
-“If you seek payment, name it only after you understand the price.”
-
-Behind him, the chained creature exhales. The braziers tremble.
+Anubis raises one hand. Three images form in the air between you. The first is a long golden arm shaped like a feather. It turns slowly inside a hall crowded with whispering souls. The second is a dark bronze pan suspended above thousands of beating hearts. The third is a stone carved with the symbol of balance, guarded by a creature whose face has been erased. “The Feather Arm. The Heart Pan. The Balance Stone.” The images fracture and vanish. “These pieces were not stolen by one hand,” Anubis says. “Fear took one. Greed took another. Rebellion claimed the last.” You look toward the open gates. “And if I restore them?” “The dead will return to judgment.” “And me?” Anubis studies you in silence. “If your purpose is honest, you will return to the living.” His eyes narrow. “If you seek payment, name it only after you understand the price.” Behind him, the chained creature exhales. The braziers tremble.
 
 ### Choices
 
@@ -275,27 +155,11 @@ Behind him, the chained creature exhales. The braziers tremble.
 
 ## ANU-007 — Refuse the God
 
-“I did not choose this,” you say. “Send me back.”
+**Suggested Image:** `ANU007.png`
 
-The amber light in Anubis’s eyes dims.
+**Text:**
 
-“You entered a door that opens only for those already standing between choices.”
-
-“I am alive.”
-
-“For now.”
-
-He gestures toward the drifting souls beyond the platform. Among them, you glimpse familiar faces—people you know, people you have lost, and people who cannot possibly be dead.
-
-The vision changes too quickly to trust.
-
-“The collapse has touched your world,” Anubis says. “Each moment the scales remain broken, the boundary weakens. Soon, returning you will be beyond even my power.”
-
-A doorway appears behind you.
-
-It leads not to the desert but into a corridor filled with pale fog. Within it, voices call your name in tones of love, accusation, and grief.
-
-“You may still refuse,” Anubis says. “But refusal is also a choice, and every choice is weighed.”
+“I did not choose this,” you say. “Send me back.” The amber light in Anubis’s eyes dims. “You entered a door that opens only for those already standing between choices.” “I am alive.” “For now.” He gestures toward the drifting souls beyond the platform. Among them, you glimpse familiar faces—people you know, people you have lost, and people who cannot possibly be dead. The vision changes too quickly to trust. “The collapse has touched your world,” Anubis says. “Each moment the scales remain broken, the boundary weakens. Soon, returning you will be beyond even my power.” A doorway appears behind you. It leads not to the desert but into a corridor filled with pale fog. Within it, voices call your name in tones of love, accusation, and grief. “You may still refuse,” Anubis says. “But refusal is also a choice, and every choice is weighed.”
 
 ### Choices
 
@@ -353,33 +217,11 @@ You strike the bronze bell.
 
 ## ANU-009 — The Ferryman’s Price
 
-The boat reaches the dock without disturbing the water.
+**Suggested Image:** `ANU009.png`
 
-The ferryman is wrapped in damp linen. No face shows beneath the cloth. Where eyes should be, two shallow hollows hold shifting reflections of your past.
+**Text:**
 
-He extends one hand.
-
-“Passage has a price.”
-
-“I have no coin.”
-
-“Coin is for the living.”
-
-The ferryman opens his palm.
-
-Inside it lies a small, bright memory: sunlight through a window, laughter in another room, the feeling of being safe without knowing why.
-
-It is yours.
-
-The ferryman closes his fingers around it.
-
-“A memory,” he says. “A promise. Or fear.”
-
-The river behind him fills with pale faces.
-
-One of them presses against the surface near the boat, unable to rise.
-
-“Choose what you can afford to lose.”
+The ferryman’s boat glides to the dock in perfect silence. The ferryman is wrapped in damp linen. No face shows beneath the cloth. Where eyes should be, two shallow hollows hold shifting reflections of your past. He extends one hand. “Passage has a price.” “I have no coin.” “Coin is for the living.” The ferryman opens his palm. Inside it lies a small, bright memory: sunlight through a window, laughter in another room, the feeling of being safe without knowing why. It is yours. The ferryman closes his fingers around it. “A memory,” he says. “A promise. Or fear.” The river behind him fills with pale faces. One of them presses against the surface near the boat, unable to rise. “Choose what you can afford to lose.”
 
 ### Choices
 
@@ -402,35 +244,11 @@ One of them presses against the surface near the boat, unable to rise.
 
 ## ANU-010 — Hall of Whispers
 
-Beyond the river stands a hall made from thousands of narrow stone passages.
+**Suggested Image:** `ANU010.png`
 
-Every wall is carved with names.
+**Text:**
 
-Some are royal. Some ordinary. Some have been scratched away so thoroughly that only scars remain.
-
-Whispers move through the corridors.
-
-“I was forgotten.”
-
-“I was innocent.”
-
-“I was feared.”
-
-“I was loved.”
-
-“I did what I had to.”
-
-The voices overlap until they become a wind of confession.
-
-Ahead, a faint golden light pulses behind a sealed door. The symbol carved above it matches the Feather Arm shown by Anubis.
-
-But from a passage to your left comes the sound of someone crying.
-
-Not the distant sorrow of the dead. This is close, frightened, and exhausted.
-
-“Please,” the voice says. “I still remember my name.”
-
-The golden light brightens, urging you onward.
+Beyond the river stands a hall made from thousands of narrow stone passages. Every wall is carved with names. Some are royal. Some ordinary. Some have been scratched away so thoroughly that only scars remain. Whispers move through the corridors. “I was forgotten.” “I was innocent.” “I was feared.” “I was loved.” “I did what I had to.” The voices overlap until they become a wind of confession. Ahead, a faint golden light pulses behind a sealed door. The symbol carved above it matches the Feather Arm shown by Anubis. But from a passage to your left comes the sound of someone crying. Not the distant sorrow of the dead. This is close, frightened, and exhausted. “Please,” the voice says. “I still remember my name.” The golden light brightens, urging you onward.
 
 ### Choices
 
@@ -447,27 +265,11 @@ The golden light brightens, urging you onward.
 
 ## ANU-011 — The Crying Soul
 
-You find a young soul pinned beneath a fallen stone tablet.
+**Suggested Image:** `ANU011.png`
 
-Their form flickers between ages. A child reaches for you, then an old woman, then a soldier covered in dust. Their face cannot decide which life it belongs to.
+**Text:**
 
-Chains of written names bind the tablet to the floor.
-
-“I was crossing for judgment when the hall broke,” the soul says. “The whispers are stealing me. Soon I will not remember which name is mine.”
-
-The golden chamber lies close. You can feel the first scale piece beyond the wall.
-
-Freeing the soul will take time.
-
-The soul notices your hesitation.
-
-“I know where the beast was chained,” they say quickly. “I heard the thieves speaking. Help me, and I will tell you.”
-
-The whispers crowd closer.
-
-Some urge mercy.
-
-Others say the dead have already had their lives.
+You find a young soul pinned beneath a fallen stone tablet. Their form flickers between ages. A child reaches for you, then an old woman, then a soldier covered in dust. Their face cannot decide which life it belongs to. Chains of written names bind the tablet to the floor. “I was crossing for judgment when the hall broke,” the soul says. “The whispers are stealing me. Soon I will not remember which name is mine.” The golden chamber lies close. You can feel the first scale piece beyond the wall. Freeing the soul will take time. The soul notices your hesitation. “I know where the beast was chained,” they say quickly. “I heard the thieves speaking. Help me, and I will tell you.” The whispers crowd closer. Some urge mercy. Others say the dead have already had their lives.
 
 ### Choices
 
@@ -498,23 +300,11 @@ You demand the truth before lifting the stone, then free them.
 
 ## ANU-012 — Feather Arm Chamber
 
-The sealed door opens into a circular chamber.
+**Suggested Image:** `ANU012.png`
 
-At its center, suspended above a shaft of blue fire, rests the Feather Arm of the sacred scale. It is longer than your body, made of gold so pale it appears almost white.
+**Text:**
 
-The arm turns slowly, although nothing supports it.
-
-Around the chamber, painted figures kneel with their hearts held open in their hands.
-
-The shadows behind them move independently.
-
-As you step closer, one painted figure turns its head.
-
-A low growl passes through the walls.
-
-You sense a hidden passage beyond the murals, leading deeper into the underworld. Scratches in the floor suggest that something with heavy claws was dragged through it.
-
-The Feather Arm waits within reach.
+The sealed door opens into a circular chamber. At its center, suspended above a shaft of blue fire, rests the Feather Arm of the sacred scale. It is longer than your body, made of gold so pale it appears almost white. The arm turns slowly, although nothing supports it. Around the chamber, painted figures kneel with their hearts held open in their hands. The shadows behind them move independently. As you step closer, one painted figure turns its head. A low growl passes through the walls. You sense a hidden passage beyond the murals, leading deeper into the underworld. Scratches in the floor suggest that something with heavy claws was dragged through it. The Feather Arm waits within reach.
 
 ### Choices
 
@@ -536,29 +326,11 @@ You recover the Feather Arm, then follow the claw marks and discover signs that 
 
 ## ANU-013 — Golden Scarab Vault
 
-A hidden wall slides aside.
+**Suggested Image:** `ANU013.png`
 
-Beyond it lies a vault untouched by decay.
+**Text:**
 
-Gold masks stare from shelves. Ceremonial cups overflow with jewels. Small statues of forgotten gods stand in rows, their names deliberately chiseled away.
-
-At the center of the room, beneath a narrow beam of white light, rests a golden scarab.
-
-Unlike the other treasure, it is warm.
-
-When you pick it up—or merely draw close—you hear a heartbeat inside it.
-
-A voice whispers:
-
-“Carry me, and no balance need bind you.”
-
-The scarab’s wings open slightly. Light leaks from beneath them, revealing tiny symbols of alteration, concealment, and false measure.
-
-You understand without knowing how: this object could interfere with sacred judgment.
-
-It could also be destroyed.
-
-Something trapped inside it wants to be released.
+A hidden wall slides aside. Beyond it lies a vault untouched by decay. Gold masks stare from shelves. Ceremonial cups overflow with jewels. Small statues of forgotten gods stand in rows, their names deliberately chiseled away. At the center of the room, beneath a narrow beam of white light, rests a golden scarab. Unlike the other treasure, it is warm. When you pick it up—or merely draw close—you hear a heartbeat inside it. A voice whispers: “Carry me, and no balance need bind you.” The scarab’s wings open slightly. Light leaks from beneath them, revealing tiny symbols of alteration, concealment, and false measure. You understand without knowing how: this object could interfere with sacred judgment. It could also be destroyed. Something trapped inside it wants to be released.
 
 ### Choices
 
@@ -587,31 +359,11 @@ You crush it beneath the Feather Arm. A bright spirit escapes and wraps you brie
 
 ## ANU-014 — Chamber of Stolen Hearts
 
-The hidden passage opens into a red-black cavern.
+**Suggested Image:** `ANU014.png`
 
-Thousands of human hearts hang from chains descending from the ceiling.
+**Text:**
 
-Some beat slowly.
-
-Some race in panic.
-
-Some are still.
-
-Each is enclosed within a glass vessel marked with a name. The chains converge above a stone platform where the missing Heart Pan once rested.
-
-A deep vibration moves through the chamber, and every heart beats at once.
-
-You step among them.
-
-Faces appear in the glass—not faces of the dead, but memories belonging to them. A mother holding a child. A thief burying stolen bread. A ruler ordering a death. A stranger offering shelter.
-
-Then you see a vessel bearing your own name.
-
-Inside it, a heart beats in perfect time with the one in your chest.
-
-Behind the platform, a massive chain disappears through a broken doorway.
-
-A growl answers the heartbeat.
+The hidden passage opens into a red-black cavern. Thousands of human hearts hang from chains descending from the ceiling. Some beat slowly. Some race in panic. Some are still. Each is enclosed within a glass vessel marked with a name. The chains converge above a stone platform where the missing Heart Pan once rested. A deep vibration moves through the chamber, and every heart beats at once. You step among them. Faces appear in the glass—not faces of the dead, but memories belonging to them. A mother holding a child. A thief burying stolen bread. A ruler ordering a death. A stranger offering shelter. Then you see a vessel bearing your own name. Inside it, a heart beats in perfect time with the one in your chest. Behind the platform, a massive chain disappears through a broken doorway. A growl answers the heartbeat.
 
 ### Choices
 
@@ -632,29 +384,11 @@ You strike the bindings. Dozens of vessels descend safely to the floor, freeing 
 
 ## ANU-015 — Ammit Unchained
 
-The broken doorway leads into a chamber scored by claws.
+**Suggested Image:** `ANU015.png`
 
-Ammit rises from the darkness.
+**Text:**
 
-Her head is that of a crocodile, broad and armored. Her forequarters belong to a lion, her hind body to a hippopotamus. Broken chains drag from her limbs, each link carved with a divine name.
-
-Her jaws open.
-
-Inside them, you see no throat—only a depth filled with fading stars.
-
-“The living one,” she says.
-
-Her voice is not the roar you expected. It is old, tired, and hungry beyond reason.
-
-“You carry judgment’s scent.”
-
-She lowers her head until one golden eye fills your vision.
-
-“Anubis calls me monster. Yet he made hunger my purpose. He weighs the heart. I carry out the sentence.”
-
-Her claws close around the stone beside you.
-
-“Tell me why I should not begin with yours.”
+Past the damaged doorway waits a chamber marked by claws. Ammit rises from the darkness. Her head is that of a crocodile, broad and armored. Her forequarters belong to a lion, her hind body to a hippopotamus. Broken chains drag from her limbs, each link carved with a divine name. Her jaws open. Inside them, you see no throat—only a depth filled with fading stars. “The living one,” she says. Her voice is not the roar you expected. It is old, tired, and hungry beyond reason. “You carry judgment’s scent.” She lowers her head until one golden eye fills your vision. “Anubis calls me monster. Yet he made hunger my purpose. He weighs the heart. I carry out the sentence.” Her claws close around the stone beside you. “Tell me why I should not begin with yours.”
 
 ### Choices
 
@@ -689,29 +423,11 @@ Ammit bites down on the scarab. Its false heartbeat shatters, satisfying her hun
 
 ## ANU-016 — The Broken Chain
 
-You reach the far side of Ammit’s chamber.
+**Suggested Image:** `ANU016.png`
 
-A section of her sacred chain lies across the path. Several links have been cut cleanly, not broken by force. Black energy leaks from the severed names carved into the metal.
+**Text:**
 
-When you touch the chain, you see a vision.
-
-A robed scribe kneels beside the scales.
-
-A hidden figure whispers from behind a veil.
-
-The scribe removes the Heart Pan.
-
-Ammit’s chain breaks.
-
-Then the vision ends.
-
-A fragment of dark power floats above the severed link. It pulses like smoke held inside glass.
-
-You could repair the chain, restoring part of the order that contained Ammit.
-
-Or you could take the fragment.
-
-Its power would belong to no god once held by a living hand.
+You reach the far side of Ammit’s chamber. A section of her sacred chain lies across the path. Several links have been cut cleanly, not broken by force. Black energy leaks from the severed names carved into the metal. When you touch the chain, you see a vision. A robed scribe kneels beside the scales. A hidden figure whispers from behind a veil. The scribe removes the Heart Pan. Ammit’s chain breaks. Then the vision ends. A fragment of dark power floats above the severed link. It pulses like smoke held inside glass. You could repair the chain, restoring part of the order that contained Ammit. Or you could take the fragment. Its power would belong to no god once held by a living hand.
 
 ### Choices
 
@@ -733,7 +449,7 @@ Its power would belong to no god once held by a living hand.
 
 ## ANU-017 — Maze of False Memories
 
-The passage narrows, then dissolves into fog.
+The passage narrows until fog replaces the walls.
 
 Walls appear only when you look away from them. Doors open onto places that cannot exist beneath the desert: your childhood home, a crowded street, a room where someone waits with their back turned.
 
@@ -769,29 +485,11 @@ There is no path that avoids the past.
 
 ## ANU-018 — Memory of Home
 
-You step into a place you know.
+**Suggested Image:** `ANU018.png`
 
-Every detail is perfect.
+**Text:**
 
-The angle of sunlight. The worn edge of a table. The sound of someone moving in the next room. A familiar voice calls you by a name spoken with affection.
-
-For a moment, the underworld feels impossible.
-
-You could stay here.
-
-No scales. No gods. No hungry beast. No judgment.
-
-A person you once loved—or still love—enters the room. Their face is exactly as you remember it, except their shadow points in the wrong direction.
-
-“You came back,” they say.
-
-Behind them, the wall flickers.
-
-For an instant, you see the maze feeding on the memory, copying it each time you look away.
-
-The figure reaches for your hand.
-
-“Do not leave again.”
+You step into a place you know. Every detail is perfect. The angle of sunlight. The worn edge of a table. The sound of someone moving in the next room. A familiar voice calls you by a name spoken with affection. For a moment, the underworld feels impossible. You could stay here. No scales. No gods. No hungry beast. No judgment. A person you once loved—or still love—enters the room. Their face is exactly as you remember it, except their shadow points in the wrong direction. “You came back,” they say. Behind them, the wall flickers. For an instant, you see the maze feeding on the memory, copying it each time you look away. The figure reaches for your hand. “Do not leave again.”
 
 ### Choices
 
@@ -813,33 +511,11 @@ The figure embraces you. Warmth becomes fog. When you awaken, a piece of your li
 
 ## ANU-019 — Memory of Failure
 
-The corridor opens onto a moment you wish had happened differently.
+**Suggested Image:** `ANU019.png`
 
-The maze changes its details to fit you.
+**Text:**
 
-Perhaps someone trusted you and you failed them.
-
-Perhaps fear made you silent.
-
-Perhaps pride made you cruel.
-
-Perhaps you chose the easier path and allowed another person to bear the cost.
-
-The scene repeats.
-
-This time, everyone turns to look at you.
-
-A voice asks:
-
-“Whose fault was it?”
-
-The question is unfair. No failure belongs to one person alone. There were circumstances, pressures, mistakes made by others.
-
-The maze offers faces to blame.
-
-Each waits silently for you to choose one.
-
-Behind them, the path to the Heart Pan begins to close.
+The corridor opens onto a moment you wish had happened differently. The maze changes its details to fit you. Perhaps someone trusted you and you failed them. Perhaps fear made you silent. Perhaps pride made you cruel. Perhaps you chose the easier path and allowed another person to bear the cost. The scene repeats. This time, everyone turns to look at you. A voice asks: “Whose fault was it?” The question is unfair. No failure belongs to one person alone. There were circumstances, pressures, mistakes made by others. The maze offers faces to blame. Each waits silently for you to choose one. Behind them, the path to the Heart Pan begins to close.
 
 ### Choices
 
@@ -863,31 +539,11 @@ The chosen face fades. So does another piece of your own memory.
 
 ## ANU-020 — The Heart Pan
 
-The fog collapses.
+**Suggested Image:** `ANU020.png`
 
-You stand in a chamber shaped like the inside of a heart.
+**Text:**
 
-Bronze walls contract with a slow, rhythmic pulse. At the center hangs the missing Heart Pan, suspended by threads of red light.
-
-Beneath it, thousands of names are carved into the floor.
-
-Some are crossed out.
-
-Some repeat.
-
-Some belong to people not yet born.
-
-The pan lowers when you approach.
-
-Its surface reflects not your face, but every version of you that might have existed: kinder, crueler, braver, more afraid.
-
-A line of fresh writing appears beneath your feet.
-
-It is your name.
-
-Beside it is a second name you do not recognize, followed by the symbol of a royal scribe.
-
-The Heart Pan waits to be claimed.
+The fog falls away. You stand in a chamber shaped like the inside of a heart. Bronze walls contract with a slow, rhythmic pulse. At the center hangs the missing Heart Pan, suspended by threads of red light. Beneath it, thousands of names are carved into the floor. Some are crossed out. Some repeat. Some belong to people not yet born. The pan lowers when you approach. Its surface reflects not your face, but every version of you that might have existed: kinder, crueler, braver, more afraid. A line of fresh writing appears beneath your feet. It is your name. Beside it is a second name you do not recognize, followed by the symbol of a royal scribe. The Heart Pan waits to be claimed.
 
 ### Choices
 
@@ -909,33 +565,11 @@ You recover the pan and discover that the theft was recorded before it occurred,
 
 ## ANU-021 — The Scribe’s Secret
 
-A hidden door opens behind the Heart Pan.
+**Suggested Image:** `ANU021.png`
 
-Inside sits an underworld scribe surrounded by endless rolls of papyrus.
+**Text:**
 
-His body is thin and birdlike. Ink stains his hands to the wrists. A blank mask covers his face, but words move across it as he speaks.
-
-“I recorded your arrival,” he says.
-
-“You knew I was coming?”
-
-“I recorded it before you were born.”
-
-He gestures to a scroll bearing your name.
-
-Lines of writing describe choices you have already made. Below them, the text continues—but the future lines rearrange whenever you try to read them.
-
-“The scales were not merely stolen,” the scribe says. “They were allowed to break.”
-
-“By Anubis?”
-
-The words on his mask scatter.
-
-“Truth has a cost. Trust, force, or memory. Those are the currencies left to us.”
-
-He places one ink-black finger on the scroll.
-
-“Choose how you wish to learn.”
+A hidden door opens behind the Heart Pan. Inside sits an underworld scribe surrounded by endless rolls of papyrus. His body is thin and birdlike. Ink stains his hands to the wrists. A blank mask covers his face, but words move across it as he speaks. “I recorded your arrival,” he says. “You knew I was coming?” “I recorded it before you were born.” He gestures to a scroll bearing your name. Lines of writing describe choices you have already made. Below them, the text continues—but the future lines rearrange whenever you try to read them. “The scales were not merely stolen,” the scribe says. “They were allowed to break.” “By Anubis?” The words on his mask scatter. “Truth has a cost. Trust, force, or memory. Those are the currencies left to us.” He places one ink-black finger on the scroll. “Choose how you wish to learn.”
 
 ### Choices
 
@@ -957,31 +591,11 @@ He places one ink-black finger on the scroll.
 
 ## ANU-022 — The True Name
 
-The scribe leads you into a chamber without walls.
+**Suggested Image:** `ANU022.png`
 
-Above, constellations form the shape of a jackal.
+**Text:**
 
-Below, the darkness reflects them perfectly.
-
-“In the beginning,” the scribe says, “the gods were not called by the names mortals gave them. Their true titles were commands written into creation.”
-
-He speaks a phrase too vast to understand.
-
-The stars bend.
-
-You feel the hidden title of Anubis settle into your mind—not his ordinary name, but the name that means:
-
-**He Who Opens the Final Door and Must Obey the Balance.**
-
-The knowledge is dangerous.
-
-Spoken openly, it could compel the mechanisms of judgment.
-
-Kept secret, it remains a weapon no one knows you possess.
-
-The scribe’s mask turns blank.
-
-“Now the name belongs to you.”
+The scribe leads you into a chamber without walls. Above, constellations form the shape of a jackal. Below, the darkness reflects them perfectly. “In the beginning,” the scribe says, “the gods were not called by the names mortals gave them. Their true titles were commands written into creation.” He speaks a phrase too vast to understand. The stars bend. You feel the hidden title of Anubis settle into your mind—not his ordinary name, but the name that means: He Who Opens the Final Door and Must Obey the Balance. The knowledge is dangerous. Spoken openly, it could compel the mechanisms of judgment. Kept secret, it remains a weapon no one knows you possess. The scribe’s mask turns blank. “Now the name belongs to you.”
 
 ### Choices
 
@@ -1005,31 +619,11 @@ You bury the title in silence.
 
 ## ANU-023 — The Rebel’s Offer
 
-The constellations vanish.
+**Suggested Image:** `ANU023.png`
 
-A figure steps from behind the scribe’s hanging scrolls.
+**Text:**
 
-They wear the broken mask of a priest and carry a staff carved from one of Ammit’s old chains. Their body shifts between human and shadow.
-
-“I wondered which path you would take,” the rebel says.
-
-The scribe lowers his head but does not interfere.
-
-“The gods call this disorder,” the rebel continues. “But what is judgment except power made sacred by repetition?”
-
-Images appear around you.
-
-Anubis weighing frightened souls.
-
-Ammit devouring those deemed unworthy.
-
-Kings passing into eternity while forgotten laborers wait without names.
-
-“The scales do not measure goodness,” the rebel says. “They measure obedience to an order built by those who control the balance.”
-
-A shard of underworld power forms above their palm.
-
-“Take the final piece. Return to the Hall. Then decide whether any god deserves to judge you.”
+The constellations vanish. A figure steps from behind the scribe’s hanging scrolls. They wear the broken mask of a priest and carry a staff carved from one of Ammit’s old chains. Their body shifts between human and shadow. “I wondered which path you would take,” the rebel says. The scribe lowers his head but does not interfere. “The gods call this disorder,” the rebel continues. “But what is judgment except power made sacred by repetition?” Images appear around you. Anubis weighing frightened souls. Ammit devouring those deemed unworthy. Kings passing into eternity while forgotten laborers wait without names. “The scales do not measure goodness,” the rebel says. “They measure obedience to an order built by those who control the balance.” A shard of underworld power forms above their palm. “Take the final piece. Return to the Hall. Then decide whether any god deserves to judge you.”
 
 ### Choices
 
@@ -1057,29 +651,11 @@ A shard of underworld power forms above their palm.
 
 ## ANU-024 — Balance Stone Chamber
 
-The final chamber lies at the center of a ruined temple.
+**Suggested Image:** `ANU024.png`
 
-The Balance Stone floats above a mechanism of interlocking rings. It is small enough to hold in one hand, yet the entire chamber leans around it.
+**Text:**
 
-On one side, dust falls upward.
-
-On the other, blue flame pours like water.
-
-Guarding the mechanism is a towering figure made of stone and linen. Its face has been erased, leaving a smooth surface marked only by a vertical crack.
-
-As you enter, the guardian raises a ceremonial blade.
-
-“Only the judged may carry balance,” it says.
-
-“I have not been judged.”
-
-“Then you may not leave.”
-
-The rings turn faster.
-
-The Balance Stone pulses in time with your heart.
-
-You see two ways to take it: patiently release the locking seals, or tear it free before the guardian strikes.
+The final chamber lies at the center of a ruined temple. The Balance Stone floats above a mechanism of interlocking rings. It is small enough to hold in one hand, yet the entire chamber leans around it. On one side, dust falls upward. On the other, blue flame pours like water. Guarding the mechanism is a towering figure made of stone and linen. Its face has been erased, leaving a smooth surface marked only by a vertical crack. As you enter, the guardian raises a ceremonial blade. “Only the judged may carry balance,” it says. “I have not been judged.” “Then you may not leave.” The rings turn faster. The Balance Stone pulses in time with your heart. You see two ways to take it: patiently release the locking seals, or tear it free before the guardian strikes.
 
 ### Choices
 
@@ -1103,27 +679,11 @@ You seize the stone. The rings fracture, and the chamber lurches violently.
 
 ## ANU-025 — The Final Guardian
 
-The guardian blocks the only exit.
+**Suggested Image:** `ANU025.png`
 
-Cracks spread across its body. Through them, pale light reveals thousands of trapped names.
+**Text:**
 
-“I was made to protect balance,” it says. “Without the stone, I have no purpose.”
-
-Its blade lowers slightly.
-
-“Return it.”
-
-Behind you, the chamber collapses one ring at a time.
-
-You could destroy the guardian and escape.
-
-You could spare it, risking pursuit.
-
-Or, with the true title of Anubis, you might command the guardian to recognize a new purpose.
-
-The guardian kneels on one cracked leg.
-
-“Judge me, living one.”
+The guardian blocks the only exit. Cracks spread across its body. Through them, pale light reveals thousands of trapped names. “I was made to protect balance,” it says. “Without the stone, I have no purpose.” Its blade lowers slightly. “Return it.” Behind you, the chamber collapses one ring at a time. You could destroy the guardian and escape. You could spare it, risking pursuit. Or, with the true title of Anubis, you might command the guardian to recognize a new purpose. The guardian kneels on one cracked leg. “Judge me, living one.”
 
 ### Choices
 
@@ -1212,41 +772,11 @@ You conceal part of the mechanism and demand safe passage, reward, or authority.
 
 ## ANU-027 — The Weighing Begins
 
-The restored scales rise from the floor.
+**Suggested Image:** `ANU027.png`
 
-The Feather Arm locks into place.
+**Text:**
 
-The Heart Pan hangs opposite the feather of Ma’at.
-
-The Balance Stone turns once, and the entire underworld becomes still.
-
-Anubis stands beside the scale.
-
-Behind him, Ammit lowers herself to the floor, watching with terrible patience.
-
-Every promise you made returns to you.
-
-Every lie.
-
-Every act of mercy.
-
-Every moment you chose yourself over another.
-
-Every truth you accepted when a lie would have been easier.
-
-Your heart burns inside your chest as though it knows it is being called.
-
-Anubis extends one hand.
-
-“Place your heart upon the scales.”
-
-The hidden title of the god waits behind your teeth.
-
-The Golden Scarab, if you still possess it, gives a false heartbeat.
-
-The Fang of Ammit aches with dark power.
-
-The final choice is yours, but it is not the only choice that matters.
+The restored scales lift from the floor. The Feather Arm locks into place. The Heart Pan hangs opposite the feather of Ma’at. The Balance Stone turns once, and the entire underworld becomes still. Anubis stands beside the scale. Behind him, Ammit lowers herself to the floor, watching with terrible patience. Every promise you made returns to you. Every lie. Every act of mercy. Every moment you chose yourself over another. Every truth you accepted when a lie would have been easier. Your heart burns inside your chest as though it knows it is being called. Anubis extends one hand. “Place your heart upon the scales.” The hidden title of the god waits behind your teeth. The Golden Scarab, if you still possess it, gives a false heartbeat. The Fang of Ammit aches with dark power. The final choice is yours, but it is not the only choice that matters.
 
 ### Choices
 
@@ -1269,390 +799,8 @@ The final choice is yours, but it is not the only choice that matters.
 
 ## ANU-028 — Final Decision
 
-This node contains no ordinary story choices.
+**Suggested Image:** `ANU028.png`
 
-The Hall of Judgment reacts to the player’s accumulated state. The final choice determines what the player attempts, but the result is resolved from all prior actions.
+**Text:**
 
-### Deterministic Ending Order
-
-1. If `memoriesRemaining <= 0` → `END-LOST`
-2. Strong rebel route → `END-REBEL`
-3. Strong trickster route → `END-TRICKSTER`
-4. Full true-ending route → `END-TRUE`
-5. If `heartWeight >= 4` → `END-AMMIT`
-6. Weaker valid rebel route → `END-REBEL`
-7. Weaker valid cheat route → `END-TRICKSTER`
-8. Fallback:
-   - `heartWeight <= 1` → `END-TRUE`
-   - otherwise → `END-AMMIT`
-
-Before displaying the ending, record the ending ID as reached.
-
----
-
-# Terminal Endings
-
-## END-TRUE — The Scales Restored
-
-**Ending ID:** `anubis_true_restored`  
-**Classification:** Win / Best Ending
-
-Your heart leaves your chest without pain.
-
-It appears in Anubis’s hand as a sphere of living red light. Within it move every choice you made: the soul you freed, the treasure you refused or surrendered, the truths you accepted, the fear you carried without allowing it to rule you.
-
-Anubis places the heart upon the pan.
-
-The scales move.
-
-For one terrible moment, your heart sinks.
-
-Ammit raises her head.
-
-Then the feather descends to meet it.
-
-The balance becomes still.
-
-Across the Hall of Judgment, every gate opens at once.
-
-The waiting dead begin to move. Names return to forgotten faces. The stolen hearts rise from their vessels and pass like red stars through the darkness.
-
-Anubis studies the balance.
-
-“A light heart is not an empty heart,” he says. “It carries grief, failure, fear, and responsibility. It becomes light when it refuses to place those burdens upon others.”
-
-He returns your heart.
-
-The instant it enters your chest, the Hall fills with dawn.
-
-You stand again in the desert before the black doorway.
-
-Wind moves across the dunes.
-
-Stars burn overhead.
-
-In your hand lies a small feather of gold.
-
-Behind you, the doorway sinks beneath the sand.
-
-Yet just before it disappears, Anubis’s voice reaches you one final time.
-
-“Live as one who has already been weighed.”
-
-### Outcome Text
-
-**The Scales Restored**
-
-You returned all three sacred pieces, faced judgment honestly, and proved that mercy and responsibility can outweigh fear.
-
-Anubis has returned you to the living world with his blessing.
-
----
-
-## END-AMMIT — Devoured by Ammit
-
-**Ending ID:** `anubis_dark_ammit`  
-**Classification:** Death
-
-Your heart appears in Anubis’s hand.
-
-It is darker than you expected.
-
-Gold clings to it. Broken promises circle it like chains. Every lie has become a mark upon its surface. Every act of cruelty has weight. Every moment you chose power without responsibility presses downward.
-
-Anubis places it on the scale.
-
-The pan falls.
-
-The feather rises.
-
-The sound of the imbalance travels through the hall like a funeral bell.
-
-Ammit stands.
-
-You try to speak.
-
-Perhaps you offer an explanation. Perhaps you insist that your intentions were misunderstood. Perhaps you remind Anubis that others have done worse.
-
-But the scale does not measure comparison.
-
-It measures what you carried here.
-
-Anubis closes his eyes.
-
-“Judgment is not punishment,” he says. “It is revelation.”
-
-Ammit’s jaws open.
-
-Inside them is a darkness deeper than death.
-
-She devours your heart in a single bite.
-
-There is no pain.
-
-Pain requires a self to experience it.
-
-Your memories vanish first. Then your name. Then the shape of everything you might have become.
-
-The last thing you hear is the restored scale settling into balance.
-
-### Outcome Text
-
-**Devoured by Ammit**
-
-Your heart outweighed the feather.
-
-The Devourer has consumed your soul, leaving no name, memory, or path back to the living world.
-
----
-
-## END-REBEL — Defy the Gods
-
-**Ending ID:** `anubis_rebel_escape`  
-**Classification:** Dark Win / Sequel Hook
-
-You do not place your heart upon the scale.
-
-Instead, you raise the Fang of Ammit.
-
-Underworld power coils around your arm. The Hall darkens as every stolen fragment you accepted answers your command.
-
-Anubis’s eyes blaze.
-
-“You mistake power for freedom.”
-
-“And you mistake authority for justice.”
-
-You strike the Balance Stone.
-
-The Fang cuts through divine law as though it were flesh.
-
-The scales split.
-
-A shockwave tears across the Hall of Judgment. Pillars crack. Gates burst open. Souls scatter toward every road at once.
-
-Ammit roars—not in hunger, but triumph.
-
-Anubis reaches for you.
-
-You speak the first word of rebellion, and the stolen power tears a doorway into the living world.
-
-You step through.
-
-The desert receives you beneath a sky filled with red stars.
-
-The black doorway collapses behind you, but the power does not remain below.
-
-It lives beneath your skin.
-
-Your shadow now has the head of a jackal.
-
-Far away, dogs begin barking.
-
-Mirrors darken.
-
-The dead whisper your name with hope and fear.
-
-You escaped judgment.
-
-But the boundary between worlds is weaker than before, and something in the underworld has begun calling you its liberator.
-
-### Outcome Text
-
-**Defy the Gods**
-
-You rejected divine judgment, broke the sacred mechanism, and escaped with stolen underworld power.
-
-You are free—for now—but the consequences have followed you home.
-
----
-
-## END-TRICKSTER — Cheat the Scales
-
-**Ending ID:** `anubis_trickster_cheat`  
-**Classification:** Secret Lose / Sequel Hook
-
-You place your heart upon the pan.
-
-At the same moment, you whisper Anubis’s hidden title.
-
-The god freezes.
-
-Not from fear.
-
-From command.
-
-The Golden Scarab opens inside your hand and releases its false heartbeat into the scale.
-
-The Balance Stone turns backward.
-
-Your heart rises.
-
-The feather falls.
-
-For one impossible instant, the scales declare you pure.
-
-The Hall erupts with whispers.
-
-Anubis strains against the power of his true name.
-
-“You do not understand what you have altered.”
-
-“I understand enough.”
-
-The gates to the living world open.
-
-You reclaim your heart and step through before the command breaks.
-
-The desert air feels warm and real. Stars shine overhead. Your body is alive.
-
-You survived.
-
-Then the Golden Scarab splits open.
-
-There was never a spirit trapped inside it.
-
-There was a door.
-
-A thin shape unfolds from the broken shell—too tall, too narrow, wearing a face assembled from pieces of people you remember.
-
-It smiles.
-
-Behind you, Anubis shouts a warning from a world already closing.
-
-The creature touches the sand.
-
-Every shadow in the desert turns toward it.
-
-You cheated the scales.
-
-And something ancient used your lie to pass judgment with you.
-
-### Outcome Text
-
-**Cheat the Scales**
-
-You manipulated the balance and escaped judgment.
-
-But your deception opened a path for an ancient presence to enter the living world.
-
-Survival is not always victory.
-
----
-
-## END-LOST — Lost Soul
-
-**Ending ID:** `anubis_lost_soul`  
-**Classification:** Lose
-
-You are walking through fog.
-
-You know there was a task.
-
-Something broken.
-
-Three pieces, perhaps.
-
-A voice once spoke your name, but the name no longer belongs to anyone you recognize.
-
-You try to remember home.
-
-There is a room without a location.
-
-A face without features.
-
-Warmth without a source.
-
-The memories fall apart when you reach for them.
-
-Other souls move beside you.
-
-Some whisper fragments of themselves.
-
-“I had a daughter.”
-
-“I built something.”
-
-“I was afraid.”
-
-“I was called…”
-
-None can finish.
-
-A faceless ferryman waits beside a black river.
-
-He does not ask for payment.
-
-You have nothing left to give.
-
-Across the water, the Hall of Judgment glows with distant gold. Somewhere within it, Anubis calls for the living traveler who entered his temple.
-
-You want to answer.
-
-You cannot remember that he means you.
-
-The procession moves forward.
-
-Your footsteps join the sound of thousands.
-
-Soon, even the desire to remember is gone.
-
-### Outcome Text
-
-**Lost Soul**
-
-The underworld took your final memory.
-
-Without a name, a past, or a purpose, you have joined the procession of forgotten souls.
-
----
-
-# Conditional Choice Visibility Summary
-
-The following choices must only appear when their requirements are met:
-
-- `ANU-015` — **Offer the Golden Scarab**
-  - Requires `tookGoldenScarab == true`
-
-- `ANU-025` — **Command it using the true name**
-  - Requires `learnedTrueName == true`
-
-- `ANU-026` — **Enter the Hall of Judgment armed**
-  - Requires `possessesAmmitFang == true` or `acceptedUnderworldPower == true`
-
-The final choices at `ANU-027` may remain visible to all players. The ending router determines whether the attempted rebellion or manipulation succeeds fully, succeeds at a cost, or fails.
-
----
-
-# State Feedback Copy
-
-Use these accessible messages after significant choices:
-
-| State change | Suggested feedback |
-|---|---|
-| `heartWeight -= 1` | Your heart feels lighter. |
-| `heartWeight -= 2` | A great burden lifts from your heart. |
-| `heartWeight += 1` | A weight settles in your chest. |
-| `heartWeight += 2` | Your heart grows dangerously heavy. |
-| `memoriesRemaining -= 1` | A memory slips beyond your reach. |
-| Scale piece recovered | A piece of the sacred scales has been recovered. |
-| `savedLostSoul = true` | The soul remembers its name. |
-| `tookGoldenScarab = true` | The scarab beats with a borrowed pulse. |
-| `possessesAmmitFang = true` | You carry the Fang of the Devourer. |
-| `acceptedUnderworldPower = true` | Underworld power now answers you. |
-| `learnedTrueName = true` | You have learned the hidden title of Anubis. |
-
----
-
-# Implementation Safeguards
-
-1. Preserve every node ID exactly as written.
-2. Apply effects only when a choice is selected.
-3. Never reapply effects when restoring a saved node.
-4. Clamp `heartWeight` to `-6...6`.
-5. Check for the Lost Soul ending after every memory loss.
-6. Record each recovered scale piece persistently.
-7. Keep all five endings reachable.
-8. Record the ending before presenting reset or menu actions.
-9. Resolve `ANU-028` from the complete accumulated state.
-10. Do not replace the ending router with direct final-button navigation.
+This node contains no ordinary story choices. The Hall of Judgment reacts to the player’s accumulated state. The final choice determines what the player attempts, but the result is resolved from all prior actions. ### Deterministic Ending Order 1. If `memoriesRemaining <= 0` → `END-LOST` 2. Strong rebel route → `END-REBEL` 3. Strong trickster route → `END-TRICKSTER` 4. Full true-ending route → `END-TRUE` 5. If `heartWeight >= 4` → `END-AMMIT` 6. Weaker valid rebel route → `END-REBEL` 7. Weaker valid cheat route → `END-TRICKSTER` 8. Fallback:    - `heartWeight <= 1` → `END-TRUE`    - otherwise → `END-AMMIT` Before displaying the ending, record the ending ID as reached. --- # Terminal Endings ## END-TRUE — The Scales Restored **Ending ID:** `anubis_true_restored`   **Classification:** Win / Best Ending Your heart leaves your chest without pain. It appears in Anubis’s hand as a sphere of living red light. Within it move every choice you made: the soul you freed, the treasure you refused or surrendered, the truths you accepted, the fear you carried without allowing it to rule you. Anubis places the heart upon the pan. The scales move. For one terrible moment, your heart sinks. Ammit raises her head. Then the feather descends to meet it. The balance becomes still. Across the Hall of Judgment, every gate opens at once. The waiting dead begin to move. Names return to forgotten faces. The stolen hearts rise from their vessels and pass like red stars through the darkness. Anubis studies the balance. “A light heart is not an empty heart,” he says. “It carries grief, failure, fear, and responsibility. It becomes light when it refuses to place those burdens upon others.” He returns your heart. The instant it enters your chest, the Hall fills with dawn. You stand again in the desert before the black doorway. Wind moves across the dunes. Stars burn overhead. In your hand lies a small feather of gold. Behind you, the doorway sinks beneath the sand. Yet just before it disappears, Anubis’s voice reaches you one final time. “Live as one who has already been weighed.” ### Outcome Text **The Scales Restored** You returned all three sacred pieces, faced judgment honestly, and proved that mercy and responsibility can outweigh fear. Anubis has returned you to the living world with his blessing. --- ## END-AMMIT — Devoured by Ammit **Ending ID:** `anubis_dark_ammit`   **Classification:** Death Your heart appears in Anubis’s hand. It is darker than you expected. Gold clings to it. Broken promises circle it like chains. Every lie has become a mark upon its surface. Every act of cruelty has weight. Every moment you chose power without responsibility presses downward. Anubis places it on the scale. The pan falls. The feather rises. The sound of the imbalance travels through the hall like a funeral bell. Ammit stands. You try to speak. Perhaps you offer an explanation. Perhaps you insist that your intentions were misunderstood. Perhaps you remind Anubis that others have done worse. But the scale does not measure comparison. It measures what you carried here. Anubis closes his eyes. “Judgment is not punishment,” he says. “It is revelation.” Ammit’s jaws open. Inside them is a darkness deeper than death. She devours your heart in a single bite. There is no pain. Pain requires a self to experience it. Your memories vanish first. Then your name. Then the shape of everything you might have become. The last thing you hear is the restored scale settling into balance. ### Outcome Text **Devoured by Ammit** Your heart outweighed the feather. The Devourer has consumed your soul, leaving no name, memory, or path back to the living world. --- ## END-REBEL — Defy the Gods **Ending ID:** `anubis_rebel_escape`   **Classification:** Dark Win / Sequel Hook You do not place your heart upon the scale. Instead, you raise the Fang of Ammit. Underworld power coils around your arm. The Hall darkens as every stolen fragment you accepted answers your command. Anubis’s eyes blaze. “You mistake power for freedom.” “And you mistake authority for justice.” You strike the Balance Stone. The Fang cuts through divine law as though it were flesh. The scales split. A shockwave tears across the Hall of Judgment. Pillars crack. Gates burst open. Souls scatter toward every road at once. Ammit roars—not in hunger, but triumph. Anubis reaches for you. You speak the first word of rebellion, and the stolen power tears a doorway into the living world. You step through. The desert receives you beneath a sky filled with red stars. The black doorway collapses behind you, but the power does not remain below. It lives beneath your skin. Your shadow now has the head of a jackal. Far away, dogs begin barking. Mirrors darken. The dead whisper your name with hope and fear. You escaped judgment. But the boundary between worlds is weaker than before, and something in the underworld has begun calling you its liberator. ### Outcome Text **Defy the Gods** You rejected divine judgment, broke the sacred mechanism, and escaped with stolen underworld power. You are free—for now—but the consequences have followed you home. --- ## END-TRICKSTER — Cheat the Scales **Ending ID:** `anubis_trickster_cheat`   **Classification:** Secret Lose / Sequel Hook You place your heart upon the pan. At the same moment, you whisper Anubis’s hidden title. The god freezes. Not from fear. From command. The Golden Scarab opens inside your hand and releases its false heartbeat into the scale. The Balance Stone turns backward. Your heart rises. The feather falls. For one impossible instant, the scales declare you pure. The Hall erupts with whispers. Anubis strains against the power of his true name. “You do not understand what you have altered.” “I understand enough.” The gates to the living world open. You reclaim your heart and step through before the command breaks. The desert air feels warm and real. Stars shine overhead. Your body is alive. You survived. Then the Golden Scarab splits open. There was never a spirit trapped inside it. There was a door. A thin shape unfolds from the broken shell—too tall, too narrow, wearing a face assembled from pieces of people you remember. It smiles. Behind you, Anubis shouts a warning from a world already closing. The creature touches the sand. Every shadow in the desert turns toward it. You cheated the scales. And something ancient used your lie to pass judgment with you. ### Outcome Text **Cheat the Scales** You manipulated the balance and escaped judgment. But your deception opened a path for an ancient presence to enter the living world. Survival is not always victory. --- ## END-LOST — Lost Soul **Ending ID:** `anubis_lost_soul`   **Classification:** Lose You are walking through fog. You know there was a task. Something broken. Three pieces, perhaps. A voice once spoke your name, but the name no longer belongs to anyone you recognize. You try to remember home. There is a room without a location. A face without features. Warmth without a source. The memories fall apart when you reach for them. Other souls move beside you. Some whisper fragments of themselves. “I had a daughter.” “I built something.” “I was afraid.” “I was called…” None can finish. A faceless ferryman waits beside a black river. He does not ask for payment. You have nothing left to give. Across the water, the Hall of Judgment glows with distant gold. Somewhere within it, Anubis calls for the living traveler who entered his temple. You want to answer. You cannot remember that he means you. The procession moves forward. Your footsteps join the sound of thousands. Soon, even the desire to remember is gone. ### Outcome Text **Lost Soul** The underworld took your final memory. Without a name, a past, or a purpose, you have joined the procession of forgotten souls. --- # Conditional Choice Visibility Summary The following choices must only appear when their requirements are met: - `ANU-015` — **Offer the Golden Scarab**   - Requires `tookGoldenScarab == true` - `ANU-025` — **Command it using the true name**   - Requires `learnedTrueName == true` - `ANU-026` — **Enter the Hall of Judgment armed**   - Requires `possessesAmmitFang == true` or `acceptedUnderworldPower == true` The final choices at `ANU-027` may remain visible to all players. The ending router determines whether the attempted rebellion or manipulation succeeds fully, succeeds at a cost, or fails. --- # State Feedback Copy Use these accessible messages after significant choices: | State change | Suggested feedback | |---|---| | `heartWeight -= 1` | Your heart feels lighter. | | `heartWeight -= 2` | A great burden lifts from your heart. | | `heartWeight += 1` | A weight settles in your chest. | | `heartWeight += 2` | Your heart grows dangerously heavy. | | `memoriesRemaining -= 1` | A memory slips beyond your reach. | | Scale piece recovered | A piece of the sacred scales has been recovered. | | `savedLostSoul = true` | The soul remembers its name. | | `tookGoldenScarab = true` | The scarab beats with a borrowed pulse. | | `possessesAmmitFang = true` | You carry the Fang of the Devourer. | | `acceptedUnderworldPower = true` | Underworld power now answers you. | | `learnedTrueName = true` | You have learned the hidden title of Anubis. | --- # Implementation Safeguards 1. Preserve every node ID exactly as written. 2. Apply effects only when a choice is selected. 3. Never reapply effects when restoring a saved node. 4. Clamp `heartWeight` to `-6...6`. 5. Check for the Lost Soul ending after every memory loss. 6. Record each recovered scale piece persistently. 7. Keep all five endings reachable. 8. Record the ending before presenting reset or menu actions. 9. Resolve `ANU-028` from the complete accumulated state. 10. Do not replace the ending router with direct final-button navigation.
