@@ -6,9 +6,15 @@ struct TalesFromTheSphinxRootView: View {
     @StateObject private var navigationState: AppNavigationState
 
     @MainActor
+    init(returnToStorySelection: @escaping () -> Void) {
+        self.returnToStorySelection = returnToStorySelection
+        _navigationState = StateObject(wrappedValue: AppNavigationState())
+    }
+
+    @MainActor
     init(
         returnToStorySelection: @escaping () -> Void,
-        navigationState: AppNavigationState = AppNavigationState()
+        navigationState: AppNavigationState
     ) {
         self.returnToStorySelection = returnToStorySelection
         _navigationState = StateObject(wrappedValue: navigationState)
