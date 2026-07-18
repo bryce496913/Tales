@@ -1,11 +1,3 @@
 import SwiftUI
 
-struct TrialOfAnubisPageEffects {
-    let entryTransition: TrialOfAnubisTransitionStyle
-    let choicesWaitForText: Bool
-
-    static let standard = TrialOfAnubisPageEffects(
-        entryTransition: .sandFade,
-        choicesWaitForText: true
-    )
-}
+// TrialOfAnubisPageEffects is defined in TrialOfAnubisPageLayout.swift so it is always available whenever the page layout is compiled.

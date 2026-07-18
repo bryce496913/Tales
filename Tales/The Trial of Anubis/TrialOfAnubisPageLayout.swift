@@ -1,6 +1,16 @@
 import SwiftUI
 import UIKit
 
+struct TrialOfAnubisPageEffects {
+    let entryTransition: TrialOfAnubisTransitionStyle
+    let choicesWaitForText: Bool
+
+    static let standard = TrialOfAnubisPageEffects(
+        entryTransition: .sandFade,
+        choicesWaitForText: true
+    )
+}
+
 struct TrialOfAnubisPageLayout<Choices: View>: View {
     let imageName: String
     let title: String
@@ -10,6 +20,20 @@ struct TrialOfAnubisPageLayout<Choices: View>: View {
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var textComplete = false
+
+    init(
+        imageName: String,
+        title: String,
+        text: String,
+        effects: TrialOfAnubisPageEffects = .standard,
+        @ViewBuilder choices: () -> Choices
+    ) {
+        self.imageName = imageName
+        self.title = title
+        self.text = text
+        self.effects = effects
+        self.choices = choices()
+    }
 
     var body: some View {
         TrialOfAnubisTransitionContainer(style: effects.entryTransition) {
