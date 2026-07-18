@@ -18,7 +18,7 @@ struct TrialOfAnubisDestinationView: View { let route: TrialOfAnubisRoute
 }
 
 struct TrialOfAnubisPageView: View { let nodeID: TrialOfAnubisRoute; @EnvironmentObject private var nav: TrialOfAnubisNavigationState; @EnvironmentObject private var options: GameOptions; @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    var body: some View { ZStack(alignment: .top) { EgyptianBackground(); if let node = TrialOfAnubisStoryContent.node(for: nodeID) { ScrollView { VStack(spacing: 16) { TrialOfAnubisPlaceholderCard(title: node.title); TrialOfAnubisStatusView(state: nav.state); VStack(alignment: .leading, spacing: 14) { Text(node.id.rawValue).font(.caption.weight(.bold)).foregroundColor(AppTheme.mutedText); Text(node.title).font(.system(.title, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold).accessibilityAddTraits(.isHeader); Text(node.narrative).foregroundColor(AppTheme.warmText).font(.body).textSelection(.enabled).accessibilityLabel(node.narrative) }.frame(maxWidth: .infinity, alignment: .leading).goldCard(); VStack(spacing: 12) { ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) { TrialOfAnubisChoiceButton(choice: $0) } } }.frame(maxWidth: 760).padding(AppTheme.screenPadding) } } else { Text("Missing Anubis route: \(nodeID.rawValue)").foregroundColor(AppTheme.gold).goldCard().onAppear { assertionFailure("Invalid Anubis route \(nodeID.rawValue)") } }; if let feedback = nav.feedback { TrialOfAnubisFeedbackBanner(feedback: feedback).padding(.top, 8).allowsHitTesting(false) } } }
+    var body: some View { ZStack(alignment: .top) { EgyptianBackground(); if let node = TrialOfAnubisStoryContent.node(for: nodeID) { ScrollView { VStack(spacing: 16) { TrialOfAnubisPlaceholderCard(imageName: node.imageName, title: node.title); TrialOfAnubisStatusView(state: nav.state); VStack(alignment: .leading, spacing: 14) { Text(node.id.rawValue).font(.caption.weight(.bold)).foregroundColor(AppTheme.mutedText); Text(node.title).font(.system(.title, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold).accessibilityAddTraits(.isHeader); Text(node.narrative).foregroundColor(AppTheme.warmText).font(.body).textSelection(.enabled).accessibilityLabel(node.narrative) }.frame(maxWidth: .infinity, alignment: .leading).goldCard(); VStack(spacing: 12) { ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) { TrialOfAnubisChoiceButton(choice: $0) } } }.frame(maxWidth: 760).padding(AppTheme.screenPadding) } } else { Text("Missing Anubis route: \(nodeID.rawValue)").foregroundColor(AppTheme.gold).goldCard().onAppear { assertionFailure("Invalid Anubis route \(nodeID.rawValue)") } }; if let feedback = nav.feedback { TrialOfAnubisFeedbackBanner(feedback: feedback).padding(.top, 8).allowsHitTesting(false) } } }
 }
 
 struct TrialOfAnubisChoiceButton: View { let choice: TrialOfAnubisChoice; @EnvironmentObject private var nav: TrialOfAnubisNavigationState
@@ -30,6 +30,36 @@ struct TrialOfAnubisStatusView: View { let state: TrialOfAnubisState; var body: 
     private var items: [String] { var a:[String]=[]; if state.tookGoldenScarab { a.append("Golden Scarab") }; if state.possessesAmmitFang { a.append("Fang of Ammit") }; if state.acceptedUnderworldPower { a.append("Underworld Power") }; if state.learnedTrueName { a.append("Hidden Title of Anubis") }; return a }
 }
 struct TrialOfAnubisFeedbackBanner: View { let feedback: TrialOfAnubisFeedback; var body: some View { Text(feedback.message).font(.callout.weight(.semibold)).foregroundColor(Color(hex: "1E140B")).padding(12).background(Capsule().fill(AppTheme.gold)).accessibilityAddTraits(.updatesFrequently).accessibilityLabel(feedback.message) } }
-struct TrialOfAnubisPlaceholderCard: View { let title: String; var body: some View { ZStack { LinearGradient(colors: [Color(hex:"1A120C"), Color(hex:"3A2811")], startPoint: .topLeading, endPoint: .bottomTrailing); VStack { Image(systemName: "scalemass.fill").font(.system(size: 42)).foregroundColor(AppTheme.gold); Text(title).font(.system(.headline, design: .serif)).foregroundColor(AppTheme.gold) } }.frame(height: 150).clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius)).accessibilityHidden(true) } }
+struct TrialOfAnubisPlaceholderCard: View {
+    let imageName: String
+    let title: String
+
+    var body: some View {
+        ZStack {
+            if let image = UIImage(named: imageName) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                LinearGradient(colors: [Color(hex: "1A120C"), Color(hex: "3A2811")], startPoint: .topLeading, endPoint: .bottomTrailing)
+                VStack(spacing: 10) {
+                    Image(systemName: "scalemass.fill")
+                        .font(.system(size: 42))
+                        .foregroundColor(AppTheme.gold)
+                    Text(imageName)
+                        .font(.caption.weight(.semibold))
+                        .foregroundColor(AppTheme.mutedText)
+                    Text(title)
+                        .font(.system(.headline, design: .serif))
+                        .foregroundColor(AppTheme.gold)
+                }
+            }
+        }
+        .frame(height: 150)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius))
+        .overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1))
+        .accessibilityHidden(true)
+    }
+}
 
 struct ANU028View: View { @EnvironmentObject private var nav: TrialOfAnubisNavigationState; var body: some View { ZStack { EgyptianBackground(); VStack(spacing: 16) { Image(systemName: "scalemass.fill").font(.system(size: 58)).foregroundColor(AppTheme.gold); Text("Judgment Begins").font(.system(.largeTitle, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold); Text("The restored scales read the full weight of your journey.").foregroundColor(AppTheme.warmText).multilineTextAlignment(.center).goldCard() }.padding(AppTheme.screenPadding) }.task { nav.resolveEndingIfNeeded() }.accessibilityLabel("Judgment begins. The restored scales read the full weight of your journey.") } }
