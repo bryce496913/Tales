@@ -30,7 +30,13 @@ enum TrialOfAnubisChoiceRequirement: Hashable { case hasGoldenScarab, learnedTru
     func isSatisfied(by state: TrialOfAnubisState) -> Bool { switch self { case .hasGoldenScarab: return state.tookGoldenScarab; case .learnedTrueName: return state.learnedTrueName; case .hasWeaponOrUnderworldPower: return state.possessesAmmitFang || state.acceptedUnderworldPower } }
 }
 struct TrialOfAnubisChoice: Identifiable, Hashable { let id: String; let source: TrialOfAnubisRoute; let title: String; let detail: String?; let destination: TrialOfAnubisRoute; let effects: [TrialOfAnubisStateEffect]; let requirement: TrialOfAnubisChoiceRequirement?; let feedback: String? }
-struct TrialOfAnubisNode: Identifiable { let id: TrialOfAnubisRoute; let title: String; let narrative: String; let choices: [TrialOfAnubisChoice] }
+struct TrialOfAnubisNode: Identifiable {
+    let id: TrialOfAnubisRoute
+    let imageName: String
+    let title: String
+    let narrative: String
+    let choices: [TrialOfAnubisChoice]
+}
 struct TrialOfAnubisSaveState: Codable { let schemaVersion: Int; var currentRoute: TrialOfAnubisRoute; var state: TrialOfAnubisState; var isInProgress: Bool; var completedEndings: Set<TrialOfAnubisEnding> }
 struct TrialOfAnubisFeedback: Identifiable, Equatable { let id = UUID(); let message: String }
 enum TrialOfAnubisAssets { static let cover = "anubis_cover" }

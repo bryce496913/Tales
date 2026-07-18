@@ -56,3 +56,47 @@ extension View {
         modifier(GoldCardModifier(padding: padding))
     }
 }
+
+extension Color {
+    init(hex: String) {
+        let cleanedHex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var value: UInt64 = 0
+        Scanner(string: cleanedHex).scanHexInt64(&value)
+
+        let alpha: UInt64
+        let red: UInt64
+        let green: UInt64
+        let blue: UInt64
+
+        switch cleanedHex.count {
+        case 3:
+            alpha = 255
+            red = (value >> 8) * 17
+            green = ((value >> 4) & 0xF) * 17
+            blue = (value & 0xF) * 17
+        case 6:
+            alpha = 255
+            red = value >> 16
+            green = (value >> 8) & 0xFF
+            blue = value & 0xFF
+        case 8:
+            alpha = value >> 24
+            red = (value >> 16) & 0xFF
+            green = (value >> 8) & 0xFF
+            blue = value & 0xFF
+        default:
+            alpha = 255
+            red = 0
+            green = 0
+            blue = 0
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(red) / 255,
+            green: Double(green) / 255,
+            blue: Double(blue) / 255,
+            opacity: Double(alpha) / 255
+        )
+    }
+}

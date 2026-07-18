@@ -13,7 +13,7 @@ def swift_text():
 
 
 def extract_node_narratives(swift):
-    pattern = re.compile(r"\.anu(\d{3}): TrialOfAnubisNode\(id: \.anu\d{3}, title: \"[^\"]+\", narrative: \"\"\"\n(.*?)\n\"\"\", choices:", re.S)
+    pattern = re.compile(r'\.anu(\d{3}): TrialOfAnubisNode\(id: \.anu\d{3}, imageName: "ANU\d{3}\.png", title: "[^\"]+", narrative: """\n(.*?)\n""", choices:', re.S)
     return {f"ANU-{node}": narrative for node, narrative in pattern.findall(swift)}
 
 
