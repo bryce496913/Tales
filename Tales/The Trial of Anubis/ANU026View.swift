@@ -6,7 +6,7 @@ struct ANU026View: View {
             imageName: "ANU026.png",
             title: "Return to the Hall",
             text: """
-The three recovered pieces begin pulling toward one another and open a doorway back to the Hall of Judgment. Anubis waits beside the broken scales while countless souls gather in the darkness. Ammit watches from behind the pillars, and the rebel’s words remain in your mind. Anubis extends his hand and orders you to return the pieces, but you now understand that carrying them gives you power over the future of the underworld.
+                The three recovered pieces begin pulling toward one another and open a doorway back to the Hall of Judgment. Anubis waits beside the broken scales while countless souls gather in the darkness. Ammit watches from behind the pillars, and the rebel’s words remain in your mind. Anubis extends his hand and orders you to return the pieces, but you now understand that carrying them gives you power over the future of the underworld.
             """
         ) {
             TrialOfAnubisChoicesStack {
