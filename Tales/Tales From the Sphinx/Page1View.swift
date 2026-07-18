@@ -24,6 +24,7 @@ struct Page1View: View {
                 StoryNavigationButton(title: "Try to find the road", route: .page(2)).padding()
             }
         }
+        .accessibilityIdentifier("sphinx-route-page-1")
     }
 }
 

@@ -49,20 +49,26 @@ struct TrialOfAnubisPageView: View {
                                     startDelay: reduceMotion ? 0 : 0.45,
                                     isEnabled: gameOptions.typewriterEnabled && !reduceMotion
                                 ) { textComplete = true }
+                                .accessibilityIdentifier(typewriterReadinessIdentifier)
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .goldCard()
                             .contentShape(Rectangle())
 
-                            VStack(spacing: 12) {
-                                ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) {
-                                    TrialOfAnubisChoiceButton(choice: $0)
+                            if choicesVisible {
+                                VStack(spacing: 12) {
+                                    ForEach(node.choices.filter { $0.requirement?.isSatisfied(by: nav.state) ?? true }) {
+                                        TrialOfAnubisChoiceButton(nodeID: nodeID, choice: $0)
+                                    }
                                 }
+                                .frame(maxWidth: .infinity)
+                                .transition(
+                                    .opacity.combined(
+                                        with: .move(edge: .bottom)
+                                    )
+                                )
+                                .accessibilityIdentifier("anubis-choice-container-ready")
                             }
-                            .frame(maxWidth: .infinity)
-                            .opacity(choicesVisible ? 1 : 0)
-                            .disabled(!choicesVisible)
-                            .animation(.easeOut(duration: gameOptions.pageTransitionsEnabled && !reduceMotion ? 0.3 : 0.05), value: choicesVisible)
                         }
                         .padding(.horizontal, AppTheme.screenPadding)
                         .padding(.top, 18)
@@ -71,6 +77,7 @@ struct TrialOfAnubisPageView: View {
                         .offset(y: appeared ? 0 : 10)
                     }
                     .zIndex(1)
+                    .accessibilityIdentifier("anubis-node-\(nodeID.rawValue)")
                 } else {
                     Text("Missing Anubis route: \(nodeID.rawValue)")
                         .foregroundColor(AppTheme.gold)
@@ -94,10 +101,12 @@ struct TrialOfAnubisPageView: View {
     }
 
     private var transitionStyle: StoryTransitionStyle { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? .sandFade : StoryPageEffects.standard.entryTransition }
+    private var typewriterReadinessIdentifier: String { choicesVisible ? "anubis-typewriter-complete" : "anubis-typewriter-pending" }
     private var choicesVisible: Bool { textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }
 
 struct TrialOfAnubisChoiceButton: View {
+    let nodeID: TrialOfAnubisRoute
     let choice: TrialOfAnubisChoice
     @EnvironmentObject private var nav: TrialOfAnubisNavigationState
 
@@ -106,6 +115,7 @@ struct TrialOfAnubisChoiceButton: View {
             nav.selectChoice(choice)
         })
         .accessibilityLabel(accessibilityTitle)
+        .accessibilityIdentifier("anubis-choice-\(nodeID.rawValue)-\(choice.title.slugifiedAccessibilityID)")
     }
 
     private var accessibilityTitle: String {

@@ -119,6 +119,7 @@ final class SphinxNavigationState: ObservableObject {
     @Published var isAdventureActive = false { didSet { persistProgress() } }
     @Published var hasSavedProgress = false
     @Published private(set) var completedEndings: Set<String> = []
+    @Published private(set) var isProcessingNavigation = false
 
     private var isRestoring = false
     private let defaults: UserDefaults
@@ -147,7 +148,29 @@ final class SphinxNavigationState: ObservableObject {
         hasSavedProgress = save.isInProgress
     }
 
-    func navigate(to route: SphinxRoute) { guard isAdventureActive else { return }; path.append(route) }
+    func navigate(to route: SphinxRoute) {
+        guard isAdventureActive else {
+            assertionFailure("Attempted Sphinx navigation while adventure was inactive")
+            return
+        }
+
+        guard !isProcessingNavigation else {
+            return
+        }
+
+        isProcessingNavigation = true
+
+        defer {
+            isProcessingNavigation = false
+        }
+
+        guard path.last != route else {
+            return
+        }
+
+        HapticManager.shared.playChoiceTap()
+        path.append(route)
+    }
     func markEndingReached(_ endingID: String) { completedEndings.insert(endingID); persistProgress() }
     func completeStory(endingID: String? = nil) { if let endingID { markEndingReached(endingID) }; isAdventureActive = false; path = []; persistProgress() }
     func returnToStoryMenu() { isAdventureActive = false; path = []; persistProgress() }

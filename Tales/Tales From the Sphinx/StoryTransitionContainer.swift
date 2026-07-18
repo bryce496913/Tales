@@ -16,8 +16,9 @@ struct StoryTransitionContainer<Content: View>: View {
     }
     private var contentOpacity: Double { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? 1 : Double(max(0.15, progress)) }
     @ViewBuilder private var overlay: some View {
-        if !reduceMotion && gameOptions.pageTransitionsEnabled && progress < 1 {
-            switch style {
+        Group {
+            if !reduceMotion && gameOptions.pageTransitionsEnabled && progress < 1 {
+                switch style {
             case .sandFade:
                 AppTheme.sand.opacity(Double(1 - progress) * 0.55).ignoresSafeArea()
             case .torchReveal:
@@ -33,8 +34,11 @@ struct StoryTransitionContainer<Content: View>: View {
                         .offset(x: proxy.size.width * progress)
                     Rectangle().fill(.black.opacity(0.35 * Double(1 - progress))).frame(width: 6).position(x: proxy.size.width/2, y: proxy.size.height/2)
                 }.ignoresSafeArea()
+                }
             }
         }
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
     }
     private var stonePanel: some View { LinearGradient(colors: [Color(hex:"5B5144"), Color(hex:"2E2924")], startPoint: .topLeading, endPoint: .bottomTrailing).shadow(color: .black.opacity(0.45), radius: 12, x: 0, y: 0) }
     private func run() { progress = (reduceMotion || !gameOptions.pageTransitionsEnabled) ? 1 : 0; let actualDuration = (reduceMotion || !gameOptions.pageTransitionsEnabled) ? 0.05 : duration; withAnimation(.easeInOut(duration: actualDuration)) { progress = 1 }; DispatchQueue.main.asyncAfter(deadline: .now() + actualDuration) { onComplete?() } }

@@ -62,15 +62,21 @@ struct StoryPageLayout<Content: View>: View {
                         VStack(alignment: .leading, spacing: 12) {
                             if let title { Text(title).font(.system(.title2, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold) }
                             TypewriterText(text: text, speed: gameOptions.typewriterSpeed.speed, startDelay: reduceMotion ? 0 : 0.45, isEnabled: gameOptions.typewriterEnabled && !reduceMotion) { textComplete = true }
+                                .accessibilityIdentifier(typewriterReadinessIdentifier)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .goldCard()
                         .contentShape(Rectangle())
-                        VStack(spacing: 12) { choices }
-                            .frame(maxWidth: .infinity)
-                            .opacity(choicesVisible ? 1 : 0)
-                            .disabled(!choicesVisible)
-                            .animation(.easeOut(duration: gameOptions.pageTransitionsEnabled && !reduceMotion ? 0.3 : 0.05), value: choicesVisible)
+                        if choicesVisible {
+                            VStack(spacing: 12) { choices }
+                                .frame(maxWidth: .infinity)
+                                .transition(
+                                    .opacity.combined(
+                                        with: .move(edge: .bottom)
+                                    )
+                                )
+                                .accessibilityIdentifier("sphinx-choice-container-ready")
+                        }
                     }
                     .padding(.horizontal, AppTheme.screenPadding).padding(.top, 18).padding(.bottom, 24)
                     .opacity(appeared ? 1 : 0).offset(y: appeared ? 0 : 10)
@@ -84,5 +90,6 @@ struct StoryPageLayout<Content: View>: View {
         .onDisappear { appeared = false; textComplete = false }
     }
     private var transitionStyle: StoryTransitionStyle { (reduceMotion || !gameOptions.pageTransitionsEnabled) ? .sandFade : effects.entryTransition }
+    private var typewriterReadinessIdentifier: String { choicesVisible ? "sphinx-typewriter-complete" : "sphinx-typewriter-pending" }
     private var choicesVisible: Bool { !effects.choicesWaitForText || textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }

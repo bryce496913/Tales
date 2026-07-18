@@ -9,6 +9,7 @@ struct TypewriterText: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var visible = ""
     @State private var task: Task<Void, Never>?
+    @State private var didComplete = false
 
     var body: some View {
         Text(displayText)
@@ -28,7 +29,12 @@ struct TypewriterText: View {
     private var displayText: String { (reduceMotion || !isEnabled) ? text : visible }
     private func start() {
         task?.cancel()
-        if reduceMotion || !isEnabled { visible = text; onComplete?(); return }
+        didComplete = false
+        if reduceMotion || !isEnabled {
+            visible = text
+            completeOnce()
+            return
+        }
         visible = ""
         task = Task { @MainActor in
             try? await Task.sleep(nanoseconds: UInt64(startDelay * 1_000_000_000))
@@ -38,8 +44,23 @@ struct TypewriterText: View {
                 visible = String(chars.prefix(index))
                 try? await Task.sleep(nanoseconds: speed.delay)
             }
-            if !Task.isCancelled { visible = text; onComplete?() }
+            if !Task.isCancelled {
+                visible = text
+                completeOnce()
+            }
         }
     }
-    private func completeNow() { task?.cancel(); task = nil; visible = text; onComplete?() }
+
+    private func completeNow() {
+        task?.cancel()
+        task = nil
+        visible = text
+        completeOnce()
+    }
+
+    private func completeOnce() {
+        guard !didComplete else { return }
+        didComplete = true
+        onComplete?()
+    }
 }

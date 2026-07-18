@@ -63,7 +63,8 @@ final class TrialOfAnubisNavigationState: ObservableObject {
     @Published var hasSavedProgress = false
     @Published private(set) var completedEndings: Set<TrialOfAnubisEnding> = []
     @Published var feedback: TrialOfAnubisFeedback?
-    private var isRestoring = false, isProcessingChoice = false
+    @Published private(set) var isProcessingChoice = false
+    private var isRestoring = false
     private let defaults: UserDefaults
     init(defaults: UserDefaults = .standard) { self.defaults = defaults; loadSavedProgressFlag() }
     var currentRoute: TrialOfAnubisRoute? { path.last }
@@ -71,7 +72,32 @@ final class TrialOfAnubisNavigationState: ObservableObject {
     func continueAdventure() { guard let save = loadSave(), save.isInProgress else { startNewAdventure(); return }; isRestoring = true; completedEndings = save.completedEndings; state = save.state; isAdventureActive = true; path = [save.currentRoute]; isRestoring = false; hasSavedProgress = true }
     func returnToStoryMenu() { persistProgress() }
     func restartAdventure() { startNewAdventure() }
-    func selectChoice(_ choice: TrialOfAnubisChoice) { guard !isProcessingChoice, currentRoute == choice.source, choice.requirement?.isSatisfied(by: state) ?? true else { return }; isProcessingChoice = true; apply(choice.effects); feedback = TrialOfAnubisFeedback(message: choice.feedback ?? genericFeedback(for: choice.effects)); let destination = state.memoriesRemaining <= 0 ? TrialOfAnubisRoute.endLost : choice.destination; if destination == .endLost { record(.lostSoul); state.finalEndingID = TrialOfAnubisEnding.lostSoul.rawValue; isAdventureActive = false }; path.append(destination); isProcessingChoice = false; persistProgress() }
+    func selectChoice(_ choice: TrialOfAnubisChoice) {
+        guard !isProcessingChoice else { return }
+
+        guard currentRoute == choice.source else {
+            assertionFailure("Attempted Anubis choice from \(choice.source.rawValue) while visible route was \(currentRoute?.rawValue ?? "nil")")
+            return
+        }
+
+        guard choice.requirement?.isSatisfied(by: state) ?? true else { return }
+
+        isProcessingChoice = true
+        defer { isProcessingChoice = false }
+
+        HapticManager.shared.playChoiceTap()
+        apply(choice.effects)
+        feedback = TrialOfAnubisFeedback(message: choice.feedback ?? genericFeedback(for: choice.effects))
+        let destination = state.memoriesRemaining <= 0 ? TrialOfAnubisRoute.endLost : choice.destination
+        if destination == .endLost {
+            record(.lostSoul)
+            state.finalEndingID = TrialOfAnubisEnding.lostSoul.rawValue
+            isAdventureActive = false
+        }
+        guard path.last != destination else { return }
+        path.append(destination)
+        persistProgress()
+    }
     func apply(_ effects: [TrialOfAnubisStateEffect]) { for effect in effects { switch effect { case .adjustHeartWeight(let v): state.heartWeight += v; case .loseMemories(let v): state.memoriesRemaining -= v; case .setAllegiance(let v): state.allegiance = v; case .setSavedLostSoul(let v): state.savedLostSoul = v; case .setMercyOath(let v): state.madeMercyOath = v; case .setGoldenScarab(let v): state.tookGoldenScarab = v; case .setAmmitFang(let v): state.possessesAmmitFang = v; case .setScarabProtection(let v): state.hasScarabProtection = v; case .setLearnedTrueName(let v): state.learnedTrueName = v; case .setUnderworldPower(let v): state.acceptedUnderworldPower = v; case .setLiedToAnubis(let v): state.liedToAnubis = v; case .setAmmitClue(let v): state.learnedAmmitClue = v; case .setOwnHeartTruth(let v): state.learnedOwnHeartTruth = v; case .setConspiracyClue(let v): state.learnedConspiracyClue = v; case .setFirstScalePiece(let v): state.firstScalePieceRecovered = v; case .setSecondScalePiece(let v): state.secondScalePieceRecovered = v; case .setFinalScalePiece(let v): state.finalScalePieceRecovered = v; case .setFinalChoice(let v): state.finalChoice = v } }; state.clamp() }
     func resolveEndingIfNeeded() { if let id = state.finalEndingID, let ending = TrialOfAnubisEnding(rawValue: id) { route(to: ending); return }; let ending = TrialOfAnubisEndingResolver.resolveEnding(state: state); state.finalEndingID = ending.rawValue; record(ending); isAdventureActive = false; persistProgress(); route(to: ending) }
     private func route(to ending: TrialOfAnubisEnding) { let r: TrialOfAnubisRoute = switch ending { case .trueEnding: .endTrue; case .devouredByAmmit: .endAmmit; case .rebel: .endRebel; case .trickster: .endTrickster; case .lostSoul: .endLost }; if path.last != r { path.append(r) } }
