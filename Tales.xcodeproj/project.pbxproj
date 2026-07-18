@@ -165,6 +165,8 @@
 		FE9990022B289A4F0015CAFB /* AppNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationState.swift; sourceTree = "<group>"; };
 		FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureResetButtons.swift; sourceTree = "<group>"; };
 		FE38B2182B289DD8004B8919 /* TalesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalesApp.swift; sourceTree = "<group>"; };
+		FEA300052B300001000001 /* Tales_From_the_Sphinx_Story.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Tales_From_the_Sphinx_Story.md; sourceTree = "<group>"; };
+		FEA300062B300001000001 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FEA300002B300001000001 /* Tales From the Sphinx */ = {
+			isa = PBXGroup;
+			children = (
+				FE02676A2B28AB1800F5C31D /* Plot1View.swift */,
+				FE02676C2B28B9A300F5C31D /* Plot2View.swift */,
+				FE02676E2B28BA1900F5C31D /* Page1View.swift */,
+				FE0267702B28BAFB00F5C31D /* Page2View.swift */,
+				FE0267722B28BB8100F5C31D /* Page3View.swift */,
+				FE0267742B28BC1700F5C31D /* Page4View.swift */,
+				FE0267762B28BC9400F5C31D /* Page5View.swift */,
+				FE0267782B28BD0500F5C31D /* Page6View.swift */,
+				FE02677A2B28BD9700F5C31D /* Page7View.swift */,
+				FE02677C2B28BE0100F5C31D /* Page8View.swift */,
+				FE02677E2B28BE9500F5C31D /* Page9View.swift */,
+				FE0267802B28BF0400F5C31D /* Page10View.swift */,
+				FE0267822B28BFEE00F5C31D /* Page11View.swift */,
+				FE0267842B28C05400F5C31D /* Page12View.swift */,
+				FE0267862B28C13E00F5C31D /* Page13View.swift */,
+				FE0267882B28C1C200F5C31D /* Page14View.swift */,
+				FE02678A2B28C22000F5C31D /* Page15View.swift */,
+				FE02678C2B28C26D00F5C31D /* Page16View.swift */,
+				FE02678E2B28C31100F5C31D /* Page17View.swift */,
+				FE0267902B28C3A100F5C31D /* Page18View.swift */,
+				FE0267922B28C46700F5C31D /* Page19View.swift */,
+				FE0267942B28C60800F5C31D /* Page20View.swift */,
+				FE0267962B28C66700F5C31D /* Page21View.swift */,
+				FE0267982B28C6F500F5C31D /* Page22View.swift */,
+				FE02679A2B28C74200F5C31D /* Page24View.swift */,
+				FE02679C2B28C77A00F5C31D /* Page25View.swift */,
+				FE02672B2B28A1B000F5C31D /* Images */,
+				FEA300052B300001000001 /* Tales_From_the_Sphinx_Story.md */,
+			);
+			path = "Tales From the Sphinx";
+			sourceTree = "<group>";
+		};
+		FEA300012B300001000001 /* The Trial of Anubis */ = {
+			isa = PBXGroup;
+			children = (
+				FEA300022B300001000001 /* Images */,
+			);
+			path = "The Trial of Anubis";
+			sourceTree = "<group>";
+		};
+		FEA300022B300001000001 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FEA300062B300001000001 /* .gitkeep */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		FE02672B2B28A1B000F5C31D /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,34 +306,9 @@
 				FEA100072B300001000001 /* StoryOutcome.swift */,
 				FEA100082B300001000001 /* ChoiceButtonStyle.swift */,
 				FEA100062B300001000001 /* StoryNavigationButton.swift */,
-				FE02676A2B28AB1800F5C31D /* Plot1View.swift */,
-				FE02676C2B28B9A300F5C31D /* Plot2View.swift */,
-				FE02676E2B28BA1900F5C31D /* Page1View.swift */,
-				FE0267702B28BAFB00F5C31D /* Page2View.swift */,
-				FE0267722B28BB8100F5C31D /* Page3View.swift */,
-				FE0267742B28BC1700F5C31D /* Page4View.swift */,
-				FE0267762B28BC9400F5C31D /* Page5View.swift */,
-				FE0267782B28BD0500F5C31D /* Page6View.swift */,
-				FE02677A2B28BD9700F5C31D /* Page7View.swift */,
-				FE02677C2B28BE0100F5C31D /* Page8View.swift */,
-				FE02677E2B28BE9500F5C31D /* Page9View.swift */,
-				FE0267802B28BF0400F5C31D /* Page10View.swift */,
-				FE0267822B28BFEE00F5C31D /* Page11View.swift */,
-				FE0267842B28C05400F5C31D /* Page12View.swift */,
-				FE0267862B28C13E00F5C31D /* Page13View.swift */,
-				FE0267882B28C1C200F5C31D /* Page14View.swift */,
-				FE02678A2B28C22000F5C31D /* Page15View.swift */,
-				FE02678C2B28C26D00F5C31D /* Page16View.swift */,
-				FE02678E2B28C31100F5C31D /* Page17View.swift */,
-				FE0267902B28C3A100F5C31D /* Page18View.swift */,
-				FE0267922B28C46700F5C31D /* Page19View.swift */,
-				FE0267942B28C60800F5C31D /* Page20View.swift */,
-				FE0267962B28C66700F5C31D /* Page21View.swift */,
-				FE0267982B28C6F500F5C31D /* Page22View.swift */,
-				FE02679A2B28C74200F5C31D /* Page24View.swift */,
-				FE02679C2B28C77A00F5C31D /* Page25View.swift */,
+				FEA300002B300001000001 /* Tales From the Sphinx */,
+				FEA300012B300001000001 /* The Trial of Anubis */,
 				FE0504AE2B289A510015CAFB /* Assets.xcassets */,
-				FE02672B2B28A1B000F5C31D /* Images */,
 				FE0504B02B289A510015CAFB /* Preview Content */,
 			);
 			path = Tales;
