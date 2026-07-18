@@ -11,6 +11,7 @@
 		FEB000022B400001000001 /* AppMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100022B400001000001 /* AppMainMenuView.swift */; };
 		FEB000032B400001000001 /* StorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100032B400001000001 /* StorySelectionView.swift */; };
 		FEB000042B400001000001 /* StorySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100042B400001000001 /* StorySelectionCard.swift */; };
+		FEB000072B400001000001 /* StorySelectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100072B400001000001 /* StorySelectionDetailView.swift */; };
 		FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */; };
 		FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */; };
 		FEA2000A2B300001000001 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1000A2B300001000001 /* PreviewContainer.swift */; };
@@ -57,6 +58,8 @@
 		FE0267662B28A22F00F5C31D /* Plot2.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0267482B28A22F00F5C31D /* Plot2.png */; };
 		FE0267672B28A22F00F5C31D /* Splash_Screen_V7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0267492B28A22F00F5C31D /* Splash_Screen_V7.png */; };
 		FE0267692B28A42E00F5C31D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0267682B28A42E00F5C31D /* Icon.png */; };
+		FEA300082B400001000001 /* ANU-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA300072B400001000001 /* ANU-Icon.png */; };
+		FEA3000A2B400001000001 /* ANU-Title-Screen-Art.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA300092B400001000001 /* ANU-Title-Screen-Art.png */; };
 		FE02676B2B28AB1800F5C31D /* Plot1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02676A2B28AB1800F5C31D /* Plot1View.swift */; };
 		FE02676D2B28B9A300F5C31D /* Plot2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02676C2B28B9A300F5C31D /* Plot2View.swift */; };
 		FE02676F2B28BA1900F5C31D /* Page1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02676E2B28BA1900F5C31D /* Page1View.swift */; };
@@ -97,6 +100,7 @@
 		FEB100022B400001000001 /* AppMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainMenuView.swift; sourceTree = "<group>"; };
 		FEB100032B400001000001 /* StorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionView.swift; sourceTree = "<group>"; };
 		FEB100042B400001000001 /* StorySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionCard.swift; sourceTree = "<group>"; };
+		FEB100072B400001000001 /* StorySelectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionDetailView.swift; sourceTree = "<group>"; };
 		FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalesFromTheSphinxRootView.swift; sourceTree = "<group>"; };
 		FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPlaceholderView.swift; sourceTree = "<group>"; };
 		FEA100062B300001000001 /* StoryNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryNavigationButton.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 		FE38B2182B289DD8004B8919 /* TalesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalesApp.swift; sourceTree = "<group>"; };
 		FEA300052B300001000001 /* Tales_From_the_Sphinx_Story.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Tales_From_the_Sphinx_Story.md; sourceTree = "<group>"; };
 		FEA300062B300001000001 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		FEA300072B400001000001 /* ANU-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANU-Icon.png"; sourceTree = "<group>"; };
+		FEA300092B400001000001 /* ANU-Title-Screen-Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANU-Title-Screen-Art.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				FEA300062B300001000001 /* .gitkeep */,
+				FEA300072B400001000001 /* ANU-Icon.png */,
+				FEA300092B400001000001 /* ANU-Title-Screen-Art.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				FEB100022B400001000001 /* AppMainMenuView.swift */,
 				FEB100032B400001000001 /* StorySelectionView.swift */,
 				FEB100042B400001000001 /* StorySelectionCard.swift */,
+				FEB100072B400001000001 /* StorySelectionDetailView.swift */,
 				FE9990002B289A4F0015CAFB /* StoryStyle.swift */,
 				FE9990022B289A4F0015CAFB /* AppNavigationState.swift */,
 				FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */,
@@ -429,6 +438,8 @@
 				FE02675C2B28A22F00F5C31D /* Twenty-Five.png in Resources */,
 				FE0267672B28A22F00F5C31D /* Splash_Screen_V7.png in Resources */,
 				FE0267692B28A42E00F5C31D /* Icon.png in Resources */,
+				FEA300082B400001000001 /* ANU-Icon.png in Resources */,
+				FEA3000A2B400001000001 /* ANU-Title-Screen-Art.png in Resources */,
 				FE0267582B28A22F00F5C31D /* Ten.png in Resources */,
 				FE02675E2B28A22F00F5C31D /* Three.png in Resources */,
 			);
@@ -453,6 +464,7 @@
 				FEB000022B400001000001 /* AppMainMenuView.swift in Sources */,
 				FEB000032B400001000001 /* StorySelectionView.swift in Sources */,
 				FEB000042B400001000001 /* StorySelectionCard.swift in Sources */,
+				FEB000072B400001000001 /* StorySelectionDetailView.swift in Sources */,
 				FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */,
 				FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */,
 				FE9990012B289A4F0015CAFB /* StoryStyle.swift in Sources */,

@@ -5,8 +5,8 @@ struct StorySelectionItem: Identifiable {
     let title: String
     let subtitle: String
     let statusText: String
-    let imageName: String?
-    let systemImageName: String
+    let iconImageName: String
+    let titleImageName: String
     let actionTitle: String
 }
 
@@ -15,13 +15,16 @@ struct StorySelectionView: View {
     let openAnubis: () -> Void
     let returnToMainMenu: () -> Void
 
+    @State private var selectedStory: StorySelectionItem?
+
     private let columns = [
         GridItem(
-            .adaptive(
-                minimum: 250,
-                maximum: 360
-            ),
-            spacing: 18
+            .flexible(),
+            spacing: 16
+        ),
+        GridItem(
+            .flexible(),
+            spacing: 16
         )
     ]
 
@@ -31,18 +34,18 @@ struct StorySelectionView: View {
             title: "Tales From the Sphinx",
             subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
             statusText: "Available",
-            imageName: "Title-Screen-Art.png",
-            systemImageName: "pyramid.fill",
+            iconImageName: "Icon.png",
+            titleImageName: "Title-Screen-Art.png",
             actionTitle: "Open Story"
         ),
         StorySelectionItem(
             id: "the-trial-of-anubis",
             title: "The Trial of Anubis",
-            subtitle: "Enter the underworld and face the judgment of Anubis.",
+            subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
             statusText: "Coming Soon",
-            imageName: nil,
-            systemImageName: "scalemass.fill",
-            actionTitle: "View Story"
+            iconImageName: "ANU-Icon.png",
+            titleImageName: "ANU-Title-Screen-Art.png",
+            actionTitle: "Open Story"
         )
     ]
 
@@ -51,58 +54,96 @@ struct StorySelectionView: View {
             EgyptianBackground()
 
             ScrollView {
-                VStack(spacing: 24) {
+                VStack(spacing: 18) {
                     header
+                        .padding(.top, 12)
+                        .padding(.horizontal, AppTheme.screenPadding)
 
-                    LazyVGrid(columns: columns, alignment: .center, spacing: 18) {
+                    LazyVGrid(
+                        columns: columns,
+                        alignment: .center,
+                        spacing: 20
+                    ) {
                         ForEach(stories) { story in
-                            StorySelectionCard(
-                                title: story.title,
-                                subtitle: story.subtitle,
-                                statusText: story.statusText,
-                                imageName: story.imageName,
-                                systemImageName: story.systemImageName,
-                                actionTitle: story.actionTitle
-                            ) {
-                                if story.id == "tales-from-the-sphinx" {
-                                    openSphinx()
-                                } else if story.id == "the-trial-of-anubis" {
-                                    openAnubis()
-                                }
+                            StorySelectionCard(story: story) {
+                                selectedStory = story
                             }
                         }
                     }
+                    .frame(maxWidth: 440)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, AppTheme.screenPadding)
 
                     MenuButton(title: "Main Menu") {
                         returnToMainMenu()
                     }
                     .accessibilityLabel("Main Menu")
                     .accessibilityHint("Returns to the Tales main menu.")
-                    .padding(.top, 8)
+                    .padding(.top, 2)
+                    .padding(.bottom, AppTheme.screenPadding)
                 }
-                .frame(maxWidth: AppTheme.maximumStoryContentWidth)
-                .padding(AppTheme.screenPadding)
                 .frame(maxWidth: .infinity)
             }
+        }
+        .sheet(item: $selectedStory) { story in
+            StorySelectionDetailView(
+                story: story,
+                openStory: {
+                    openSelectedStory(story)
+                }
+            )
+            .presentationDetents([
+                .medium,
+                .large
+            ])
+            .presentationDragIndicator(.visible)
         }
     }
 
     private var header: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 6) {
             Text("Pick a Story")
-                .font(.system(size: 40, weight: .bold, design: .serif))
+                .font(
+                    .system(
+                        .largeTitle,
+                        design: .serif
+                    )
+                    .weight(.bold)
+                )
                 .foregroundColor(AppTheme.gold)
-                .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.75)
 
-            Text("Every story offers a different journey, set of choices, and ending.")
-                .font(.system(.body, design: .serif).weight(.medium))
+            Text("Choose an adventure to learn more.")
+                .font(
+                    .system(
+                        .subheadline,
+                        design: .serif
+                    )
+                )
                 .foregroundColor(AppTheme.mutedText)
                 .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
         }
-        .goldCard()
         .frame(maxWidth: AppTheme.maximumTextWidth)
+    }
+
+    private func openSelectedStory(
+        _ story: StorySelectionItem
+    ) {
+        selectedStory = nil
+
+        DispatchQueue.main.async {
+            switch story.id {
+            case "tales-from-the-sphinx":
+                openSphinx()
+
+            case "the-trial-of-anubis":
+                openAnubis()
+
+            default:
+                assertionFailure(
+                    "Unknown story selection: \(story.id)"
+                )
+            }
+        }
     }
 }
 
@@ -110,10 +151,17 @@ struct StorySelectionView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             StorySelectionView(openSphinx: {}, openAnubis: {}, returnToMainMenu: {})
+                .previewDisplayName("Two-column grid - iPhone SE")
                 .previewDevice("iPhone SE (3rd generation)")
+
             StorySelectionView(openSphinx: {}, openAnubis: {}, returnToMainMenu: {})
+                .previewDisplayName("Two-column grid - large iPhone")
+                .previewDevice("iPhone 15 Pro Max")
+
+            StorySelectionView(openSphinx: {}, openAnubis: {}, returnToMainMenu: {})
+                .previewDisplayName("Two-column grid - iPad portrait")
                 .previewDevice("iPad Pro (12.9-inch) (6th generation)")
-                .previewInterfaceOrientation(.landscapeLeft)
+                .previewInterfaceOrientation(.portrait)
         }
     }
 }
