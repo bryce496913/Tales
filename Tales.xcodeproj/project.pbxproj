@@ -161,7 +161,6 @@
 		FEA500000000000000000091 /* TrialOfAnubisPageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */; };
 		FEA500000000000000000093 /* TrialOfAnubisTypewriterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */; };
 		FEA500000000000000000095 /* TrialOfAnubisTypewriterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */; };
-		FEA500000000000000000097 /* TrialOfAnubisTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000096 /* TrialOfAnubisTransitionStyle.swift */; };
 		FEA500000000000000000099 /* TrialOfAnubisTransitionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -375,7 +374,6 @@
 				FEA400000000000000000001 /* ANU001View.swift */,				FEA400000000000000000003 /* ANU002View.swift */,				FEA400000000000000000005 /* ANU003View.swift */,				FEA400000000000000000007 /* ANU004View.swift */,				FEA400000000000000000009 /* ANU005View.swift */,				FEA40000000000000000000B /* ANU006View.swift */,				FEA40000000000000000000D /* ANU007View.swift */,				FEA40000000000000000000F /* ANU008View.swift */,				FEA400000000000000000011 /* ANU009View.swift */,				FEA400000000000000000013 /* ANU010View.swift */,				FEA400000000000000000015 /* ANU011View.swift */,				FEA400000000000000000017 /* ANU012View.swift */,				FEA400000000000000000019 /* ANU013View.swift */,				FEA40000000000000000001B /* ANU014View.swift */,				FEA40000000000000000001D /* ANU015View.swift */,				FEA40000000000000000001F /* ANU016View.swift */,				FEA400000000000000000021 /* ANU017View.swift */,				FEA400000000000000000023 /* ANU018View.swift */,				FEA400000000000000000025 /* ANU019View.swift */,				FEA400000000000000000027 /* ANU020View.swift */,				FEA400000000000000000029 /* ANU021View.swift */,				FEA40000000000000000002B /* ANU022View.swift */,				FEA40000000000000000002D /* ANU023View.swift */,				FEA40000000000000000002F /* ANU024View.swift */,				FEA400000000000000000031 /* ANU025View.swift */,				FEA400000000000000000033 /* ANU026View.swift */,				FEA400000000000000000035 /* ANU027View.swift */,				FEA400000000000000000037 /* ANU028View.swift */,				FEA400000000000000000039 /* AnubisAmmitEndingView.swift */,				FEA40000000000000000003B /* AnubisLostSoulEndingView.swift */,				FEA40000000000000000003D /* AnubisRebelEndingView.swift */,				FEA40000000000000000003F /* AnubisTricksterEndingView.swift */,				FEA400000000000000000041 /* AnubisTrueEndingView.swift */,				FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */,
 				FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */,
 				FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */,
-				FEA400000000000000000096 /* TrialOfAnubisTransitionStyle.swift */,
 				FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */,
 				FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */,				FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */,				FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */,				FEA400000000000000000049 /* TrialOfAnubisNavigationState.swift */,				FEA40000000000000000004B /* TrialOfAnubisOutcomeView.swift */,				FEA40000000000000000004D /* TrialOfAnubisPageLayout.swift */,				FEA40000000000000000004F /* TrialOfAnubisPreviewContainer.swift */,				FEA400000000000000000051 /* TrialOfAnubisProgress.swift */,				FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */,				FEA400000000000000000055 /* TrialOfAnubisRootView.swift */,				FEA400000000000000000057 /* TrialOfAnubisRoute.swift */,				FEA600000000000000000059 /* The_Trial_of_Anubis_Simplified_Two_Choice_Story.md */,				FEA300022B300001000001 /* Images */,
 			);
@@ -648,7 +646,6 @@
 				FEA500000000000000000091 /* TrialOfAnubisPageEffects.swift in Sources */,
 				FEA500000000000000000093 /* TrialOfAnubisTypewriterSpeed.swift in Sources */,
 				FEA500000000000000000095 /* TrialOfAnubisTypewriterText.swift in Sources */,
-				FEA500000000000000000097 /* TrialOfAnubisTransitionStyle.swift in Sources */,
 				FEA500000000000000000099 /* TrialOfAnubisTransitionContainer.swift in Sources */,
 				FEA500000000000000000044 /* TrialOfAnubisChoiceButtonStyle.swift in Sources */,
 				FEA500000000000000000046 /* TrialOfAnubisMainMenuView.swift in Sources */,
