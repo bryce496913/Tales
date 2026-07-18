@@ -92,6 +92,7 @@
 		B12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift */; };
 		B148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift */; };
 		B17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift */; };
+		B1ABCDEF0000000000000001 /* TrialOfAnubisChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABCDEF0000000000000001 /* TrialOfAnubisChoiceButton.swift */; };
 		B183A1257817B13F883FB800 /* ANU024View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A1257817B13F883FB800 /* ANU024View.swift */; };
 		B17A0C70E127F6A1BEC43000 /* ANU025View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A0C70E127F6A1BEC43000 /* ANU025View.swift */; };
 		B1D230FD27800D461B77F600 /* ANU027View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D230FD27800D461B77F600 /* ANU027View.swift */; };
@@ -230,41 +231,42 @@
 		FEA100092B300001000001 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		A1824177266DD974EF00E800 /* TrialOfAnubisViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialOfAnubisViews.swift"; sourceTree = "<group>"; };
 		A14570B320E741DB2DB39B00 /* TrialOfAnubisCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialOfAnubisCore.swift"; sourceTree = "<group>"; };
-		A1A0E832B393A984BEF6AD00 /* AnubisLostSoulEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endings/AnubisLostSoulEndingView.swift"; sourceTree = "<group>"; };
-		A14217BD313FD7BBE178A000 /* AnubisAmmitEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endings/AnubisAmmitEndingView.swift"; sourceTree = "<group>"; };
-		A13326785564B05098192700 /* AnubisTricksterEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endings/AnubisTricksterEndingView.swift"; sourceTree = "<group>"; };
-		A17100459C41B5C5D6BF3300 /* AnubisTrueEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endings/AnubisTrueEndingView.swift"; sourceTree = "<group>"; };
-		A12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endings/AnubisRebelEndingView.swift"; sourceTree = "<group>"; };
-		A148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components/TrialOfAnubisEndingView.swift"; sourceTree = "<group>"; };
-		A17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content/TrialOfAnubisStoryContent.swift"; sourceTree = "<group>"; };
-		A183A1257817B13F883FB800 /* ANU024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act IV - Judgment/ANU024View.swift"; sourceTree = "<group>"; };
-		A17A0C70E127F6A1BEC43000 /* ANU025View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act IV - Judgment/ANU025View.swift"; sourceTree = "<group>"; };
-		A1D230FD27800D461B77F600 /* ANU027View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act IV - Judgment/ANU027View.swift"; sourceTree = "<group>"; };
-		A1C395A876DDABB9138A2500 /* ANU028View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act IV - Judgment/ANU028View.swift"; sourceTree = "<group>"; };
-		A1AB3F831B509856354F0A00 /* ANU026View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act IV - Judgment/ANU026View.swift"; sourceTree = "<group>"; };
-		A14D2781E7380414E29CBA00 /* ANU005View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU005View.swift"; sourceTree = "<group>"; };
-		A1D16286808150D02BE0FC00 /* ANU001View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU001View.swift"; sourceTree = "<group>"; };
-		A13B7B41435336BAF4404200 /* ANU007View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU007View.swift"; sourceTree = "<group>"; };
-		A1D3FE75688C31B014C88400 /* ANU003View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU003View.swift"; sourceTree = "<group>"; };
-		A1B941D7C08A3A7D79D42200 /* ANU002View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU002View.swift"; sourceTree = "<group>"; };
-		A1D41510D1A1A1341132CA00 /* ANU006View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU006View.swift"; sourceTree = "<group>"; };
-		A1E53337821B1AC0C538C700 /* ANU004View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act I - The Summons/ANU004View.swift"; sourceTree = "<group>"; };
-		A1A4CEBD303287BE806FA300 /* ANU014View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU014View.swift"; sourceTree = "<group>"; };
-		A1C89FDD10DDC58305917B00 /* ANU015View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU015View.swift"; sourceTree = "<group>"; };
-		A1BE25A8C384F0C6B10DCE00 /* ANU013View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU013View.swift"; sourceTree = "<group>"; };
-		A1A6436AD02E0ED45CF4F000 /* ANU010View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU010View.swift"; sourceTree = "<group>"; };
-		A137DEFC4E30F41DDC1D3A00 /* ANU008View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU008View.swift"; sourceTree = "<group>"; };
-		A12A193F8BD5922234C9DE00 /* ANU011View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU011View.swift"; sourceTree = "<group>"; };
-		A18852C7847BF11A22979500 /* ANU009View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU009View.swift"; sourceTree = "<group>"; };
-		A13FD006794D24587661E900 /* ANU012View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU012View.swift"; sourceTree = "<group>"; };
-		A136E995151F770B4E500E00 /* ANU016View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act II - The Broken Underworld/ANU016View.swift"; sourceTree = "<group>"; };
-		A1A56281D953304985984F00 /* ANU022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU022View.swift"; sourceTree = "<group>"; };
-		A1F19E29C2020FADAAE05500 /* ANU018View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU018View.swift"; sourceTree = "<group>"; };
-		A1A723CDB9D08DEFBD797400 /* ANU021View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU021View.swift"; sourceTree = "<group>"; };
-		A194C7CB2E9EAF9976413900 /* ANU023View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU023View.swift"; sourceTree = "<group>"; };
-		A190456D9F21D1F161B3FA00 /* ANU017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU017View.swift"; sourceTree = "<group>"; };
-		A18233DF43AA004A5A97A300 /* ANU020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU020View.swift"; sourceTree = "<group>"; };
-		A1C9D29AAAB6E35F7CA86800 /* ANU019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Act III - Memory and Temptation/ANU019View.swift"; sourceTree = "<group>"; };
+		A1A0E832B393A984BEF6AD00 /* AnubisLostSoulEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnubisLostSoulEndingView.swift"; sourceTree = "<group>"; };
+		A14217BD313FD7BBE178A000 /* AnubisAmmitEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnubisAmmitEndingView.swift"; sourceTree = "<group>"; };
+		A13326785564B05098192700 /* AnubisTricksterEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnubisTricksterEndingView.swift"; sourceTree = "<group>"; };
+		A17100459C41B5C5D6BF3300 /* AnubisTrueEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnubisTrueEndingView.swift"; sourceTree = "<group>"; };
+		A12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnubisRebelEndingView.swift"; sourceTree = "<group>"; };
+		A148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialOfAnubisEndingView.swift"; sourceTree = "<group>"; };
+		A17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialOfAnubisStoryContent.swift"; sourceTree = "<group>"; };
+		A1ABCDEF0000000000000001 /* TrialOfAnubisChoiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialOfAnubisChoiceButton.swift"; sourceTree = "<group>"; };
+		A183A1257817B13F883FB800 /* ANU024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU024View.swift"; sourceTree = "<group>"; };
+		A17A0C70E127F6A1BEC43000 /* ANU025View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU025View.swift"; sourceTree = "<group>"; };
+		A1D230FD27800D461B77F600 /* ANU027View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU027View.swift"; sourceTree = "<group>"; };
+		A1C395A876DDABB9138A2500 /* ANU028View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU028View.swift"; sourceTree = "<group>"; };
+		A1AB3F831B509856354F0A00 /* ANU026View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU026View.swift"; sourceTree = "<group>"; };
+		A14D2781E7380414E29CBA00 /* ANU005View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU005View.swift"; sourceTree = "<group>"; };
+		A1D16286808150D02BE0FC00 /* ANU001View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU001View.swift"; sourceTree = "<group>"; };
+		A13B7B41435336BAF4404200 /* ANU007View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU007View.swift"; sourceTree = "<group>"; };
+		A1D3FE75688C31B014C88400 /* ANU003View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU003View.swift"; sourceTree = "<group>"; };
+		A1B941D7C08A3A7D79D42200 /* ANU002View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU002View.swift"; sourceTree = "<group>"; };
+		A1D41510D1A1A1341132CA00 /* ANU006View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU006View.swift"; sourceTree = "<group>"; };
+		A1E53337821B1AC0C538C700 /* ANU004View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU004View.swift"; sourceTree = "<group>"; };
+		A1A4CEBD303287BE806FA300 /* ANU014View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU014View.swift"; sourceTree = "<group>"; };
+		A1C89FDD10DDC58305917B00 /* ANU015View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU015View.swift"; sourceTree = "<group>"; };
+		A1BE25A8C384F0C6B10DCE00 /* ANU013View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU013View.swift"; sourceTree = "<group>"; };
+		A1A6436AD02E0ED45CF4F000 /* ANU010View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU010View.swift"; sourceTree = "<group>"; };
+		A137DEFC4E30F41DDC1D3A00 /* ANU008View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU008View.swift"; sourceTree = "<group>"; };
+		A12A193F8BD5922234C9DE00 /* ANU011View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU011View.swift"; sourceTree = "<group>"; };
+		A18852C7847BF11A22979500 /* ANU009View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU009View.swift"; sourceTree = "<group>"; };
+		A13FD006794D24587661E900 /* ANU012View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU012View.swift"; sourceTree = "<group>"; };
+		A136E995151F770B4E500E00 /* ANU016View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU016View.swift"; sourceTree = "<group>"; };
+		A1A56281D953304985984F00 /* ANU022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU022View.swift"; sourceTree = "<group>"; };
+		A1F19E29C2020FADAAE05500 /* ANU018View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU018View.swift"; sourceTree = "<group>"; };
+		A1A723CDB9D08DEFBD797400 /* ANU021View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU021View.swift"; sourceTree = "<group>"; };
+		A194C7CB2E9EAF9976413900 /* ANU023View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU023View.swift"; sourceTree = "<group>"; };
+		A190456D9F21D1F161B3FA00 /* ANU017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU017View.swift"; sourceTree = "<group>"; };
+		A18233DF43AA004A5A97A300 /* ANU020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU020View.swift"; sourceTree = "<group>"; };
+		A1C9D29AAAB6E35F7CA86800 /* ANU019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ANU019View.swift"; sourceTree = "<group>"; };
 		C0A100000000000000000000 /* ANU001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU001.png"; sourceTree = "<group>"; };
 		C0A100000000000000000001 /* ANU002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU002.png"; sourceTree = "<group>"; };
 		C0A100000000000000000002 /* ANU003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Images/ANU003.png"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				A12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift */,
 				A148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift */,
 				A17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift */,
+				A1ABCDEF0000000000000001 /* TrialOfAnubisChoiceButton.swift */,
 				A183A1257817B13F883FB800 /* ANU024View.swift */,
 				A17A0C70E127F6A1BEC43000 /* ANU025View.swift */,
 				A1D230FD27800D461B77F600 /* ANU027View.swift */,
@@ -683,6 +686,7 @@
 				B12C0CE4E0CE6D4F08E19600 /* AnubisRebelEndingView.swift in Sources */,
 				B148C40DFD1223F25B202600 /* TrialOfAnubisEndingView.swift in Sources */,
 				B17836BBFF6130BAB6C38F00 /* TrialOfAnubisStoryContent.swift in Sources */,
+				B1ABCDEF0000000000000001 /* TrialOfAnubisChoiceButton.swift in Sources */,
 				B183A1257817B13F883FB800 /* ANU024View.swift in Sources */,
 				B17A0C70E127F6A1BEC43000 /* ANU025View.swift in Sources */,
 				B1D230FD27800D461B77F600 /* ANU027View.swift in Sources */,
