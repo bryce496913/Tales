@@ -1,131 +1,169 @@
 import SwiftUI
+import UIKit
 
 struct StorySelectionCard: View {
-    let title: String
-    let subtitle: String
-    let statusText: String
-    let imageName: String?
-    let systemImageName: String
-    let actionTitle: String
+    let story: StorySelectionItem
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            VStack(alignment: .leading, spacing: 16) {
-                artwork
+            VStack(spacing: 8) {
+                StorySelectionArtworkImage(
+                    imageName: story.iconImageName,
+                    contentMode: .fill,
+                    fallbackSystemImageName: "book.closed.fill"
+                )
+                .aspectRatio(1, contentMode: .fill)
+                .frame(maxWidth: 190)
+                .clipped()
+                .clipShape(
+                    RoundedRectangle(
+                        cornerRadius: 22,
+                        style: .continuous
+                    )
+                )
+                .overlay(
+                    RoundedRectangle(
+                        cornerRadius: 22,
+                        style: .continuous
+                    )
+                    .stroke(
+                        AppTheme.gold.opacity(0.55),
+                        lineWidth: 1
+                    )
+                )
+                .shadow(color: AppTheme.shadow, radius: 8, x: 0, y: 5)
+                .accessibilityHidden(true)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(statusText)
-                        .font(.system(.caption, design: .serif).weight(.bold))
-                        .foregroundColor(Color(hex: "1E140B"))
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(Capsule().fill(AppTheme.gold))
-                        .accessibilityLabel("Status: \(statusText)")
-
-                    Text(title)
-                        .font(.system(.title2, design: .serif).weight(.bold))
-                        .foregroundColor(AppTheme.gold)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    Text(subtitle)
-                        .font(.system(.body, design: .serif).weight(.medium))
-                        .foregroundColor(AppTheme.mutedText)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-
-                Spacer(minLength: 0)
-
-                Text(actionTitle)
-                    .font(.system(.headline, design: .serif).weight(.semibold))
-                    .foregroundColor(Color(hex: "1E140B"))
+                Text(story.title)
+                    .font(
+                        .system(
+                            .subheadline,
+                            design: .serif
+                        )
+                        .weight(.semibold)
+                    )
+                    .foregroundColor(AppTheme.gold)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 18)
-                    .padding(.vertical, 14)
-                    .frame(maxWidth: .infinity, minHeight: 54)
+                    .lineLimit(2)
+                    .fixedSize(
+                        horizontal: false,
+                        vertical: true
+                    )
+
+                Text(story.statusText)
+                    .font(.caption2.weight(.bold))
+                    .foregroundColor(AppTheme.mutedText)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
                     .background(
-                        RoundedRectangle(cornerRadius: AppTheme.buttonRadius, style: .continuous)
-                            .fill(AppTheme.gold)
+                        Capsule()
+                            .stroke(AppTheme.gold.opacity(0.35), lineWidth: 1)
                     )
             }
-            .padding(AppTheme.cardPadding)
-            .frame(maxWidth: .infinity, minHeight: 430, alignment: .topLeading)
-            .background(
-                RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous)
-                    .fill(AppTheme.card)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous)
-                            .stroke(AppTheme.gold.opacity(0.55), lineWidth: 1)
-                    )
-                    .shadow(color: AppTheme.shadow, radius: 18, x: 0, y: 10)
+            .frame(
+                maxWidth: .infinity,
+                alignment: .top
             )
         }
         .buttonStyle(.plain)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(title), \(statusText), \(subtitle)")
-        .accessibilityHint("Activates \(actionTitle).")
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(
+            "\(story.title), \(story.statusText)"
+        )
+        .accessibilityHint(
+            "Opens story details."
+        )
+    }
+}
+
+struct StorySelectionArtworkImage: View {
+    let imageName: String
+    let contentMode: ContentMode
+    let fallbackSystemImageName: String
+
+    var body: some View {
+        if let image = UIImage.storySelectionImage(named: imageName) {
+            Image(uiImage: image)
+                .resizable()
+                .aspectRatio(contentMode: contentMode)
+        } else {
+            fallback
+                .onAppear {
+                    assertionFailure("Missing story selection image: \(imageName)")
+                }
+        }
     }
 
-    @ViewBuilder
-    private var artwork: some View {
-        if let imageName {
-            Image(imageName)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 190)
-                .frame(maxWidth: .infinity)
-                .clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous))
-                .overlay(
-                    RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous)
-                        .stroke(AppTheme.gold.opacity(0.45), lineWidth: 1)
-                )
-                .accessibilityHidden(true)
-        } else {
-            ZStack {
-                LinearGradient(
-                    colors: [AppTheme.cardAlt, AppTheme.backgroundTop, AppTheme.backgroundBottom],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                VStack(spacing: 10) {
-                    Image(systemName: systemImageName)
-                        .font(.system(size: 46, weight: .semibold))
-                    Text(title)
-                        .font(.system(.headline, design: .serif).weight(.bold))
-                        .multilineTextAlignment(.center)
-                    Text(statusText)
-                        .font(.system(.caption, design: .serif).weight(.bold))
-                }
-                .foregroundColor(AppTheme.gold)
-                .padding()
-            }
-            .frame(height: 190)
-            .frame(maxWidth: .infinity)
-            .clipShape(RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous)
-                    .stroke(AppTheme.gold.opacity(0.45), lineWidth: 1)
+    private var fallback: some View {
+        ZStack {
+            LinearGradient(
+                colors: [AppTheme.cardAlt, AppTheme.backgroundTop, AppTheme.backgroundBottom],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
-            .accessibilityHidden(true)
+
+            Image(systemName: fallbackSystemImageName)
+                .font(.system(size: 42, weight: .semibold))
+                .foregroundColor(AppTheme.gold)
         }
     }
 }
 
+private extension UIImage {
+    static func storySelectionImage(named imageName: String) -> UIImage? {
+        if let image = UIImage(named: imageName) {
+            return image
+        }
+
+        let nameWithoutExtension = (imageName as NSString).deletingPathExtension
+        guard nameWithoutExtension != imageName else {
+            return nil
+        }
+
+        return UIImage(named: nameWithoutExtension)
+    }
+}
+
 struct StorySelectionCard_Previews: PreviewProvider {
+    private static let sphinxStory = StorySelectionItem(
+        id: "tales-from-the-sphinx",
+        title: "Tales From the Sphinx",
+        subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
+        statusText: "Available",
+        iconImageName: "Icon.png",
+        titleImageName: "Title-Screen-Art.png",
+        actionTitle: "Open Story"
+    )
+
+    private static let anubisStory = StorySelectionItem(
+        id: "the-trial-of-anubis",
+        title: "The Trial of Anubis",
+        subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
+        statusText: "Coming Soon",
+        iconImageName: "ANU-Icon.png",
+        titleImageName: "ANU-Title-Screen-Art.png",
+        actionTitle: "Open Story"
+    )
+
     static var previews: some View {
+        Group {
+            preview(for: sphinxStory)
+                .previewDisplayName("Sphinx icon tile")
+                .previewDevice("iPhone SE (3rd generation)")
+
+            preview(for: anubisStory)
+                .previewDisplayName("Anubis icon tile")
+                .previewDevice("iPhone 15 Pro Max")
+        }
+    }
+
+    private static func preview(for story: StorySelectionItem) -> some View {
         ZStack {
             EgyptianBackground()
-            StorySelectionCard(
-                title: "The Trial of Anubis",
-                subtitle: "Enter the underworld and face the judgment of Anubis.",
-                statusText: "Coming Soon",
-                imageName: nil,
-                systemImageName: "scalemass.fill",
-                actionTitle: "View Story"
-            ) {}
-            .padding()
+            StorySelectionCard(story: story) {}
+                .frame(width: 150)
+                .padding()
         }
     }
 }
