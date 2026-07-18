@@ -11,6 +11,7 @@ struct StoryNavigationButton: View {
         ChoiceButton(title, width: width, height: height) {
             navigationState.navigate(to: route)
         }
+        .accessibilityIdentifier("sphinx-choice-\(title.slugifiedAccessibilityID)")
     }
 }
 
@@ -25,5 +26,6 @@ struct RandomStoryNavigationButton: View {
                 navigationState.navigate(to: route)
             }
         }
+        .accessibilityIdentifier("sphinx-choice-\(title.slugifiedAccessibilityID)")
     }
 }

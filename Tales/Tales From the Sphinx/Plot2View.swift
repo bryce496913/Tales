@@ -10,6 +10,7 @@ struct Plot2View: View {
         ) {
             StoryNavigationButton(title: "Continue", route: .page(1))
         }
+        .accessibilityIdentifier("sphinx-route-plot2")
     }
 }
 
