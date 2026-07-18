@@ -54,7 +54,7 @@ enum StoryCatalog {
         subtitle: "Enter the underworld, recover the sacred scales, and determine the weight of your heart.",
         summary: "The scales of Anubis have been shattered. Journey through the Egyptian underworld, recover their stolen pieces, and face choices shaped by morality, memory, power, mercy, and truth.",
         availability: .available,
-        coverImageName: nil,
+        coverImageName: "ANU-Title-Screen-Art.png",
         iconSystemName: "scalemass.fill",
         estimatedLength: "28 Story Nodes",
         endingCount: 5,
