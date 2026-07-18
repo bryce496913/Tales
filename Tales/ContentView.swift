@@ -8,43 +8,71 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var navigationState = AppNavigationState()
     @State private var isSplashActive = true
+    @State private var appScreen: AppScreen = .mainMenu
 
     var body: some View {
-        NavigationStack(path: $navigationState.path) {
-            ZStack {
-                EgyptianBackground()
+        ZStack {
+            EgyptianBackground()
 
-                if isSplashActive {
-                    SplashScreen()
-                        .transition(.opacity)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                withAnimation(.easeInOut(duration: 0.45)) {
-                                    isSplashActive = false
-                                }
+            if isSplashActive {
+                SplashScreen()
+                    .transition(.opacity)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            withAnimation(.easeInOut(duration: 0.45)) {
+                                isSplashActive = false
                             }
                         }
-                } else {
-                    MainMenu()
-                        .environmentObject(navigationState)
-                        .transition(.opacity.combined(with: .move(edge: .bottom)))
-                }
-            }
-            .navigationBarBackButtonHidden(true)
-            .navigationDestination(for: StoryRoute.self) { route in
-                StoryDestinationView(route: route)
-                    .environmentObject(navigationState)
-                    .navigationBarBackButtonHidden(true)
+                    }
+            } else {
+                appContent
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
         }
-        .environmentObject(navigationState)
+    }
+
+    @ViewBuilder
+    private var appContent: some View {
+        switch appScreen {
+        case .mainMenu:
+            AppMainMenuView {
+                appScreen = .storySelection
+            }
+
+        case .storySelection:
+            StorySelectionView(
+                openSphinx: {
+                    appScreen = .talesFromTheSphinx
+                },
+                openAnubis: {
+                    appScreen = .trialOfAnubisPlaceholder
+                },
+                returnToMainMenu: {
+                    appScreen = .mainMenu
+                }
+            )
+
+        case .talesFromTheSphinx:
+            TalesFromTheSphinxRootView(
+                returnToStorySelection: {
+                    appScreen = .storySelection
+                }
+            )
+
+        case .trialOfAnubisPlaceholder:
+            TrialOfAnubisPlaceholderView(
+                returnToStorySelection: {
+                    appScreen = .storySelection
+                }
+            )
+        }
     }
 }
 
 struct SplashScreen: View {
     @State private var appeared = false
+
 
     var body: some View {
         ZStack {
@@ -68,8 +96,14 @@ struct SplashScreen: View {
 }
 
 struct MainMenu: View {
+    let returnToStorySelection: () -> Void
+
     @EnvironmentObject private var navigationState: AppNavigationState
     @State private var appeared = false
+
+    init(returnToStorySelection: @escaping () -> Void = {}) {
+        self.returnToStorySelection = returnToStorySelection
+    }
 
     var body: some View {
         ZStack {
@@ -121,6 +155,12 @@ struct MainMenu: View {
                 }
                 .buttonStyle(StoryChoiceButtonStyle())
                 .frame(maxWidth: 280)
+
+                MenuButton(title: "Back to Story Selection") {
+                    returnToStorySelection()
+                }
+                .accessibilityLabel("Back to Story Selection")
+                .accessibilityHint("Returns to the story selection screen.")
 
                 Spacer(minLength: 30)
             }

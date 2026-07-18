@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEB000012B400001000001 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100012B400001000001 /* AppScreen.swift */; };
+		FEB000022B400001000001 /* AppMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100022B400001000001 /* AppMainMenuView.swift */; };
+		FEB000032B400001000001 /* StorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100032B400001000001 /* StorySelectionView.swift */; };
+		FEB000042B400001000001 /* StorySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100042B400001000001 /* StorySelectionCard.swift */; };
+		FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */; };
+		FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */; };
 		FEA2000A2B300001000001 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1000A2B300001000001 /* PreviewContainer.swift */; };
 		FEA200062B300001000001 /* StoryNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100062B300001000001 /* StoryNavigationButton.swift */; };
 		FEA200002B300001000001 /* StoryEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100002B300001000001 /* StoryEffects.swift */; };
@@ -87,6 +93,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEB100012B400001000001 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		FEB100022B400001000001 /* AppMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainMenuView.swift; sourceTree = "<group>"; };
+		FEB100032B400001000001 /* StorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionView.swift; sourceTree = "<group>"; };
+		FEB100042B400001000001 /* StorySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionCard.swift; sourceTree = "<group>"; };
+		FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalesFromTheSphinxRootView.swift; sourceTree = "<group>"; };
+		FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPlaceholderView.swift; sourceTree = "<group>"; };
 		FEA100062B300001000001 /* StoryNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryNavigationButton.swift; sourceTree = "<group>"; };
 		FEA100002B300001000001 /* StoryEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEffects.swift; sourceTree = "<group>"; };
 		FEA100012B300001000001 /* StoryTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTransitionContainer.swift; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 		FEA300002B300001000001 /* Tales From the Sphinx */ = {
 			isa = PBXGroup;
 			children = (
+				FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */,
 				FE02676A2B28AB1800F5C31D /* Plot1View.swift */,
 				FE02676C2B28B9A300F5C31D /* Plot2View.swift */,
 				FE02676E2B28BA1900F5C31D /* Page1View.swift */,
@@ -218,6 +231,7 @@
 		FEA300012B300001000001 /* The Trial of Anubis */ = {
 			isa = PBXGroup;
 			children = (
+				FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */,
 				FEA300022B300001000001 /* Images */,
 			);
 			path = "The Trial of Anubis";
@@ -290,6 +304,10 @@
 			children = (
 				FE38B2182B289DD8004B8919 /* TalesApp.swift */,
 				FE0504AC2B289A4F0015CAFB /* ContentView.swift */,
+				FEB100012B400001000001 /* AppScreen.swift */,
+				FEB100022B400001000001 /* AppMainMenuView.swift */,
+				FEB100032B400001000001 /* StorySelectionView.swift */,
+				FEB100042B400001000001 /* StorySelectionCard.swift */,
 				FE9990002B289A4F0015CAFB /* StoryStyle.swift */,
 				FE9990022B289A4F0015CAFB /* AppNavigationState.swift */,
 				FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */,
@@ -431,6 +449,12 @@
 				FE02679D2B28C77A00F5C31D /* Page25View.swift in Sources */,
 				FE0267852B28C05400F5C31D /* Page12View.swift in Sources */,
 				FE0504AD2B289A4F0015CAFB /* ContentView.swift in Sources */,
+				FEB000012B400001000001 /* AppScreen.swift in Sources */,
+				FEB000022B400001000001 /* AppMainMenuView.swift in Sources */,
+				FEB000032B400001000001 /* StorySelectionView.swift in Sources */,
+				FEB000042B400001000001 /* StorySelectionCard.swift in Sources */,
+				FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */,
+				FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */,
 				FE9990012B289A4F0015CAFB /* StoryStyle.swift in Sources */,
 				FE9990032B289A4F0015CAFB /* AppNavigationState.swift in Sources */,
 				FE9990052B289A4F0015CAFB /* AdventureResetButtons.swift in Sources */,
