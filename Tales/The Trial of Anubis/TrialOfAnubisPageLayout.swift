@@ -1,6 +1,12 @@
 import SwiftUI
 import UIKit
 
+enum TrialOfAnubisTransitionStyle: CaseIterable {
+    case sandFade
+    case torchReveal
+    case stoneDoor
+}
+
 struct TrialOfAnubisPageEffects {
     let entryTransition: TrialOfAnubisTransitionStyle
     let choicesWaitForText: Bool
