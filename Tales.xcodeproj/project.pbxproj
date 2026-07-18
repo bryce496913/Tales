@@ -13,7 +13,6 @@
 		FEB000042B400001000001 /* StorySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100042B400001000001 /* StorySelectionCard.swift */; };
 		FEB000072B400001000001 /* StorySelectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100072B400001000001 /* StorySelectionDetailView.swift */; };
 		FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */; };
-		FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */; };
 		FEA2000A2B300001000001 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1000A2B300001000001 /* PreviewContainer.swift */; };
 		FEA200062B300001000001 /* StoryNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100062B300001000001 /* StoryNavigationButton.swift */; };
 		FEA200002B300001000001 /* StoryEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100002B300001000001 /* StoryEffects.swift */; };
@@ -93,6 +92,72 @@
 		FE0504AF2B289A510015CAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0504AE2B289A510015CAFB /* Assets.xcassets */; };
 		FE0504B22B289A510015CAFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0504B12B289A510015CAFB /* Preview Assets.xcassets */; };
 		FE38B2192B289DD8004B8919 /* TalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38B2182B289DD8004B8919 /* TalesApp.swift */; };
+		FEA500000000000000000002 /* ANU001View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000001 /* ANU001View.swift */; };
+		FEA500000000000000000004 /* ANU002View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000003 /* ANU002View.swift */; };
+		FEA500000000000000000006 /* ANU003View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000005 /* ANU003View.swift */; };
+		FEA500000000000000000008 /* ANU004View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000007 /* ANU004View.swift */; };
+		FEA50000000000000000000A /* ANU005View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000009 /* ANU005View.swift */; };
+		FEA50000000000000000000C /* ANU006View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000000B /* ANU006View.swift */; };
+		FEA50000000000000000000E /* ANU007View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000000D /* ANU007View.swift */; };
+		FEA500000000000000000010 /* ANU008View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000000F /* ANU008View.swift */; };
+		FEA500000000000000000012 /* ANU009View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000011 /* ANU009View.swift */; };
+		FEA500000000000000000014 /* ANU010View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000013 /* ANU010View.swift */; };
+		FEA500000000000000000016 /* ANU011View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000015 /* ANU011View.swift */; };
+		FEA500000000000000000018 /* ANU012View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000017 /* ANU012View.swift */; };
+		FEA50000000000000000001A /* ANU013View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000019 /* ANU013View.swift */; };
+		FEA50000000000000000001C /* ANU014View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000001B /* ANU014View.swift */; };
+		FEA50000000000000000001E /* ANU015View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000001D /* ANU015View.swift */; };
+		FEA500000000000000000020 /* ANU016View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000001F /* ANU016View.swift */; };
+		FEA500000000000000000022 /* ANU017View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000021 /* ANU017View.swift */; };
+		FEA500000000000000000024 /* ANU018View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000023 /* ANU018View.swift */; };
+		FEA500000000000000000026 /* ANU019View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000025 /* ANU019View.swift */; };
+		FEA500000000000000000028 /* ANU020View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000027 /* ANU020View.swift */; };
+		FEA50000000000000000002A /* ANU021View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000029 /* ANU021View.swift */; };
+		FEA50000000000000000002C /* ANU022View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000002B /* ANU022View.swift */; };
+		FEA50000000000000000002E /* ANU023View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000002D /* ANU023View.swift */; };
+		FEA500000000000000000030 /* ANU024View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000002F /* ANU024View.swift */; };
+		FEA500000000000000000032 /* ANU025View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000031 /* ANU025View.swift */; };
+		FEA500000000000000000034 /* ANU026View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000033 /* ANU026View.swift */; };
+		FEA500000000000000000036 /* ANU027View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000035 /* ANU027View.swift */; };
+		FEA500000000000000000038 /* ANU028View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000037 /* ANU028View.swift */; };
+		FEA50000000000000000003A /* AnubisAmmitEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000039 /* AnubisAmmitEndingView.swift */; };
+		FEA50000000000000000003C /* AnubisLostSoulEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000003B /* AnubisLostSoulEndingView.swift */; };
+		FEA50000000000000000003E /* AnubisRebelEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000003D /* AnubisRebelEndingView.swift */; };
+		FEA500000000000000000040 /* AnubisTricksterEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000003F /* AnubisTricksterEndingView.swift */; };
+		FEA500000000000000000042 /* AnubisTrueEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000041 /* AnubisTrueEndingView.swift */; };
+		FEA500000000000000000044 /* TrialOfAnubisChoiceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */; };
+		FEA500000000000000000046 /* TrialOfAnubisMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */; };
+		FEA500000000000000000048 /* TrialOfAnubisNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */; };
+		FEA50000000000000000004A /* TrialOfAnubisNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000049 /* TrialOfAnubisNavigationState.swift */; };
+		FEA50000000000000000004C /* TrialOfAnubisOutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000004B /* TrialOfAnubisOutcomeView.swift */; };
+		FEA50000000000000000004E /* TrialOfAnubisPageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000004D /* TrialOfAnubisPageLayout.swift */; };
+		FEA500000000000000000050 /* TrialOfAnubisPreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA40000000000000000004F /* TrialOfAnubisPreviewContainer.swift */; };
+		FEA500000000000000000052 /* TrialOfAnubisProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000051 /* TrialOfAnubisProgress.swift */; };
+		FEA500000000000000000054 /* TrialOfAnubisResetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */; };
+		FEA500000000000000000056 /* TrialOfAnubisRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000055 /* TrialOfAnubisRootView.swift */; };
+		FEA500000000000000000058 /* TrialOfAnubisRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000057 /* TrialOfAnubisRoute.swift */; };
+		FEA80000000000000000005B /* ANU001.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005A /* ANU001.png */; };
+		FEA80000000000000000005D /* ANU002.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005C /* ANU002.png */; };
+		FEA80000000000000000005F /* ANU003.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005E /* ANU003.png */; };
+		FEA800000000000000000061 /* ANU004.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000060 /* ANU004.png */; };
+		FEA800000000000000000063 /* ANU005.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000062 /* ANU005.png */; };
+		FEA800000000000000000065 /* ANU006.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000064 /* ANU006.png */; };
+		FEA800000000000000000067 /* ANU007.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000066 /* ANU007.png */; };
+		FEA800000000000000000069 /* ANU008.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000068 /* ANU008.png */; };
+		FEA80000000000000000006B /* ANU009.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000006A /* ANU009.png */; };
+		FEA80000000000000000006D /* ANU010.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000006C /* ANU010.png */; };
+		FEA80000000000000000006F /* ANU011.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000006E /* ANU011.png */; };
+		FEA800000000000000000071 /* ANU012.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000070 /* ANU012.png */; };
+		FEA800000000000000000073 /* ANU013.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000072 /* ANU013.png */; };
+		FEA800000000000000000075 /* ANU014.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000074 /* ANU014.png */; };
+		FEA800000000000000000077 /* ANU015.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000076 /* ANU015.png */; };
+		FEA800000000000000000079 /* ANU016.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000078 /* ANU016.png */; };
+		FEA80000000000000000007B /* ANU017.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000007A /* ANU017.png */; };
+		FEA80000000000000000007D /* ANU018.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000007C /* ANU018.png */; };
+		FEA80000000000000000007F /* ANU019.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000007E /* ANU019.png */; };
+		FEA800000000000000000081 /* ANU020.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000080 /* ANU020.png */; };
+		FEA800000000000000000083 /* ANU021.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000082 /* ANU021.png */; };
+		FEA800000000000000000085 /* ANU022.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000084 /* ANU022.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +167,6 @@
 		FEB100042B400001000001 /* StorySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionCard.swift; sourceTree = "<group>"; };
 		FEB100072B400001000001 /* StorySelectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionDetailView.swift; sourceTree = "<group>"; };
 		FEB100052B400001000001 /* TalesFromTheSphinxRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalesFromTheSphinxRootView.swift; sourceTree = "<group>"; };
-		FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPlaceholderView.swift; sourceTree = "<group>"; };
 		FEA100062B300001000001 /* StoryNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryNavigationButton.swift; sourceTree = "<group>"; };
 		FEA100002B300001000001 /* StoryEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEffects.swift; sourceTree = "<group>"; };
 		FEA100012B300001000001 /* StoryTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTransitionContainer.swift; sourceTree = "<group>"; };
@@ -182,9 +246,75 @@
 		FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureResetButtons.swift; sourceTree = "<group>"; };
 		FE38B2182B289DD8004B8919 /* TalesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalesApp.swift; sourceTree = "<group>"; };
 		FEA300052B300001000001 /* Tales_From_the_Sphinx_Story.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Tales_From_the_Sphinx_Story.md; sourceTree = "<group>"; };
-		FEA300062B300001000001 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		FEA300072B400001000001 /* ANU-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANU-Icon.png"; sourceTree = "<group>"; };
 		FEA300092B400001000001 /* ANU-Title-Screen-Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANU-Title-Screen-Art.png"; sourceTree = "<group>"; };
+		FEA400000000000000000001 /* ANU001View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU001View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000003 /* ANU002View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU002View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000005 /* ANU003View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU003View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000007 /* ANU004View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU004View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000009 /* ANU005View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU005View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000000B /* ANU006View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU006View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000000D /* ANU007View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU007View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000000F /* ANU008View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU008View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000011 /* ANU009View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU009View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000013 /* ANU010View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU010View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000015 /* ANU011View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU011View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000017 /* ANU012View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU012View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000019 /* ANU013View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU013View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000001B /* ANU014View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU014View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000001D /* ANU015View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU015View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000001F /* ANU016View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU016View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000021 /* ANU017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU017View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000023 /* ANU018View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU018View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000025 /* ANU019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU019View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000027 /* ANU020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU020View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000029 /* ANU021View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU021View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000002B /* ANU022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU022View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000002D /* ANU023View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU023View.swift; sourceTree = "<group>"; };
+		FEA40000000000000000002F /* ANU024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU024View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000031 /* ANU025View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU025View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000033 /* ANU026View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU026View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000035 /* ANU027View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU027View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000037 /* ANU028View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU028View.swift; sourceTree = "<group>"; };
+		FEA400000000000000000039 /* AnubisAmmitEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnubisAmmitEndingView.swift; sourceTree = "<group>"; };
+		FEA40000000000000000003B /* AnubisLostSoulEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnubisLostSoulEndingView.swift; sourceTree = "<group>"; };
+		FEA40000000000000000003D /* AnubisRebelEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnubisRebelEndingView.swift; sourceTree = "<group>"; };
+		FEA40000000000000000003F /* AnubisTricksterEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnubisTricksterEndingView.swift; sourceTree = "<group>"; };
+		FEA400000000000000000041 /* AnubisTrueEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnubisTrueEndingView.swift; sourceTree = "<group>"; };
+		FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisChoiceButtonStyle.swift; sourceTree = "<group>"; };
+		FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisMainMenuView.swift; sourceTree = "<group>"; };
+		FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisNavigationButton.swift; sourceTree = "<group>"; };
+		FEA400000000000000000049 /* TrialOfAnubisNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisNavigationState.swift; sourceTree = "<group>"; };
+		FEA40000000000000000004B /* TrialOfAnubisOutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisOutcomeView.swift; sourceTree = "<group>"; };
+		FEA40000000000000000004D /* TrialOfAnubisPageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPageLayout.swift; sourceTree = "<group>"; };
+		FEA40000000000000000004F /* TrialOfAnubisPreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPreviewContainer.swift; sourceTree = "<group>"; };
+		FEA400000000000000000051 /* TrialOfAnubisProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisProgress.swift; sourceTree = "<group>"; };
+		FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisResetButtons.swift; sourceTree = "<group>"; };
+		FEA400000000000000000055 /* TrialOfAnubisRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRootView.swift; sourceTree = "<group>"; };
+		FEA400000000000000000057 /* TrialOfAnubisRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRoute.swift; sourceTree = "<group>"; };
+		FEA600000000000000000059 /* The_Trial_of_Anubis_Simplified_Two_Choice_Story.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Trial_of_Anubis_Simplified_Two_Choice_Story.md; sourceTree = "<group>"; };
+		FEA70000000000000000005A /* ANU001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU001.png; sourceTree = "<group>"; };
+		FEA70000000000000000005C /* ANU002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU002.png; sourceTree = "<group>"; };
+		FEA70000000000000000005E /* ANU003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU003.png; sourceTree = "<group>"; };
+		FEA700000000000000000060 /* ANU004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU004.png; sourceTree = "<group>"; };
+		FEA700000000000000000062 /* ANU005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU005.png; sourceTree = "<group>"; };
+		FEA700000000000000000064 /* ANU006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU006.png; sourceTree = "<group>"; };
+		FEA700000000000000000066 /* ANU007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU007.png; sourceTree = "<group>"; };
+		FEA700000000000000000068 /* ANU008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU008.png; sourceTree = "<group>"; };
+		FEA70000000000000000006A /* ANU009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU009.png; sourceTree = "<group>"; };
+		FEA70000000000000000006C /* ANU010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU010.png; sourceTree = "<group>"; };
+		FEA70000000000000000006E /* ANU011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU011.png; sourceTree = "<group>"; };
+		FEA700000000000000000070 /* ANU012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU012.png; sourceTree = "<group>"; };
+		FEA700000000000000000072 /* ANU013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU013.png; sourceTree = "<group>"; };
+		FEA700000000000000000074 /* ANU014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU014.png; sourceTree = "<group>"; };
+		FEA700000000000000000076 /* ANU015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU015.png; sourceTree = "<group>"; };
+		FEA700000000000000000078 /* ANU016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU016.png; sourceTree = "<group>"; };
+		FEA70000000000000000007A /* ANU017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU017.png; sourceTree = "<group>"; };
+		FEA70000000000000000007C /* ANU018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU018.png; sourceTree = "<group>"; };
+		FEA70000000000000000007E /* ANU019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU019.png; sourceTree = "<group>"; };
+		FEA700000000000000000080 /* ANU020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU020.png; sourceTree = "<group>"; };
+		FEA700000000000000000082 /* ANU021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU021.png; sourceTree = "<group>"; };
+		FEA700000000000000000084 /* ANU022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU022.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,8 +367,7 @@
 		FEA300012B300001000001 /* The Trial of Anubis */ = {
 			isa = PBXGroup;
 			children = (
-				FEB100062B400001000001 /* TrialOfAnubisPlaceholderView.swift */,
-				FEA300022B300001000001 /* Images */,
+				FEA400000000000000000001 /* ANU001View.swift */,				FEA400000000000000000003 /* ANU002View.swift */,				FEA400000000000000000005 /* ANU003View.swift */,				FEA400000000000000000007 /* ANU004View.swift */,				FEA400000000000000000009 /* ANU005View.swift */,				FEA40000000000000000000B /* ANU006View.swift */,				FEA40000000000000000000D /* ANU007View.swift */,				FEA40000000000000000000F /* ANU008View.swift */,				FEA400000000000000000011 /* ANU009View.swift */,				FEA400000000000000000013 /* ANU010View.swift */,				FEA400000000000000000015 /* ANU011View.swift */,				FEA400000000000000000017 /* ANU012View.swift */,				FEA400000000000000000019 /* ANU013View.swift */,				FEA40000000000000000001B /* ANU014View.swift */,				FEA40000000000000000001D /* ANU015View.swift */,				FEA40000000000000000001F /* ANU016View.swift */,				FEA400000000000000000021 /* ANU017View.swift */,				FEA400000000000000000023 /* ANU018View.swift */,				FEA400000000000000000025 /* ANU019View.swift */,				FEA400000000000000000027 /* ANU020View.swift */,				FEA400000000000000000029 /* ANU021View.swift */,				FEA40000000000000000002B /* ANU022View.swift */,				FEA40000000000000000002D /* ANU023View.swift */,				FEA40000000000000000002F /* ANU024View.swift */,				FEA400000000000000000031 /* ANU025View.swift */,				FEA400000000000000000033 /* ANU026View.swift */,				FEA400000000000000000035 /* ANU027View.swift */,				FEA400000000000000000037 /* ANU028View.swift */,				FEA400000000000000000039 /* AnubisAmmitEndingView.swift */,				FEA40000000000000000003B /* AnubisLostSoulEndingView.swift */,				FEA40000000000000000003D /* AnubisRebelEndingView.swift */,				FEA40000000000000000003F /* AnubisTricksterEndingView.swift */,				FEA400000000000000000041 /* AnubisTrueEndingView.swift */,				FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */,				FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */,				FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */,				FEA400000000000000000049 /* TrialOfAnubisNavigationState.swift */,				FEA40000000000000000004B /* TrialOfAnubisOutcomeView.swift */,				FEA40000000000000000004D /* TrialOfAnubisPageLayout.swift */,				FEA40000000000000000004F /* TrialOfAnubisPreviewContainer.swift */,				FEA400000000000000000051 /* TrialOfAnubisProgress.swift */,				FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */,				FEA400000000000000000055 /* TrialOfAnubisRootView.swift */,				FEA400000000000000000057 /* TrialOfAnubisRoute.swift */,				FEA600000000000000000059 /* The_Trial_of_Anubis_Simplified_Two_Choice_Story.md */,				FEA300022B300001000001 /* Images */,
 			);
 			path = "The Trial of Anubis";
 			sourceTree = "<group>";
@@ -246,10 +375,9 @@
 		FEA300022B300001000001 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FEA300062B300001000001 /* .gitkeep */,
 				FEA300072B400001000001 /* ANU-Icon.png */,
 				FEA300092B400001000001 /* ANU-Title-Screen-Art.png */,
-			);
+				FEA70000000000000000005A /* ANU001.png */,				FEA70000000000000000005C /* ANU002.png */,				FEA70000000000000000005E /* ANU003.png */,				FEA700000000000000000060 /* ANU004.png */,				FEA700000000000000000062 /* ANU005.png */,				FEA700000000000000000064 /* ANU006.png */,				FEA700000000000000000066 /* ANU007.png */,				FEA700000000000000000068 /* ANU008.png */,				FEA70000000000000000006A /* ANU009.png */,				FEA70000000000000000006C /* ANU010.png */,				FEA70000000000000000006E /* ANU011.png */,				FEA700000000000000000070 /* ANU012.png */,				FEA700000000000000000072 /* ANU013.png */,				FEA700000000000000000074 /* ANU014.png */,				FEA700000000000000000076 /* ANU015.png */,				FEA700000000000000000078 /* ANU016.png */,				FEA70000000000000000007A /* ANU017.png */,				FEA70000000000000000007C /* ANU018.png */,				FEA70000000000000000007E /* ANU019.png */,				FEA700000000000000000080 /* ANU020.png */,				FEA700000000000000000082 /* ANU021.png */,				FEA700000000000000000084 /* ANU022.png */,			);
 			path = Images;
 			sourceTree = "<group>";
 		};
@@ -407,6 +535,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA80000000000000000005B /* ANU001.png in Resources */,
+				FEA80000000000000000005D /* ANU002.png in Resources */,
+				FEA80000000000000000005F /* ANU003.png in Resources */,
+				FEA800000000000000000061 /* ANU004.png in Resources */,
+				FEA800000000000000000063 /* ANU005.png in Resources */,
+				FEA800000000000000000065 /* ANU006.png in Resources */,
+				FEA800000000000000000067 /* ANU007.png in Resources */,
+				FEA800000000000000000069 /* ANU008.png in Resources */,
+				FEA80000000000000000006B /* ANU009.png in Resources */,
+				FEA80000000000000000006D /* ANU010.png in Resources */,
+				FEA80000000000000000006F /* ANU011.png in Resources */,
+				FEA800000000000000000071 /* ANU012.png in Resources */,
+				FEA800000000000000000073 /* ANU013.png in Resources */,
+				FEA800000000000000000075 /* ANU014.png in Resources */,
+				FEA800000000000000000077 /* ANU015.png in Resources */,
+				FEA800000000000000000079 /* ANU016.png in Resources */,
+				FEA80000000000000000007B /* ANU017.png in Resources */,
+				FEA80000000000000000007D /* ANU018.png in Resources */,
+				FEA80000000000000000007F /* ANU019.png in Resources */,
+				FEA800000000000000000081 /* ANU020.png in Resources */,
+				FEA800000000000000000083 /* ANU021.png in Resources */,
+				FEA800000000000000000085 /* ANU022.png in Resources */,
 				FE0267652B28A22F00F5C31D /* Twenty-Four.png in Resources */,
 				FE02674F2B28A22F00F5C31D /* hieroglyphics_(Left).png in Resources */,
 				FE02674D2B28A22F00F5C31D /* Two.png in Resources */,
@@ -452,6 +602,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA500000000000000000002 /* ANU001View.swift in Sources */,
+				FEA500000000000000000004 /* ANU002View.swift in Sources */,
+				FEA500000000000000000006 /* ANU003View.swift in Sources */,
+				FEA500000000000000000008 /* ANU004View.swift in Sources */,
+				FEA50000000000000000000A /* ANU005View.swift in Sources */,
+				FEA50000000000000000000C /* ANU006View.swift in Sources */,
+				FEA50000000000000000000E /* ANU007View.swift in Sources */,
+				FEA500000000000000000010 /* ANU008View.swift in Sources */,
+				FEA500000000000000000012 /* ANU009View.swift in Sources */,
+				FEA500000000000000000014 /* ANU010View.swift in Sources */,
+				FEA500000000000000000016 /* ANU011View.swift in Sources */,
+				FEA500000000000000000018 /* ANU012View.swift in Sources */,
+				FEA50000000000000000001A /* ANU013View.swift in Sources */,
+				FEA50000000000000000001C /* ANU014View.swift in Sources */,
+				FEA50000000000000000001E /* ANU015View.swift in Sources */,
+				FEA500000000000000000020 /* ANU016View.swift in Sources */,
+				FEA500000000000000000022 /* ANU017View.swift in Sources */,
+				FEA500000000000000000024 /* ANU018View.swift in Sources */,
+				FEA500000000000000000026 /* ANU019View.swift in Sources */,
+				FEA500000000000000000028 /* ANU020View.swift in Sources */,
+				FEA50000000000000000002A /* ANU021View.swift in Sources */,
+				FEA50000000000000000002C /* ANU022View.swift in Sources */,
+				FEA50000000000000000002E /* ANU023View.swift in Sources */,
+				FEA500000000000000000030 /* ANU024View.swift in Sources */,
+				FEA500000000000000000032 /* ANU025View.swift in Sources */,
+				FEA500000000000000000034 /* ANU026View.swift in Sources */,
+				FEA500000000000000000036 /* ANU027View.swift in Sources */,
+				FEA500000000000000000038 /* ANU028View.swift in Sources */,
+				FEA50000000000000000003A /* AnubisAmmitEndingView.swift in Sources */,
+				FEA50000000000000000003C /* AnubisLostSoulEndingView.swift in Sources */,
+				FEA50000000000000000003E /* AnubisRebelEndingView.swift in Sources */,
+				FEA500000000000000000040 /* AnubisTricksterEndingView.swift in Sources */,
+				FEA500000000000000000042 /* AnubisTrueEndingView.swift in Sources */,
+				FEA500000000000000000044 /* TrialOfAnubisChoiceButtonStyle.swift in Sources */,
+				FEA500000000000000000046 /* TrialOfAnubisMainMenuView.swift in Sources */,
+				FEA500000000000000000048 /* TrialOfAnubisNavigationButton.swift in Sources */,
+				FEA50000000000000000004A /* TrialOfAnubisNavigationState.swift in Sources */,
+				FEA50000000000000000004C /* TrialOfAnubisOutcomeView.swift in Sources */,
+				FEA50000000000000000004E /* TrialOfAnubisPageLayout.swift in Sources */,
+				FEA500000000000000000050 /* TrialOfAnubisPreviewContainer.swift in Sources */,
+				FEA500000000000000000052 /* TrialOfAnubisProgress.swift in Sources */,
+				FEA500000000000000000054 /* TrialOfAnubisResetButtons.swift in Sources */,
+				FEA500000000000000000056 /* TrialOfAnubisRootView.swift in Sources */,
+				FEA500000000000000000058 /* TrialOfAnubisRoute.swift in Sources */,
 				FE02677D2B28BE0100F5C31D /* Page8View.swift in Sources */,
 				FE02678B2B28C22000F5C31D /* Page15View.swift in Sources */,
 				FE02678F2B28C31100F5C31D /* Page17View.swift in Sources */,
@@ -466,7 +660,6 @@
 				FEB000042B400001000001 /* StorySelectionCard.swift in Sources */,
 				FEB000072B400001000001 /* StorySelectionDetailView.swift in Sources */,
 				FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */,
-				FEB000062B400001000001 /* TrialOfAnubisPlaceholderView.swift in Sources */,
 				FE9990012B289A4F0015CAFB /* StoryStyle.swift in Sources */,
 				FE9990032B289A4F0015CAFB /* AppNavigationState.swift in Sources */,
 				FE9990052B289A4F0015CAFB /* AdventureResetButtons.swift in Sources */,

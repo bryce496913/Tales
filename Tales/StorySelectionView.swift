@@ -42,7 +42,7 @@ struct StorySelectionView: View {
             id: "the-trial-of-anubis",
             title: "The Trial of Anubis",
             subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
-            statusText: "Coming Soon",
+            statusText: "Available",
             iconImageName: "ANU-Icon.png",
             titleImageName: "ANU-Title-Screen-Art.png",
             actionTitle: "Open Story"
