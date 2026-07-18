@@ -62,7 +62,7 @@ class SharedStoryInteractionRegressionTests(unittest.TestCase):
         self.assertIn('sphinx-route-page-1', read('Tales/Tales From the Sphinx/Page1View.swift'))
         anubis_views = read('Tales/The Trial of Anubis/TrialOfAnubisViews.swift')
         self.assertIn('anubis-node-', anubis_views)
-        self.assertIn('anubis-choice-', anubis_views)
+        self.assertIn('anubis-choice-', read('Tales/The Trial of Anubis/TrialOfAnubisChoiceButton.swift'))
         self.assertIn('anubis-choice-container-ready', anubis_views)
 
     def test_no_extra_production_navigation_state_instances(self):
@@ -81,7 +81,7 @@ class SharedStoryInteractionRegressionTests(unittest.TestCase):
         self.assertEqual(anubis_instances, ['Tales/Tales From the Sphinx/TalesApp.swift'])
 
     def test_anubis_first_nodes_and_effects_are_unchanged(self):
-        content = read('Tales/The Trial of Anubis/Content/TrialOfAnubisStoryContent.swift')
+        content = read('Tales/The Trial of Anubis/TrialOfAnubisStoryContent.swift')
         self.assertIn('id: "ANU-001-approach-the-black-doorway", source: .anu001, title: "Approach the black doorway", detail: nil, destination: .anu002, effects: []', content)
         self.assertIn('id: "ANU-001-walk-away-into-the-desert", source: .anu001, title: "Walk away into the desert", detail: nil, destination: .anu003, effects: [.loseMemories(1)]', content)
         self.assertIn('id: "ANU-002-enter-the-doorway", source: .anu002, title: "Enter the doorway", detail: nil, destination: .anu003, effects: []', content)

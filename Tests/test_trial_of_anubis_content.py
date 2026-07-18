@@ -3,9 +3,9 @@ import re
 import unittest
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-CONTENT = ROOT / "Tales/The Trial of Anubis/Content/TrialOfAnubisStoryContent.swift"
+CONTENT = ROOT / "Tales/The Trial of Anubis/TrialOfAnubisStoryContent.swift"
 DOC = ROOT / "Tales/The Trial of Anubis/Documentation/The_Trial_of_Anubis_Full_Story_Views.md"
-ENDINGS = ROOT / "Tales/The Trial of Anubis/Endings"
+ENDINGS = ROOT / "Tales/The Trial of Anubis"
 
 
 def swift_text():

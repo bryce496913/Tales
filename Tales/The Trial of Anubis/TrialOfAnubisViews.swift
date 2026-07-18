@@ -105,23 +105,6 @@ struct TrialOfAnubisPageView: View {
     private var choicesVisible: Bool { textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }
 
-struct TrialOfAnubisChoiceButton: View {
-    let nodeID: TrialOfAnubisRoute
-    let choice: TrialOfAnubisChoice
-    @EnvironmentObject private var nav: TrialOfAnubisNavigationState
-
-    var body: some View {
-        ChoiceButton(accessibilityTitle, action: {
-            nav.selectChoice(choice)
-        })
-        .accessibilityLabel(accessibilityTitle)
-        .accessibilityIdentifier("anubis-choice-\(nodeID.rawValue)-\(choice.title.slugifiedAccessibilityID)")
-    }
-
-    private var accessibilityTitle: String {
-        [choice.title, choice.detail].compactMap { $0 }.joined(separator: ". ")
-    }
-}
 struct TrialOfAnubisStatusView: View { let state: TrialOfAnubisState; var body: some View { VStack(alignment: .leading, spacing: 6) { Text("Heart: \(heart)"); Text("Memories: \(max(0,state.memoriesRemaining)) / 3"); Text("Sacred Scale Pieces: \(pieces) / 3"); if !items.isEmpty { Text("Items: \(items.joined(separator: ", "))") } }.font(.caption.weight(.semibold)).foregroundColor(AppTheme.sand).frame(maxWidth: .infinity, alignment: .leading).goldCard(padding: 10).accessibilityLabel("\(heart). Memories \(max(0,state.memoriesRemaining)) of 3. Sacred Scale Pieces \(pieces) of 3. \(items.isEmpty ? "No major items held" : "Items: \(items.joined(separator: ", "))")") }
     private var heart: String { state.heartWeight <= -3 ? "Light Heart" : (state.heartWeight >= 3 ? "Heavy Heart" : "Balanced Heart") }
     private var pieces: Int { [state.firstScalePieceRecovered,state.secondScalePieceRecovered,state.finalScalePieceRecovered].filter{$0}.count }
@@ -159,5 +142,3 @@ struct TrialOfAnubisPlaceholderCard: View {
         .accessibilityHidden(true)
     }
 }
-
-struct ANU028View: View { @EnvironmentObject private var nav: TrialOfAnubisNavigationState; var body: some View { ZStack { EgyptianBackground(); VStack(spacing: 16) { Image(systemName: "scalemass.fill").font(.system(size: 58)).foregroundColor(AppTheme.gold); Text("Judgment Begins").font(.system(.largeTitle, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold); Text("The restored scales read the full weight of your journey.").foregroundColor(AppTheme.warmText).multilineTextAlignment(.center).goldCard() }.padding(AppTheme.screenPadding) }.task { nav.resolveEndingIfNeeded() }.accessibilityLabel("Judgment begins. The restored scales read the full weight of your journey.") } }
