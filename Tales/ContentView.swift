@@ -46,7 +46,7 @@ struct ContentView: View {
                     appScreen = .talesFromTheSphinx
                 },
                 openAnubis: {
-                    appScreen = .trialOfAnubisPlaceholder
+                    appScreen = .trialOfAnubis
                 },
                 returnToMainMenu: {
                     appScreen = .mainMenu
@@ -60,8 +60,8 @@ struct ContentView: View {
                 }
             )
 
-        case .trialOfAnubisPlaceholder:
-            TrialOfAnubisPlaceholderView(
+        case .trialOfAnubis:
+            TrialOfAnubisRootView(
                 returnToStorySelection: {
                     appScreen = .storySelection
                 }
