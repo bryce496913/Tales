@@ -7,7 +7,7 @@ struct AnubisTricksterEndingView: View {
             outcome: .lose,
             title: "Cheat the Scales",
             classification: "Secret Lose / Sequel Hook",
-            imageName: "ENDTRICKSTER.png",
+            imageName: "ANU027.png",
             storyText: """
                 You place your heart on the scales while speaking the forbidden title you learned in the underworld. The Balance Stone turns backwards and the scales falsely declare your heart lighter than the feather. You escape through the gate to the living world before Anubis can stop you. Once you reach the desert, a crack of darkness opens in the air behind you. A tall ancient creature steps through the opening and causes every shadow in the desert to turn toward it.
             """,

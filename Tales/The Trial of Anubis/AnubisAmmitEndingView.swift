@@ -7,7 +7,7 @@ struct AnubisAmmitEndingView: View {
             outcome: .death,
             title: "Devoured by Ammit",
             classification: "Death",
-            imageName: "ENDAMMIT.png",
+            imageName: "ANU027.png",
             storyText: """
                 Anubis places your heart on the scales, but it immediately sinks beneath the weight of every lie, betrayal and selfish choice. The feather rises and the sound of the failed judgment echoes through the hall. You try to explain your actions, but Anubis tells you that the scales do not compare you with others; they only reveal what you chose to carry. Ammit opens her jaws and devours your heart in a single bite. Your memories disappear, then your name, followed by every future you might have lived.
             """,
