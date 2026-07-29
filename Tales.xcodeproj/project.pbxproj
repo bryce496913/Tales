@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEA900000000000000000087 /* ANU023.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000086 /* ANU023.png */; };
+		FEA900000000000000000089 /* ANU024.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000088 /* ANU024.png */; };
+		FEA90000000000000000008B /* ANU025.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008A /* ANU025.png */; };
+		FEA90000000000000000008D /* ANU026.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008C /* ANU026.png */; };
+		FEA90000000000000000008F /* ANU027.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008E /* ANU027.png */; };
 		FEB000012B400001000001 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100012B400001000001 /* AppScreen.swift */; };
 		FEB000022B400001000001 /* AppMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100022B400001000001 /* AppMainMenuView.swift */; };
 		FEB000032B400001000001 /* StorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100032B400001000001 /* StorySelectionView.swift */; };
@@ -136,9 +141,9 @@
 		FEA500000000000000000054 /* TrialOfAnubisResetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */; };
 		FEA500000000000000000056 /* TrialOfAnubisRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000055 /* TrialOfAnubisRootView.swift */; };
 		FEA500000000000000000058 /* TrialOfAnubisRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000057 /* TrialOfAnubisRoute.swift */; };
-		FEA80000000000000000005B /* ANU001.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005A /* ANU001.png */; };
-		FEA80000000000000000005D /* ANU002.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005C /* ANU002.png */; };
-		FEA80000000000000000005F /* ANU003.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005E /* ANU003.png */; };
+		FEA80000000000000000008B /* ANU001.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005A /* ANU001.png */; };
+		FEA80000000000000000008D /* ANU002.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005C /* ANU002.png */; };
+		FEA80000000000000000008F /* ANU003.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000005E /* ANU003.png */; };
 		FEA800000000000000000061 /* ANU004.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000060 /* ANU004.png */; };
 		FEA800000000000000000063 /* ANU005.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000062 /* ANU005.png */; };
 		FEA800000000000000000065 /* ANU006.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000064 /* ANU006.png */; };
@@ -323,6 +328,11 @@
 		FEA700000000000000000080 /* ANU020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU020.png; sourceTree = "<group>"; };
 		FEA700000000000000000082 /* ANU021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU021.png; sourceTree = "<group>"; };
 		FEA700000000000000000084 /* ANU022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU022.png; sourceTree = "<group>"; };
+		FEA700000000000000000086 /* ANU023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU023.png; sourceTree = "<group>"; };
+		FEA700000000000000000088 /* ANU024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU024.png; sourceTree = "<group>"; };
+		FEA70000000000000000008A /* ANU025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU025.png; sourceTree = "<group>"; };
+		FEA70000000000000000008C /* ANU026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU026.png; sourceTree = "<group>"; };
+		FEA70000000000000000008E /* ANU027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU027.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,7 +399,13 @@
 			children = (
 				FEA300072B400001000001 /* ANU-Icon.png */,
 				FEA300092B400001000001 /* ANU-Title-Screen-Art.png */,
-				FEA70000000000000000005A /* ANU001.png */,				FEA70000000000000000005C /* ANU002.png */,				FEA70000000000000000005E /* ANU003.png */,				FEA700000000000000000060 /* ANU004.png */,				FEA700000000000000000062 /* ANU005.png */,				FEA700000000000000000064 /* ANU006.png */,				FEA700000000000000000066 /* ANU007.png */,				FEA700000000000000000068 /* ANU008.png */,				FEA70000000000000000006A /* ANU009.png */,				FEA70000000000000000006C /* ANU010.png */,				FEA70000000000000000006E /* ANU011.png */,				FEA700000000000000000070 /* ANU012.png */,				FEA700000000000000000072 /* ANU013.png */,				FEA700000000000000000074 /* ANU014.png */,				FEA700000000000000000076 /* ANU015.png */,				FEA700000000000000000078 /* ANU016.png */,				FEA70000000000000000007A /* ANU017.png */,				FEA70000000000000000007C /* ANU018.png */,				FEA70000000000000000007E /* ANU019.png */,				FEA700000000000000000080 /* ANU020.png */,				FEA700000000000000000082 /* ANU021.png */,				FEA700000000000000000084 /* ANU022.png */,			);
+				FEA70000000000000000005A /* ANU001.png */,				FEA70000000000000000005C /* ANU002.png */,				FEA70000000000000000005E /* ANU003.png */,				FEA700000000000000000060 /* ANU004.png */,				FEA700000000000000000062 /* ANU005.png */,				FEA700000000000000000064 /* ANU006.png */,				FEA700000000000000000066 /* ANU007.png */,				FEA700000000000000000068 /* ANU008.png */,				FEA70000000000000000006A /* ANU009.png */,				FEA70000000000000000006C /* ANU010.png */,				FEA70000000000000000006E /* ANU011.png */,				FEA700000000000000000070 /* ANU012.png */,				FEA700000000000000000072 /* ANU013.png */,				FEA700000000000000000074 /* ANU014.png */,				FEA700000000000000000076 /* ANU015.png */,				FEA700000000000000000078 /* ANU016.png */,				FEA70000000000000000007A /* ANU017.png */,				FEA70000000000000000007C /* ANU018.png */,				FEA70000000000000000007E /* ANU019.png */,				FEA700000000000000000080 /* ANU020.png */,				FEA700000000000000000082 /* ANU021.png */,				FEA700000000000000000084 /* ANU022.png */,
+				FEA700000000000000000086 /* ANU023.png */,
+				FEA700000000000000000088 /* ANU024.png */,
+				FEA70000000000000000008A /* ANU025.png */,
+				FEA70000000000000000008C /* ANU026.png */,
+				FEA70000000000000000008E /* ANU027.png */,
+			);
 			path = Images;
 			sourceTree = "<group>";
 		};
@@ -547,9 +563,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA80000000000000000005B /* ANU001.png in Resources */,
-				FEA80000000000000000005D /* ANU002.png in Resources */,
-				FEA80000000000000000005F /* ANU003.png in Resources */,
+				FEA80000000000000000008B /* ANU001.png in Resources */,
+				FEA80000000000000000008D /* ANU002.png in Resources */,
+				FEA80000000000000000008F /* ANU003.png in Resources */,
 				FEA800000000000000000061 /* ANU004.png in Resources */,
 				FEA800000000000000000063 /* ANU005.png in Resources */,
 				FEA800000000000000000065 /* ANU006.png in Resources */,
@@ -569,6 +585,11 @@
 				FEA800000000000000000081 /* ANU020.png in Resources */,
 				FEA800000000000000000083 /* ANU021.png in Resources */,
 				FEA800000000000000000085 /* ANU022.png in Resources */,
+				FEA900000000000000000087 /* ANU023.png in Resources */,
+				FEA900000000000000000089 /* ANU024.png in Resources */,
+				FEA90000000000000000008B /* ANU025.png in Resources */,
+				FEA90000000000000000008D /* ANU026.png in Resources */,
+				FEA90000000000000000008F /* ANU027.png in Resources */,
 				FE0267652B28A22F00F5C31D /* Twenty-Four.png in Resources */,
 				FE02674F2B28A22F00F5C31D /* hieroglyphics_(Left).png in Resources */,
 				FE02674D2B28A22F00F5C31D /* Two.png in Resources */,

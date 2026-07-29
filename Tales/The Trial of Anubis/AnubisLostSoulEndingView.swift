@@ -7,7 +7,7 @@ struct AnubisLostSoulEndingView: View {
             outcome: .lose,
             title: "Lost Soul",
             classification: "Lose",
-            imageName: "ENDLOST.png",
+            imageName: "ANU018.png",
             storyText: """
                 You continue walking through the fog, knowing that there was once a task you needed to complete, but you can no longer remember what it was. Memories of home have become empty rooms, faceless people and warmth without a source. Other forgotten souls walk beside you, each trying and failing to remember their own name. The ferryman waits beside the black river, but he asks for no payment because you have nothing left to give. Somewhere in the distance, Anubis calls for the living traveller who entered his temple, but you no longer understand that he means you.
             """,

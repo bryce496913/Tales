@@ -429,7 +429,7 @@ The restored scales rise from the floor with the feather of Ma’at resting on o
 
 ## ANU-028 — Final Decision
 
-**Suggested image:** `ANU028.png`
+**Suggested image:** `ANU027.png`
 
 **Text:**  
 You return every piece of the scales to Anubis and the sacred balance begins rebuilding itself. Your heart rises from your chest and floats above the empty pan while the feather of Ma’at waits on the other side. Anubis tells you that this is your final chance to accept judgment honestly. You can allow the scales to decide your fate or interfere with the balance before it settles.
@@ -447,7 +447,7 @@ You return every piece of the scales to Anubis and the sacred balance begins reb
 
 **Ending ID:** `anubis_true_restored`  
 **Classification:** Win / Best Ending  
-**Suggested image:** `ENDTRUE.png`
+**Suggested image:** `ANU027.png`
 
 **Text:**  
 Your heart leaves your chest and appears in Anubis’s hand as a sphere of red light. He places it on the restored scales and, after one frightening moment, it balances perfectly with the feather of Ma’at. The gates of judgment open, forgotten souls remember their names and the stolen hearts return to their owners. Anubis tells you that a light heart is not empty, but one that accepts fear, failure and responsibility without placing those burdens on others. He returns your heart and sends you back to the desert, where a small golden feather remains in your hand. As the temple disappears beneath the sand, his voice tells you, “Live as one who has already been weighed.”
@@ -466,7 +466,7 @@ Anubis has returned you to the living world with his blessing.
 
 **Ending ID:** `anubis_dark_ammit`  
 **Classification:** Death  
-**Suggested image:** `ENDAMMIT.png`
+**Suggested image:** `ANU027.png`
 
 **Text:**  
 Anubis places your heart on the scales, but it immediately sinks beneath the weight of every lie, betrayal and selfish choice. The feather rises and the sound of the failed judgment echoes through the hall. You try to explain your actions, but Anubis tells you that the scales do not compare you with others; they only reveal what you chose to carry. Ammit opens her jaws and devours your heart in a single bite. Your memories disappear, then your name, followed by every future you might have lived.
@@ -485,7 +485,7 @@ The Devourer has consumed your soul, leaving no name, memory or path back to the
 
 **Ending ID:** `anubis_rebel_escape`  
 **Classification:** Dark Win / Sequel Hook  
-**Suggested image:** `ENDREBEL.png`
+**Suggested image:** `ANU027.png`
 
 **Text:**  
 You refuse to place your heart on the scales as underworld power gathers around the broken Hall of Judgment. Anubis warns that you have confused power with freedom, but you strike the Balance Stone and split the scales apart. The hall collapses as souls escape through every gate and Ammit roars in triumph. You tear open a doorway and return to the desert beneath a sky filled with red stars. The stolen power remains beneath your skin, your shadow now has the head of a jackal and the dead begin whispering your name as their liberator.
@@ -504,7 +504,7 @@ You are free for now, but the consequences have followed you home.
 
 **Ending ID:** `anubis_trickster_cheat`  
 **Classification:** Secret Lose / Sequel Hook  
-**Suggested image:** `ENDTRICKSTER.png`
+**Suggested image:** `ANU027.png`
 
 **Text:**  
 You place your heart on the scales while speaking the forbidden title you learned in the underworld. The Balance Stone turns backwards and the scales falsely declare your heart lighter than the feather. You escape through the gate to the living world before Anubis can stop you. Once you reach the desert, a crack of darkness opens in the air behind you. A tall ancient creature steps through the opening and causes every shadow in the desert to turn toward it.
@@ -525,7 +525,7 @@ Survival is not always victory.
 
 **Ending ID:** `anubis_lost_soul`  
 **Classification:** Lose  
-**Suggested image:** `ENDLOST.png`
+**Suggested image:** `ANU018.png`
 
 **Text:**  
 You continue walking through the fog, knowing that there was once a task you needed to complete, but you can no longer remember what it was. Memories of home have become empty rooms, faceless people and warmth without a source. Other forgotten souls walk beside you, each trying and failing to remember their own name. The ferryman waits beside the black river, but he asks for no payment because you have nothing left to give. Somewhere in the distance, Anubis calls for the living traveller who entered his temple, but you no longer understand that he means you.
