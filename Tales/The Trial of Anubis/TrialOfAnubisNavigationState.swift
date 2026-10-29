@@ -2,7 +2,7 @@ import Foundation
 
 @MainActor
 final class TrialOfAnubisNavigationState: ObservableObject {
-    static let saveKey = "Tales.trial-of-anubis.progress.v1"
+    static let saveKey = "Tales.trial-of-anubis.progress.v2"
 
     @Published var path: [TrialOfAnubisRoute] = []
     @Published private(set) var progress: TrialOfAnubisProgress
@@ -21,11 +21,12 @@ final class TrialOfAnubisNavigationState: ObservableObject {
     func startNewAdventure() {
         let completed = progress.completedEndingIDs
         progress = TrialOfAnubisProgress(
-            currentNodeID: TrialOfAnubisRoute.anu001.rawValue,
-            visitedNodeIDs: [TrialOfAnubisRoute.anu001.rawValue],
+            currentNodeID: TrialOfAnubisRoute.anu000.rawValue,
+            visitedNodeIDs: [TrialOfAnubisRoute.anu000.rawValue],
+            collectedItems: [],
             completedEndingIDs: completed
         )
-        path = [.anu001]
+        path = [.anu000]
         persist()
     }
 
@@ -40,10 +41,17 @@ final class TrialOfAnubisNavigationState: ObservableObject {
         path = [route]
     }
 
-    func navigate(to route: TrialOfAnubisRoute) {
-        guard !isNavigating, path.last != route else { return }
+    func navigate(to destination: TrialOfAnubisRoute, collecting item: TrialOfAnubisItem? = nil) {
+        guard !isNavigating, path.last != destination else { return }
         isNavigating = true
         defer { isNavigating = false }
+
+        if let item = item {
+            progress.collectedItems.insert(item)
+        }
+
+        // HOME becomes the end-game hall once every scale piece has been collected.
+        let route: TrialOfAnubisRoute = destination == .home && progress.hasAllItems ? .endGame : destination
 
         if route.isEnding {
             recordEnding(route)
@@ -69,7 +77,7 @@ final class TrialOfAnubisNavigationState: ObservableObject {
         guard route.isEnding else { return }
         progress.currentNodeID = route.rawValue
         progress.visitedNodeIDs.insert(route.rawValue)
-        progress.completedEndingIDs.insert(Self.endingID(for: route))
+        progress.completedEndingIDs.insert(route.endingID ?? route.rawValue)
         persist()
     }
 
@@ -97,17 +105,7 @@ final class TrialOfAnubisNavigationState: ObservableObject {
     }
 
     private static func canContinue(_ progress: TrialOfAnubisProgress) -> Bool {
-        progress.currentNodeID.hasPrefix("ANU-")
-    }
-
-    private static func endingID(for route: TrialOfAnubisRoute) -> String {
-        switch route {
-        case .endTrue: return "anubis_true_restored"
-        case .endAmmit: return "anubis_dark_ammit"
-        case .endRebel: return "anubis_rebel_escape"
-        case .endTrickster: return "anubis_trickster_cheat"
-        case .endLost: return "anubis_lost_soul"
-        default: return route.rawValue
-        }
+        guard let route = TrialOfAnubisRoute(rawValue: progress.currentNodeID) else { return false }
+        return !route.isEnding
     }
 }

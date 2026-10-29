@@ -2,28 +2,28 @@ import SwiftUI
 
 struct ANU003View: View {
     var body: some View {
-        TrialOfAnubisPageLayout(
-            imageName: "ANU003.png",
-            title: "The Jackal Temple",
-            text: """
-                The staircase leads into an ancient temple lined with black jackal statues. Their golden collars remain bright despite the dust, and each statue slowly turns its head to watch you. A narrow path leads toward a circular opening in the floor, while a side room glitters with masks, ceremonial blades and piles of gold. Behind you, the staircase has disappeared and the wall now shows a carving shaped exactly like you. The voice below asks, “What did you come here seeking?”
+        TrialOfAnubisOutcomeView(
+            endingID: "anubis_lost_in_desert",
+            outcome: .death,
+            title: "Lost in the Sand",
+            classification: "Death",
+            imageName: "ANU001.png",
+            storyText: """
+            The black doorway sinks back beneath the dune as if it had never been there, and the voice falls silent. You walk toward where you think the expedition camp should be, but every dune looks the same and the stars never appear to guide you. Your footprints vanish almost as soon as you make them. Hours pass, then what feels like days. Your lips crack, your legs give way and the cold sand slowly pulls you down. The last thing you hear is a jackal calling somewhere in the dark, patient and unhurried, as if it always knew you would return.
             """,
-            effects: TrialOfAnubisPageEffects(
-                entryTransition: .stoneDoor,
-                choicesWaitForText: true
-            )
-        ) {
-            TrialOfAnubisChoicesStack {
-                TrialOfAnubisNavigationButton(
-                    title: "Follow the jackal statues",
-                    destination: .anu004
-                )
+            outcomeText: """
+            The doorway closed, and the desert claimed you instead.
 
-                TrialOfAnubisNavigationButton(
-                    title: "Search the temple for treasure",
-                    destination: .anu013
-                )
-            }
+            Your journey ends beneath the sand, never judged by the dead and never found by the living.
+            """
+        )
+    }
+}
+
+struct ANU003View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU003View()
         }
     }
 }

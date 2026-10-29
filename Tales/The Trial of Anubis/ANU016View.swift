@@ -6,7 +6,7 @@ struct ANU016View: View {
             imageName: "ANU016.png",
             title: "The Broken Chain",
             text: """
-                At the far side of Ammit’s chamber, you find a section of her broken chain lying across the path. The links were cut cleanly, proving that someone released her on purpose. When you touch the chain, you see a vision of an underworld scribe removing the Heart Pan while a hidden figure watches. A fragment of dark power floats above the broken metal, offering you the choice to repair part of the chain or take its power for yourself.
+            You tell Ammit that you will help her. She lowers her huge head and shows you the last chain still fastened around her neck, anchored deep in the chamber wall. The other links were cut cleanly, proving that someone released her on purpose. When you grip the chain, you see a vision of an underworld scribe lifting the Heart Pan from the scales while a hidden figure watches from the shadows. The final link is already cracked and would break with one hard strike. Ammit watches you closely, waiting to see what you will do.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .sandFade,
@@ -15,15 +15,23 @@ struct ANU016View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Repair the broken chain",
-                    destination: .anu017
+                    title: "Free",
+                    destination: .anu034
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Leave the chain and continue",
-                    destination: .anu017
+                    title: "Leave",
+                    destination: .anu032
                 )
             }
+        }
+    }
+}
+
+struct ANU016View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU016View()
         }
     }
 }
