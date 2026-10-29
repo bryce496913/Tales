@@ -6,7 +6,7 @@ struct ANU024View: View {
             imageName: "ANU024.png",
             title: "Balance Stone Chamber",
             text: """
-                The final piece floats above a machine of turning stone rings. The Balance Stone is small enough to fit in your hand, but the entire room leans around it. A giant guardian made from stone and linen stands beside the mechanism with a ceremonial blade. Its face has been erased and it warns that only the judged may carry balance. You can either carefully unlock the mechanism or tear the stone free before the guardian attacks.
+            The final piece floats above a machine of turning stone rings. The Balance Stone is small enough to fit in your hand, but the entire room leans around it. A giant guardian made from stone and linen stands beside the mechanism with a ceremonial blade. Its face has been erased and it warns that only the judged may carry balance. You can either carefully unlock the mechanism or tear the stone free before the guardian attacks.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .stoneDoor,
@@ -15,15 +15,25 @@ struct ANU024View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Take the Balance Stone carefully",
-                    destination: .anu025
+                    title: "Take the Balance Stone",
+                    destination: .anu036,
+                    collects: .balanceStone
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Rip it from the guardian mechanism",
-                    destination: .anu025
+                    title: "Rip it from the guardian",
+                    destination: .anu025,
+                    collects: .balanceStone
                 )
             }
+        }
+    }
+}
+
+struct ANU024View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU024View()
         }
     }
 }
