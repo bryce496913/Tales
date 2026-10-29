@@ -13,7 +13,7 @@ struct TrialOfAnubisNavigationButton: View {
         } label: {
             Text(title)
                 .font(.system(.headline, design: .serif).weight(.semibold))
-                .foregroundColor(Color(hex: "1E140B"))
+                .foregroundColor(AppTheme.buttonText)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
                 .padding(.horizontal, 16)

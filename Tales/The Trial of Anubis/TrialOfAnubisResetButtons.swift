@@ -15,7 +15,7 @@ struct TrialOfAnubisResetButtons: View {
                 .buttonStyle(TrialOfAnubisChoiceButtonStyle())
         }
         .font(.system(.headline, design: .serif).weight(.semibold))
-        .foregroundColor(Color(hex: "1E140B"))
+        .foregroundColor(AppTheme.buttonText)
         .frame(maxWidth: AppTheme.maximumButtonWidth)
     }
 }

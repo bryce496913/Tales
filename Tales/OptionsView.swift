@@ -15,7 +15,7 @@ struct OptionsView: View {
                     } label: {
                         Label("Back", systemImage: "chevron.left")
                             .font(.system(.headline, design: .serif).weight(.semibold))
-                            .foregroundColor(Color(hex: "1E140B"))
+                            .foregroundColor(AppTheme.buttonText)
                             .frame(maxWidth: .infinity, minHeight: 54)
                     }
                     .buttonStyle(StoryChoiceButtonStyle())

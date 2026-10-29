@@ -10,6 +10,7 @@ enum AppTheme {
     static let warmText = Color(hex: "F7E8C5")
     static let mutedText = Color(hex: "CDBB91")
     static let shadow = Color.black.opacity(0.45)
+    static let buttonText = Color(hex: "1E140B")
 
     static let screenPadding: CGFloat = 20
     static let cardPadding: CGFloat = 18
@@ -57,5 +58,23 @@ struct GoldCardModifier: ViewModifier {
 extension View {
     func goldCard(padding: CGFloat = AppTheme.cardPadding) -> some View {
         modifier(GoldCardModifier(padding: padding))
+    }
+}
+
+extension Color {
+    init(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+
+        self.init(
+            .sRGB,
+            red: Double((rgb & 0xFF0000) >> 16) / 255.0,
+            green: Double((rgb & 0x00FF00) >> 8) / 255.0,
+            blue: Double(rgb & 0x0000FF) / 255.0,
+            opacity: 1.0
+        )
     }
 }
