@@ -47,6 +47,8 @@ enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
     case anu043 = "ANU-043"
     case anu044 = "ANU-044"
     case anu045 = "ANU-045"
+    case anu046 = "ANU-046"
+    case anu047 = "ANU-047"
 
     /// HOME hub that links to the three item paths.
     static let home: TrialOfAnubisRoute = .anu011
@@ -68,6 +70,7 @@ enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
         case .anu035: return "anubis_taken_by_the_river"
         case .anu038: return "anubis_buried_with_the_stone"
         case .anu040: return "anubis_peaceful_death"
+        case .anu047: return "anubis_defy_the_gods"
         default: return nil
         }
     }
@@ -170,6 +173,10 @@ struct TrialOfAnubisDestinationView: View {
             ANU044View()
         case .anu045:
             ANU045View()
+        case .anu046:
+            ANU046View()
+        case .anu047:
+            ANU047View()
         }
     }
 }

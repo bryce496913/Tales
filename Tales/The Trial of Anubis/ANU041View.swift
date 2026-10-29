@@ -15,13 +15,15 @@ struct ANU041View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Free the trapped soul",
-                    destination: .anu012
+                    title: "Free them",
+                    destination: .anu012,
+                    marks: .freedSoul
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Leave them and go to the Feather Arm door",
-                    destination: .anu012
+                    title: "Leave them",
+                    destination: .anu012,
+                    marks: .abandonedSoul
                 )
             }
         }

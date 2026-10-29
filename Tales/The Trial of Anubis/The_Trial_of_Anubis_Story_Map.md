@@ -8,14 +8,18 @@
 # How the Story Works
 
 - The player starts at `000` and must collect three pieces of the broken scales: the **Feather Arm**, the **Heart Pan** and the **Balance Stone**.
-- `011` (**HOME**, the Hall of Gates) is the hub. It shows a gate for each piece the player has not collected yet:
+- `011` (**HOME**, the Hall of Gates) is the hub. It shows a gate for each piece the player has not collected yet (up to three buttons):
   - Feather Arm → `008`
   - Heart Pan → `018`
   - Balance Stone → `021`
 - When all three pieces are collected, any route into HOME goes to `026` instead. This opens the end-game.
-- Pieces are collected by the choice buttons marked **[collects …]** below.
+- Pieces are collected by the choice buttons marked **[collects …]**.
+- Some choices are remembered (**[remembers …]**) and change later pages:
+  - Freed the soul at `041`: staying in the memory at `019` leads to `046` (rescued) instead of `040` (death), and `030` gains a closing line.
+  - Left the soul at `041`: the nameless soul appears at `026`, and `030` gains a different closing line.
+  - Accepted the rebel at `023`: extra line at `024`; at `026` the rebel appears and **Escape** becomes **Keep the deal** → `047`.
 - Game-over pages have no choice buttons. They show the shared outcome screen with Restart / Menu controls and record their ending ID.
-- Progress (current page, visited pages, collected pieces, completed endings) is saved under `Tales.trial-of-anubis.progress.v2`.
+- Progress (current page, visited pages, collected pieces, remembered choices, completed endings) is saved under `Tales.trial-of-anubis.progress.v2`. Restarting clears everything except completed endings.
 
 Page names in conversation use the short number (`004`). In code, the view is `ANU004View` and the route is `.anu004` (`"ANU-004"`).
 
@@ -26,81 +30,83 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 | Page | Title | Choice | Goes to |
 |---|---|---|---|
 | `000` | The Lost Expedition | Continue | `001` The Silent Desert |
-| `001` | The Silent Desert | Enter the doorway | `002` The Black Doorway |
+| `001` | The Silent Desert | Enter | `002` The Black Doorway |
 |  |  | Turn back | `003` Lost in the Sand (Game Over) |
-| `002` | The Black Doorway | Enter | `004` The Jackal Temple |
-|  |  | Call into the darkness | `003` Lost in the Sand (Game Over) |
+| `002` | The Black Doorway | Go down | `004` The Jackal Temple |
+|  |  | Call out | `003` Lost in the Sand (Game Over) |
 | `003` | Lost in the Sand | — | **Game Over** (Death) |
 | `004` | The Jackal Temple | Follow the statues | `013` Golden Scarab Vault |
-|  |  | Enter the stairs | `005` Anubis Revealed |
+|  |  | Take the stairs | `005` Anubis Revealed |
 | `005` | Anubis Revealed | Help | `006` Terms of Judgment |
 |  |  | Run | `007` Run from the God |
 | `006` | Terms of Judgment | Agree | `008` River of the Dead |
 |  |  | Ask for a reward | `033` The Price of a Reward |
-| `007` | Run from the God | Agree to help | `006` Terms of Judgment |
-|  |  | Run | `017` Swallowed by the Fog (Game Over) |
+| `007` | Run from the God | Help | `006` Terms of Judgment |
+|  |  | Keep running | `017` Swallowed by the Fog (Game Over) |
 | `008` | River of the Dead | Call out | `009` The Ferryman’s Price |
 |  |  | Swim | `035` Taken by the River (Game Over) |
 | `009` | The Ferryman’s Price | Pay | `010` Hall of Whispers |
 |  |  | Refuse | `039` Taken by Force |
-| `010` | Hall of Whispers | Follow the crying voice | `041` The Crying Soul |
-|  |  | Enter the Feather Arm door | `012` Feather Arm Chamber |
-| `011` | HOME — The Hall of Gates | Enter the first gate | `008` River of the Dead |
-|  |  | Enter the second gate | `018` Maze of False Memories |
-|  |  | Enter the third gate | `021` The Scribe’s Secret |
+| `010` | Hall of Whispers | Find the voice | `041` The Crying Soul |
+|  |  | Open the door | `012` Feather Arm Chamber |
+| `011` | HOME — The Hall of Gates | First gate | `008` River of the Dead |
+|  |  | Second gate | `018` Maze of False Memories |
+|  |  | Third gate | `021` The Scribe’s Secret |
 | `012` | Feather Arm Chamber | Take the feather **[collects Feather Arm]** | `011` HOME (or `026` if all pieces are held) |
 |  |  | Enter the shadow | `014` Chamber of Stolen Hearts |
-| `013` | Golden Scarab Vault | Take the scarab | `014` Chamber of Stolen Hearts |
-|  |  | Don’t take it | `011` HOME (or `026` if all pieces are held) |
+| `013` | Golden Scarab Vault | Take it | `014` Chamber of Stolen Hearts |
+|  |  | Leave it | `011` HOME (or `026` if all pieces are held) |
 | `014` | Chamber of Stolen Hearts | Touch the heart | `031` Pulled Through the Glass |
 |  |  | Follow the chains | `015` Ammit Unchained |
 | `015` | Ammit Unchained | Help | `016` The Broken Chain |
 |  |  | Fight | `032` Devoured by Ammit (Game Over) |
-| `016` | The Broken Chain | Free | `034` Ammit Breaks Free |
-|  |  | Leave | `032` Devoured by Ammit (Game Over) |
+| `016` | The Broken Chain | Free her | `034` Ammit Breaks Free |
+|  |  | Leave her | `032` Devoured by Ammit (Game Over) |
 | `017` | Swallowed by the Fog | — | **Game Over** (Death) |
-| `018` | Maze of False Memories | Follow the memory of home | `019` Memory of Home |
-|  |  | Follow your failures | `042` Memory of Failure |
-| `019` | Memory of Home | Accept that the memory may be false | `020` The Heart Pan |
-|  |  | Stay inside the memory | `040` A Peaceful Death (Game Over) |
+| `018` | Maze of False Memories | Remember home | `019` Memory of Home |
+|  |  | Face your failure | `042` Memory of Failure |
+| `019` | Memory of Home | Let it go | `020` The Heart Pan |
+|  |  | Stay | `040` A Peaceful Death (Game Over); if *freed the trapped soul at 041*: **Stay** → `046` The Voice You Saved |
 | `020` | The Heart Pan | Take **[collects Heart Pan]** | `011` HOME (or `026` if all pieces are held) |
-| `021` | The Scribe’s Secret | Trust the scribe | `022` The True Name |
-|  |  | Threaten the scribe | `043` Ink and Threats |
-| `022` | The True Name | Speak Anubis’s hidden title | `023` The Rebel’s Offer |
-|  |  | Keep the name secret | `044` A Secret Kept |
+| `021` | The Scribe’s Secret | Trust | `022` The True Name |
+|  |  | Threaten | `043` Ink and Threats |
+| `022` | The True Name | Speak the name | `023` The Rebel’s Offer |
+|  |  | Keep it secret | `044` A Secret Kept |
 | `023` | The Rebel’s Offer | Reject | `045` The Rebel’s Fire |
-|  |  | Accept | `024` Balance Stone Chamber |
-| `024` | Balance Stone Chamber | Take the Balance Stone **[collects Balance Stone]** | `036` The Guardian’s Guidance |
-|  |  | Rip it from the guardian **[collects Balance Stone]** | `025` The Final Guardian |
-| `025` | The Final Guardian | Spare the guardian | `036` The Guardian’s Guidance |
-|  |  | Destroy the final guardian | `037` The Collapsing Tomb |
+|  |  | Accept **[remembers: Accepted the rebel’s offer at 023]** | `024` Balance Stone Chamber |
+| `024` | Balance Stone Chamber | Take it **[collects Balance Stone]** | `036` The Guardian’s Guidance |
+|  |  | Rip it free **[collects Balance Stone]** | `025` The Final Guardian |
+| `025` | The Final Guardian | Spare | `036` The Guardian’s Guidance |
+|  |  | Destroy | `037` The Collapsing Tomb |
 | `026` | The Scales Made Whole | Talk to Anubis | `027` Restoring the Scales |
-|  |  | Try to escape | `028` Lord of the Tomb (Game Over) |
+|  |  | Escape | `028` Lord of the Tomb (Game Over); if *accepted the rebel’s offer at 023*: **Keep the deal** → `047` Defy the Gods (Game Over) |
 | `027` | Restoring the Scales | Accept | `030` The Scales Restored (Game Over) |
 |  |  | Reject | `029` Released (Game Over) |
 | `028` | Lord of the Tomb | — | **Game Over** (Dark Ending) |
 | `029` | Released | — | **Game Over** (Released) |
 | `030` | The Scales Restored | — | **Game Over** (Best Ending) |
-| `031` | Pulled Through the Glass | Heart journey | `020` The Heart Pan |
+| `031` | Pulled Through the Glass | Follow the heartbeat | `020` The Heart Pan |
 | `032` | Devoured by Ammit | — | **Game Over** (Death) |
-| `033` | The Price of a Reward | Enter the first gate | `008` River of the Dead |
-| `034` | Ammit Breaks Free | Enter the broken wall | `020` The Heart Pan |
+| `033` | The Price of a Reward | Enter the gate | `008` River of the Dead |
+| `034` | Ammit Breaks Free | Go through | `020` The Heart Pan |
 | `035` | Taken by the River | — | **Game Over** (Death) |
-| `036` | The Guardian’s Guidance | Return to the Hall of Gates | `011` HOME (or `026` if all pieces are held) |
-| `037` | The Collapsing Tomb | Run for it | `011` HOME (or `026` if all pieces are held) |
-|  |  | Try and dodge | `038` Buried with the Stone (Game Over) |
+| `036` | The Guardian’s Guidance | Return | `011` HOME (or `026` if all pieces are held) |
+| `037` | The Collapsing Tomb | Run | `011` HOME (or `026` if all pieces are held) |
+|  |  | Dodge | `038` Buried with the Stone (Game Over) |
 | `038` | Buried with the Stone | — | **Game Over** (Death) |
 | `039` | Taken by Force | Continue | `010` Hall of Whispers |
 | `040` | A Peaceful Death | — | **Game Over** (Peaceful Death) |
-| `041` | The Crying Soul | Free the trapped soul | `012` Feather Arm Chamber |
-|  |  | Leave them and go to the Feather Arm door | `012` Feather Arm Chamber |
-| `042` | Memory of Failure | Admit responsibility | `020` The Heart Pan |
-|  |  | Blame someone else | `019` Memory of Home |
-| `043` | Ink and Threats | Apologise and trust the scribe | `022` The True Name |
-|  |  | Search behind the shelves | `023` The Rebel’s Offer |
-| `044` | A Secret Kept | Follow the masked figure | `023` The Rebel’s Offer |
+| `041` | The Crying Soul | Free them **[remembers: Freed the trapped soul at 041]** | `012` Feather Arm Chamber |
+|  |  | Leave them **[remembers: Left the trapped soul at 041]** | `012` Feather Arm Chamber |
+| `042` | Memory of Failure | Admit it | `020` The Heart Pan |
+|  |  | Blame others | `019` Memory of Home |
+| `043` | Ink and Threats | Apologise | `022` The True Name |
+|  |  | Search | `023` The Rebel’s Offer |
+| `044` | A Secret Kept | Follow | `023` The Rebel’s Offer |
 |  |  | Take the stairs | `024` Balance Stone Chamber |
 | `045` | The Rebel’s Fire | Take the stairs | `024` Balance Stone Chamber |
+| `046` | The Voice You Saved | Follow the heartbeat | `020` The Heart Pan |
+| `047` | Defy the Gods | — | **Game Over** (Dark Ending) |
 
 ---
 
@@ -117,6 +123,7 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 | `035` | Taken by the River | Death | `anubis_taken_by_the_river` | `008` |
 | `038` | Buried with the Stone | Death | `anubis_buried_with_the_stone` | `037` |
 | `040` | A Peaceful Death | Peaceful Death | `anubis_peaceful_death` | `019` |
+| `047` | Defy the Gods | Dark Ending | `anubis_defy_the_gods` | `026` |
 
 ---
 
@@ -147,7 +154,7 @@ The desert is completely silent. There is no wind, no stars and no sound apart f
 
 ### Choices
 
-- **Enter the doorway** → `002` The Black Doorway
+- **Enter** → `002` The Black Doorway
 - **Turn back** → `003` Lost in the Sand (Game Over)
 
 ---
@@ -163,8 +170,8 @@ You stop at the doorway and look down a staircase lit by cold blue flames. Carvi
 
 ### Choices
 
-- **Enter** → `004` The Jackal Temple
-- **Call into the darkness** → `003` Lost in the Sand (Game Over)
+- **Go down** → `004` The Jackal Temple
+- **Call out** → `003` Lost in the Sand (Game Over)
 
 ---
 
@@ -196,7 +203,7 @@ The staircase leads into an ancient temple lined with black jackal statues. Thei
 ### Choices
 
 - **Follow the statues** → `013` Golden Scarab Vault
-- **Enter the stairs** → `005` Anubis Revealed
+- **Take the stairs** → `005` Anubis Revealed
 
 ---
 
@@ -243,8 +250,8 @@ You turn and run back toward the staircase, but the steps have gone. In their pl
 
 ### Choices
 
-- **Agree to help** → `006` Terms of Judgment
-- **Run** → `017` Swallowed by the Fog (Game Over)
+- **Help** → `006` Terms of Judgment
+- **Keep running** → `017` Swallowed by the Fog (Game Over)
 
 ---
 
@@ -291,8 +298,8 @@ Beyond the river is a maze of stone passages covered in thousands of names. Some
 
 ### Choices
 
-- **Follow the crying voice** → `041` The Crying Soul
-- **Enter the Feather Arm door** → `012` Feather Arm Chamber
+- **Find the voice** → `041` The Crying Soul
+- **Open the door** → `012` Feather Arm Chamber
 
 ---
 
@@ -307,9 +314,9 @@ The light folds around you and you find yourself in a round chamber of black sto
 
 ### Choices
 
-- **Enter the first gate** → `008` River of the Dead
-- **Enter the second gate** → `018` Maze of False Memories
-- **Enter the third gate** → `021` The Scribe’s Secret
+- **First gate** → `008` River of the Dead
+- **Second gate** → `018` Maze of False Memories
+- **Third gate** → `021` The Scribe’s Secret
 
 ---
 
@@ -324,7 +331,7 @@ The sealed door opens into a circular room where the golden Feather Arm floats a
 
 ### Choices
 
-- **Take the feather** **[collects Feather Arm]** → `011` HOME
+- **Take the feather **[collects Feather Arm]**** → `011` HOME (or `026` if all pieces are held)
 - **Enter the shadow** → `014` Chamber of Stolen Hearts
 
 ---
@@ -340,8 +347,8 @@ The jackal statues turn their heads one by one, guiding you along the wall until
 
 ### Choices
 
-- **Take the scarab** → `014` Chamber of Stolen Hearts
-- **Don’t take it** → `011` HOME
+- **Take it** → `014` Chamber of Stolen Hearts
+- **Leave it** → `011` HOME (or `026` if all pieces are held)
 
 ---
 
@@ -388,8 +395,8 @@ You tell Ammit that you will help her. She lowers her huge head and shows you th
 
 ### Choices
 
-- **Free** → `034` Ammit Breaks Free
-- **Leave** → `032` Devoured by Ammit (Game Over)
+- **Free her** → `034` Ammit Breaks Free
+- **Leave her** → `032` Devoured by Ammit (Game Over)
 
 ---
 
@@ -420,8 +427,8 @@ The passage disappears into thick white fog and the walls begin changing wheneve
 
 ### Choices
 
-- **Follow the memory of home** → `019` Memory of Home
-- **Follow your failures** → `042` Memory of Failure
+- **Remember home** → `019` Memory of Home
+- **Face your failure** → `042` Memory of Failure
 
 ---
 
@@ -429,22 +436,22 @@ The passage disappears into thick white fog and the walls begin changing wheneve
 
 **Image:** `ANU018.png`  
 **Reached from:** `018`, `042`  
-**Notes:** Story copied from old 018.
+**Notes:** Story copied from old 018. Staying leads to 046 instead of 040 if you freed the soul at 041.
 
 **Text:**  
 You enter a perfect memory of home, complete with familiar light, sounds and the feeling of being safe. Someone you once loved enters the room and tells you that you have finally returned. Everything feels real, except their shadow points in the wrong direction and the walls flicker whenever you stop looking at them. The figure reaches out and asks you not to leave again.
 
 ### Choices
 
-- **Accept that the memory may be false** → `020` The Heart Pan
-- **Stay inside the memory** → `040` A Peaceful Death (Game Over)
+- **Let it go** → `020` The Heart Pan
+- **Stay** → `040` A Peaceful Death (Game Over); if *freed the trapped soul at 041*: **Stay** → `046` The Voice You Saved
 
 ---
 
 ## 020 — The Heart Pan
 
 **Image:** `ANU020.png`  
-**Reached from:** `019`, `031`, `034`, `042`  
+**Reached from:** `019`, `031`, `034`, `042`, `046`  
 **Notes:** Story unchanged.
 
 **Text:**  
@@ -452,7 +459,7 @@ The fog clears and reveals a chamber shaped like the inside of a giant heart. Th
 
 ### Choices
 
-- **Take** **[collects Heart Pan]** → `011` HOME
+- **Take **[collects Heart Pan]**** → `011` HOME (or `026` if all pieces are held)
 
 ---
 
@@ -467,8 +474,8 @@ A hidden door leads to an underworld scribe surrounded by endless rolls of papyr
 
 ### Choices
 
-- **Trust the scribe** → `022` The True Name
-- **Threaten the scribe** → `043` Ink and Threats
+- **Trust** → `022` The True Name
+- **Threaten** → `043` Ink and Threats
 
 ---
 
@@ -483,8 +490,8 @@ The scribe brings you into a dark chamber where stars form the shape of a jackal
 
 ### Choices
 
-- **Speak Anubis’s hidden title** → `023` The Rebel’s Offer
-- **Keep the name secret** → `044` A Secret Kept
+- **Speak the name** → `023` The Rebel’s Offer
+- **Keep it secret** → `044` A Secret Kept
 
 ---
 
@@ -500,7 +507,7 @@ A masked rebel steps from behind the scribe’s scrolls and claims that the gods
 ### Choices
 
 - **Reject** → `045` The Rebel’s Fire
-- **Accept** → `024` Balance Stone Chamber
+- **Accept **[remembers: Accepted the rebel’s offer at 023]**** → `024` Balance Stone Chamber
 
 ---
 
@@ -508,15 +515,17 @@ A masked rebel steps from behind the scribe’s scrolls and claims that the gods
 
 **Image:** `ANU024.png`  
 **Reached from:** `023`, `044`, `045`  
-**Notes:** Story unchanged.
+**Notes:** Story unchanged. Extra line if you accepted the rebel at 023.
 
 **Text:**  
 The final piece floats above a machine of turning stone rings. The Balance Stone is small enough to fit in your hand, but the entire room leans around it. A giant guardian made from stone and linen stands beside the mechanism with a ceremonial blade. Its face has been erased and it warns that only the judged may carry balance. You can either carefully unlock the mechanism or tear the stone free before the guardian attacks.
 
+*If accepted the rebel’s offer at 023, add:* On your palm, the rebel’s mark glows faintly, and the guardian’s blank face turns toward it as if it already knows whose side you have chosen.
+
 ### Choices
 
-- **Take the Balance Stone** **[collects Balance Stone]** → `036` The Guardian’s Guidance
-- **Rip it from the guardian** **[collects Balance Stone]** → `025` The Final Guardian
+- **Take it **[collects Balance Stone]**** → `036` The Guardian’s Guidance
+- **Rip it free **[collects Balance Stone]**** → `025` The Final Guardian
 
 ---
 
@@ -524,15 +533,15 @@ The final piece floats above a machine of turning stone rings. The Balance Stone
 
 **Image:** `ANU025.png`  
 **Reached from:** `024`  
-**Notes:** Story unchanged. Note: the text still offers a third option (using Anubis’s hidden title) that has no button.
+**Notes:** Last sentence fixed to match the two buttons.
 
 **Text:**  
-The guardian blocks the exit as cracks spread across its body. It says that it was created to protect the Balance Stone and now has no purpose without it. The room begins collapsing behind you while the guardian lowers its weapon and asks you to judge what should happen to it. You can spare it, destroy it or use Anubis’s hidden title to command it.
+The guardian blocks the exit as cracks spread across its body. It says that it was created to protect the Balance Stone and now has no purpose without it. The room begins collapsing behind you while the guardian lowers its weapon and asks you to judge what should happen to it. You can spare it or destroy it.
 
 ### Choices
 
-- **Spare the guardian** → `036` The Guardian’s Guidance
-- **Destroy the final guardian** → `037` The Collapsing Tomb
+- **Spare** → `036` The Guardian’s Guidance
+- **Destroy** → `037` The Collapsing Tomb
 
 ---
 
@@ -540,15 +549,19 @@ The guardian blocks the exit as cracks spread across its body. It says that it w
 
 **Image:** `ANU026.png`  
 **Reached from:** `011`  
-**Notes:** HOME once all three items are collected.
+**Notes:** HOME once all three items are collected. Changes if you accepted the rebel at 023 or left the soul at 041.
 
 **Text:**  
 As you step back into the Hall of Gates, the Feather Arm, the Heart Pan and the Balance Stone pull against your hands, straining toward one another. All three gates seal behind curtains of blue fire and a fourth door opens where there was only wall before. Beyond it, Anubis waits beside the broken scales while countless souls gather in the darkness. He extends his hand and asks for the pieces. Behind you, a narrow passage glows with light from the world above, and you realise that whoever carries all three pieces holds power over the future of the underworld.
 
+*If left the trapped soul at 041, add:* Among the gathered dead, one figure flickers between a child, an old woman and a wounded soldier. It is the soul you left beneath the stone tablet, and it no longer remembers its name.
+
+*If accepted the rebel’s offer at 023, add:* Then the masked rebel steps out from among the souls. They say nothing, but they hold out their hand beside Anubis’s, and you remember the deal you made among the scribe’s scrolls.
+
 ### Choices
 
 - **Talk to Anubis** → `027` Restoring the Scales
-- **Try to escape** → `028` Lord of the Tomb (Game Over)
+- **Escape** → `028` Lord of the Tomb (Game Over); if *accepted the rebel’s offer at 023*: **Keep the deal** → `047` Defy the Gods (Game Over)
 
 ---
 
@@ -587,7 +600,7 @@ You rule the tomb of Anubis, but you can never leave it.
 ## 029 — Released (Game Over)
 
 **Image:** `ANU001.png`  
-**Outcome:** `lose` · Released · `anubis_released`  
+**Outcome:** `released` · Released · `anubis_released`  
 **Reached from:** `027`  
 **Notes:** Anubis is disappointed but releases you. You wake up in hospital.
 
@@ -605,10 +618,14 @@ Anubis has released you, but you will never know what your heart was truly worth
 **Image:** `ANU027.png`  
 **Outcome:** `win` · Best Ending · `anubis_scales_restored`  
 **Reached from:** `027`  
-**Notes:** Best ending. Based on the old True ending.
+**Notes:** Best ending. Based on the old True ending. Extra line depending on the soul at 041.
 
 **Text:**  
 You nod, and your heart leaves your chest as a sphere of red light. Anubis places it on the restored scales and, after one frightening moment, it balances perfectly with the feather of Ma’at. The gates of judgment open, forgotten souls remember their names and the stolen hearts return to their owners. Anubis tells you that a light heart is not an empty one, but one that accepts fear, failure and responsibility without placing those burdens on others. He thanks you, returns your heart and sends you back to the desert, where you wake beside the expedition trucks with a small golden feather in your hand. As the last of the temple disappears beneath the sand, you hear his voice one final time: “Live as one who has already been weighed.”
+
+*If freed the trapped soul at 041, add:* As you leave, the soul you freed in the Hall of Whispers steps forward, speaks their own name aloud for the first time in centuries and thanks you before passing through the gate.
+
+*If left the trapped soul at 041, add:* As you leave, you see the soul you left beneath the stone tablet among those passing through the gate. Their name has come back to them, but they do not look at you.
 
 **Outcome text:**  
 You restored the scales of judgment and faced them honestly.  
@@ -627,7 +644,7 @@ You press your hand against the glass. Your heart stops, and so does every heart
 
 ### Choices
 
-- **Heart journey** → `020` The Heart Pan
+- **Follow the heartbeat** → `020` The Heart Pan
 
 ---
 
@@ -658,7 +675,7 @@ Anubis’s eyes narrow and the growling behind the pillars falls silent. “You 
 
 ### Choices
 
-- **Enter the first gate** → `008` River of the Dead
+- **Enter the gate** → `008` River of the Dead
 
 ---
 
@@ -673,7 +690,7 @@ With one hard strike, the last link shatters. Ammit throws back her head and roa
 
 ### Choices
 
-- **Enter the broken wall** → `020` The Heart Pan
+- **Go through** → `020` The Heart Pan
 
 ---
 
@@ -704,7 +721,7 @@ The guardian lowers its blade and bows its erased face toward you. “You have j
 
 ### Choices
 
-- **Return to the Hall of Gates** → `011` HOME
+- **Return** → `011` HOME (or `026` if all pieces are held)
 
 ---
 
@@ -719,8 +736,8 @@ Your blow splits the guardian in two and it falls without a sound. At once, the 
 
 ### Choices
 
-- **Run for it** → `011` HOME
-- **Try and dodge** → `038` Buried with the Stone (Game Over)
+- **Run** → `011` HOME (or `026` if all pieces are held)
+- **Dodge** → `038` Buried with the Stone (Game Over)
 
 ---
 
@@ -775,15 +792,15 @@ You rest forever inside it, peaceful and forgotten.
 
 **Image:** `ANU011.png`  
 **Reached from:** `010`  
-**Notes:** Filled gap (was ??). Based on old 011. Both choices continue to 012.
+**Notes:** Filled gap (was ??). Based on old 011. Freeing the soul can save you at 019 and changes 030; leaving them changes 026 and 030.
 
 **Text:**  
 You find a trapped soul pinned beneath a heavy stone tablet. Their body flickers between a child, an old woman and a wounded soldier as the hall steals pieces of who they were. They tell you that they were waiting for judgment when the scales broke and that soon they will forget their own name. Freeing them will take time, but they promise to show you the safest way to the Feather Arm if you help them.
 
 ### Choices
 
-- **Free the trapped soul** → `012` Feather Arm Chamber
-- **Leave them and go to the Feather Arm door** → `012` Feather Arm Chamber
+- **Free them **[remembers: Freed the trapped soul at 041]**** → `012` Feather Arm Chamber
+- **Leave them **[remembers: Left the trapped soul at 041]**** → `012` Feather Arm Chamber
 
 ---
 
@@ -798,8 +815,8 @@ The maze forces you to relive a moment when you failed someone, acted out of fea
 
 ### Choices
 
-- **Admit responsibility** → `020` The Heart Pan
-- **Blame someone else** → `019` Memory of Home
+- **Admit it** → `020` The Heart Pan
+- **Blame others** → `019` Memory of Home
 
 ---
 
@@ -814,8 +831,8 @@ You grab the scribe by his robes and demand the truth. The words on his mask sto
 
 ### Choices
 
-- **Apologise and trust the scribe** → `022` The True Name
-- **Search behind the shelves** → `023` The Rebel’s Offer
+- **Apologise** → `022` The True Name
+- **Search** → `023` The Rebel’s Offer
 
 ---
 
@@ -830,7 +847,7 @@ You fold the name away inside your mind and say nothing. The scribe’s mask fil
 
 ### Choices
 
-- **Follow the masked figure** → `023` The Rebel’s Offer
+- **Follow** → `023` The Rebel’s Offer
 - **Take the stairs** → `024` Balance Stone Chamber
 
 ---
@@ -850,10 +867,41 @@ The rebel’s mask tilts to one side. “Then you are just another servant of th
 
 ---
 
+## 046 — The Voice You Saved
+
+**Image:** `ANU018.png`  
+**Reached from:** `019`  
+**Notes:** Only reached by staying in the memory at 019 after freeing the soul at 041.
+
+**Text:**  
+You take their hand and the warm light closes around you. Then another voice cuts through it, thin but familiar. It is the soul you freed in the Hall of Whispers. They stand in the doorway of the memory, flickering between a child, an old woman and a wounded soldier, and they repeat your name again and again so that you cannot forget it. The memory cracks like glass. Beyond it, the fog parts and a heartbeat that sounds exactly like your own calls you forward.
+
+### Choices
+
+- **Follow the heartbeat** → `020` The Heart Pan
+
+---
+
+## 047 — Defy the Gods (Game Over)
+
+**Image:** `ANU027.png`  
+**Outcome:** `darkWin` · Dark Ending · `anubis_defy_the_gods`  
+**Reached from:** `026`  
+**Notes:** Only reached by accepting the rebel at 023, then choosing Keep the deal at 026. Reworks the old Rebel ending.
+
+**Text:**  
+You turn away from Anubis and place the three pieces in the rebel’s hands. Anubis warns you that you have confused power with freedom, but the rebel strikes the Balance Stone against the empty frame and the scales split apart. The hall collapses as souls escape through every gate and Ammit roars somewhere in the dark. The rebel tears open a doorway and pulls you through into the desert beneath a sky filled with red stars. Stolen power remains beneath your skin, your shadow now has the head of a jackal and the dead begin whispering your name as their liberator.
+
+**Outcome text:**  
+You kept your bargain with the rebel and broke the scales of judgment.  
+You are free for now, but the dead have followed you home.
+
+---
+
 # Route Safeguards
 
-1. Every choice has one fixed destination; HOME is the only page whose buttons depend on collected pieces.
-2. Verify every destination exists and every page from `000` to `045` is reachable.
+1. HOME shows only the gates for uncollected pieces; `019` and `026` swap one button based on remembered choices. Every other choice has one fixed destination.
+2. Verify every destination exists and every page from `000` to `047` is reachable.
 3. Verify every reachable state can still reach a game-over page (no soft-locks).
 4. `026` must only be reachable once all three pieces are collected.
-5. Restarting clears collected pieces but keeps completed endings.
+5. Restarting clears collected pieces and remembered choices but keeps completed endings.

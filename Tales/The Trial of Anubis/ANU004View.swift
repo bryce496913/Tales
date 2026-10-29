@@ -20,7 +20,7 @@ struct ANU004View: View {
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Enter the stairs",
+                    title: "Take the stairs",
                     destination: .anu005
                 )
             }

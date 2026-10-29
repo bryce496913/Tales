@@ -4,6 +4,7 @@ enum TrialOfAnubisOutcome {
     case win
     case darkWin
     case lose
+    case released
     case death
 
     var presentationTitle: String {
@@ -11,6 +12,7 @@ enum TrialOfAnubisOutcome {
         case .win: return "Victory"
         case .darkWin: return "A Dangerous Victory"
         case .lose: return "Defeat"
+        case .released: return "Home Again"
         case .death: return "You Have Fallen"
         }
     }
@@ -20,6 +22,7 @@ enum TrialOfAnubisOutcome {
         case .win: return "The scales shine with restored balance."
         case .darkWin: return "Power answers, but its flame casts a long shadow."
         case .lose: return "The desert keeps another unfinished judgment."
+        case .released: return "You return to the living, your heart still unweighed."
         case .death: return "The temple falls silent around your name."
         }
     }
@@ -29,6 +32,7 @@ enum TrialOfAnubisOutcome {
         case .win: return "crown.fill"
         case .darkWin: return "flame.fill"
         case .lose: return "exclamationmark.triangle.fill"
+        case .released: return "sunrise.fill"
         case .death: return "xmark.shield.fill"
         }
     }
@@ -38,6 +42,7 @@ enum TrialOfAnubisOutcome {
         case .win: return AppTheme.gold
         case .darkWin: return Color(hex: "B86F22")
         case .lose: return Color(hex: "C47A2C")
+        case .released: return AppTheme.sand
         case .death: return Color(hex: "9F2E2E")
         }
     }
@@ -47,6 +52,7 @@ enum TrialOfAnubisOutcome {
         case .win: return Color(hex: "3A2811").opacity(0.94)
         case .darkWin: return Color(hex: "30200F").opacity(0.95)
         case .lose: return Color(hex: "2B2117").opacity(0.95)
+        case .released: return Color(hex: "2E2619").opacity(0.94)
         case .death: return Color(hex: "1B0F12").opacity(0.97)
         }
     }
@@ -167,7 +173,7 @@ struct TrialOfAnubisOutcomeView: View {
         switch outcome {
         case .win: return appeared ? 1 : 0.78
         case .death: return appeared ? 1 : 0.92
-        case .darkWin, .lose: return 1
+        case .darkWin, .lose, .released: return 1
         }
     }
 
@@ -204,6 +210,8 @@ struct TrialOfAnubisOutcomeView: View {
             withAnimation(.easeOut(duration: 0.55)) { appeared = true }
         case .darkWin:
             withAnimation(.easeOut(duration: 0.5)) { appeared = true }
+        case .released:
+            withAnimation(.easeOut(duration: 0.8)) { appeared = true }
         case .lose:
             withAnimation(.easeOut(duration: 0.28)) { appeared = true }
             Task { @MainActor in
@@ -224,6 +232,7 @@ struct TrialOfAnubisOutcomeView_Previews: PreviewProvider {
             preview(.win).previewDisplayName("Win outcome")
             preview(.darkWin).previewDisplayName("Dark Win outcome")
             preview(.lose).previewDisplayName("Lose outcome")
+            preview(.released).previewDisplayName("Released outcome")
             preview(.death).previewDisplayName("Death outcome")
         }
     }

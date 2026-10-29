@@ -15,12 +15,12 @@ struct ANU013View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Take the scarab",
+                    title: "Take it",
                     destination: .anu014
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Don’t take it",
+                    title: "Leave it",
                     destination: .anu011
                 )
             }

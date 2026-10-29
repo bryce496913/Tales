@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct ANU019View: View {
+    @EnvironmentObject
+    private var navigationState: TrialOfAnubisNavigationState
+
     var body: some View {
         TrialOfAnubisPageLayout(
             imageName: "ANU018.png",
@@ -15,14 +18,21 @@ struct ANU019View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Accept that the memory may be false",
+                    title: "Let it go",
                     destination: .anu020
                 )
 
-                TrialOfAnubisNavigationButton(
-                    title: "Stay inside the memory",
-                    destination: .anu040
-                )
+                if navigationState.progress.storyFlags.contains(.freedSoul) {
+                    TrialOfAnubisNavigationButton(
+                        title: "Stay",
+                        destination: .anu046
+                    )
+                } else {
+                    TrialOfAnubisNavigationButton(
+                        title: "Stay",
+                        destination: .anu040
+                    )
+                }
             }
         }
     }

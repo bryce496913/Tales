@@ -34,9 +34,9 @@ struct ANU011View: View {
     }
 
     private static let gates: [HomeGate] = [
-        HomeGate(item: .feather, title: "Enter the first gate", destination: .anu008),
-        HomeGate(item: .heart, title: "Enter the second gate", destination: .anu018),
-        HomeGate(item: .balanceStone, title: "Enter the third gate", destination: .anu021)
+        HomeGate(item: .feather, title: "First gate", destination: .anu008),
+        HomeGate(item: .heart, title: "Second gate", destination: .anu018),
+        HomeGate(item: .balanceStone, title: "Third gate", destination: .anu021)
     ]
 }
 

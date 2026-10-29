@@ -15,7 +15,7 @@ struct ANU033View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Enter the first gate",
+                    title: "Enter the gate",
                     destination: .anu008
                 )
             }

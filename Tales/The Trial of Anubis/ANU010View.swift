@@ -15,12 +15,12 @@ struct ANU010View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Follow the crying voice",
+                    title: "Find the voice",
                     destination: .anu041
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Enter the Feather Arm door",
+                    title: "Open the door",
                     destination: .anu012
                 )
             }
