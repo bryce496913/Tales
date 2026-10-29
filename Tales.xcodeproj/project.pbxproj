@@ -12,6 +12,21 @@
 		FEA90000000000000000008B /* ANU025.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008A /* ANU025.png */; };
 		FEA90000000000000000008D /* ANU026.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008C /* ANU026.png */; };
 		FEA90000000000000000008F /* ANU027.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008E /* ANU027.png */; };
+		FEAA00000000000000000001 /* ANU000.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000000 /* ANU000.png */; };
+		FEAA00000000000000000003 /* ANU029.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000002 /* ANU029.png */; };
+		FEAA00000000000000000005 /* ANU033.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000004 /* ANU033.png */; };
+		FEAA00000000000000000007 /* ANU034.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000006 /* ANU034.png */; };
+		FEAA00000000000000000009 /* ANU035.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000008 /* ANU035.png */; };
+		FEAA0000000000000000000B /* ANU036.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA0000000000000000000A /* ANU036.png */; };
+		FEAA0000000000000000000D /* ANU037.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA0000000000000000000C /* ANU037.png */; };
+		FEAA0000000000000000000F /* ANU038.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA0000000000000000000E /* ANU038.png */; };
+		FEAA00000000000000000011 /* ANU039.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000010 /* ANU039.png */; };
+		FEAA00000000000000000013 /* ANU040.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000012 /* ANU040.png */; };
+		FEAA00000000000000000015 /* ANU041.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000014 /* ANU041.png */; };
+		FEAA00000000000000000017 /* ANU042.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000016 /* ANU042.png */; };
+		FEAA00000000000000000019 /* ANU043.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA00000000000000000018 /* ANU043.png */; };
+		FEAA0000000000000000001B /* ANU044.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA0000000000000000001A /* ANU044.png */; };
+		FEAA0000000000000000001D /* ANU045.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAA0000000000000000001C /* ANU045.png */; };
 		FEB000012B400001000001 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100012B400001000001 /* AppScreen.swift */; };
 		FEB000022B400001000001 /* AppMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100022B400001000001 /* AppMainMenuView.swift */; };
 		FEB000032B400001000001 /* StorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB100032B400001000001 /* StorySelectionView.swift */; };
@@ -359,6 +374,21 @@
 		FEA70000000000000000008A /* ANU025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU025.png; sourceTree = "<group>"; };
 		FEA70000000000000000008C /* ANU026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU026.png; sourceTree = "<group>"; };
 		FEA70000000000000000008E /* ANU027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU027.png; sourceTree = "<group>"; };
+		FEAA00000000000000000000 /* ANU000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU000.png; sourceTree = "<group>"; };
+		FEAA00000000000000000002 /* ANU029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU029.png; sourceTree = "<group>"; };
+		FEAA00000000000000000004 /* ANU033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU033.png; sourceTree = "<group>"; };
+		FEAA00000000000000000006 /* ANU034.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU034.png; sourceTree = "<group>"; };
+		FEAA00000000000000000008 /* ANU035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU035.png; sourceTree = "<group>"; };
+		FEAA0000000000000000000A /* ANU036.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU036.png; sourceTree = "<group>"; };
+		FEAA0000000000000000000C /* ANU037.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU037.png; sourceTree = "<group>"; };
+		FEAA0000000000000000000E /* ANU038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU038.png; sourceTree = "<group>"; };
+		FEAA00000000000000000010 /* ANU039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU039.png; sourceTree = "<group>"; };
+		FEAA00000000000000000012 /* ANU040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU040.png; sourceTree = "<group>"; };
+		FEAA00000000000000000014 /* ANU041.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU041.png; sourceTree = "<group>"; };
+		FEAA00000000000000000016 /* ANU042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU042.png; sourceTree = "<group>"; };
+		FEAA00000000000000000018 /* ANU043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU043.png; sourceTree = "<group>"; };
+		FEAA0000000000000000001A /* ANU044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU044.png; sourceTree = "<group>"; };
+		FEAA0000000000000000001C /* ANU045.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU045.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +461,21 @@
 				FEA70000000000000000008A /* ANU025.png */,
 				FEA70000000000000000008C /* ANU026.png */,
 				FEA70000000000000000008E /* ANU027.png */,
+				FEAA00000000000000000000 /* ANU000.png */,
+				FEAA00000000000000000002 /* ANU029.png */,
+				FEAA00000000000000000004 /* ANU033.png */,
+				FEAA00000000000000000006 /* ANU034.png */,
+				FEAA00000000000000000008 /* ANU035.png */,
+				FEAA0000000000000000000A /* ANU036.png */,
+				FEAA0000000000000000000C /* ANU037.png */,
+				FEAA0000000000000000000E /* ANU038.png */,
+				FEAA00000000000000000010 /* ANU039.png */,
+				FEAA00000000000000000012 /* ANU040.png */,
+				FEAA00000000000000000014 /* ANU041.png */,
+				FEAA00000000000000000016 /* ANU042.png */,
+				FEAA00000000000000000018 /* ANU043.png */,
+				FEAA0000000000000000001A /* ANU044.png */,
+				FEAA0000000000000000001C /* ANU045.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -616,6 +661,21 @@
 				FEA90000000000000000008B /* ANU025.png in Resources */,
 				FEA90000000000000000008D /* ANU026.png in Resources */,
 				FEA90000000000000000008F /* ANU027.png in Resources */,
+				FEAA00000000000000000001 /* ANU000.png in Resources */,
+				FEAA00000000000000000003 /* ANU029.png in Resources */,
+				FEAA00000000000000000005 /* ANU033.png in Resources */,
+				FEAA00000000000000000007 /* ANU034.png in Resources */,
+				FEAA00000000000000000009 /* ANU035.png in Resources */,
+				FEAA0000000000000000000B /* ANU036.png in Resources */,
+				FEAA0000000000000000000D /* ANU037.png in Resources */,
+				FEAA0000000000000000000F /* ANU038.png in Resources */,
+				FEAA00000000000000000011 /* ANU039.png in Resources */,
+				FEAA00000000000000000013 /* ANU040.png in Resources */,
+				FEAA00000000000000000015 /* ANU041.png in Resources */,
+				FEAA00000000000000000017 /* ANU042.png in Resources */,
+				FEAA00000000000000000019 /* ANU043.png in Resources */,
+				FEAA0000000000000000001B /* ANU044.png in Resources */,
+				FEAA0000000000000000001D /* ANU045.png in Resources */,
 				FE0267652B28A22F00F5C31D /* Twenty-Four.png in Resources */,
 				FE02674F2B28A22F00F5C31D /* hieroglyphics_(Left).png in Resources */,
 				FE02674D2B28A22F00F5C31D /* Two.png in Resources */,

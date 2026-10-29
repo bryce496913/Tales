@@ -7,7 +7,7 @@ struct ANU038View: View {
             outcome: .death,
             title: "Buried with the Stone",
             classification: "Death",
-            imageName: "ANU024.png",
+            imageName: "ANU038.png",
             storyText: """
             You throw yourself sideways to dodge the falling slab, but the floor tilts again and you slide straight back into its path. The slab lands with a sound like a door closing. In the silence that follows, the Balance Stone rolls from your hand and comes to rest in the dust, perfectly still, as the chamber settles over you.
             """,

@@ -7,7 +7,7 @@ struct ANU029View: View {
             outcome: .lose,
             title: "Released",
             classification: "Released",
-            imageName: "ANU001.png",
+            imageName: "ANU029.png",
             storyText: """
             You tell Anubis that you cannot do it. For a long moment he says nothing, and the disappointment in his amber eyes is worse than any anger. Then he bows his head. “You returned what was stolen,” he says. “For that, the dead are grateful. Go home.” He touches your forehead and the hall fades to white. You wake to the steady beep of a heart monitor. A nurse tells you that a rescue team found you half-buried in the sand three days after the storm. Nobody believes you about the temple, but on the hospital windowsill a small black jackal sits in the sun, watching you.
             """,

@@ -621,3 +621,4 @@ module.exports = {
     return svg(s + vignette(0.5));
   },
 };
+Object.assign(module.exports, require('./scenes2'));

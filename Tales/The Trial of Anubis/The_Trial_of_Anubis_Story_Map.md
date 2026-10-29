@@ -124,7 +124,7 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 
 ## 000 — The Lost Expedition
 
-**Image:** `ANU001.png`  
+**Image:** `ANU000.png`  
 **Notes:** New page.
 
 **Text:**  
@@ -586,7 +586,7 @@ You rule the tomb of Anubis, but you can never leave it.
 
 ## 029 — Released (Game Over)
 
-**Image:** `ANU001.png`  
+**Image:** `ANU029.png`  
 **Outcome:** `lose` · Released · `anubis_released`  
 **Reached from:** `027`  
 **Notes:** Anubis is disappointed but releases you. You wake up in hospital.
@@ -649,7 +649,7 @@ The Devourer has consumed your soul, leaving no name, memory or path back to the
 
 ## 033 — The Price of a Reward
 
-**Image:** `ANU006.png`  
+**Image:** `ANU033.png`  
 **Reached from:** `006`  
 **Notes:** Anubis is angry but accepts.
 
@@ -664,7 +664,7 @@ Anubis’s eyes narrow and the growling behind the pillars falls silent. “You 
 
 ## 034 — Ammit Breaks Free
 
-**Image:** `ANU016.png`  
+**Image:** `ANU034.png`  
 **Reached from:** `016`  
 **Notes:** Ammit breaks the wall and runs away.
 
@@ -679,7 +679,7 @@ With one hard strike, the last link shatters. Ammit throws back her head and roa
 
 ## 035 — Taken by the River (Game Over)
 
-**Image:** `ANU008.png`  
+**Image:** `ANU035.png`  
 **Outcome:** `death` · Death · `anubis_taken_by_the_river`  
 **Reached from:** `008`  
 **Notes:** Death from swimming the river.
@@ -695,7 +695,7 @@ The drowned souls have claimed you as one of their own.
 
 ## 036 — The Guardian’s Guidance
 
-**Image:** `ANU025.png`  
+**Image:** `ANU036.png`  
 **Reached from:** `024`, `025`  
 **Notes:** The guardian guides you back to HOME.
 
@@ -710,7 +710,7 @@ The guardian lowers its blade and bows its erased face toward you. “You have j
 
 ## 037 — The Collapsing Tomb
 
-**Image:** `ANU024.png`  
+**Image:** `ANU037.png`  
 **Reached from:** `025`  
 **Notes:** Escape the collapsing tomb.
 
@@ -726,7 +726,7 @@ Your blow splits the guardian in two and it falls without a sound. At once, the 
 
 ## 038 — Buried with the Stone (Game Over)
 
-**Image:** `ANU024.png`  
+**Image:** `ANU038.png`  
 **Outcome:** `death` · Death · `anubis_buried_with_the_stone`  
 **Reached from:** `037`  
 **Notes:** Death from trying to dodge the falling slab.
@@ -742,7 +742,7 @@ You lie buried with the Balance Stone, far from the scales it belonged to.
 
 ## 039 — Taken by Force
 
-**Image:** `ANU009.png`  
+**Image:** `ANU039.png`  
 **Reached from:** `009`  
 **Notes:** The ferryman takes the memory by force.
 
@@ -757,7 +757,7 @@ You refuse. The ferryman says nothing. He simply reaches into your chest with a 
 
 ## 040 — A Peaceful Death (Game Over)
 
-**Image:** `ANU018.png`  
+**Image:** `ANU040.png`  
 **Outcome:** `death` · Peaceful Death · `anubis_peaceful_death`  
 **Reached from:** `019`  
 **Notes:** A peaceful death from staying inside the memory.
@@ -773,7 +773,7 @@ You rest forever inside it, peaceful and forgotten.
 
 ## 041 — The Crying Soul
 
-**Image:** `ANU011.png`  
+**Image:** `ANU041.png`  
 **Reached from:** `010`  
 **Notes:** Filled gap (was ??). Based on old 011. Both choices continue to 012.
 
@@ -789,7 +789,7 @@ You find a trapped soul pinned beneath a heavy stone tablet. Their body flickers
 
 ## 042 — Memory of Failure
 
-**Image:** `ANU019.png`  
+**Image:** `ANU042.png`  
 **Reached from:** `018`  
 **Notes:** Filled gap (was ??). Based on old 019. Blaming someone sends you into the comforting false memory at 019.
 
@@ -805,7 +805,7 @@ The maze forces you to relive a moment when you failed someone, acted out of fea
 
 ## 043 — Ink and Threats
 
-**Image:** `ANU021.png`  
+**Image:** `ANU043.png`  
 **Reached from:** `021`  
 **Notes:** Filled gap (was ??).
 
@@ -821,7 +821,7 @@ You grab the scribe by his robes and demand the truth. The words on his mask sto
 
 ## 044 — A Secret Kept
 
-**Image:** `ANU022.png`  
+**Image:** `ANU044.png`  
 **Reached from:** `022`  
 **Notes:** Filled gap (was ??).
 
@@ -837,7 +837,7 @@ You fold the name away inside your mind and say nothing. The scribe’s mask fil
 
 ## 045 — The Rebel’s Fire
 
-**Image:** `ANU023.png`  
+**Image:** `ANU045.png`  
 **Reached from:** `023`  
 **Notes:** Filled gap (was ??).
 

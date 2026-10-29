@@ -315,8 +315,8 @@ function chainLinks(x1, y1, x2, y2, size = 26, col = '#9a9894', dark = '#5a5856'
 function jackalStatue(x, y, sc = 1, flip = false, opts = {}) {
   const { body = '#1b1d2a', hi = '#353a52', eye = '#ffc43a', plinth = '#c7922e' } = opts;
   return at(x, y, sc, `
-    <rect x="-80" y="-40" width="170" height="40" fill="${plinth}" ${stroke(3)}/>
-    <rect x="-70" y="-56" width="150" height="18" fill="#e0aa3e" ${stroke(3)}/>
+    ${plinth ? `<rect x="-80" y="-40" width="170" height="40" fill="${plinth}" ${stroke(3)}/>
+    <rect x="-70" y="-56" width="150" height="18" fill="#e0aa3e" ${stroke(3)}/>` : ''}
     <path d="M-60 -56 C-74 -110 -60 -170 -16 -180 C2 -220 10 -250 22 -262
              L40 -300 L44 -258 L52 -252 L66 -298 L70 -244 C80 -236 84 -230 92 -224 L128 -210
              C132 -204 130 -196 122 -194 L84 -190 C76 -184 70 -176 68 -160

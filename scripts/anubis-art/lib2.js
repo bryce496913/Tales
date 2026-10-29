@@ -135,7 +135,7 @@ function scrollPile(x, y, n, seed, sc = 1) {
 
 // Masked underworld scribe sitting behind a writing desk. Origin: floor under desk centre.
 function scribe(x, y, sc = 1, opts = {}) {
-  const { desk = true, standing = false, flip = false } = opts;
+  const { desk = true, standing = false, flip = false, mask = '#f3ead6', words: showWords = true } = opts;
   const robe = '#1d5a63', robeHi = '#2f7a84';
   const words = glyphRow => {
     let s = '';
@@ -152,8 +152,8 @@ function scribe(x, y, sc = 1, opts = {}) {
     <g transform="translate(0 ${baseY - 330})">
       <path d="M-70 40 C-80 -30 -60 -90 0 -96 C60 -90 80 -30 70 40 Z" fill="#14233a" ${stroke(3)}/>
       <path d="M-56 30 L-56 -40 M56 30 L56 -40" stroke="#f2b833" stroke-width="6"/>
-      <ellipse cx="0" cy="-8" rx="44" ry="58" fill="#f3ead6" ${stroke(3)}/>
-      ${words()}
+      <ellipse cx="0" cy="-8" rx="44" ry="58" fill="${mask}" ${stroke(3)}/>
+      ${showWords === true ? words() : showWords || ''}
       ${glow(0, -10, 70, '#ffe7a6', 0.3)}
     </g>`;
   const deskSvg = desk ? `
