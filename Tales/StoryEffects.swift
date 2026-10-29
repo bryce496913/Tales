@@ -11,16 +11,12 @@ struct StoryPageEffects {
     var choicesWaitForText: Bool = true
 
     static let standard = StoryPageEffects()
-    static let torchLit = StoryPageEffects(entryTransition: .torchReveal)
-    static let doorway = StoryPageEffects(entryTransition: .stoneDoor)
 }
 
 final class HapticManager {
     static let shared = HapticManager(); private init() {}
     private var hapticsEnabled: Bool { UserDefaults.standard.object(forKey: "Tales.hapticsEnabled") as? Bool ?? true }
-    func playChoicePress() { guard hapticsEnabled else { return }; UIImpactFeedbackGenerator(style: .light).impactOccurred() }
     func playChoiceTap() { guard hapticsEnabled else { return }; UIImpactFeedbackGenerator(style: .medium).impactOccurred() }
-    func playTransition() { guard hapticsEnabled else { return }; UISelectionFeedbackGenerator().selectionChanged() }
     func playWin() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.success) }
     func playLose() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.warning) }
     func playDeath() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.error) }

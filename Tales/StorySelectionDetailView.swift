@@ -42,7 +42,7 @@ struct StorySelectionDetailView: View {
 
                     Text(story.statusText)
                         .font(.system(.caption, design: .serif).weight(.bold))
-                        .foregroundColor(Color(hex: "1E140B"))
+                        .foregroundColor(AppTheme.buttonText)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 7)
                         .background(Capsule().fill(AppTheme.gold))
@@ -79,37 +79,17 @@ struct StorySelectionDetailView: View {
 }
 
 struct StorySelectionDetailView_Previews: PreviewProvider {
-    private static let sphinxStory = StorySelectionItem(
-        id: "tales-from-the-sphinx",
-        title: "Tales From the Sphinx",
-        subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
-        statusText: "Available",
-        iconImageName: "Icon.png",
-        titleImageName: "Title-Screen-Art.png",
-        actionTitle: "Open Story"
-    )
-
-    private static let anubisStory = StorySelectionItem(
-        id: "the-trial-of-anubis",
-        title: "The Trial of Anubis",
-        subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
-        statusText: "Coming Soon",
-        iconImageName: "ANU-Icon.png",
-        titleImageName: "ANU-Title-Screen-Art.png",
-        actionTitle: "Open Story"
-    )
-
     static var previews: some View {
         Group {
-            StorySelectionDetailView(story: sphinxStory, openStory: {})
+            StorySelectionDetailView(story: StorySelectionItem.talesFromTheSphinx, openStory: {})
                 .previewDisplayName("Sphinx detail popout - iPhone SE")
                 .previewDevice("iPhone SE (3rd generation)")
 
-            StorySelectionDetailView(story: anubisStory, openStory: {})
+            StorySelectionDetailView(story: StorySelectionItem.trialOfAnubis, openStory: {})
                 .previewDisplayName("Anubis detail popout - large iPhone")
                 .previewDevice("iPhone 15 Pro Max")
 
-            StorySelectionDetailView(story: sphinxStory, openStory: {})
+            StorySelectionDetailView(story: StorySelectionItem.talesFromTheSphinx, openStory: {})
                 .previewDisplayName("Sphinx detail popout - iPad portrait")
                 .previewDevice("iPad Pro (12.9-inch) (6th generation)")
                 .previewInterfaceOrientation(.portrait)

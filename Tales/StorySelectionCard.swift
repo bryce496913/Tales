@@ -126,33 +126,13 @@ private extension UIImage {
 }
 
 struct StorySelectionCard_Previews: PreviewProvider {
-    private static let sphinxStory = StorySelectionItem(
-        id: "tales-from-the-sphinx",
-        title: "Tales From the Sphinx",
-        subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
-        statusText: "Available",
-        iconImageName: "Icon.png",
-        titleImageName: "Title-Screen-Art.png",
-        actionTitle: "Open Story"
-    )
-
-    private static let anubisStory = StorySelectionItem(
-        id: "the-trial-of-anubis",
-        title: "The Trial of Anubis",
-        subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
-        statusText: "Coming Soon",
-        iconImageName: "ANU-Icon.png",
-        titleImageName: "ANU-Title-Screen-Art.png",
-        actionTitle: "Open Story"
-    )
-
     static var previews: some View {
         Group {
-            preview(for: sphinxStory)
+            preview(for: StorySelectionItem.talesFromTheSphinx)
                 .previewDisplayName("Sphinx icon tile")
                 .previewDevice("iPhone SE (3rd generation)")
 
-            preview(for: anubisStory)
+            preview(for: StorySelectionItem.trialOfAnubis)
                 .previewDisplayName("Anubis icon tile")
                 .previewDevice("iPhone 15 Pro Max")
         }
