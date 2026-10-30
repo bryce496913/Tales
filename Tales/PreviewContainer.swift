@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if DEBUG
+/// Supplies isolated GameOptions and AppNavigationState for SwiftUI previews.
 struct PreviewContainer<Content: View>: View {
     @StateObject private var gameOptions: GameOptions
     @StateObject private var navigationState: AppNavigationState
@@ -24,4 +24,3 @@ struct PreviewContainer<Content: View>: View {
         .environmentObject(navigationState)
     }
 }
-#endif

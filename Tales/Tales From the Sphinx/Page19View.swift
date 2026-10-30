@@ -14,8 +14,7 @@ struct Page19View: View {
             imageName: "Nineteen.png",
             text: "This room is clearly light, and you are able to have a good look around. The room is lacking anything but two upright sarcophagi. On the floor in front of each sarcophagus is a set of hieroglyphics. You think to yourself, “This is just like those dumb emoji puzzles on Facebook; I am sure I can figure out which is the correct way to go.\""
         ) {
-
-            HStack {
+            StoryChoicesStack {
                 VStack {
                     Image(uiImage: #imageLiteral(resourceName: "hieroglyphics_(Left).png"))
                         .resizable()
@@ -24,8 +23,6 @@ struct Page19View: View {
 
                     StoryNavigationButton(title: "Open the left sarcophagus", route: .page(18))
                 }
-
-                Spacer()
 
                 VStack {
                     Image(uiImage: #imageLiteral(resourceName: "hieroglyphics_(Right).png"))
@@ -36,7 +33,6 @@ struct Page19View: View {
                     StoryNavigationButton(title: "Open the right sarcophagus", route: .page(22))
                 }
             }
-            .padding()
         }
     }
 }

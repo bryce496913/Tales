@@ -84,6 +84,18 @@ struct StoryPageLayout<Content: View>: View {
     private var choicesVisible: Bool { !effects.choicesWaitForText || textComplete || reduceMotion || !gameOptions.typewriterEnabled }
 }
 
+/// Lays choices out side by side when they fit, otherwise stacks them vertically.
+struct StoryChoicesStack<Content: View>: View {
+    @ViewBuilder let content: Content
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .top, spacing: 12) { content }
+            VStack(spacing: 12) { content }
+        }
+    }
+}
+
 struct StoryPageLayout_Previews: PreviewProvider {
     static var previews: some View {
         PreviewContainer {

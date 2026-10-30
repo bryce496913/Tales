@@ -14,14 +14,11 @@ struct Page18View: View {
             imageName: "Eighteen.png",
             text: "This is the darkest room you have entered. There is only one torch in this room, just off to your right. The only thing this torch is illuminating is a ladder that leads to an opening in the ceiling. Taking this torch would make exploring the rest of the room easier."
         ) {
-
-            HStack {
+            StoryChoicesStack {
                 RandomStoryNavigationButton(title: "Climb the ladder", routes: [.page(12), .page(24)])
-                Spacer()
 
                 StoryNavigationButton(title: "Take torch to explore", route: .page(15))
-                }
-            .padding()
+            }
         }
     }
 }
