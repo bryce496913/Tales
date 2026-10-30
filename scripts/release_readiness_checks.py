@@ -66,6 +66,32 @@ def check_project_membership():
     for name in sorted(referenced - on_disk):
         failures.append(f"{name} is in the Xcode project but missing on disk")
 
+    # Folder names must match exactly: macOS ignores case, but other checkouts do not.
+    groups = {}
+    for group_id, children, rest in re.findall(
+            r"([0-9A-F]+)(?: /\*[^*]*\*/)? = \{\s*isa = PBXGroup;\s*children = \((.*?)\);(.*?)\};", project, flags=re.S):
+        path = re.search(r"\bpath = \"?([^\";]+)\"?;", rest)
+        groups[group_id] = (re.findall(r"([0-9A-F]+) /\*", children), path.group(1) if path else None)
+    parents = {child: group_id for group_id, (children, _) in groups.items() for child in children}
+
+    def group_folder(group_id):
+        parts = []
+        while group_id in groups:
+            if groups[group_id][1]:
+                parts.append(groups[group_id][1])
+            group_id = parents.get(group_id)
+        return list(reversed(parts))
+
+    for group_id, (_, path) in groups.items():
+        if not path:
+            continue
+        current = ROOT
+        for part in group_folder(group_id):
+            if part not in {p.name for p in current.iterdir()}:
+                failures.append(f"Xcode group folder '{part}' not found in {current.relative_to(ROOT) or '.'} (check capitalisation)")
+                break
+            current = current / part
+
 
 def check_images():
     images = {p.name for p in TALES.rglob("*.png")}
