@@ -69,6 +69,16 @@ def check_project_membership():
 
 def check_images():
     images = {p.name for p in TALES.rglob("*.png")}
+    project = PBXPROJ.read_text()
+    registered = set(re.findall(r"path = \"?([^\";]+\.png)\"?;", project))
+    resources_phase = project.split("/* Begin PBXResourcesBuildPhase section */")[-1].split("/* End PBXResourcesBuildPhase section */")[0]
+    bundled = set(re.findall(r"/\* ([^*]+\.png) in Resources \*/,", resources_phase))
+    for name in sorted(images - registered):
+        failures.append(f"{name} exists on disk but is not in the Xcode project (add it with File > Add Files)")
+    for name in sorted(registered - images):
+        failures.append(f"{name} is in the Xcode project but missing on disk")
+    for name in sorted(registered - bundled):
+        failures.append(f"{name} is in the Xcode project but not in the app target's Copy Bundle Resources")
     for path in swift_files():
         text = path.read_text()
         names = re.findall(r'(?:imageName|resourceName): "([^"]+\.png)"', text)
