@@ -11,7 +11,7 @@ Bryce Cameron
 Embark on a thrilling adventure through the mysteries of the Sphinx in "Tales From the Sphinx." As the protagonist, you find yourself entangled in a surreal journey filled with unexpected twists and turns. From exploring ancient corridors to encountering mythical creatures, every decision you make shapes your destiny. Uncover the secrets of the Sphinx as you navigate through the enigmatic passages, making choices that lead to different outcomes. Will you escape unscathed, or will the Sphinx's riddles prove to be your ultimate challenge?
 
 ### The Trial of Anubis
-Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart. A two-choice branching story across 28 pages with five endings: The Scales Restored (true ending), Ammit, Rebel, Trickster, and Lost Soul.
+Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart. A branching story across 48 pages (`ANU-000`…`ANU-047`) built around the Hall of Gates hub: recover the Feather Arm, Heart Pan and Balance Stone, then decide what to do with the restored scales. Ten endings, listed below.
 
 ## About
 "Tales From the Sphinx" is an engaging text-based choose-your-own-adventure game that transports players into a mysterious world inspired by Egyptian mythology. Immerse yourself in a captivating narrative where every decision influences the unfolding story. Navigate through beautifully illustrated scenarios, encountering various challenges, characters, and unexpected events. The game offers a unique and immersive experience, allowing players to shape their destiny by making crucial choices at every juncture.
@@ -26,7 +26,7 @@ Enter the Egyptian underworld, recover the sacred scales, and face the final jud
 
 - `Tales/` – shared app shell: main menu, story selection, options, theme, and the shared page/outcome components used by Tales From the Sphinx.
 - `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, images, and the story script.
-- `Tales/The Trial of Anubis/` – Anubis pages (`ANU001View`…`ANU028View`), ending views, its own navigation/progress state and presentation components, images, and the story script.
+- `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), its own navigation/progress state and presentation components, images, and the story map.
 - `scripts/release_readiness_checks.py` – static checks run before a release (see below).
 
 ## Release Checks
@@ -37,7 +37,7 @@ Run from the repository root:
 python3 scripts/release_readiness_checks.py
 ```
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis ending IDs match the navigation state.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis ending IDs match the navigation state.
 
 ## Release Readiness Notes
 
