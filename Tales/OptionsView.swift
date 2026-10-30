@@ -43,7 +43,6 @@ struct OptionsView: View {
                         OptionToggleRow(title: "Haptics", detail: "Play tactile feedback for choices and endings.", isOn: $gameOptions.hapticsEnabled)
                         OptionToggleRow(title: "Button Glow", detail: "Use ambient glow around choice buttons.", isOn: $gameOptions.buttonGlowEnabled)
                         OptionToggleRow(title: "Outcome Animations", detail: "Animate victory, defeat, and death cards.", isOn: $gameOptions.outcomeAnimationsEnabled)
-                        OptionToggleRow(title: "Sound Effects", detail: "Saved now for a future sound-effects pass.", isOn: $gameOptions.soundEffectsEnabled)
                     }
                     optionSection("Reset") {
                         ChoiceButton("Reset to Defaults") { confirmingReset = true }

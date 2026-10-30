@@ -47,7 +47,7 @@ It verifies that every Swift file is in the Xcode project (and vice versa), ever
 - Completed outcome screens are not restored as unfinished adventures after relaunch. Reaching an ending marks the persisted adventure as no longer in progress, while the current in-memory screen remains visible until the player chooses Restart Adventure or Return to Main Menu.
 - Restart Adventure and Return to Main Menu preserve completed-ending history. Reset Story Progress clears completed endings along with the saved route.
 - `StoryPageEffects` contains only active page-specific presentation fields: `entryTransition` and `choicesWaitForText`.
-- `GameOptions` is the single source of truth for player-controlled effects, including typewriter enablement, typewriter speed, page transitions, haptics, button glow, outcome animations, and sound-effect preference. Story navigation state stores only the route, in-progress flag, and completed endings.
+- `GameOptions` is the single source of truth for player-controlled effects, including typewriter enablement, typewriter speed, page transitions, haptics, button glow, outcome animations, and background ambience. Story navigation state stores only the route, in-progress flag, and completed endings.
 - SwiftUI previews use a shared `PreviewContainer` with isolated preview `UserDefaults` and required `GameOptions` and `AppNavigationState` environment objects.
 
 ## Tales From the Sphinx Ending ID Mapping
