@@ -4,17 +4,18 @@ struct TrialOfAnubisNavigationButton: View {
     let title: String
     let destination: TrialOfAnubisRoute
     var collects: TrialOfAnubisItem? = nil
+    var marks: TrialOfAnubisStoryFlag? = nil
 
     @EnvironmentObject
     private var navigationState: TrialOfAnubisNavigationState
 
     var body: some View {
         Button {
-            navigationState.navigate(to: destination, collecting: collects)
+            navigationState.navigate(to: destination, collecting: collects, marking: marks)
         } label: {
             Text(title)
                 .font(.system(.headline, design: .serif).weight(.semibold))
-                .foregroundColor(Color(hex: "1E140B"))
+                .foregroundColor(AppTheme.buttonText)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
                 .padding(.horizontal, 16)

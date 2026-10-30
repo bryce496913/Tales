@@ -15,7 +15,7 @@ struct ANU044View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Follow the masked figure",
+                    title: "Follow",
                     destination: .anu023
                 )
 

@@ -10,6 +10,28 @@ struct StorySelectionItem: Identifiable {
     let actionTitle: String
 }
 
+extension StorySelectionItem {
+    static let talesFromTheSphinx = StorySelectionItem(
+        id: "tales-from-the-sphinx",
+        title: "Tales From the Sphinx",
+        subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
+        statusText: "Available",
+        iconImageName: "Icon.png",
+        titleImageName: "Title-Screen-Art.png",
+        actionTitle: "Open Story"
+    )
+
+    static let trialOfAnubis = StorySelectionItem(
+        id: "the-trial-of-anubis",
+        title: "The Trial of Anubis",
+        subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
+        statusText: "Available",
+        iconImageName: "ANU-Icon.png",
+        titleImageName: "ANU-Title-Screen-Art.png",
+        actionTitle: "Open Story"
+    )
+}
+
 struct StorySelectionView: View {
     let openSphinx: () -> Void
     let openAnubis: () -> Void
@@ -28,26 +50,7 @@ struct StorySelectionView: View {
         )
     ]
 
-    private let stories = [
-        StorySelectionItem(
-            id: "tales-from-the-sphinx",
-            title: "Tales From the Sphinx",
-            subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
-            statusText: "Available",
-            iconImageName: "Icon.png",
-            titleImageName: "Title-Screen-Art.png",
-            actionTitle: "Open Story"
-        ),
-        StorySelectionItem(
-            id: "the-trial-of-anubis",
-            title: "The Trial of Anubis",
-            subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
-            statusText: "Available",
-            iconImageName: "ANU-Icon.png",
-            titleImageName: "ANU-Title-Screen-Art.png",
-            actionTitle: "Open Story"
-        )
-    ]
+    private let stories: [StorySelectionItem] = [.talesFromTheSphinx, .trialOfAnubis]
 
     var body: some View {
         ZStack {
@@ -132,10 +135,10 @@ struct StorySelectionView: View {
 
         DispatchQueue.main.async {
             switch story.id {
-            case "tales-from-the-sphinx":
+            case StorySelectionItem.talesFromTheSphinx.id:
                 openSphinx()
 
-            case "the-trial-of-anubis":
+            case StorySelectionItem.trialOfAnubis.id:
                 openAnubis()
 
             default:

@@ -21,7 +21,8 @@ struct ANU023View: View {
 
                 TrialOfAnubisNavigationButton(
                     title: "Accept",
-                    destination: .anu024
+                    destination: .anu024,
+                    marks: .acceptedRebel
                 )
             }
         }

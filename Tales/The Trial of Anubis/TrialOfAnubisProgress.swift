@@ -7,10 +7,27 @@ enum TrialOfAnubisItem: String, Codable, CaseIterable {
     case balanceStone
 }
 
+/// Choices the story remembers so later pages can react to them.
+enum TrialOfAnubisStoryFlag: String, Codable, CaseIterable {
+    case freedSoul
+    case abandonedSoul
+    case acceptedRebel
+
+    /// A flag that cannot be held at the same time as this one.
+    var opposite: TrialOfAnubisStoryFlag? {
+        switch self {
+        case .freedSoul: return .abandonedSoul
+        case .abandonedSoul: return .freedSoul
+        case .acceptedRebel: return nil
+        }
+    }
+}
+
 struct TrialOfAnubisProgress: Codable {
     var currentNodeID: String
     var visitedNodeIDs: Set<String>
     var collectedItems: Set<TrialOfAnubisItem>
+    var storyFlags: Set<TrialOfAnubisStoryFlag>
     var completedEndingIDs: Set<String>
 
     var hasAllItems: Bool {
@@ -23,6 +40,7 @@ struct TrialOfAnubisProgress: Codable {
             TrialOfAnubisRoute.anu000.rawValue
         ],
         collectedItems: [],
+        storyFlags: [],
         completedEndingIDs: []
     )
 }

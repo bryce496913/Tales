@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+._*
+
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# Python
+__pycache__/

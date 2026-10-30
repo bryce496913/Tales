@@ -106,7 +106,6 @@
 		FE02679B2B28C74200F5C31D /* Page24View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02679A2B28C74200F5C31D /* Page24View.swift */; };
 		FE02679D2B28C77A00F5C31D /* Page25View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02679C2B28C77A00F5C31D /* Page25View.swift */; };
 		FE0504AD2B289A4F0015CAFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0504AC2B289A4F0015CAFB /* ContentView.swift */; };
-		FE9990012B289A4F0015CAFB /* StoryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9990002B289A4F0015CAFB /* StoryStyle.swift */; };
 		FE9990032B289A4F0015CAFB /* AppNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9990022B289A4F0015CAFB /* AppNavigationState.swift */; };
 		FE9990052B289A4F0015CAFB /* AdventureResetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */; };
 		FE0504AF2B289A510015CAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0504AE2B289A510015CAFB /* Assets.xcassets */; };
@@ -158,6 +157,8 @@
 		FED50000000000000000002B /* ANU043View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED40000000000000000002B /* ANU043View.swift */; };
 		FED50000000000000000002C /* ANU044View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED40000000000000000002C /* ANU044View.swift */; };
 		FED50000000000000000002D /* ANU045View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED40000000000000000002D /* ANU045View.swift */; };
+		FED50000000000000000002E /* ANU046View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED40000000000000000002E /* ANU046View.swift */; };
+		FED50000000000000000002F /* ANU047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED40000000000000000002F /* ANU047View.swift */; };
 		FEA500000000000000000044 /* TrialOfAnubisChoiceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */; };
 		FEA500000000000000000046 /* TrialOfAnubisMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */; };
 		FEA500000000000000000048 /* TrialOfAnubisNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */; };
@@ -191,7 +192,6 @@
 		FEA800000000000000000081 /* ANU020.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000080 /* ANU020.png */; };
 		FEA800000000000000000083 /* ANU021.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000082 /* ANU021.png */; };
 		FEA800000000000000000085 /* ANU022.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000084 /* ANU022.png */; };
-		FEA500000000000000000091 /* TrialOfAnubisPageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */; };
 		FEA500000000000000000093 /* TrialOfAnubisTypewriterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */; };
 		FEA500000000000000000095 /* TrialOfAnubisTypewriterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */; };
 		FEA500000000000000000099 /* TrialOfAnubisTransitionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */; };
@@ -278,7 +278,6 @@
 		FE0504AC2B289A4F0015CAFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE0504AE2B289A510015CAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE0504B12B289A510015CAFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FE9990002B289A4F0015CAFB /* StoryStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryStyle.swift; sourceTree = "<group>"; };
 		FE9990022B289A4F0015CAFB /* AppNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationState.swift; sourceTree = "<group>"; };
 		FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureResetButtons.swift; sourceTree = "<group>"; };
 		FE38B2182B289DD8004B8919 /* TalesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalesApp.swift; sourceTree = "<group>"; };
@@ -331,6 +330,8 @@
 		FED40000000000000000002B /* ANU043View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU043View.swift; sourceTree = "<group>"; };
 		FED40000000000000000002C /* ANU044View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU044View.swift; sourceTree = "<group>"; };
 		FED40000000000000000002D /* ANU045View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU045View.swift; sourceTree = "<group>"; };
+		FED40000000000000000002E /* ANU046View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU046View.swift; sourceTree = "<group>"; };
+		FED40000000000000000002F /* ANU047View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANU047View.swift; sourceTree = "<group>"; };
 		FEA400000000000000000043 /* TrialOfAnubisChoiceButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisChoiceButtonStyle.swift; sourceTree = "<group>"; };
 		FEA400000000000000000045 /* TrialOfAnubisMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisMainMenuView.swift; sourceTree = "<group>"; };
 		FEA400000000000000000047 /* TrialOfAnubisNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisNavigationButton.swift; sourceTree = "<group>"; };
@@ -342,7 +343,6 @@
 		FEA400000000000000000053 /* TrialOfAnubisResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisResetButtons.swift; sourceTree = "<group>"; };
 		FEA400000000000000000055 /* TrialOfAnubisRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRootView.swift; sourceTree = "<group>"; };
 		FEA400000000000000000057 /* TrialOfAnubisRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisRoute.swift; sourceTree = "<group>"; };
-		FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisPageEffects.swift; sourceTree = "<group>"; };
 		FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTypewriterSpeed.swift; sourceTree = "<group>"; };
 		FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTypewriterText.swift; sourceTree = "<group>"; };
 		FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOfAnubisTransitionContainer.swift; sourceTree = "<group>"; };
@@ -441,7 +441,7 @@
 		FEA300012B300001000001 /* The Trial of Anubis */ = {
 			isa = PBXGroup;
 			children = (
-				FEA400000000000000000001 /* ANU001View.swift */,				FEA400000000000000000003 /* ANU002View.swift */,				FEA400000000000000000005 /* ANU003View.swift */,				FEA400000000000000000007 /* ANU004View.swift */,				FEA400000000000000000009 /* ANU005View.swift */,				FEA40000000000000000000B /* ANU006View.swift */,				FEA40000000000000000000D /* ANU007View.swift */,				FEA40000000000000000000F /* ANU008View.swift */,				FEA400000000000000000011 /* ANU009View.swift */,				FEA400000000000000000013 /* ANU010View.swift */,				FEA400000000000000000015 /* ANU011View.swift */,				FEA400000000000000000017 /* ANU012View.swift */,				FEA400000000000000000019 /* ANU013View.swift */,				FEA40000000000000000001B /* ANU014View.swift */,				FEA40000000000000000001D /* ANU015View.swift */,				FEA40000000000000000001F /* ANU016View.swift */,				FEA400000000000000000021 /* ANU017View.swift */,				FEA400000000000000000023 /* ANU018View.swift */,				FEA400000000000000000025 /* ANU019View.swift */,				FEA400000000000000000027 /* ANU020View.swift */,				FEA400000000000000000029 /* ANU021View.swift */,				FEA40000000000000000002B /* ANU022View.swift */,				FEA40000000000000000002D /* ANU023View.swift */,				FEA40000000000000000002F /* ANU024View.swift */,				FEA400000000000000000031 /* ANU025View.swift */,				FEA400000000000000000033 /* ANU026View.swift */,				FEA400000000000000000035 /* ANU027View.swift */,				FEA400000000000000000037 /* ANU028View.swift */,				FED400000000000000000000 /* ANU000View.swift */,				FED40000000000000000001D /* ANU029View.swift */,				FED40000000000000000001E /* ANU030View.swift */,				FED40000000000000000001F /* ANU031View.swift */,				FED400000000000000000020 /* ANU032View.swift */,				FED400000000000000000021 /* ANU033View.swift */,				FED400000000000000000022 /* ANU034View.swift */,				FED400000000000000000023 /* ANU035View.swift */,				FED400000000000000000024 /* ANU036View.swift */,				FED400000000000000000025 /* ANU037View.swift */,				FED400000000000000000026 /* ANU038View.swift */,				FED400000000000000000027 /* ANU039View.swift */,				FED400000000000000000028 /* ANU040View.swift */,				FED400000000000000000029 /* ANU041View.swift */,				FED40000000000000000002A /* ANU042View.swift */,				FED40000000000000000002B /* ANU043View.swift */,				FED40000000000000000002C /* ANU044View.swift */,				FED40000000000000000002D /* ANU045View.swift */,				FEA400000000000000000090 /* TrialOfAnubisPageEffects.swift */,
+				FEA400000000000000000001 /* ANU001View.swift */,				FEA400000000000000000003 /* ANU002View.swift */,				FEA400000000000000000005 /* ANU003View.swift */,				FEA400000000000000000007 /* ANU004View.swift */,				FEA400000000000000000009 /* ANU005View.swift */,				FEA40000000000000000000B /* ANU006View.swift */,				FEA40000000000000000000D /* ANU007View.swift */,				FEA40000000000000000000F /* ANU008View.swift */,				FEA400000000000000000011 /* ANU009View.swift */,				FEA400000000000000000013 /* ANU010View.swift */,				FEA400000000000000000015 /* ANU011View.swift */,				FEA400000000000000000017 /* ANU012View.swift */,				FEA400000000000000000019 /* ANU013View.swift */,				FEA40000000000000000001B /* ANU014View.swift */,				FEA40000000000000000001D /* ANU015View.swift */,				FEA40000000000000000001F /* ANU016View.swift */,				FEA400000000000000000021 /* ANU017View.swift */,				FEA400000000000000000023 /* ANU018View.swift */,				FEA400000000000000000025 /* ANU019View.swift */,				FEA400000000000000000027 /* ANU020View.swift */,				FEA400000000000000000029 /* ANU021View.swift */,				FEA40000000000000000002B /* ANU022View.swift */,				FEA40000000000000000002D /* ANU023View.swift */,				FEA40000000000000000002F /* ANU024View.swift */,				FEA400000000000000000031 /* ANU025View.swift */,				FEA400000000000000000033 /* ANU026View.swift */,				FEA400000000000000000035 /* ANU027View.swift */,				FEA400000000000000000037 /* ANU028View.swift */,				FED400000000000000000000 /* ANU000View.swift */,				FED40000000000000000001D /* ANU029View.swift */,				FED40000000000000000001E /* ANU030View.swift */,				FED40000000000000000001F /* ANU031View.swift */,				FED400000000000000000020 /* ANU032View.swift */,				FED400000000000000000021 /* ANU033View.swift */,				FED400000000000000000022 /* ANU034View.swift */,				FED400000000000000000023 /* ANU035View.swift */,				FED400000000000000000024 /* ANU036View.swift */,				FED400000000000000000025 /* ANU037View.swift */,				FED400000000000000000026 /* ANU038View.swift */,				FED400000000000000000027 /* ANU039View.swift */,				FED400000000000000000028 /* ANU040View.swift */,				FED400000000000000000029 /* ANU041View.swift */,				FED40000000000000000002A /* ANU042View.swift */,				FED40000000000000000002B /* ANU043View.swift */,				FED40000000000000000002C /* ANU044View.swift */,				FED40000000000000000002D /* ANU045View.swift */,				FED40000000000000000002E /* ANU046View.swift */,				FED40000000000000000002F /* ANU047View.swift */,
 				FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */,
 				FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */,
 				FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */,
@@ -544,7 +544,6 @@
 				FEB100032B400001000001 /* StorySelectionView.swift */,
 				FEB100042B400001000001 /* StorySelectionCard.swift */,
 				FEB100072B400001000001 /* StorySelectionDetailView.swift */,
-				FE9990002B289A4F0015CAFB /* StoryStyle.swift */,
 				FE9990022B289A4F0015CAFB /* AppNavigationState.swift */,
 				FE9990042B289A4F0015CAFB /* AdventureResetButtons.swift */,
 				FEA000012B300001000001 /* AppTheme.swift */,
@@ -767,7 +766,8 @@
 				FED50000000000000000002B /* ANU043View.swift in Sources */,
 				FED50000000000000000002C /* ANU044View.swift in Sources */,
 				FED50000000000000000002D /* ANU045View.swift in Sources */,
-				FEA500000000000000000091 /* TrialOfAnubisPageEffects.swift in Sources */,
+				FED50000000000000000002E /* ANU046View.swift in Sources */,
+				FED50000000000000000002F /* ANU047View.swift in Sources */,
 				FEA500000000000000000093 /* TrialOfAnubisTypewriterSpeed.swift in Sources */,
 				FEA500000000000000000095 /* TrialOfAnubisTypewriterText.swift in Sources */,
 				FEA500000000000000000099 /* TrialOfAnubisTransitionContainer.swift in Sources */,
@@ -796,7 +796,6 @@
 				FEB000042B400001000001 /* StorySelectionCard.swift in Sources */,
 				FEB000072B400001000001 /* StorySelectionDetailView.swift in Sources */,
 				FEB000052B400001000001 /* TalesFromTheSphinxRootView.swift in Sources */,
-				FE9990012B289A4F0015CAFB /* StoryStyle.swift in Sources */,
 				FE9990032B289A4F0015CAFB /* AppNavigationState.swift in Sources */,
 				FE9990052B289A4F0015CAFB /* AdventureResetButtons.swift in Sources */,
 				FEA000112B300001000001 /* AppTheme.swift in Sources */,

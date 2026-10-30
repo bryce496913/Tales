@@ -15,7 +15,7 @@ struct ANU031View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Heart journey",
+                    title: "Follow the heartbeat",
                     destination: .anu020
                 )
             }

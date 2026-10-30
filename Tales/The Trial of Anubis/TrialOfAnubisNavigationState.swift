@@ -24,6 +24,7 @@ final class TrialOfAnubisNavigationState: ObservableObject {
             currentNodeID: TrialOfAnubisRoute.anu000.rawValue,
             visitedNodeIDs: [TrialOfAnubisRoute.anu000.rawValue],
             collectedItems: [],
+            storyFlags: [],
             completedEndingIDs: completed
         )
         path = [.anu000]
@@ -41,13 +42,24 @@ final class TrialOfAnubisNavigationState: ObservableObject {
         path = [route]
     }
 
-    func navigate(to destination: TrialOfAnubisRoute, collecting item: TrialOfAnubisItem? = nil) {
+    func navigate(
+        to destination: TrialOfAnubisRoute,
+        collecting item: TrialOfAnubisItem? = nil,
+        marking flag: TrialOfAnubisStoryFlag? = nil
+    ) {
         guard !isNavigating, path.last != destination else { return }
         isNavigating = true
         defer { isNavigating = false }
 
         if let item = item {
             progress.collectedItems.insert(item)
+        }
+
+        if let flag = flag {
+            progress.storyFlags.insert(flag)
+            if let opposite = flag.opposite {
+                progress.storyFlags.remove(opposite)
+            }
         }
 
         // HOME becomes the end-game hall once every scale piece has been collected.

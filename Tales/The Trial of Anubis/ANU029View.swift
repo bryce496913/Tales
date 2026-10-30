@@ -4,7 +4,7 @@ struct ANU029View: View {
     var body: some View {
         TrialOfAnubisOutcomeView(
             endingID: "anubis_released",
-            outcome: .lose,
+            outcome: .released,
             title: "Released",
             classification: "Released",
             imageName: "ANU029.png",

@@ -1,11 +1,10 @@
 //
-//  Plot1View.swift
+//  Page1View.swift
 //  Tales
 //
 //  Created by Bryce Cameron on 12/12/23.
 //
 
-// Page1View.swift
 import SwiftUI
 
 struct Page1View: View {
