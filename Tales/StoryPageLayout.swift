@@ -1,9 +1,5 @@
 import SwiftUI
 
-typealias StoryPageView<Content: View> = StoryPageLayout<Content>
-typealias StoryImageView = StaticStoryImage
-typealias TypewriterTextView = TypewriterText
-
 struct StaticStoryImage: View {
     let imageName: String
 

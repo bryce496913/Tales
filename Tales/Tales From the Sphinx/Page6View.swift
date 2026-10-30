@@ -5,7 +5,6 @@
 //  Created by Bryce Cameron on 12/12/23.
 //
 
-// Page6View.swift
 import SwiftUI
 
 struct Page6View: View {

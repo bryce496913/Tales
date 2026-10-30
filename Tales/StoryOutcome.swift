@@ -19,7 +19,6 @@ struct StoryOutcomeView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var appeared = false
     @State private var hapticPlayed = false
-    @State private var textComplete = false
 
     var body: some View {
         ZStack {
@@ -39,7 +38,6 @@ struct StoryOutcomeView: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
-            textComplete = !gameOptions.typewriterEnabled || reduceMotion
             guard !appeared else { return }
             navigationState.markEndingReached(endingID)
             if animationsEnabled { runEntrance() } else { appeared = true }
@@ -63,19 +61,18 @@ struct StoryOutcomeView: View {
 
             Text(outcome.title).font(.system(.largeTitle, design: .serif).weight(.bold)).foregroundColor(outcome.accent).accessibilityAddTraits(.isHeader)
             Text(outcome.subtitle).font(.system(.subheadline, design: .serif).weight(.medium)).foregroundColor(AppTheme.mutedText).multilineTextAlignment(.center)
-            TypewriterText(text: storyText, speed: gameOptions.typewriterSpeed.speed, startDelay: animationsEnabled ? 0.25 : 0, isEnabled: gameOptions.typewriterEnabled && !reduceMotion) { textComplete = true }
+            TypewriterText(text: storyText, speed: gameOptions.typewriterSpeed.speed, startDelay: animationsEnabled ? 0.25 : 0, isEnabled: gameOptions.typewriterEnabled && !reduceMotion)
         }
         .frame(maxWidth: AppTheme.maximumTextWidth)
         .padding(AppTheme.cardPadding)
         .background(RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous).fill(outcome.background).overlay(RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous).stroke(outcome.accent.opacity(0.75), lineWidth: 1.25)).shadow(color: outcome.accent.opacity(0.22), radius: 18, x: 0, y: 10))
-        .offset(x: shakeOffset, y: animationsEnabled && !appeared ? 12 : 0)
+        .offset(y: animationsEnabled && !appeared ? 12 : 0)
         .opacity(appeared ? 1 : (animationsEnabled ? 0 : 1))
         .accessibilityLabel("\(outcome.title). \(outcome.subtitle). \(storyText)")
     }
 
     private var animationsEnabled: Bool { gameOptions.outcomeAnimationsEnabled && !reduceMotion }
     private var iconScale: CGFloat { !animationsEnabled ? 1 : (appeared ? 1 : 0.75) }
-    private var shakeOffset: CGFloat { outcome == .lose && animationsEnabled && appeared ? 0 : 0 }
 
     private var winSparkles: some View {
         ZStack {
@@ -92,7 +89,6 @@ struct StoryOutcomeView: View {
         }
     }
 }
-
 
 struct StoryOutcomeView_Previews: PreviewProvider {
     static var previews: some View {
