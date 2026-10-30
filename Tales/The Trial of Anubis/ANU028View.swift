@@ -7,7 +7,7 @@ struct ANU028View: View {
             outcome: .darkWin,
             title: "Lord of the Tomb",
             classification: "Dark Ending",
-            imageName: "ANU027.png",
+            imageName: "ANU028.png",
             storyText: """
             You turn from Anubis and run for the glowing passage with the three pieces blazing in your arms. As you cross the threshold, their power pours into you. The passage does not lead home. It leads up into the heart of the tomb, and every torch, statue and stone bends toward you as you pass. Behind you, Anubis’s voice fades into silence. When you finally stop, you are seated on a throne of black stone while the jackal statues kneel before you. The tomb of Anubis is yours now, and so is every soul still waiting inside it.
             """,

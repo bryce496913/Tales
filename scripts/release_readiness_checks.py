@@ -115,6 +115,16 @@ def check_anubis_routes():
         if "TrialOfAnubisOutcomeView(" in path.read_text():
             check(f"anu{path.stem[3:6]}" in mapping, f"{path.name} shows an outcome but has no ending ID in TrialOfAnubisRoute")
 
+    # Every Anubis page has its own illustration named after its route number.
+    for case in cases:
+        number = case[3:]
+        path = ANUBIS / f"ANU{number}View.swift"
+        if not path.exists():
+            failures.append(f"missing Anubis page file {path.name} for .{case}")
+            continue
+        images = re.findall(r'imageName: "([^"]+)"', path.read_text())
+        check(images == [f"ANU{number}.png"], f"{path.name} should use ANU{number}.png, found {images}")
+
 def main():
     check_sphinx_endings()
     check_removed_apis()

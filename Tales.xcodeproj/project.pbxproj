@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEAC00000000000000000000 /* ANU000.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000000 /* ANU000.png */; };
+		FEAC0000000000000000001C /* ANU028.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000001C /* ANU028.png */; };
+		FEAC0000000000000000001D /* ANU029.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000001D /* ANU029.png */; };
+		FEAC0000000000000000001E /* ANU030.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000001E /* ANU030.png */; };
+		FEAC0000000000000000001F /* ANU031.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000001F /* ANU031.png */; };
+		FEAC00000000000000000020 /* ANU032.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000020 /* ANU032.png */; };
+		FEAC00000000000000000021 /* ANU033.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000021 /* ANU033.png */; };
+		FEAC00000000000000000022 /* ANU034.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000022 /* ANU034.png */; };
+		FEAC00000000000000000023 /* ANU035.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000023 /* ANU035.png */; };
+		FEAC00000000000000000024 /* ANU036.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000024 /* ANU036.png */; };
+		FEAC00000000000000000025 /* ANU037.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000025 /* ANU037.png */; };
+		FEAC00000000000000000026 /* ANU038.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000026 /* ANU038.png */; };
+		FEAC00000000000000000027 /* ANU039.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000027 /* ANU039.png */; };
+		FEAC00000000000000000028 /* ANU040.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000028 /* ANU040.png */; };
+		FEAC00000000000000000029 /* ANU041.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB00000000000000000029 /* ANU041.png */; };
+		FEAC0000000000000000002A /* ANU042.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002A /* ANU042.png */; };
+		FEAC0000000000000000002B /* ANU043.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002B /* ANU043.png */; };
+		FEAC0000000000000000002C /* ANU044.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002C /* ANU044.png */; };
+		FEAC0000000000000000002D /* ANU045.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002D /* ANU045.png */; };
+		FEAC0000000000000000002E /* ANU046.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002E /* ANU046.png */; };
+		FEAC0000000000000000002F /* ANU047.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAB0000000000000000002F /* ANU047.png */; };
 		FEA900000000000000000087 /* ANU023.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000086 /* ANU023.png */; };
 		FEA900000000000000000089 /* ANU024.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA700000000000000000088 /* ANU024.png */; };
 		FEA90000000000000000008B /* ANU025.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA70000000000000000008A /* ANU025.png */; };
@@ -183,6 +204,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEAB00000000000000000000 /* ANU000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU000.png; sourceTree = "<group>"; };
+		FEAB0000000000000000001C /* ANU028.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU028.png; sourceTree = "<group>"; };
+		FEAB0000000000000000001D /* ANU029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU029.png; sourceTree = "<group>"; };
+		FEAB0000000000000000001E /* ANU030.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU030.png; sourceTree = "<group>"; };
+		FEAB0000000000000000001F /* ANU031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU031.png; sourceTree = "<group>"; };
+		FEAB00000000000000000020 /* ANU032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU032.png; sourceTree = "<group>"; };
+		FEAB00000000000000000021 /* ANU033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU033.png; sourceTree = "<group>"; };
+		FEAB00000000000000000022 /* ANU034.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU034.png; sourceTree = "<group>"; };
+		FEAB00000000000000000023 /* ANU035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU035.png; sourceTree = "<group>"; };
+		FEAB00000000000000000024 /* ANU036.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU036.png; sourceTree = "<group>"; };
+		FEAB00000000000000000025 /* ANU037.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU037.png; sourceTree = "<group>"; };
+		FEAB00000000000000000026 /* ANU038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU038.png; sourceTree = "<group>"; };
+		FEAB00000000000000000027 /* ANU039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU039.png; sourceTree = "<group>"; };
+		FEAB00000000000000000028 /* ANU040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU040.png; sourceTree = "<group>"; };
+		FEAB00000000000000000029 /* ANU041.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU041.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002A /* ANU042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU042.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002B /* ANU043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU043.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002C /* ANU044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU044.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002D /* ANU045.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU045.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002E /* ANU046.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU046.png; sourceTree = "<group>"; };
+		FEAB0000000000000000002F /* ANU047.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU047.png; sourceTree = "<group>"; };
 		FEB100012B400001000001 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		FEB100022B400001000001 /* AppMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainMenuView.swift; sourceTree = "<group>"; };
 		FEB100032B400001000001 /* StorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySelectionView.swift; sourceTree = "<group>"; };
@@ -431,8 +473,29 @@
 				FEA70000000000000000008A /* ANU025.png */,
 				FEA70000000000000000008C /* ANU026.png */,
 				FEA70000000000000000008E /* ANU027.png */,
+				FEAB00000000000000000000 /* ANU000.png */,
+				FEAB0000000000000000001C /* ANU028.png */,
+				FEAB0000000000000000001D /* ANU029.png */,
+				FEAB0000000000000000001E /* ANU030.png */,
+				FEAB0000000000000000001F /* ANU031.png */,
+				FEAB00000000000000000020 /* ANU032.png */,
+				FEAB00000000000000000021 /* ANU033.png */,
+				FEAB00000000000000000022 /* ANU034.png */,
+				FEAB00000000000000000023 /* ANU035.png */,
+				FEAB00000000000000000024 /* ANU036.png */,
+				FEAB00000000000000000025 /* ANU037.png */,
+				FEAB00000000000000000026 /* ANU038.png */,
+				FEAB00000000000000000027 /* ANU039.png */,
+				FEAB00000000000000000028 /* ANU040.png */,
+				FEAB00000000000000000029 /* ANU041.png */,
+				FEAB0000000000000000002A /* ANU042.png */,
+				FEAB0000000000000000002B /* ANU043.png */,
+				FEAB0000000000000000002C /* ANU044.png */,
+				FEAB0000000000000000002D /* ANU045.png */,
+				FEAB0000000000000000002E /* ANU046.png */,
+				FEAB0000000000000000002F /* ANU047.png */,
 			);
-			path = Images;
+			path = images;
 			sourceTree = "<group>";
 		};
 		FE02672B2B28A1B000F5C31D /* Images */ = {
@@ -615,6 +678,27 @@
 				FEA90000000000000000008B /* ANU025.png in Resources */,
 				FEA90000000000000000008D /* ANU026.png in Resources */,
 				FEA90000000000000000008F /* ANU027.png in Resources */,
+				FEAC00000000000000000000 /* ANU000.png in Resources */,
+				FEAC0000000000000000001C /* ANU028.png in Resources */,
+				FEAC0000000000000000001D /* ANU029.png in Resources */,
+				FEAC0000000000000000001E /* ANU030.png in Resources */,
+				FEAC0000000000000000001F /* ANU031.png in Resources */,
+				FEAC00000000000000000020 /* ANU032.png in Resources */,
+				FEAC00000000000000000021 /* ANU033.png in Resources */,
+				FEAC00000000000000000022 /* ANU034.png in Resources */,
+				FEAC00000000000000000023 /* ANU035.png in Resources */,
+				FEAC00000000000000000024 /* ANU036.png in Resources */,
+				FEAC00000000000000000025 /* ANU037.png in Resources */,
+				FEAC00000000000000000026 /* ANU038.png in Resources */,
+				FEAC00000000000000000027 /* ANU039.png in Resources */,
+				FEAC00000000000000000028 /* ANU040.png in Resources */,
+				FEAC00000000000000000029 /* ANU041.png in Resources */,
+				FEAC0000000000000000002A /* ANU042.png in Resources */,
+				FEAC0000000000000000002B /* ANU043.png in Resources */,
+				FEAC0000000000000000002C /* ANU044.png in Resources */,
+				FEAC0000000000000000002D /* ANU045.png in Resources */,
+				FEAC0000000000000000002E /* ANU046.png in Resources */,
+				FEAC0000000000000000002F /* ANU047.png in Resources */,
 				FE0267652B28A22F00F5C31D /* Twenty-Four.png in Resources */,
 				FE02674F2B28A22F00F5C31D /* hieroglyphics_(Left).png in Resources */,
 				FE02674D2B28A22F00F5C31D /* Two.png in Resources */,
