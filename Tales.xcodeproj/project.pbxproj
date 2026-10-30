@@ -45,6 +45,8 @@
 		FEA200012B300001000001 /* StoryTransitionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100012B300001000001 /* StoryTransitionContainer.swift */; };
 		FEA200022B300001000001 /* TypewriterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100022B300001000001 /* TypewriterText.swift */; };
 		FEA200052B300001000001 /* GameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100052B300001000001 /* GameOptions.swift */; };
+		FEA2000B2B300001000001 /* AmbiencePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1000B2B300001000001 /* AmbiencePlayer.swift */; };
+		FEA2000C2B300001000001 /* TalesAmbience.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FEA1000C2B300001000001 /* TalesAmbience.m4a */; };
 		FEA200092B300001000001 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100092B300001000001 /* OptionsView.swift */; };
 		FEA200072B300001000001 /* StoryOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100072B300001000001 /* StoryOutcome.swift */; };
 		FEA200082B300001000001 /* ChoiceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA100082B300001000001 /* ChoiceButtonStyle.swift */; };
@@ -236,6 +238,8 @@
 		FEA100012B300001000001 /* StoryTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTransitionContainer.swift; sourceTree = "<group>"; };
 		FEA100022B300001000001 /* TypewriterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypewriterText.swift; sourceTree = "<group>"; };
 		FEA100052B300001000001 /* GameOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptions.swift; sourceTree = "<group>"; };
+		FEA1000B2B300001000001 /* AmbiencePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbiencePlayer.swift; sourceTree = "<group>"; };
+		FEA1000C2B300001000001 /* TalesAmbience.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TalesAmbience.m4a; sourceTree = "<group>"; };
 		FEA100092B300001000001 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		FEA1000A2B300001000001 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		FEA100072B300001000001 /* StoryOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOutcome.swift; sourceTree = "<group>"; };
@@ -572,6 +576,8 @@
 				FEA100012B300001000001 /* StoryTransitionContainer.swift */,
 				FEA100022B300001000001 /* TypewriterText.swift */,
 				FEA100052B300001000001 /* GameOptions.swift */,
+				FEA1000B2B300001000001 /* AmbiencePlayer.swift */,
+				FEA1000C2B300001000001 /* TalesAmbience.m4a */,
 				FEA100092B300001000001 /* OptionsView.swift */,
 				FEA1000A2B300001000001 /* PreviewContainer.swift */,
 				FEA100072B300001000001 /* StoryOutcome.swift */,
@@ -720,6 +726,7 @@
 				FE02675A2B28A22F00F5C31D /* One.png in Resources */,
 				FE0267522B28A22F00F5C31D /* Twenty.png in Resources */,
 				FE0504AF2B289A510015CAFB /* Assets.xcassets in Resources */,
+				FEA2000C2B300001000001 /* TalesAmbience.m4a in Resources */,
 				FE0267632B28A22F00F5C31D /* Title-Screen-Art.png in Resources */,
 				FE0267512B28A22F00F5C31D /* Eight.png in Resources */,
 				FE0267572B28A22F00F5C31D /* Sixteen.png in Resources */,
@@ -830,6 +837,7 @@
 				FEA200012B300001000001 /* StoryTransitionContainer.swift in Sources */,
 				FEA200022B300001000001 /* TypewriterText.swift in Sources */,
 				FEA200052B300001000001 /* GameOptions.swift in Sources */,
+				FEA2000B2B300001000001 /* AmbiencePlayer.swift in Sources */,
 				FEA200092B300001000001 /* OptionsView.swift in Sources */,
 				FEA2000A2B300001000001 /* PreviewContainer.swift in Sources */,
 				FEA200072B300001000001 /* StoryOutcome.swift in Sources */,
