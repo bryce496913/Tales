@@ -14,11 +14,8 @@ struct Page1View: View {
             imageName: "One.png",
             text: "As you stand at the feet of this enormous Sphinx, you notice that the main doorway is open. You think to yourself, head inside to find help or head back in the direction where the road could be."
         ) {
-
-            HStack {
+            StoryChoicesStack {
                 StoryNavigationButton(title: "Try to enter the sphinx", route: .page(3)).padding()
-
-                Spacer()
 
                 StoryNavigationButton(title: "Try to find the road", route: .page(2)).padding()
             }

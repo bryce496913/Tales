@@ -492,9 +492,8 @@ PLOT-01
 
 ### `NODE-15` — Page15View
 
-- Image: `Fithteen.png`
+- Image: `Fifteen.png`
 - Outcome: Lose
-- Note: the asset spelling is implemented as `Fithteen.png`.
 
 ### `NODE-16` — Page16View
 

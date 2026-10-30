@@ -14,11 +14,8 @@ struct Page9View: View {
             imageName: "Nine.png",
             text: "On immediate inspection, this new room has nowhere obvious to go to next. Your worrying thought is interrupted by a thunderous sound, followed by rapidly rushing sand filling the room. You need to find a way out before you are buried alive. In the room are two statues, both with levers, one of God Anubis and the other of God Osiris. One of these statues could be the key out of here. If only you had reception, you could Google which each God represents."
         ) {
-
-            HStack {
+            StoryChoicesStack {
                 StoryNavigationButton(title: "Pick Anubis", route: .page(21)).padding()
-
-                Spacer()
 
                 StoryNavigationButton(title: "Pick Osiris", route: .page(10)).padding()
             }

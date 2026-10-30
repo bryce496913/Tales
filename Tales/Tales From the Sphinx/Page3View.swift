@@ -14,11 +14,8 @@ struct Page3View: View {
             imageName: "Three.png",
             text: "After climbing the stairs of the Sphinx, you enter the main hall. Though empty, the room is dimly lit, hinting at the chance of more people inside. As your eyes adjust to the change of light, you notice, at the back, the hall splits in two different directions."
         ) {
-
-            HStack {
+            StoryChoicesStack {
                 StoryNavigationButton(title: "Head down the left", route: .page(4)).padding()
-
-                Spacer()
 
                 StoryNavigationButton(title: "Head down the right", route: .page(6)).padding()
             }

@@ -49,6 +49,14 @@ def check_sphinx_endings():
         check(f'endingID: "{ending_id}"' in path.read_text(), f"{filename} missing endingID {ending_id}")
 
 
+def check_sphinx_routes():
+    root_text = (SPHINX / "TalesFromTheSphinxRootView.swift").read_text()
+    handled = {int(n) for n in re.findall(r"case (\d+): Page\d+View\(\)", root_text)}
+    for path in sorted(SPHINX.glob("*.swift")):
+        for number in re.findall(r"\.page\((\d+)\)", path.read_text()):
+            check(int(number) in handled, f"{path.name} navigates to .page({number}), which StoryDestinationView does not handle")
+
+
 def check_removed_apis():
     for path in swift_files():
         text = path.read_text()
@@ -153,6 +161,7 @@ def check_anubis_routes():
 
 def main():
     check_sphinx_endings()
+    check_sphinx_routes()
     check_removed_apis()
     check_project_membership()
     check_images()
