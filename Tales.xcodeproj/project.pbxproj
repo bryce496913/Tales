@@ -495,7 +495,7 @@
 				FEAB0000000000000000002E /* ANU046.png */,
 				FEAB0000000000000000002F /* ANU047.png */,
 			);
-			path = images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		FE02672B2B28A1B000F5C31D /* Images */ = {
