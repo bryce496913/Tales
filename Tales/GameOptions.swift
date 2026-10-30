@@ -16,7 +16,6 @@ final class GameOptions: ObservableObject {
         static let pageTransitionsEnabled = "Tales.pageTransitionsEnabled"
         static let buttonGlowEnabled = "Tales.buttonGlowEnabled"
         static let outcomeAnimationsEnabled = "Tales.outcomeAnimationsEnabled"
-        static let soundEffectsEnabled = "Tales.soundEffectsEnabled"
         static let backgroundMusicEnabled = "Tales.backgroundMusicEnabled"
     }
 
@@ -26,8 +25,6 @@ final class GameOptions: ObservableObject {
     @Published var pageTransitionsEnabled: Bool { didSet { defaults.set(pageTransitionsEnabled, forKey: Key.pageTransitionsEnabled) } }
     @Published var buttonGlowEnabled: Bool { didSet { defaults.set(buttonGlowEnabled, forKey: Key.buttonGlowEnabled) } }
     @Published var outcomeAnimationsEnabled: Bool { didSet { defaults.set(outcomeAnimationsEnabled, forKey: Key.outcomeAnimationsEnabled) } }
-    // Ready for future audio integration; no sound files or audio engine are currently present.
-    @Published var soundEffectsEnabled: Bool { didSet { defaults.set(soundEffectsEnabled, forKey: Key.soundEffectsEnabled) } }
     @Published var backgroundMusicEnabled: Bool { didSet { defaults.set(backgroundMusicEnabled, forKey: Key.backgroundMusicEnabled) } }
 
     private let defaults: UserDefaults
@@ -40,7 +37,6 @@ final class GameOptions: ObservableObject {
         pageTransitionsEnabled = defaults.object(forKey: Key.pageTransitionsEnabled) as? Bool ?? true
         buttonGlowEnabled = defaults.object(forKey: Key.buttonGlowEnabled) as? Bool ?? true
         outcomeAnimationsEnabled = defaults.object(forKey: Key.outcomeAnimationsEnabled) as? Bool ?? true
-        soundEffectsEnabled = defaults.object(forKey: Key.soundEffectsEnabled) as? Bool ?? true
         backgroundMusicEnabled = defaults.object(forKey: Key.backgroundMusicEnabled) as? Bool ?? true
     }
 
@@ -51,7 +47,6 @@ final class GameOptions: ObservableObject {
         pageTransitionsEnabled = true
         buttonGlowEnabled = true
         outcomeAnimationsEnabled = true
-        soundEffectsEnabled = true
         backgroundMusicEnabled = true
     }
 }

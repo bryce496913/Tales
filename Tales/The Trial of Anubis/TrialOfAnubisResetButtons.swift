@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Game-over controls for The Trial of Anubis, styled like the rest of the app's choice buttons.
 struct TrialOfAnubisResetButtons: View {
     let restartStory: () -> Void
     let returnToStoryMenu: () -> Void
@@ -7,15 +8,10 @@ struct TrialOfAnubisResetButtons: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Button("Restart The Trial of Anubis", action: restartStory)
-                .buttonStyle(TrialOfAnubisChoiceButtonStyle())
-            Button("Return to Anubis Menu", action: returnToStoryMenu)
-                .buttonStyle(TrialOfAnubisChoiceButtonStyle())
-            Button("Return to Story Selection", action: returnToStorySelection)
-                .buttonStyle(TrialOfAnubisChoiceButtonStyle())
+            ChoiceButton("Restart The Trial of Anubis", action: restartStory)
+            ChoiceButton("Return to Anubis Menu", action: returnToStoryMenu)
+            ChoiceButton("Return to Story Selection", action: returnToStorySelection)
         }
-        .font(.system(.headline, design: .serif).weight(.semibold))
-        .foregroundColor(AppTheme.buttonText)
         .frame(maxWidth: AppTheme.maximumButtonWidth)
     }
 }

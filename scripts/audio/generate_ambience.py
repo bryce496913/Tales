@@ -1,5 +1,5 @@
-# Generates Tales/TalesAmbience.m4a. Run from this folder with numpy installed, then:
-#   ffmpeg -i tales_ambience_loop.wav -c:a aac -b:a 160k ../../Tales/TalesAmbience.m4a
+# Generates the raw ambience loop for Tales/TalesAmbience.m4a. Run from this folder with
+# numpy installed, then master it for phone speakers with ./master_ambience.sh
 # Seamless-looping "tomb" ambience. Every component is built circularly
 # (periodic frequencies, FFT noise, circular reverb/tails) so the loop has no seam.
 import numpy as np, wave
