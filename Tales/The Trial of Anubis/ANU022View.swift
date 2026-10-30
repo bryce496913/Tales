@@ -6,7 +6,7 @@ struct ANU022View: View {
             imageName: "ANU022.png",
             title: "The True Name",
             text: """
-                The scribe brings you into a dark chamber where stars form the shape of a jackal. He explains that the gods once had titles powerful enough to command the laws of creation. He then teaches you the hidden title of Anubis: He Who Opens the Final Door and Must Obey the Balance. Speaking it could command parts of the underworld, while keeping it secret would leave you with a weapon that no one knows you possess.
+            The scribe brings you into a dark chamber where stars form the shape of a jackal. He explains that the gods once had titles powerful enough to command the laws of creation. He then teaches you the hidden title of Anubis: He Who Opens the Final Door and Must Obey the Balance. Speaking it could command parts of the underworld, while keeping it secret would leave you with a weapon that no one knows you possess.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .sandFade,
@@ -15,15 +15,23 @@ struct ANU022View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Speak Anubis’s hidden title",
+                    title: "Speak the name",
                     destination: .anu023
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Keep the name secret",
-                    destination: .anu023
+                    title: "Keep it secret",
+                    destination: .anu044
                 )
             }
+        }
+    }
+}
+
+struct ANU022View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU022View()
         }
     }
 }

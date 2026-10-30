@@ -2,29 +2,21 @@ import SwiftUI
 
 struct ANU028View: View {
     var body: some View {
-        TrialOfAnubisPageLayout(
+        TrialOfAnubisOutcomeView(
+            endingID: "anubis_lord_of_the_tomb",
+            outcome: .darkWin,
+            title: "Lord of the Tomb",
+            classification: "Dark Ending",
             imageName: "ANU027.png",
-            title: "Final Decision",
-            text: """
-                You return every piece of the scales to Anubis and the sacred balance begins rebuilding itself. Your heart rises from your chest and floats above the empty pan while the feather of Ma’at waits on the other side. Anubis tells you that this is your final chance to accept judgment honestly. You can allow the scales to decide your fate or interfere with the balance before it settles.
+            storyText: """
+            You turn from Anubis and run for the glowing passage with the three pieces blazing in your arms. As you cross the threshold, their power pours into you. The passage does not lead home. It leads up into the heart of the tomb, and every torch, statue and stone bends toward you as you pass. Behind you, Anubis’s voice fades into silence. When you finally stop, you are seated on a throne of black stone while the jackal statues kneel before you. The tomb of Anubis is yours now, and so is every soul still waiting inside it.
             """,
-            effects: TrialOfAnubisPageEffects(
-                entryTransition: .stoneDoor,
-                choicesWaitForText: true
-            )
-        ) {
-            TrialOfAnubisChoicesStack {
-                TrialOfAnubisNavigationButton(
-                    title: "Accept honest judgment",
-                    destination: .endTrue
-                )
+            outcomeText: """
+            You stole the scales and took the place of a god.
 
-                TrialOfAnubisNavigationButton(
-                    title: "Manipulate the scales",
-                    destination: .endTrickster
-                )
-            }
-        }
+            You rule the tomb of Anubis, but you can never leave it.
+            """
+        )
     }
 }
 

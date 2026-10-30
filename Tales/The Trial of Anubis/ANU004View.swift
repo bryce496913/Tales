@@ -3,27 +3,35 @@ import SwiftUI
 struct ANU004View: View {
     var body: some View {
         TrialOfAnubisPageLayout(
-            imageName: "ANU004.png",
-            title: "The Voice Below",
+            imageName: "ANU003.png",
+            title: "The Jackal Temple",
             text: """
-                You descend a spiral staircase that circles a shaft with no visible bottom. The voice follows beside you and asks why you entered the temple. As you continue downward, the steps show flashes of your own life: small acts of kindness, lies that were never discovered and moments when fear controlled you. Far below, two amber eyes open in the darkness. The voice speaks again, this time with greater force. “Answer.”
+            The staircase leads into an ancient temple lined with black jackal statues. Their golden collars remain bright despite the dust, and each statue slowly turns its head to watch you. A narrow path leads toward a circular opening in the floor where a spiral staircase winds down into the dark, while a side room glitters with masks, ceremonial blades and piles of gold. Behind you, the staircase has disappeared and the wall now shows a carving shaped exactly like you. The voice below asks, “What did you come here seeking?”
             """,
             effects: TrialOfAnubisPageEffects(
-                entryTransition: .torchReveal,
+                entryTransition: .stoneDoor,
                 choicesWaitForText: true
             )
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Answer honestly",
-                    destination: .anu005
+                    title: "Follow the statues",
+                    destination: .anu013
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Lie about why you are here",
+                    title: "Take the stairs",
                     destination: .anu005
                 )
             }
+        }
+    }
+}
+
+struct ANU004View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU004View()
         }
     }
 }

@@ -3,25 +3,25 @@ import SwiftUI
 struct ANU018View: View {
     var body: some View {
         TrialOfAnubisPageLayout(
-            imageName: "ANU018.png",
-            title: "Memory of Home",
+            imageName: "ANU017.png",
+            title: "Maze of False Memories",
             text: """
-                You enter a perfect memory of home, complete with familiar light, sounds and the feeling of being safe. Someone you once loved enters the room and tells you that you have finally returned. Everything feels real, except their shadow points in the wrong direction and the walls flicker whenever you stop looking at them. The figure reaches out and asks you not to leave again.
+            The passage disappears into thick white fog and the walls begin changing whenever you look away. Doors open onto places from your past, including your childhood home, crowded streets and rooms containing people you once knew. Anubis warns from somewhere far away that names disappear first, then faces and finally purpose. Two paths form ahead: one leads toward a warm memory of home, while the other leads toward the memory of your greatest failure.
             """,
             effects: TrialOfAnubisPageEffects(
-                entryTransition: .torchReveal,
+                entryTransition: .sandFade,
                 choicesWaitForText: true
             )
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Accept that the memory may be false",
-                    destination: .anu020
+                    title: "Remember home",
+                    destination: .anu019
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Stay inside the memory",
-                    destination: .endLost
+                    title: "Face your failure",
+                    destination: .anu042
                 )
             }
         }

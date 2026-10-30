@@ -4,9 +4,9 @@ struct ANU007View: View {
     var body: some View {
         TrialOfAnubisPageLayout(
             imageName: "ANU007.png",
-            title: "Refuse the God",
+            title: "Run from the God",
             text: """
-                You tell Anubis that you did not choose this and demand to be sent home. He warns you that the doorway only opens for people already standing between important choices. Around you, the wandering souls briefly take the faces of people you know, including some who cannot possibly be dead. Anubis explains that the broken scales have already begun affecting the living world and that soon even he may be unable to return you. A doorway appears behind you, leading into a corridor of pale fog filled with voices calling your name.
+            You turn and run back toward the staircase, but the steps have gone. In their place is a corridor of pale fog filled with voices calling your name. Anubis does not chase you. His voice simply follows, calm and close, as though he is walking beside you. He warns you that the broken scales are already reaching into the living world, and the souls drifting past you now wear the faces of people you know, some of whom are still alive. If the balance is not restored soon, even he will be unable to send you home. Ahead, the fog grows darker and the voices grow louder.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .sandFade,
@@ -15,15 +15,23 @@ struct ANU007View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Accept after Anubis warns you",
-                    destination: .anu008
+                    title: "Help",
+                    destination: .anu006
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Flee into the darkness",
+                    title: "Keep running",
                     destination: .anu017
                 )
             }
+        }
+    }
+}
+
+struct ANU007View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU007View()
         }
     }
 }

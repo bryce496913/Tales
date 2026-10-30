@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
+    case anu000 = "ANU-000"
     case anu001 = "ANU-001"
     case anu002 = "ANU-002"
     case anu003 = "ANU-003"
@@ -29,14 +30,50 @@ enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
     case anu026 = "ANU-026"
     case anu027 = "ANU-027"
     case anu028 = "ANU-028"
+    case anu029 = "ANU-029"
+    case anu030 = "ANU-030"
+    case anu031 = "ANU-031"
+    case anu032 = "ANU-032"
+    case anu033 = "ANU-033"
+    case anu034 = "ANU-034"
+    case anu035 = "ANU-035"
+    case anu036 = "ANU-036"
+    case anu037 = "ANU-037"
+    case anu038 = "ANU-038"
+    case anu039 = "ANU-039"
+    case anu040 = "ANU-040"
+    case anu041 = "ANU-041"
+    case anu042 = "ANU-042"
+    case anu043 = "ANU-043"
+    case anu044 = "ANU-044"
+    case anu045 = "ANU-045"
+    case anu046 = "ANU-046"
+    case anu047 = "ANU-047"
 
-    case endTrue = "END-TRUE"
-    case endAmmit = "END-AMMIT"
-    case endRebel = "END-REBEL"
-    case endTrickster = "END-TRICKSTER"
-    case endLost = "END-LOST"
+    /// HOME hub that links to the three item paths.
+    static let home: TrialOfAnubisRoute = .anu011
 
-    var isEnding: Bool { rawValue.hasPrefix("END-") }
+    /// HOME once the Feather Arm, Heart Pan and Balance Stone are all collected.
+    static let endGame: TrialOfAnubisRoute = .anu026
+
+    var isEnding: Bool { endingID != nil }
+
+    /// Stable ID recorded when a game-over page is reached.
+    var endingID: String? {
+        switch self {
+        case .anu003: return "anubis_lost_in_desert"
+        case .anu017: return "anubis_swallowed_by_fog"
+        case .anu028: return "anubis_lord_of_the_tomb"
+        case .anu029: return "anubis_released"
+        case .anu030: return "anubis_scales_restored"
+        case .anu032: return "anubis_devoured_by_ammit"
+        case .anu035: return "anubis_taken_by_the_river"
+        case .anu038: return "anubis_buried_with_the_stone"
+        case .anu040: return "anubis_peaceful_death"
+        case .anu047: return "anubis_defy_the_gods"
+        default: return nil
+        }
+    }
 }
 
 struct TrialOfAnubisDestinationView: View {
@@ -44,6 +81,8 @@ struct TrialOfAnubisDestinationView: View {
 
     var body: some View {
         switch route {
+        case .anu000:
+            ANU000View()
         case .anu001:
             ANU001View()
         case .anu002:
@@ -100,16 +139,44 @@ struct TrialOfAnubisDestinationView: View {
             ANU027View()
         case .anu028:
             ANU028View()
-        case .endTrue:
-            AnubisTrueEndingView()
-        case .endAmmit:
-            AnubisAmmitEndingView()
-        case .endRebel:
-            AnubisRebelEndingView()
-        case .endTrickster:
-            AnubisTricksterEndingView()
-        case .endLost:
-            AnubisLostSoulEndingView()
+        case .anu029:
+            ANU029View()
+        case .anu030:
+            ANU030View()
+        case .anu031:
+            ANU031View()
+        case .anu032:
+            ANU032View()
+        case .anu033:
+            ANU033View()
+        case .anu034:
+            ANU034View()
+        case .anu035:
+            ANU035View()
+        case .anu036:
+            ANU036View()
+        case .anu037:
+            ANU037View()
+        case .anu038:
+            ANU038View()
+        case .anu039:
+            ANU039View()
+        case .anu040:
+            ANU040View()
+        case .anu041:
+            ANU041View()
+        case .anu042:
+            ANU042View()
+        case .anu043:
+            ANU043View()
+        case .anu044:
+            ANU044View()
+        case .anu045:
+            ANU045View()
+        case .anu046:
+            ANU046View()
+        case .anu047:
+            ANU047View()
         }
     }
 }

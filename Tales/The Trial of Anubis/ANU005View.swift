@@ -6,7 +6,7 @@ struct ANU005View: View {
             imageName: "ANU005.png",
             title: "Anubis Revealed",
             text: """
-                The staircase opens into a hall so large that the ceiling disappears into darkness. At its centre stands Anubis, dressed in black and gold with glowing amber eyes. Behind him is a shattered set of scales, with one pan cracked on the floor and the central balance stone torn from its frame. Shadowy souls drift through open gates while something enormous growls from behind the pillars. Anubis tells you that the scales used to judge the dead have been stolen and that you must recover the missing pieces before the boundary between life and death collapses.
+            You descend a spiral staircase that circles a shaft with no visible bottom. As you go, the steps show flashes of your own life: small acts of kindness, lies that were never discovered and moments when fear made your choices for you. At the bottom, the stairs open into a hall so vast that its ceiling disappears into darkness. Anubis stands at its centre, dressed in black and gold, his amber eyes glowing. Behind him lies a shattered set of scales, with one pan cracked on the floor and the central balance stone torn from its frame. Shadowy souls drift through open gates while something enormous growls behind the pillars. Anubis tells you that the scales have been stolen and asks for your help before the boundary between life and death collapses.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .stoneDoor,
@@ -15,15 +15,23 @@ struct ANU005View: View {
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Kneel and listen",
+                    title: "Help",
                     destination: .anu006
                 )
 
                 TrialOfAnubisNavigationButton(
-                    title: "Demand to be released",
+                    title: "Run",
                     destination: .anu007
                 )
             }
+        }
+    }
+}
+
+struct ANU005View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU005View()
         }
     }
 }

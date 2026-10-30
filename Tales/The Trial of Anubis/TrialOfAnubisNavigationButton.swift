@@ -3,13 +3,15 @@ import SwiftUI
 struct TrialOfAnubisNavigationButton: View {
     let title: String
     let destination: TrialOfAnubisRoute
+    var collects: TrialOfAnubisItem? = nil
+    var marks: TrialOfAnubisStoryFlag? = nil
 
     @EnvironmentObject
     private var navigationState: TrialOfAnubisNavigationState
 
     var body: some View {
         Button {
-            navigationState.navigate(to: destination)
+            navigationState.navigate(to: destination, collecting: collects, marking: marks)
         } label: {
             Text(title)
                 .font(.system(.headline, design: .serif).weight(.semibold))

@@ -89,22 +89,21 @@ def check_anubis_routes():
         for target in re.findall(r"destination: \.(\w+)", path.read_text()):
             check(target in cases, f"{path.name} navigates to unknown route .{target}")
 
-    state_text = (ANUBIS / "TrialOfAnubisNavigationState.swift").read_text()
-    mapping = dict(re.findall(r'case \.(\w+): return "([^"]+)"', state_text))
-    ending_views = {
-        "endTrue": "AnubisTrueEndingView.swift",
-        "endAmmit": "AnubisAmmitEndingView.swift",
-        "endRebel": "AnubisRebelEndingView.swift",
-        "endTrickster": "AnubisTricksterEndingView.swift",
-        "endLost": "AnubisLostSoulEndingView.swift",
-    }
-    for case, filename in ending_views.items():
-        ending_id = mapping.get(case)
-        check(ending_id is not None, f"TrialOfAnubisNavigationState has no ending ID for .{case}")
-        if ending_id:
-            check(f'endingID: "{ending_id}"' in (ANUBIS / filename).read_text(),
-                  f"{filename} endingID does not match navigation state ({ending_id})")
-
+    # Game-over pages are numbered routes; TrialOfAnubisRoute.endingID maps each to its stable ID.
+    mapping = dict(re.findall(r'case \.(anu\d{3}): return "([^"]+)"', route_text))
+    check(mapping, "TrialOfAnubisRoute has no ending IDs")
+    for case, ending_id in mapping.items():
+        path = ANUBIS / f"ANU{case[3:]}View.swift"
+        if not path.exists():
+            failures.append(f"missing Anubis ending file {path.name}")
+            continue
+        text = path.read_text()
+        check("TrialOfAnubisOutcomeView(" in text, f"{path.name} is an ending but does not use TrialOfAnubisOutcomeView")
+        check(f'endingID: "{ending_id}"' in text,
+              f"{path.name} endingID does not match TrialOfAnubisRoute ({ending_id})")
+    for path in sorted(ANUBIS.glob("ANU*View.swift")):
+        if "TrialOfAnubisOutcomeView(" in path.read_text():
+            check(f"anu{path.stem[3:6]}" in mapping, f"{path.name} shows an outcome but has no ending ID in TrialOfAnubisRoute")
 
 def main():
     check_sphinx_endings()

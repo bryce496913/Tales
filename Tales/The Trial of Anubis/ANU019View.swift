@@ -1,29 +1,47 @@
 import SwiftUI
 
 struct ANU019View: View {
+    @EnvironmentObject
+    private var navigationState: TrialOfAnubisNavigationState
+
     var body: some View {
         TrialOfAnubisPageLayout(
-            imageName: "ANU019.png",
-            title: "Memory of Failure",
+            imageName: "ANU018.png",
+            title: "Memory of Home",
             text: """
-                The maze forces you to relive a moment when you failed someone, acted out of fear or allowed another person to carry the cost of your choice. The scene repeats until everyone turns to face you. A voice asks whose fault it was, while the maze offers you several people to blame. Behind them, the path forward begins closing.
+            You enter a perfect memory of home, complete with familiar light, sounds and the feeling of being safe. Someone you once loved enters the room and tells you that you have finally returned. Everything feels real, except their shadow points in the wrong direction and the walls flicker whenever you stop looking at them. The figure reaches out and asks you not to leave again.
             """,
             effects: TrialOfAnubisPageEffects(
-                entryTransition: .sandFade,
+                entryTransition: .torchReveal,
                 choicesWaitForText: true
             )
         ) {
             TrialOfAnubisChoicesStack {
                 TrialOfAnubisNavigationButton(
-                    title: "Admit responsibility",
+                    title: "Let it go",
                     destination: .anu020
                 )
 
-                TrialOfAnubisNavigationButton(
-                    title: "Blame someone else",
-                    destination: .anu020
-                )
+                if navigationState.progress.storyFlags.contains(.freedSoul) {
+                    TrialOfAnubisNavigationButton(
+                        title: "Stay",
+                        destination: .anu046
+                    )
+                } else {
+                    TrialOfAnubisNavigationButton(
+                        title: "Stay",
+                        destination: .anu040
+                    )
+                }
             }
+        }
+    }
+}
+
+struct ANU019View_Previews: PreviewProvider {
+    static var previews: some View {
+        TrialOfAnubisPreviewContainer {
+            ANU019View()
         }
     }
 }

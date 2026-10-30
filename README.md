@@ -64,10 +64,17 @@ It verifies that every Swift file is in the Xcode project (and vice versa), ever
 
 ## The Trial of Anubis Ending ID Mapping
 
-- `AnubisTrueEndingView` (`END-TRUE`): `anubis_true_restored`
-- `AnubisAmmitEndingView` (`END-AMMIT`): `anubis_dark_ammit`
-- `AnubisRebelEndingView` (`END-REBEL`): `anubis_rebel_escape`
-- `AnubisTricksterEndingView` (`END-TRICKSTER`): `anubis_trickster_cheat`
-- `AnubisLostSoulEndingView` (`END-LOST`): `anubis_lost_soul`
+Game-over pages are numbered story routes. See `Tales/The Trial of Anubis/The_Trial_of_Anubis_Story_Map.md` for the full story map.
+
+- `ANU003View` (`ANU-003`, Lost in the Sand): `anubis_lost_in_desert`
+- `ANU017View` (`ANU-017`, Swallowed by the Fog): `anubis_swallowed_by_fog`
+- `ANU028View` (`ANU-028`, Lord of the Tomb): `anubis_lord_of_the_tomb`
+- `ANU029View` (`ANU-029`, Released): `anubis_released`
+- `ANU030View` (`ANU-030`, The Scales Restored): `anubis_scales_restored`
+- `ANU032View` (`ANU-032`, Devoured by Ammit): `anubis_devoured_by_ammit`
+- `ANU035View` (`ANU-035`, Taken by the River): `anubis_taken_by_the_river`
+- `ANU038View` (`ANU-038`, Buried with the Stone): `anubis_buried_with_the_stone`
+- `ANU040View` (`ANU-040`, A Peaceful Death): `anubis_peaceful_death`
+- `ANU047View` (`ANU-047`, Defy the Gods): `anubis_defy_the_gods`
 
 Feel the suspense, make strategic decisions, and explore the world of "Tales From the Sphinx" – an interactive adventure that puts you in control of your destiny.
