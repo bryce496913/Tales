@@ -113,7 +113,6 @@ module.exports = {
     s += M.person(620, 860, 0.75, { cloth: '#7a6a4a', skin: '#a8704a', point: true, mood: 'stern' });
     s += `<path d="M590 640 C600 620 650 620 660 640 Z" fill="#e9e2d0" ${stroke(2.5)}/><rect x="580" y="636" width="90" height="10" fill="#e9e2d0" ${stroke(2)}/>`;
     s += L.hero(160, 1060, 0.95, { turn: 0.5 });
-    s += `<rect x="232" y="772" width="56" height="38" rx="6" fill="#2a2a2a" ${stroke(2.5)}/><circle cx="260" cy="791" r="12" fill="#5a6a8a" ${stroke(2)}/>`;
     s += L.fog(980, 32, '#e8a46a', 0.5, 14, 80);
     return svg(s + vignette(0.35));
   },
@@ -298,10 +297,10 @@ module.exports = {
     s += `<path d="M370 600 C440 590 520 580 560 590 L556 612 C510 610 450 616 376 630 Z" fill="#c9bea6" ${stroke(3)}/>`;
     // golden thread of memory drawn out of the chest
     s += glow(600, 590, 160, '#ffd36b', 0.55);
-    s += `<path d="M680 640 C640 560 620 640 590 590 C570 560 560 620 560 600" stroke="#ffe08a" stroke-width="7" fill="none" stroke-linecap="round"/>`;
+    s += `<path d="M640 1000 C700 900 600 800 650 720 C690 660 600 640 590 600 C580 570 566 610 560 600" stroke="#ffe08a" stroke-width="7" fill="none" stroke-linecap="round"/>`;
     s += [[640, 580], [612, 626], [580, 566]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="10" fill="#fff3c4"/>`).join('');
     s += L.hero(720, 1060, 0.95, { turn: -0.6 });
-    s += glow(690, 650, 60, '#ffe08a', 0.8);
+    s += glow(640, 990, 120, '#ffe08a', 0.7);
     return svg(s + vignette(0.6));
   },
 

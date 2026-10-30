@@ -7,7 +7,7 @@ struct ANU032View: View {
             outcome: .death,
             title: "Devoured by Ammit",
             classification: "Death",
-            imageName: "ANU015.png",
+            imageName: "ANU032.png",
             storyText: """
             Ammit’s patience runs out. She moves faster than anything that size should be able to, and the chamber fills with the sound of iron dragging across stone. Her voice rumbles inside your head. She has seen what your heart holds, she says, and she does not need the scales to weigh it. Her jaws close and your heart is gone before you feel the pain. Your memories disappear next, then your name, followed by every future you might have lived.
             """,

@@ -400,7 +400,10 @@ function anubis(x, y, sc = 1, opts = {}) {
 }
 
 // Hooded traveller seen from behind. Origin: bottom centre. Height ~420.
+// The pages are drawn from the player's point of view, so the traveller is
+// never shown. Kept for reference; returns nothing unless SHOW_HERO is set.
 function hero(x, y, sc = 1, opts = {}) {
+  if (!process.env.SHOW_HERO) return '';
   const { flip = false, cloak = '#45322a', hair = '#24160f', turn = 0, kneel = false, armOut = false } = opts;
   const cloakHi = '#57402f';
   const h = kneel ? 0.72 : 1;

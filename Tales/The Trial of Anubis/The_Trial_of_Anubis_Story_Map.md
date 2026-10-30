@@ -177,7 +177,7 @@ You stop at the doorway and look down a staircase lit by cold blue flames. Carvi
 
 ## 003 — Lost in the Sand (Game Over)
 
-**Image:** `ANU001.png`  
+**Image:** `ANU003.png`  
 **Outcome:** `death` · Death · `anubis_lost_in_desert`  
 **Reached from:** `001`, `002`  
 **Notes:** Rewritten: lost in the desert. Reached from 001 (Turn back) and 002 (Call into the darkness), so the copy avoids naming either choice.
@@ -193,7 +193,7 @@ Your journey ends beneath the sand, never judged by the dead and never found by 
 
 ## 004 — The Jackal Temple
 
-**Image:** `ANU003.png`  
+**Image:** `ANU004.png`  
 **Reached from:** `002`  
 **Notes:** Story copied from old 003.
 
@@ -305,7 +305,7 @@ Beyond the river is a maze of stone passages covered in thousands of names. Some
 
 ## 011 — HOME — The Hall of Gates
 
-**Image:** `ANU026.png`  
+**Image:** `ANU011.png`  
 **Reached from:** `012`, `013`, `020`, `036`, `037`  
 **Notes:** HOME hub (rewritten). Only the gates for pieces you have not collected are shown. Once all three are collected, any route to HOME goes to 026 instead.
 
@@ -404,7 +404,7 @@ You tell Ammit that you will help her. She lowers her huge head and shows you th
 
 ## 017 — Swallowed by the Fog (Game Over)
 
-**Image:** `ANU007.png`  
+**Image:** `ANU017.png`  
 **Outcome:** `death` · Death · `anubis_swallowed_by_fog`  
 **Reached from:** `007`  
 **Notes:** Rewritten: you try to run and are killed.
@@ -420,7 +420,7 @@ Your name now belongs to the voices in the fog.
 
 ## 018 — Maze of False Memories
 
-**Image:** `ANU017.png`  
+**Image:** `ANU018.png`  
 **Reached from:** `011`  
 **Notes:** Heart path via the HOME second gate. Story copied from old 017.
 
@@ -436,7 +436,7 @@ The passage disappears into thick white fog and the walls begin changing wheneve
 
 ## 019 — Memory of Home
 
-**Image:** `ANU018.png`  
+**Image:** `ANU019.png`  
 **Reached from:** `018`, `042`  
 **Notes:** Story copied from old 018. Staying leads to 046 instead of 040 if you freed the soul at 041.
 
@@ -587,7 +587,7 @@ You walk to Anubis and place the three pieces in his hands. The Feather Arm sett
 
 ## 028 — Lord of the Tomb (Game Over)
 
-**Image:** `ANU027.png`  
+**Image:** `ANU028.png`  
 **Outcome:** `darkWin` · Dark Ending · `anubis_lord_of_the_tomb`  
 **Reached from:** `026`  
 **Notes:** God-like powers; you now control the tomb of Anubis.
@@ -603,7 +603,7 @@ You rule the tomb of Anubis, but you can never leave it.
 
 ## 029 — Released (Game Over)
 
-**Image:** `ANU001.png`  
+**Image:** `ANU029.png`  
 **Outcome:** `released` · Released · `anubis_released`  
 **Reached from:** `027`  
 **Notes:** Anubis is disappointed but releases you. You wake up in hospital.
@@ -619,7 +619,7 @@ Anubis has released you, but you will never know what your heart was truly worth
 
 ## 030 — The Scales Restored (Game Over)
 
-**Image:** `ANU027.png`  
+**Image:** `ANU030.png`  
 **Outcome:** `win` · Best Ending · `anubis_scales_restored`  
 **Reached from:** `027`  
 **Notes:** Best ending. Based on the old True ending. Extra line depending on the soul at 041.
@@ -639,7 +639,7 @@ Anubis has returned you to the living world with his blessing.
 
 ## 031 — Pulled Through the Glass
 
-**Image:** `ANU014.png`  
+**Image:** `ANU031.png`  
 **Reached from:** `014`  
 **Notes:** Teleport into the Heart Pan room.
 
@@ -654,7 +654,7 @@ You press your hand against the glass. Your heart stops, and so does every heart
 
 ## 032 — Devoured by Ammit (Game Over)
 
-**Image:** `ANU015.png`  
+**Image:** `ANU032.png`  
 **Outcome:** `death` · Death · `anubis_devoured_by_ammit`  
 **Reached from:** `015`, `016`  
 **Notes:** Reached from 015 (Fight) and 016 (Leave), so the copy avoids naming either choice.
@@ -873,7 +873,7 @@ The rebel’s mask tilts to one side. “Then you are just another servant of th
 
 ## 046 — The Voice You Saved
 
-**Image:** `ANU018.png`  
+**Image:** `ANU046.png`  
 **Reached from:** `019`  
 **Notes:** Only reached by staying in the memory at 019 after freeing the soul at 041.
 
@@ -888,7 +888,7 @@ You take their hand and the warm light closes around you. Then another voice cut
 
 ## 047 — Defy the Gods (Game Over)
 
-**Image:** `ANU027.png`  
+**Image:** `ANU047.png`  
 **Outcome:** `darkWin` · Dark Ending · `anubis_defy_the_gods`  
 **Reached from:** `026`  
 **Notes:** Only reached by accepting the rebel at 023, then choosing Keep the deal at 026. Reworks the old Rebel ending.

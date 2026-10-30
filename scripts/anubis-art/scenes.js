@@ -121,7 +121,10 @@ module.exports = {
     s += `<ellipse cx="500" cy="690" rx="170" ry="54" fill="#d8a64a" ${stroke(3)}/>
       <ellipse cx="500" cy="694" rx="140" ry="40" fill="#0d1a3a" ${stroke(3)}/>
       <ellipse cx="500" cy="698" rx="100" ry="24" fill="#2f7bff" opacity="0.7"/>
-      <ellipse cx="500" cy="700" rx="56" ry="12" fill="#bfe6ff" opacity="0.8"/>`;
+      <ellipse cx="500" cy="700" rx="56" ry="12" fill="#bfe6ff" opacity="0.8"/>
+      <path d="M380 694 A120 34 0 0 1 620 694 L600 698 A100 26 0 0 0 400 698 Z" fill="#c49a4a" ${stroke(2)}/>
+      <path d="M420 706 A80 18 0 0 1 580 706 L566 708 A66 13 0 0 0 434 708 Z" fill="#8a6a3a" ${stroke(2)}/>
+      <path d="M392 690 L410 700 M450 668 L456 684 M520 664 L516 680 M590 676 L578 690" stroke="${OL}" stroke-width="3"/>`;
     // Rows of statues
     s += L.jackalStatue(350, 540, 0.45) + L.jackalStatue(650, 540, 0.45, true);
     s += L.jackalStatue(250, 650, 0.7) + L.jackalStatue(750, 650, 0.7, true);

@@ -2,7 +2,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
-const scenes = require('./scenes');
+const scenes = require(process.env.SCENES || './pages');
 
 (async () => {
   const [outDir, ...names] = process.argv.slice(2);

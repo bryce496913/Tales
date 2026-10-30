@@ -7,7 +7,7 @@ struct ANU047View: View {
             outcome: .darkWin,
             title: "Defy the Gods",
             classification: "Dark Ending",
-            imageName: "ANU027.png",
+            imageName: "ANU047.png",
             storyText: """
             You turn away from Anubis and place the three pieces in the rebel’s hands. Anubis warns you that you have confused power with freedom, but the rebel strikes the Balance Stone against the empty frame and the scales split apart. The hall collapses as souls escape through every gate and Ammit roars somewhere in the dark. The rebel tears open a doorway and pulls you through into the desert beneath a sky filled with red stars. Stolen power remains beneath your skin, your shadow now has the head of a jackal and the dead begin whispering your name as their liberator.
             """,
