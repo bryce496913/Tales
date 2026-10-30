@@ -30,7 +30,7 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 | Page | Title | Choice | Goes to |
 |---|---|---|---|
 | `000` | The Lost Expedition | Continue | `001` The Silent Desert |
-| `001` | The Silent Desert | Enter | `002` The Black Doorway |
+| `001` | The Silent Desert | Approach | `002` The Black Doorway |
 |  |  | Turn back | `003` Lost in the Sand (Game Over) |
 | `002` | The Black Doorway | Go down | `004` The Jackal Temple |
 |  |  | Call out | `003` Lost in the Sand (Game Over) |
@@ -67,7 +67,7 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 |  |  | Face your failure | `042` Memory of Failure |
 | `019` | Memory of Home | Let it go | `020` The Heart Pan |
 |  |  | Stay | `040` A Peaceful Death (Game Over); if *freed the trapped soul at 041*: **Stay** → `046` The Voice You Saved |
-| `020` | The Heart Pan | Take **[collects Heart Pan]** | `011` HOME (or `026` if all pieces are held) |
+| `020` | The Heart Pan | Take **[collects Heart Pan]** | `011` HOME (or `026` if all pieces are held); if *already carrying the Heart Pan*: **Return** → `011` HOME |
 | `021` | The Scribe’s Secret | Trust | `022` The True Name |
 |  |  | Threaten | `043` Ink and Threats |
 | `022` | The True Name | Speak the name | `023` The Rebel’s Offer |
@@ -154,7 +154,7 @@ The desert is completely silent. There is no wind, no stars and no sound apart f
 
 ### Choices
 
-- **Enter** → `002` The Black Doorway
+- **Approach** → `002` The Black Doorway
 - **Turn back** → `003` Lost in the Sand (Game Over)
 
 ---
@@ -198,7 +198,7 @@ Your journey ends beneath the sand, never judged by the dead and never found by 
 **Notes:** Story copied from old 003.
 
 **Text:**  
-The staircase leads into an ancient temple lined with black jackal statues. Their golden collars remain bright despite the dust, and each statue slowly turns its head to watch you. A narrow path leads toward a circular opening in the floor, while a side room glitters with masks, ceremonial blades and piles of gold. Behind you, the staircase has disappeared and the wall now shows a carving shaped exactly like you. The voice below asks, “What did you come here seeking?”
+The staircase leads into an ancient temple lined with black jackal statues. Their golden collars remain bright despite the dust, and each statue slowly turns its head to watch you. A narrow path leads toward a circular opening in the floor where a spiral staircase winds down into the dark, while a side room glitters with masks, ceremonial blades and piles of gold. Behind you, the staircase has disappeared and the wall now shows a carving shaped exactly like you. The voice below asks, “What did you come here seeking?”
 
 ### Choices
 
@@ -278,7 +278,7 @@ The first gate grinds open on stone hinges and cold air rolls out to meet you. B
 **Notes:** Story unchanged.
 
 **Text:**  
-The ferryman reaches the dock without disturbing the water. He is wrapped in wet linen and has no face, but the empty spaces where his eyes should be reflect moments from your past. He tells you that passage requires a memory, a promise or fear. In his hand appears a bright memory of sunlight, laughter and safety that you immediately recognise as your own. Nearby, a trapped soul presses against the river’s surface and reaches toward the boat.
+The ferryman reaches the dock without disturbing the water. He is wrapped in wet linen and has no face, but the empty spaces where his eyes should be reflect moments from your past. He tells you that passage requires a memory, a promise or a fear. In his hand appears a bright memory of sunlight, laughter and safety that you immediately recognise as your own. Nearby, a trapped soul presses against the river’s surface and reaches toward the boat.
 
 ### Choices
 
@@ -310,7 +310,7 @@ Beyond the river is a maze of stone passages covered in thousands of names. Some
 **Notes:** HOME hub (rewritten). Only the gates for pieces you have not collected are shown. Once all three are collected, any route to HOME goes to 026 instead.
 
 **Text:**  
-The light folds around you and you find yourself in a round chamber of black stone beneath a ceiling painted with stars. At its centre stands the empty frame of the great scales, with three hollow sockets shaped like a feather, a heart and a smooth round stone. Three gates are set into the walls around it. The first is carved with a feather, the second with a heart and the third with a set of perfectly level scales. The gate of any piece you already carry is sealed behind a curtain of blue fire. Somewhere beyond the empty frame, Anubis waits for the scales to be made whole.
+The light folds around you and you find yourself in a round chamber of black stone beneath a ceiling painted with stars. At its centre stands the empty frame of the great scales, with three hollow sockets shaped like a feather, a heart and a smooth round stone. Three gates are set into the walls around it. The first is carved with a feather, the second with a heart and the third with a set of perfectly level scales. The gate of any piece you already carry is sealed behind a curtain of blue fire. Words carved around the frame warn that the scales of judgment have been broken and their pieces scattered, and that no living visitor may leave until all three are returned. Somewhere beyond the frame, Anubis waits for the scales to be made whole.
 
 ### Choices
 
@@ -324,10 +324,12 @@ The light folds around you and you find yourself in a round chamber of black sto
 
 **Image:** `ANU012.png`  
 **Reached from:** `010`, `041`  
-**Notes:** Story unchanged.
+**Notes:** Story unchanged. Extra line if you freed the soul at 041.
 
 **Text:**  
 The sealed door opens into a circular room where the golden Feather Arm floats above a shaft of blue fire. Painted figures kneel around the walls holding their hearts in their hands, but their shadows move on their own. Deep scratches cross the floor and lead toward a hidden passage behind the murals. A low growl moves through the stone as the Feather Arm slowly turns within reach.
+
+*If freed the trapped soul at 041, add:* The soul you freed drifts to your side and traces a safe path between the scratches, keeping you clear of the moving shadows.
 
 ### Choices
 
@@ -452,14 +454,16 @@ You enter a perfect memory of home, complete with familiar light, sounds and the
 
 **Image:** `ANU020.png`  
 **Reached from:** `019`, `031`, `034`, `042`, `046`  
-**Notes:** Story unchanged.
+**Notes:** Story unchanged. If you already carry the Heart Pan (possible via 012 → 014), an extra line explains it and the button becomes Return.
 
 **Text:**  
 The fog clears and reveals a chamber shaped like the inside of a giant heart. The missing Heart Pan hangs at the centre, held above thousands of names carved into the floor. Some of the names belong to the dead, while others belong to people who have not yet been born. Your own name appears beneath your feet beside the name of an underworld scribe, suggesting that your arrival was recorded long before the scales were broken.
 
+*If already carrying the Heart Pan, add:* But as you step closer, it fades like a reflection. The real Heart Pan is already with you, warm against your chest, as if it remembers this place.
+
 ### Choices
 
-- **Take **[collects Heart Pan]**** → `011` HOME (or `026` if all pieces are held)
+- **Take **[collects Heart Pan]**** → `011` HOME (or `026` if all pieces are held); if *already carrying the Heart Pan*: **Return** → `011` HOME
 
 ---
 
@@ -671,7 +675,7 @@ The Devourer has consumed your soul, leaving no name, memory or path back to the
 **Notes:** Anubis is angry but accepts.
 
 **Text:**  
-Anubis’s eyes narrow and the growling behind the pillars falls silent. “You stand in the hall of the dead and ask for payment,” he says. For a moment, you are certain you have made a terrible mistake. Then he laughs, low and dry. “Very well. Restore the scales and you may name your reward. But remember that the scales will weigh the asking too.” He strikes the floor with his staff and the first gate grinds open behind you.
+Anubis’s eyes narrow and the growling behind the pillars falls silent. “You stand in the hall of the dead and ask for payment,” he says. For a moment, you are certain you have made a terrible mistake. Then he laughs, low and dry. “Very well. Restore the scales and you may name your reward. But remember that the scales will weigh the asking too.” He strikes the floor with his staff, and behind you a gate carved with a feather begins to open.
 
 ### Choices
 

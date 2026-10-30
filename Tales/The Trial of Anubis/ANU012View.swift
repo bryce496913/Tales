@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct ANU012View: View {
+    @EnvironmentObject
+    private var navigationState: TrialOfAnubisNavigationState
+
     var body: some View {
         TrialOfAnubisPageLayout(
             imageName: "ANU012.png",
             title: "Feather Arm Chamber",
-            text: """
-            The sealed door opens into a circular room where the golden Feather Arm floats above a shaft of blue fire. Painted figures kneel around the walls holding their hearts in their hands, but their shadows move on their own. Deep scratches cross the floor and lead toward a hidden passage behind the murals. A low growl moves through the stone as the Feather Arm slowly turns within reach.
-            """,
+            text: storyText,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .torchReveal,
                 choicesWaitForText: true
@@ -26,6 +27,18 @@ struct ANU012View: View {
                 )
             }
         }
+    }
+
+    private var storyText: String {
+        var result = """
+        The sealed door opens into a circular room where the golden Feather Arm floats above a shaft of blue fire. Painted figures kneel around the walls holding their hearts in their hands, but their shadows move on their own. Deep scratches cross the floor and lead toward a hidden passage behind the murals. A low growl moves through the stone as the Feather Arm slowly turns within reach.
+        """
+
+        if navigationState.progress.storyFlags.contains(.freedSoul) {
+            result += " The soul you freed drifts to your side and traces a safe path between the scratches, keeping you clear of the moving shadows."
+        }
+
+        return result
     }
 }
 

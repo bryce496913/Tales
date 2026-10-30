@@ -11,7 +11,7 @@ struct ANU011View: View {
             imageName: "ANU026.png",
             title: "The Hall of Gates",
             text: """
-            The light folds around you and you find yourself in a round chamber of black stone beneath a ceiling painted with stars. At its centre stands the empty frame of the great scales, with three hollow sockets shaped like a feather, a heart and a smooth round stone. Three gates are set into the walls around it. The first is carved with a feather, the second with a heart and the third with a set of perfectly level scales. The gate of any piece you already carry is sealed behind a curtain of blue fire. Somewhere beyond the empty frame, Anubis waits for the scales to be made whole.
+            The light folds around you and you find yourself in a round chamber of black stone beneath a ceiling painted with stars. At its centre stands the empty frame of the great scales, with three hollow sockets shaped like a feather, a heart and a smooth round stone. Three gates are set into the walls around it. The first is carved with a feather, the second with a heart and the third with a set of perfectly level scales. The gate of any piece you already carry is sealed behind a curtain of blue fire. Words carved around the frame warn that the scales of judgment have been broken and their pieces scattered, and that no living visitor may leave until all three are returned. Somewhere beyond the frame, Anubis waits for the scales to be made whole.
             """,
             effects: TrialOfAnubisPageEffects(
                 entryTransition: .stoneDoor,
