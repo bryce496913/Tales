@@ -121,6 +121,16 @@ def check_images():
             check(name in images, f"{path.relative_to(ROOT)} references missing image {name}")
 
 
+def check_audio():
+    project = PBXPROJ.read_text()
+    resources_phase = project.split("/* Begin PBXResourcesBuildPhase section */")[-1].split("/* End PBXResourcesBuildPhase section */")[0]
+    bundled = set(re.findall(r"/\* ([^*]+\.m4a) in Resources \*/,", resources_phase))
+    for path in swift_files():
+        for name in re.findall(r'resourceName = "([^"]+)"', path.read_text()):
+            check((TALES / f"{name}.m4a").exists(), f"{path.relative_to(ROOT)} references missing audio {name}.m4a")
+            check(f"{name}.m4a" in bundled, f"{name}.m4a is not in the app target's Copy Bundle Resources")
+
+
 def check_anubis_routes():
     route_text = (ANUBIS / "TrialOfAnubisRoute.swift").read_text()
     cases = re.findall(r"^\s*case (\w+) = \"", route_text, flags=re.M)
@@ -165,6 +175,7 @@ def main():
     check_removed_apis()
     check_project_membership()
     check_images()
+    check_audio()
     check_anubis_routes()
 
     if failures:

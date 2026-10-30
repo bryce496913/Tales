@@ -17,6 +17,7 @@ final class GameOptions: ObservableObject {
         static let buttonGlowEnabled = "Tales.buttonGlowEnabled"
         static let outcomeAnimationsEnabled = "Tales.outcomeAnimationsEnabled"
         static let soundEffectsEnabled = "Tales.soundEffectsEnabled"
+        static let backgroundMusicEnabled = "Tales.backgroundMusicEnabled"
     }
 
     @Published var typewriterEnabled: Bool { didSet { defaults.set(typewriterEnabled, forKey: Key.typewriterEnabled) } }
@@ -27,6 +28,7 @@ final class GameOptions: ObservableObject {
     @Published var outcomeAnimationsEnabled: Bool { didSet { defaults.set(outcomeAnimationsEnabled, forKey: Key.outcomeAnimationsEnabled) } }
     // Ready for future audio integration; no sound files or audio engine are currently present.
     @Published var soundEffectsEnabled: Bool { didSet { defaults.set(soundEffectsEnabled, forKey: Key.soundEffectsEnabled) } }
+    @Published var backgroundMusicEnabled: Bool { didSet { defaults.set(backgroundMusicEnabled, forKey: Key.backgroundMusicEnabled) } }
 
     private let defaults: UserDefaults
 
@@ -39,6 +41,7 @@ final class GameOptions: ObservableObject {
         buttonGlowEnabled = defaults.object(forKey: Key.buttonGlowEnabled) as? Bool ?? true
         outcomeAnimationsEnabled = defaults.object(forKey: Key.outcomeAnimationsEnabled) as? Bool ?? true
         soundEffectsEnabled = defaults.object(forKey: Key.soundEffectsEnabled) as? Bool ?? true
+        backgroundMusicEnabled = defaults.object(forKey: Key.backgroundMusicEnabled) as? Bool ?? true
     }
 
     func resetToDefaults() {
@@ -49,5 +52,6 @@ final class GameOptions: ObservableObject {
         buttonGlowEnabled = true
         outcomeAnimationsEnabled = true
         soundEffectsEnabled = true
+        backgroundMusicEnabled = true
     }
 }

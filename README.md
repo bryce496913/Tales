@@ -27,6 +27,8 @@ Enter the Egyptian underworld, recover the sacred scales, and face the final jud
 - `Tales/` – shared app shell: main menu, story selection, options, theme, and the shared page/outcome components used by Tales From the Sphinx.
 - `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, images, and the story script.
 - `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), its own navigation/progress state and presentation components, images, and the story map.
+- `Tales/TalesAmbience.m4a` – looping background ambience, played by `AmbiencePlayer` and toggled under Options > Sound.
+- `scripts/audio/generate_ambience.py` – the script that synthesizes the ambience, for regenerating or tweaking it.
 - `scripts/release_readiness_checks.py` – static checks run before a release (see below).
 
 ## Release Checks
@@ -37,7 +39,7 @@ Run from the repository root:
 python3 scripts/release_readiness_checks.py
 ```
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis ending IDs match the navigation state.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis ending IDs match the navigation state.
 
 ## Release Readiness Notes
 

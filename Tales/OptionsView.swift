@@ -36,6 +36,9 @@ struct OptionsView: View {
                         .accessibilityElement(children: .combine)
                         OptionToggleRow(title: "Page Transitions", detail: "Use sand, torch, and stone doorway transitions.", isOn: $gameOptions.pageTransitionsEnabled)
                     }
+                    optionSection("Sound") {
+                        OptionToggleRow(title: "Background Ambience", detail: "Play wind, drone, and distant bells while you read.", isOn: $gameOptions.backgroundMusicEnabled)
+                    }
                     optionSection("Feedback") {
                         OptionToggleRow(title: "Haptics", detail: "Play tactile feedback for choices and endings.", isOn: $gameOptions.hapticsEnabled)
                         OptionToggleRow(title: "Button Glow", detail: "Use ambient glow around choice buttons.", isOn: $gameOptions.buttonGlowEnabled)
