@@ -135,6 +135,10 @@ struct StorySelectionCard_Previews: PreviewProvider {
             preview(for: StorySelectionItem.trialOfAnubis)
                 .previewDisplayName("Anubis icon tile")
                 .previewDevice("iPhone 15 Pro Max")
+
+            preview(for: StorySelectionItem.descentToHades)
+                .previewDisplayName("Hades icon tile")
+                .previewDevice("iPhone 15 Pro Max")
         }
     }
 

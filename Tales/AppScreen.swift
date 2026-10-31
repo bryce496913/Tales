@@ -5,4 +5,5 @@ enum AppScreen: Equatable {
     case storySelection
     case talesFromTheSphinx
     case trialOfAnubis
+    case descentToHades
 }

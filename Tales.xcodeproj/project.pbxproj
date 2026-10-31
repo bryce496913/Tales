@@ -203,6 +203,71 @@
 		FEA500000000000000000093 /* TrialOfAnubisTypewriterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000092 /* TrialOfAnubisTypewriterSpeed.swift */; };
 		FEA500000000000000000095 /* TrialOfAnubisTypewriterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000094 /* TrialOfAnubisTypewriterText.swift */; };
 		FEA500000000000000000099 /* TrialOfAnubisTransitionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA400000000000000000098 /* TrialOfAnubisTransitionContainer.swift */; };
+		FEB000000000000000000004 /* DescentToHadesChoiceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000003 /* DescentToHadesChoiceButtonStyle.swift */; };
+		FEB000000000000000000006 /* DescentToHadesMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000005 /* DescentToHadesMainMenuView.swift */; };
+		FEB000000000000000000008 /* DescentToHadesNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000007 /* DescentToHadesNavigationButton.swift */; };
+		FEB00000000000000000000A /* DescentToHadesNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000009 /* DescentToHadesNavigationState.swift */; };
+		FEB00000000000000000000C /* DescentToHadesOutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000000B /* DescentToHadesOutcomeView.swift */; };
+		FEB00000000000000000000E /* DescentToHadesPageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000000D /* DescentToHadesPageLayout.swift */; };
+		FEB000000000000000000010 /* DescentToHadesPreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000000F /* DescentToHadesPreviewContainer.swift */; };
+		FEB000000000000000000012 /* DescentToHadesProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000011 /* DescentToHadesProgress.swift */; };
+		FEB000000000000000000014 /* DescentToHadesResetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000013 /* DescentToHadesResetButtons.swift */; };
+		FEB000000000000000000016 /* DescentToHadesRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000015 /* DescentToHadesRootView.swift */; };
+		FEB000000000000000000018 /* DescentToHadesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000017 /* DescentToHadesRoute.swift */; };
+		FEB00000000000000000001A /* DescentToHadesTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000019 /* DescentToHadesTheme.swift */; };
+		FEB00000000000000000001C /* DescentToHadesTransitionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000001B /* DescentToHadesTransitionContainer.swift */; };
+		FEB00000000000000000001E /* DescentToHadesTypewriterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000001D /* DescentToHadesTypewriterSpeed.swift */; };
+		FEB000000000000000000020 /* DescentToHadesTypewriterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000001F /* DescentToHadesTypewriterText.swift */; };
+		FEB000000000000000000022 /* HDS000View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000021 /* HDS000View.swift */; };
+		FEB000000000000000000024 /* HDS001View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000023 /* HDS001View.swift */; };
+		FEB000000000000000000026 /* HDS002View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000025 /* HDS002View.swift */; };
+		FEB000000000000000000028 /* HDS003View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000027 /* HDS003View.swift */; };
+		FEB00000000000000000002A /* HDS004View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000029 /* HDS004View.swift */; };
+		FEB00000000000000000002C /* HDS005View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000002B /* HDS005View.swift */; };
+		FEB00000000000000000002E /* HDS006View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000002D /* HDS006View.swift */; };
+		FEB000000000000000000030 /* HDS007View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000002F /* HDS007View.swift */; };
+		FEB000000000000000000032 /* HDS008View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000031 /* HDS008View.swift */; };
+		FEB000000000000000000034 /* HDS009View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000033 /* HDS009View.swift */; };
+		FEB000000000000000000036 /* HDS010View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000035 /* HDS010View.swift */; };
+		FEB000000000000000000038 /* HDS011View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000037 /* HDS011View.swift */; };
+		FEB00000000000000000003A /* HDS012View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000039 /* HDS012View.swift */; };
+		FEB00000000000000000003C /* HDS013View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000003B /* HDS013View.swift */; };
+		FEB00000000000000000003E /* HDS014View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000003D /* HDS014View.swift */; };
+		FEB000000000000000000040 /* HDS015View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000003F /* HDS015View.swift */; };
+		FEB000000000000000000042 /* HDS016View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000041 /* HDS016View.swift */; };
+		FEB000000000000000000044 /* HDS017View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000043 /* HDS017View.swift */; };
+		FEB000000000000000000046 /* HDS018View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000045 /* HDS018View.swift */; };
+		FEB000000000000000000048 /* HDS019View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000047 /* HDS019View.swift */; };
+		FEB00000000000000000004A /* HDS020View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000049 /* HDS020View.swift */; };
+		FEB00000000000000000004C /* HDS021View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000004B /* HDS021View.swift */; };
+		FEB00000000000000000004E /* HDS022View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000004D /* HDS022View.swift */; };
+		FEB000000000000000000050 /* HDS023View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000004F /* HDS023View.swift */; };
+		FEB000000000000000000052 /* HDS024View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000051 /* HDS024View.swift */; };
+		FEB000000000000000000054 /* HDS025View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000053 /* HDS025View.swift */; };
+		FEB000000000000000000056 /* HDS026View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000055 /* HDS026View.swift */; };
+		FEB000000000000000000058 /* HDS027View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000057 /* HDS027View.swift */; };
+		FEB00000000000000000005A /* HDS028View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000059 /* HDS028View.swift */; };
+		FEB00000000000000000005C /* HDS029View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000005B /* HDS029View.swift */; };
+		FEB00000000000000000005E /* HDS030View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000005D /* HDS030View.swift */; };
+		FEB000000000000000000060 /* HDS031View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000005F /* HDS031View.swift */; };
+		FEB000000000000000000062 /* HDS032View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000061 /* HDS032View.swift */; };
+		FEB000000000000000000064 /* HDS033View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000063 /* HDS033View.swift */; };
+		FEB000000000000000000066 /* HDS034View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000065 /* HDS034View.swift */; };
+		FEB000000000000000000068 /* HDS035View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000067 /* HDS035View.swift */; };
+		FEB00000000000000000006A /* HDS036View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000069 /* HDS036View.swift */; };
+		FEB00000000000000000006C /* HDS037View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000006B /* HDS037View.swift */; };
+		FEB00000000000000000006E /* HDS038View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000006D /* HDS038View.swift */; };
+		FEB000000000000000000070 /* HDS039View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000006F /* HDS039View.swift */; };
+		FEB000000000000000000072 /* HDS040View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000071 /* HDS040View.swift */; };
+		FEB000000000000000000074 /* HDS041View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000073 /* HDS041View.swift */; };
+		FEB000000000000000000076 /* HDS042View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000075 /* HDS042View.swift */; };
+		FEB000000000000000000078 /* HDS043View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000077 /* HDS043View.swift */; };
+		FEB00000000000000000007A /* HDS044View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000079 /* HDS044View.swift */; };
+		FEB00000000000000000007C /* HDS045View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007B /* HDS045View.swift */; };
+		FEB00000000000000000007E /* HDS046View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007D /* HDS046View.swift */; };
+		FEB000000000000000000080 /* HDS047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007F /* HDS047View.swift */; };
+		FEB000000000000000000083 /* HDS-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000082 /* HDS-Icon.png */; };
+		FEB000000000000000000085 /* HDS-Title-Screen-Art.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000084 /* HDS-Title-Screen-Art.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -405,6 +470,72 @@
 		FEA70000000000000000008A /* ANU025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU025.png; sourceTree = "<group>"; };
 		FEA70000000000000000008C /* ANU026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU026.png; sourceTree = "<group>"; };
 		FEA70000000000000000008E /* ANU027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANU027.png; sourceTree = "<group>"; };
+		FEB000000000000000000003 /* DescentToHadesChoiceButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesChoiceButtonStyle.swift; sourceTree = "<group>"; };
+		FEB000000000000000000005 /* DescentToHadesMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesMainMenuView.swift; sourceTree = "<group>"; };
+		FEB000000000000000000007 /* DescentToHadesNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesNavigationButton.swift; sourceTree = "<group>"; };
+		FEB000000000000000000009 /* DescentToHadesNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesNavigationState.swift; sourceTree = "<group>"; };
+		FEB00000000000000000000B /* DescentToHadesOutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesOutcomeView.swift; sourceTree = "<group>"; };
+		FEB00000000000000000000D /* DescentToHadesPageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesPageLayout.swift; sourceTree = "<group>"; };
+		FEB00000000000000000000F /* DescentToHadesPreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesPreviewContainer.swift; sourceTree = "<group>"; };
+		FEB000000000000000000011 /* DescentToHadesProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesProgress.swift; sourceTree = "<group>"; };
+		FEB000000000000000000013 /* DescentToHadesResetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesResetButtons.swift; sourceTree = "<group>"; };
+		FEB000000000000000000015 /* DescentToHadesRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesRootView.swift; sourceTree = "<group>"; };
+		FEB000000000000000000017 /* DescentToHadesRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesRoute.swift; sourceTree = "<group>"; };
+		FEB000000000000000000019 /* DescentToHadesTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesTheme.swift; sourceTree = "<group>"; };
+		FEB00000000000000000001B /* DescentToHadesTransitionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesTransitionContainer.swift; sourceTree = "<group>"; };
+		FEB00000000000000000001D /* DescentToHadesTypewriterSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesTypewriterSpeed.swift; sourceTree = "<group>"; };
+		FEB00000000000000000001F /* DescentToHadesTypewriterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescentToHadesTypewriterText.swift; sourceTree = "<group>"; };
+		FEB000000000000000000021 /* HDS000View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS000View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000023 /* HDS001View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS001View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000025 /* HDS002View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS002View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000027 /* HDS003View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS003View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000029 /* HDS004View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS004View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000002B /* HDS005View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS005View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000002D /* HDS006View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS006View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000002F /* HDS007View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS007View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000031 /* HDS008View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS008View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000033 /* HDS009View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS009View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000035 /* HDS010View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS010View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000037 /* HDS011View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS011View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000039 /* HDS012View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS012View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000003B /* HDS013View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS013View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000003D /* HDS014View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS014View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000003F /* HDS015View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS015View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000041 /* HDS016View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS016View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000043 /* HDS017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS017View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000045 /* HDS018View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS018View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000047 /* HDS019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS019View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000049 /* HDS020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS020View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000004B /* HDS021View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS021View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000004D /* HDS022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS022View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000004F /* HDS023View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS023View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000051 /* HDS024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS024View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000053 /* HDS025View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS025View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000055 /* HDS026View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS026View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000057 /* HDS027View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS027View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000059 /* HDS028View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS028View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000005B /* HDS029View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS029View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000005D /* HDS030View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS030View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000005F /* HDS031View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS031View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000061 /* HDS032View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS032View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000063 /* HDS033View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS033View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000065 /* HDS034View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS034View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000067 /* HDS035View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS035View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000069 /* HDS036View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS036View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000006B /* HDS037View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS037View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000006D /* HDS038View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS038View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000006F /* HDS039View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS039View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000071 /* HDS040View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS040View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000073 /* HDS041View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS041View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000075 /* HDS042View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS042View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000077 /* HDS043View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS043View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000079 /* HDS044View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS044View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000007B /* HDS045View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS045View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000007D /* HDS046View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS046View.swift; sourceTree = "<group>"; };
+		FEB00000000000000000007F /* HDS047View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS047View.swift; sourceTree = "<group>"; };
+		FEB000000000000000000081 /* The_Descent_to_Hades_Story_Map.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Descent_to_Hades_Story_Map.md; sourceTree = "<group>"; };
+		FEB000000000000000000082 /* HDS-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDS-Icon.png"; sourceTree = "<group>"; };
+		FEB000000000000000000084 /* HDS-Title-Screen-Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDS-Title-Screen-Art.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -585,6 +716,7 @@
 				FEA100062B300001000001 /* StoryNavigationButton.swift */,
 				FEA300002B300001000001 /* Tales From the Sphinx */,
 				FEA300012B300001000001 /* The Trial of Anubis */,
+				FEB000000000000000000001 /* The Descent to Hades */,
 				FE0504AE2B289A510015CAFB /* Assets.xcassets */,
 				FE0504B02B289A510015CAFB /* Preview Content */,
 			);
@@ -597,6 +729,87 @@
 				FE0504B12B289A510015CAFB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEB000000000000000000001 /* The Descent to Hades */ = {
+			isa = PBXGroup;
+			children = (
+				FEB000000000000000000003 /* DescentToHadesChoiceButtonStyle.swift */,
+				FEB000000000000000000005 /* DescentToHadesMainMenuView.swift */,
+				FEB000000000000000000007 /* DescentToHadesNavigationButton.swift */,
+				FEB000000000000000000009 /* DescentToHadesNavigationState.swift */,
+				FEB00000000000000000000B /* DescentToHadesOutcomeView.swift */,
+				FEB00000000000000000000D /* DescentToHadesPageLayout.swift */,
+				FEB00000000000000000000F /* DescentToHadesPreviewContainer.swift */,
+				FEB000000000000000000011 /* DescentToHadesProgress.swift */,
+				FEB000000000000000000013 /* DescentToHadesResetButtons.swift */,
+				FEB000000000000000000015 /* DescentToHadesRootView.swift */,
+				FEB000000000000000000017 /* DescentToHadesRoute.swift */,
+				FEB000000000000000000019 /* DescentToHadesTheme.swift */,
+				FEB00000000000000000001B /* DescentToHadesTransitionContainer.swift */,
+				FEB00000000000000000001D /* DescentToHadesTypewriterSpeed.swift */,
+				FEB00000000000000000001F /* DescentToHadesTypewriterText.swift */,
+				FEB000000000000000000021 /* HDS000View.swift */,
+				FEB000000000000000000023 /* HDS001View.swift */,
+				FEB000000000000000000025 /* HDS002View.swift */,
+				FEB000000000000000000027 /* HDS003View.swift */,
+				FEB000000000000000000029 /* HDS004View.swift */,
+				FEB00000000000000000002B /* HDS005View.swift */,
+				FEB00000000000000000002D /* HDS006View.swift */,
+				FEB00000000000000000002F /* HDS007View.swift */,
+				FEB000000000000000000031 /* HDS008View.swift */,
+				FEB000000000000000000033 /* HDS009View.swift */,
+				FEB000000000000000000035 /* HDS010View.swift */,
+				FEB000000000000000000037 /* HDS011View.swift */,
+				FEB000000000000000000039 /* HDS012View.swift */,
+				FEB00000000000000000003B /* HDS013View.swift */,
+				FEB00000000000000000003D /* HDS014View.swift */,
+				FEB00000000000000000003F /* HDS015View.swift */,
+				FEB000000000000000000041 /* HDS016View.swift */,
+				FEB000000000000000000043 /* HDS017View.swift */,
+				FEB000000000000000000045 /* HDS018View.swift */,
+				FEB000000000000000000047 /* HDS019View.swift */,
+				FEB000000000000000000049 /* HDS020View.swift */,
+				FEB00000000000000000004B /* HDS021View.swift */,
+				FEB00000000000000000004D /* HDS022View.swift */,
+				FEB00000000000000000004F /* HDS023View.swift */,
+				FEB000000000000000000051 /* HDS024View.swift */,
+				FEB000000000000000000053 /* HDS025View.swift */,
+				FEB000000000000000000055 /* HDS026View.swift */,
+				FEB000000000000000000057 /* HDS027View.swift */,
+				FEB000000000000000000059 /* HDS028View.swift */,
+				FEB00000000000000000005B /* HDS029View.swift */,
+				FEB00000000000000000005D /* HDS030View.swift */,
+				FEB00000000000000000005F /* HDS031View.swift */,
+				FEB000000000000000000061 /* HDS032View.swift */,
+				FEB000000000000000000063 /* HDS033View.swift */,
+				FEB000000000000000000065 /* HDS034View.swift */,
+				FEB000000000000000000067 /* HDS035View.swift */,
+				FEB000000000000000000069 /* HDS036View.swift */,
+				FEB00000000000000000006B /* HDS037View.swift */,
+				FEB00000000000000000006D /* HDS038View.swift */,
+				FEB00000000000000000006F /* HDS039View.swift */,
+				FEB000000000000000000071 /* HDS040View.swift */,
+				FEB000000000000000000073 /* HDS041View.swift */,
+				FEB000000000000000000075 /* HDS042View.swift */,
+				FEB000000000000000000077 /* HDS043View.swift */,
+				FEB000000000000000000079 /* HDS044View.swift */,
+				FEB00000000000000000007B /* HDS045View.swift */,
+				FEB00000000000000000007D /* HDS046View.swift */,
+				FEB00000000000000000007F /* HDS047View.swift */,
+				FEB000000000000000000081 /* The_Descent_to_Hades_Story_Map.md */,
+				FEB000000000000000000002 /* Images */,
+			);
+			path = "The Descent to Hades";
+			sourceTree = "<group>";
+		};
+		FEB000000000000000000002 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FEB000000000000000000082 /* HDS-Icon.png */,
+				FEB000000000000000000084 /* HDS-Title-Screen-Art.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -741,6 +954,8 @@
 				FEA3000A2B400001000001 /* ANU-Title-Screen-Art.png in Resources */,
 				FE0267582B28A22F00F5C31D /* Ten.png in Resources */,
 				FE02675E2B28A22F00F5C31D /* Three.png in Resources */,
+				FEB000000000000000000083 /* HDS-Icon.png in Resources */,
+				FEB000000000000000000085 /* HDS-Title-Screen-Art.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,6 +1078,69 @@
 				FE02677B2B28BD9700F5C31D /* Page7View.swift in Sources */,
 				FE38B2192B289DD8004B8919 /* TalesApp.swift in Sources */,
 				FE02676F2B28BA1900F5C31D /* Page1View.swift in Sources */,
+				FEB000000000000000000004 /* DescentToHadesChoiceButtonStyle.swift in Sources */,
+				FEB000000000000000000006 /* DescentToHadesMainMenuView.swift in Sources */,
+				FEB000000000000000000008 /* DescentToHadesNavigationButton.swift in Sources */,
+				FEB00000000000000000000A /* DescentToHadesNavigationState.swift in Sources */,
+				FEB00000000000000000000C /* DescentToHadesOutcomeView.swift in Sources */,
+				FEB00000000000000000000E /* DescentToHadesPageLayout.swift in Sources */,
+				FEB000000000000000000010 /* DescentToHadesPreviewContainer.swift in Sources */,
+				FEB000000000000000000012 /* DescentToHadesProgress.swift in Sources */,
+				FEB000000000000000000014 /* DescentToHadesResetButtons.swift in Sources */,
+				FEB000000000000000000016 /* DescentToHadesRootView.swift in Sources */,
+				FEB000000000000000000018 /* DescentToHadesRoute.swift in Sources */,
+				FEB00000000000000000001A /* DescentToHadesTheme.swift in Sources */,
+				FEB00000000000000000001C /* DescentToHadesTransitionContainer.swift in Sources */,
+				FEB00000000000000000001E /* DescentToHadesTypewriterSpeed.swift in Sources */,
+				FEB000000000000000000020 /* DescentToHadesTypewriterText.swift in Sources */,
+				FEB000000000000000000022 /* HDS000View.swift in Sources */,
+				FEB000000000000000000024 /* HDS001View.swift in Sources */,
+				FEB000000000000000000026 /* HDS002View.swift in Sources */,
+				FEB000000000000000000028 /* HDS003View.swift in Sources */,
+				FEB00000000000000000002A /* HDS004View.swift in Sources */,
+				FEB00000000000000000002C /* HDS005View.swift in Sources */,
+				FEB00000000000000000002E /* HDS006View.swift in Sources */,
+				FEB000000000000000000030 /* HDS007View.swift in Sources */,
+				FEB000000000000000000032 /* HDS008View.swift in Sources */,
+				FEB000000000000000000034 /* HDS009View.swift in Sources */,
+				FEB000000000000000000036 /* HDS010View.swift in Sources */,
+				FEB000000000000000000038 /* HDS011View.swift in Sources */,
+				FEB00000000000000000003A /* HDS012View.swift in Sources */,
+				FEB00000000000000000003C /* HDS013View.swift in Sources */,
+				FEB00000000000000000003E /* HDS014View.swift in Sources */,
+				FEB000000000000000000040 /* HDS015View.swift in Sources */,
+				FEB000000000000000000042 /* HDS016View.swift in Sources */,
+				FEB000000000000000000044 /* HDS017View.swift in Sources */,
+				FEB000000000000000000046 /* HDS018View.swift in Sources */,
+				FEB000000000000000000048 /* HDS019View.swift in Sources */,
+				FEB00000000000000000004A /* HDS020View.swift in Sources */,
+				FEB00000000000000000004C /* HDS021View.swift in Sources */,
+				FEB00000000000000000004E /* HDS022View.swift in Sources */,
+				FEB000000000000000000050 /* HDS023View.swift in Sources */,
+				FEB000000000000000000052 /* HDS024View.swift in Sources */,
+				FEB000000000000000000054 /* HDS025View.swift in Sources */,
+				FEB000000000000000000056 /* HDS026View.swift in Sources */,
+				FEB000000000000000000058 /* HDS027View.swift in Sources */,
+				FEB00000000000000000005A /* HDS028View.swift in Sources */,
+				FEB00000000000000000005C /* HDS029View.swift in Sources */,
+				FEB00000000000000000005E /* HDS030View.swift in Sources */,
+				FEB000000000000000000060 /* HDS031View.swift in Sources */,
+				FEB000000000000000000062 /* HDS032View.swift in Sources */,
+				FEB000000000000000000064 /* HDS033View.swift in Sources */,
+				FEB000000000000000000066 /* HDS034View.swift in Sources */,
+				FEB000000000000000000068 /* HDS035View.swift in Sources */,
+				FEB00000000000000000006A /* HDS036View.swift in Sources */,
+				FEB00000000000000000006C /* HDS037View.swift in Sources */,
+				FEB00000000000000000006E /* HDS038View.swift in Sources */,
+				FEB000000000000000000070 /* HDS039View.swift in Sources */,
+				FEB000000000000000000072 /* HDS040View.swift in Sources */,
+				FEB000000000000000000074 /* HDS041View.swift in Sources */,
+				FEB000000000000000000076 /* HDS042View.swift in Sources */,
+				FEB000000000000000000078 /* HDS043View.swift in Sources */,
+				FEB00000000000000000007A /* HDS044View.swift in Sources */,
+				FEB00000000000000000007C /* HDS045View.swift in Sources */,
+				FEB00000000000000000007E /* HDS046View.swift in Sources */,
+				FEB000000000000000000080 /* HDS047View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
