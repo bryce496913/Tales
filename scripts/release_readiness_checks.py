@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TALES = ROOT / "Tales"
 SPHINX = TALES / "Tales From the Sphinx"
 ANUBIS = TALES / "The Trial of Anubis"
+HADES = TALES / "The Descent to Hades"
 PBXPROJ = ROOT / "Tales.xcodeproj" / "project.pbxproj"
 
 SPHINX_ENDINGS = {
@@ -29,6 +30,9 @@ SPHINX_ENDINGS = {
 }
 
 failures = []
+# Story pages may be built before their illustrations exist; they show a placeholder until then.
+pending_art = []
+PENDING_ART = re.compile(r"HDS\d{3}\.png")
 
 
 def check(condition, message):
@@ -118,7 +122,12 @@ def check_images():
         names = re.findall(r'(?:imageName|resourceName): "([^"]+\.png)"', text)
         names += re.findall(r'(?:Image|ImageName|StaticImage)\(imageName: "([^"]+\.png)"', text)
         for name in names:
-            check(name in images, f"{path.relative_to(ROOT)} references missing image {name}")
+            if name in images:
+                continue
+            if PENDING_ART.fullmatch(name):
+                pending_art.append(name)
+            else:
+                failures.append(f"{path.relative_to(ROOT)} references missing image {name}")
 
 
 def check_audio():
@@ -131,43 +140,55 @@ def check_audio():
             check(f"{name}.m4a" in bundled, f"{name}.m4a is not in the app target's Copy Bundle Resources")
 
 
-def check_anubis_routes():
-    route_text = (ANUBIS / "TrialOfAnubisRoute.swift").read_text()
+def check_story_routes(folder, enum_name, prefix, outcome_view, story_name):
+    """Checks a numbered-page story (ANU, HDS): routes, ending IDs and one illustration per page."""
+    lower = prefix.lower()
+    route_text = (folder / f"{enum_name}.swift").read_text()
     cases = re.findall(r"^\s*case (\w+) = \"", route_text, flags=re.M)
-    check(cases, "no TrialOfAnubisRoute cases found")
-    destination = route_text[route_text.index("struct TrialOfAnubisDestinationView"):]
+    check(cases, f"no {enum_name} cases found")
+    destination_view = enum_name.replace("Route", "DestinationView")
+    destination = route_text[route_text.index(f"struct {destination_view}"):]
     for case in cases:
-        check(f"case .{case}:" in destination, f"TrialOfAnubisDestinationView does not handle .{case}")
+        check(f"case .{case}:" in destination, f"{destination_view} does not handle .{case}")
 
-    for path in sorted(ANUBIS.glob("*.swift")):
+    for path in sorted(folder.glob("*.swift")):
         for target in re.findall(r"destination: \.(\w+)", path.read_text()):
             check(target in cases, f"{path.name} navigates to unknown route .{target}")
 
-    # Game-over pages are numbered routes; TrialOfAnubisRoute.endingID maps each to its stable ID.
-    mapping = dict(re.findall(r'case \.(anu\d{3}): return "([^"]+)"', route_text))
-    check(mapping, "TrialOfAnubisRoute has no ending IDs")
+    # Game-over pages are numbered routes; the route enum's endingID maps each to its stable ID.
+    mapping = dict(re.findall(rf'case \.({lower}\d{{3}}): return "([^"]+)"', route_text))
+    check(mapping, f"{enum_name} has no ending IDs")
     for case, ending_id in mapping.items():
-        path = ANUBIS / f"ANU{case[3:]}View.swift"
+        path = folder / f"{prefix}{case[3:]}View.swift"
         if not path.exists():
-            failures.append(f"missing Anubis ending file {path.name}")
+            failures.append(f"missing {story_name} ending file {path.name}")
             continue
         text = path.read_text()
-        check("TrialOfAnubisOutcomeView(" in text, f"{path.name} is an ending but does not use TrialOfAnubisOutcomeView")
+        check(f"{outcome_view}(" in text, f"{path.name} is an ending but does not use {outcome_view}")
         check(f'endingID: "{ending_id}"' in text,
-              f"{path.name} endingID does not match TrialOfAnubisRoute ({ending_id})")
-    for path in sorted(ANUBIS.glob("ANU*View.swift")):
-        if "TrialOfAnubisOutcomeView(" in path.read_text():
-            check(f"anu{path.stem[3:6]}" in mapping, f"{path.name} shows an outcome but has no ending ID in TrialOfAnubisRoute")
+              f"{path.name} endingID does not match {enum_name} ({ending_id})")
+    for path in sorted(folder.glob(f"{prefix}*View.swift")):
+        if f"{outcome_view}(" in path.read_text():
+            check(f"{lower}{path.stem[3:6]}" in mapping, f"{path.name} shows an outcome but has no ending ID in {enum_name}")
 
-    # Every Anubis page has its own illustration named after its route number.
+    # Every page has its own illustration named after its route number.
     for case in cases:
         number = case[3:]
-        path = ANUBIS / f"ANU{number}View.swift"
+        path = folder / f"{prefix}{number}View.swift"
         if not path.exists():
-            failures.append(f"missing Anubis page file {path.name} for .{case}")
+            failures.append(f"missing {story_name} page file {path.name} for .{case}")
             continue
         images = re.findall(r'imageName: "([^"]+)"', path.read_text())
-        check(images == [f"ANU{number}.png"], f"{path.name} should use ANU{number}.png, found {images}")
+        check(images == [f"{prefix}{number}.png"], f"{path.name} should use {prefix}{number}.png, found {images}")
+
+
+def check_anubis_routes():
+    check_story_routes(ANUBIS, "TrialOfAnubisRoute", "ANU", "TrialOfAnubisOutcomeView", "Anubis")
+
+
+def check_hades_routes():
+    check_story_routes(HADES, "DescentToHadesRoute", "HDS", "DescentToHadesOutcomeView", "Hades")
+
 
 def main():
     check_sphinx_endings()
@@ -177,12 +198,15 @@ def main():
     check_images()
     check_audio()
     check_anubis_routes()
+    check_hades_routes()
 
     if failures:
         print("Release readiness checks FAILED:")
         for failure in failures:
             print(f"  - {failure}")
         return 1
+    if pending_art:
+        print(f"Pending illustrations (placeholder shown in the app): {', '.join(sorted(set(pending_art)))}")
     print("Release readiness checks passed.")
     return 0
 

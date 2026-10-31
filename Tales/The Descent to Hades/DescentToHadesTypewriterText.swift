@@ -1,0 +1,105 @@
+import SwiftUI
+
+struct DescentToHadesTypewriterText: View {
+    let text: String
+    var speed: DescentToHadesTypewriterSpeed = .normal
+    var startDelay: TimeInterval = 0.25
+    var onComplete: (() -> Void)? = nil
+    var reduceMotionOverride: Bool? = nil
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var visibleText = ""
+    @State private var typingTask: Task<Void, Never>?
+    @State private var didComplete = false
+    @State private var currentText = ""
+
+    var body: some View {
+        Text(effectiveReduceMotion ? text : visibleText)
+            .font(.system(.body, design: .serif))
+            .foregroundColor(DescentToHadesTheme.marble)
+            .lineSpacing(5)
+            .fixedSize(horizontal: false, vertical: true)
+            .contentShape(Rectangle())
+            .accessibilityLabel(Text(text))
+            .accessibilityValue(Text(didComplete ? "Complete" : "Revealing text"))
+            .accessibilityAction(named: Text("Reveal full text")) { completeOnce() }
+            .onTapGesture { completeOnce() }
+            .onAppear { startIfNeeded(forceRestart: true) }
+            .onDisappear { cancelTyping() }
+            .onChange(of: text) { _ in startIfNeeded(forceRestart: true) }
+            .onChange(of: reduceMotion) { _ in startIfNeeded(forceRestart: true) }
+    }
+
+    private var effectiveReduceMotion: Bool {
+        reduceMotionOverride ?? reduceMotion
+    }
+
+    private func startIfNeeded(forceRestart: Bool = false) {
+        if forceRestart || currentText != text {
+            currentText = text
+            didComplete = false
+            visibleText = ""
+        }
+        typingTask?.cancel()
+
+        guard !effectiveReduceMotion else {
+            completeOnce()
+            return
+        }
+
+        typingTask = Task { @MainActor in
+            if startDelay > 0 {
+                try? await Task.sleep(nanoseconds: UInt64(startDelay * 1_000_000_000))
+            }
+            guard !Task.isCancelled else { return }
+
+            let characters = Array(text)
+            var index = 0
+            while index < characters.count && !Task.isCancelled {
+                index = min(characters.count, index + speed.batchSize)
+                visibleText = String(characters.prefix(index))
+                try? await Task.sleep(nanoseconds: speed.delay)
+            }
+
+            guard !Task.isCancelled else { return }
+            completeOnce()
+        }
+    }
+
+    private func cancelTyping() {
+        typingTask?.cancel()
+        typingTask = nil
+    }
+
+    private func completeOnce() {
+        visibleText = text
+        typingTask?.cancel()
+        typingTask = nil
+        guard !didComplete else { return }
+        didComplete = true
+        onComplete?()
+    }
+}
+
+struct DescentToHadesTypewriterText_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            DescentToHadesTypewriterText(
+                text: "Charon waits as the sentence slowly rises out of the mist.",
+                speed: .slow,
+                startDelay: 1
+            )
+            .padding()
+            .background(DescentToHadesTheme.card)
+            .previewDisplayName("Partial reveal")
+
+            DescentToHadesTypewriterText(
+                text: "Reduce Motion shows the full passage immediately.",
+                reduceMotionOverride: true
+            )
+            .padding()
+            .background(DescentToHadesTheme.card)
+            .previewDisplayName("Reduce Motion")
+        }
+    }
+}

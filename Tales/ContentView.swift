@@ -48,6 +48,9 @@ struct ContentView: View {
                 openAnubis: {
                     appScreen = .trialOfAnubis
                 },
+                openHades: {
+                    appScreen = .descentToHades
+                },
                 returnToMainMenu: {
                     appScreen = .mainMenu
                 }
@@ -62,6 +65,13 @@ struct ContentView: View {
 
         case .trialOfAnubis:
             TrialOfAnubisRootView(
+                returnToStorySelection: {
+                    appScreen = .storySelection
+                }
+            )
+
+        case .descentToHades:
+            DescentToHadesRootView(
                 returnToStorySelection: {
                     appScreen = .storySelection
                 }

@@ -1,6 +1,6 @@
 # Tales
 
-An iOS collection of illustrated choose-your-own-adventure stories inspired by Egyptian mythology. Players pick a story from the Tales main menu, and each story keeps its own saved progress and completed endings.
+An iOS collection of illustrated choose-your-own-adventure stories inspired by Egyptian and Greek mythology. Players pick a story from the Tales main menu, and each story keeps its own saved progress and completed endings.
 
 ## Creator
 Bryce Cameron
@@ -12,6 +12,9 @@ Embark on a thrilling adventure through the mysteries of the Sphinx in "Tales Fr
 
 ### The Trial of Anubis
 Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart. A branching story across 48 pages (`ANU-000`…`ANU-047`) built around the Hall of Gates hub: recover the Feather Arm, Heart Pan and Balance Stone, then decide what to do with the restored scales. Ten endings, listed below.
+
+### The Descent to Hades
+Cross the river Styx, win the favour of the gods of the dead, and bring your brother home without looking back. After a squall off Cape Tainaron drowns your brother Theo, you follow him into the Greek underworld. A branching story across 48 pages (`HDS-000`…`HDS-047`) built around the Crossroads of Judgment hub: collect the Water of Lethe, the Ember of Phlegethon and the Golden Bough as gifts for Hades, then face him on his throne. Five remembered choices change later pages. Eleven endings, listed below.
 
 ## About
 "Tales From the Sphinx" is an engaging text-based choose-your-own-adventure game that transports players into a mysterious world inspired by Egyptian mythology. Immerse yourself in a captivating narrative where every decision influences the unfolding story. Navigate through beautifully illustrated scenarios, encountering various challenges, characters, and unexpected events. The game offers a unique and immersive experience, allowing players to shape their destiny by making crucial choices at every juncture.
@@ -27,6 +30,7 @@ Enter the Egyptian underworld, recover the sacred scales, and face the final jud
 - `Tales/` – shared app shell: main menu, story selection, options, theme, and the shared page/outcome components used by Tales From the Sphinx.
 - `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, images, and the story script.
 - `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), its own navigation/progress state and presentation components, images, and the story map.
+- `Tales/The Descent to Hades/` – Hades pages (`HDS000View`…`HDS047View`, game-over pages included), its own navigation/progress state, Greek colour theme (`DescentToHadesTheme`) and presentation components, images, and the story map.
 - `Tales/TalesAmbience.m4a` – looping background ambience, played by `AmbiencePlayer` and toggled under Options > Sound.
 - `scripts/audio/generate_ambience.py` – the script that synthesizes the ambience, for regenerating or tweaking it.
 - `scripts/release_readiness_checks.py` – static checks run before a release (see below).
@@ -39,7 +43,7 @@ Run from the repository root:
 python3 scripts/release_readiness_checks.py
 ```
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis ending IDs match the navigation state.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending IDs match their route enums. Hades page illustrations that have not been added yet are listed as pending instead of failing the check.
 
 ## Release Readiness Notes
 
@@ -78,5 +82,21 @@ Game-over pages are numbered story routes. See `Tales/The Trial of Anubis/The_Tr
 - `ANU038View` (`ANU-038`, Buried with the Stone): `anubis_buried_with_the_stone`
 - `ANU040View` (`ANU-040`, A Peaceful Death): `anubis_peaceful_death`
 - `ANU047View` (`ANU-047`, Defy the Gods): `anubis_defy_the_gods`
+
+## The Descent to Hades Ending ID Mapping
+
+Game-over pages are numbered story routes. See `Tales/The Descent to Hades/The_Descent_to_Hades_Story_Map.md` for the full story map.
+
+- `HDS003View` (`HDS-003`, Lost to the Sea): `hades_lost_to_the_sea`
+- `HDS008View` (`HDS-008`, Taken by the Styx): `hades_taken_by_the_styx`
+- `HDS012View` (`HDS-012`, Torn by Cerberus): `hades_torn_by_cerberus`
+- `HDS014View` (`HDS-014`, Bound by the Seeds): `hades_bound_by_the_seeds`
+- `HDS023View` (`HDS-023`, The Sweet Forgetting): `hades_sweet_forgetting`
+- `HDS031View` (`HDS-031`, Chained in Tartarus): `hades_chained_in_tartarus`
+- `HDS039View` (`HDS-039`, The Isles of the Blessed): `hades_isles_of_the_blessed`
+- `HDS044View` (`HDS-044`, Out Into the Sun): `hades_out_into_the_sun`
+- `HDS045View` (`HDS-045`, Looked Back): `hades_looked_back`
+- `HDS046View` (`HDS-046`, The Willing Exchange): `hades_willing_exchange`
+- `HDS047View` (`HDS-047`, Thief of the Dead): `hades_thief_of_the_dead`
 
 Feel the suspense, make strategic decisions, and explore the world of "Tales From the Sphinx" – an interactive adventure that puts you in control of your destiny.
