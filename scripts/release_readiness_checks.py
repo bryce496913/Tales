@@ -5,6 +5,7 @@ Run from anywhere: python3 scripts/release_readiness_checks.py
 Exits non-zero and lists every failure if any check fails.
 """
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -103,7 +104,7 @@ def check_project_membership():
 
 
 def check_images():
-    images = {p.name for p in TALES.rglob("*.png")}
+    images = {p.name for p in TALES.rglob("*.png") if ".xcassets" not in str(p)}
     project = PBXPROJ.read_text()
     registered = set(re.findall(r"path = \"?([^\";]+\.png)\"?;", project))
     resources_phase = project.split("/* Begin PBXResourcesBuildPhase section */")[-1].split("/* End PBXResourcesBuildPhase section */")[0]
@@ -183,6 +184,17 @@ def check_hades_routes():
     check_story_routes(HADES, "DescentToHadesRoute", "HDS", "DescentToHadesOutcomeView", "Hades")
 
 
+def check_tracked_junk():
+    # .gitignore keeps these out, but uploads through GitHub's web UI or Desktop can bypass it.
+    try:
+        tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.splitlines()
+    except (OSError, subprocess.CalledProcessError):
+        return
+    for path in tracked:
+        if path.endswith(".DS_Store") or "/xcuserdata/" in path or path.endswith(".xcuserstate"):
+            failures.append(f"{path} is committed; remove it with git rm --cached (it is personal/macOS state)")
+
+
 def main():
     check_sphinx_endings()
     check_sphinx_routes()
@@ -192,6 +204,7 @@ def main():
     check_audio()
     check_anubis_routes()
     check_hades_routes()
+    check_tracked_junk()
 
     if failures:
         print("Release readiness checks FAILED:")

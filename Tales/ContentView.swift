@@ -87,14 +87,12 @@ struct SplashScreen: View {
         ZStack {
             EgyptianBackground()
             VStack(spacing: 20) {
-                Image(uiImage: #imageLiteral(resourceName: "Icon.png"))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 220)
-                    .padding()
-                    .goldCard(padding: 12)
-                Text("Tales From the Sphinx")
-                    .font(.system(.title, design: .serif).weight(.bold))
+                Image(systemName: "book.pages.fill")
+                    .font(.system(size: 72, weight: .semibold, design: .serif))
+                    .foregroundColor(AppTheme.gold)
+                    .accessibilityHidden(true)
+                Text("Tales")
+                    .font(.system(size: 48, weight: .bold, design: .serif))
                     .foregroundColor(AppTheme.gold)
             }
             .opacity(appeared ? 1 : 0)
