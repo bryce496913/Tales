@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0E58894AEB166A6EDFD6C4 /* AppNavigationStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC2C6CA9DA603A1F8ADB1 /* AppNavigationStateTests.swift */; };
+		2FCD0A4A88E00A0B6EAF8B11 /* BranchingStoryStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237D46884273827280209A6 /* BranchingStoryStateTests.swift */; };
+		132950168022AC15ABC5CB54 /* EndingsGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D625063EF53E32454A82E /* EndingsGalleryView.swift */; };
 		8B559B973EECD7DC18DE1B3E /* StoryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6308A685A26936D133E3337 /* StoryTheme.swift */; };
 		26812DE2585A789B0806B2AB /* StoryEndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AEACE85B94451FF564AAE /* StoryEndingView.swift */; };
 		2B61C19FE60FE716E1F142DF /* BranchingStoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E2226500B69D9FA2839EC /* BranchingStoryViews.swift */; };
@@ -170,7 +173,21 @@
 		FEB000000000000000000080 /* HDS047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007F /* HDS047View.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DFAC54EC022B5FA0CE9E7935 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE05049F2B289A4F0015CAFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE0504A62B289A4F0015CAFB;
+			remoteInfo = Tales;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6F9A1917669D5240DD64C7D3 /* TalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1EC2C6CA9DA603A1F8ADB1 /* AppNavigationStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationStateTests.swift; sourceTree = "<group>"; };
+		3237D46884273827280209A6 /* BranchingStoryStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchingStoryStateTests.swift; sourceTree = "<group>"; };
+		C75D625063EF53E32454A82E /* EndingsGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingsGalleryView.swift; sourceTree = "<group>"; };
 		C6308A685A26936D133E3337 /* StoryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTheme.swift; sourceTree = "<group>"; };
 		661AEACE85B94451FF564AAE /* StoryEndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEndingView.swift; sourceTree = "<group>"; };
 		F14E2226500B69D9FA2839EC /* BranchingStoryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchingStoryViews.swift; sourceTree = "<group>"; };
@@ -339,6 +356,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B0976A84F3A3080B1A0C9FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE0504A42B289A4F0015CAFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,9 +373,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04FD085B5B8E47DAD5FC6F22 /* TalesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C1EC2C6CA9DA603A1F8ADB1 /* AppNavigationStateTests.swift */,
+				3237D46884273827280209A6 /* BranchingStoryStateTests.swift */,
+			);
+			path = TalesTests;
+			sourceTree = "<group>";
+		};
 		8347B085A9D7684D1B5E82DB /* Story Engine */ = {
 			isa = PBXGroup;
 			children = (
+				C75D625063EF53E32454A82E /* EndingsGalleryView.swift */,
 				C6308A685A26936D133E3337 /* StoryTheme.swift */,
 				661AEACE85B94451FF564AAE /* StoryEndingView.swift */,
 				F14E2226500B69D9FA2839EC /* BranchingStoryViews.swift */,
@@ -409,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0504A92B289A4F0015CAFB /* Tales */,
+				04FD085B5B8E47DAD5FC6F22 /* TalesTests */,
 				FE0504A82B289A4F0015CAFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -417,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0504A72B289A4F0015CAFB /* Tales.app */,
+				6F9A1917669D5240DD64C7D3 /* TalesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -546,6 +582,24 @@
 			productReference = FE0504A72B289A4F0015CAFB /* Tales.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3D43AFCF71BAC5808E8553C9 /* TalesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00ED3C2737010EC9CD749A93 /* Build configuration list for PBXNativeTarget "TalesTests" */;
+			buildPhases = (
+				C1D5A675EB10CD4EBD4D6C18 /* Sources */,
+				0B0976A84F3A3080B1A0C9FB /* Frameworks */,
+				8772E477F959EAB55992157A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				151FDAAC81FA51443326CBBC /* PBXTargetDependency */,
+			);
+			name = TalesTests;
+			productName = TalesTests;
+			productReference = 6F9A1917669D5240DD64C7D3 /* TalesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -558,6 +612,10 @@
 				TargetAttributes = {
 					FE0504A62B289A4F0015CAFB = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					3D43AFCF71BAC5808E8553C9 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = FE0504A62B289A4F0015CAFB;
 					};
 				};
 			};
@@ -575,11 +633,19 @@
 			projectRoot = "";
 			targets = (
 				FE0504A62B289A4F0015CAFB /* Tales */,
+				3D43AFCF71BAC5808E8553C9 /* TalesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8772E477F959EAB55992157A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE0504A52B289A4F0015CAFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,10 +659,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C1D5A675EB10CD4EBD4D6C18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0E58894AEB166A6EDFD6C4 /* AppNavigationStateTests.swift in Sources */,
+				2FCD0A4A88E00A0B6EAF8B11 /* BranchingStoryStateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE0504A32B289A4F0015CAFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132950168022AC15ABC5CB54 /* EndingsGalleryView.swift in Sources */,
 				8B559B973EECD7DC18DE1B3E /* StoryTheme.swift in Sources */,
 				26812DE2585A789B0806B2AB /* StoryEndingView.swift in Sources */,
 				2B61C19FE60FE716E1F142DF /* BranchingStoryViews.swift in Sources */,
@@ -759,6 +835,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		151FDAAC81FA51443326CBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE0504A62B289A4F0015CAFB /* Tales */;
+			targetProxy = DFAC54EC022B5FA0CE9E7935 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FE0504B82B289A510015CAFB /* Debug */ = {
@@ -940,6 +1024,44 @@
 			};
 			name = Release;
 		};
+		38928D5A7559732E301B8C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUB8MS3A98;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bryce-Cameron-Design.TalesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tales.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tales";
+			};
+			name = Debug;
+		};
+		32C9FB063D3A950B3809FAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUB8MS3A98;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bryce-Cameron-Design.TalesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tales.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tales";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -957,6 +1079,15 @@
 			buildConfigurations = (
 				FE0504BB2B289A510015CAFB /* Debug */,
 				FE0504BC2B289A510015CAFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00ED3C2737010EC9CD749A93 /* Build configuration list for PBXNativeTarget "TalesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38928D5A7559732E301B8C90 /* Debug */,
+				32C9FB063D3A950B3809FAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

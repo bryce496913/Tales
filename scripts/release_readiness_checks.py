@@ -50,6 +50,20 @@ def check_sphinx_endings():
             continue
         check(f'endingID: "{ending_id}"' in path.read_text(), f"{filename} missing endingID {ending_id}")
 
+    # The endings gallery lists the same endings, with each page's own art.
+    root = (SPHINX / "TalesFromTheSphinxRootView.swift").read_text()
+    gallery = re.findall(r'EndingEntry\(id: "([^"]+)", imageName: "([^"]+)"\)', root)
+    check([i for i, _ in gallery] == list(SPHINX_ENDINGS.values()),
+          "TalesFromTheSphinx.endings must list the Sphinx endings in page order")
+    for filename, ending_id in SPHINX_ENDINGS.items():
+        path = SPHINX / filename
+        if not path.exists():
+            continue
+        page_images = re.findall(r'imageName: "([^"]+)"', path.read_text())
+        for gallery_id, image in gallery:
+            if gallery_id == ending_id:
+                check(page_images == [image], f"TalesFromTheSphinx.endings shows {image} for {ending_id}, but {filename} uses {page_images}")
+
 
 def check_sphinx_routes():
     root_text = (SPHINX / "TalesFromTheSphinxRootView.swift").read_text()
@@ -70,7 +84,7 @@ def check_removed_apis():
 def check_project_membership():
     project = PBXPROJ.read_text()
     referenced = set(re.findall(r"path = \"?([^\";]+\.swift)\"?;", project))
-    on_disk = {p.name for p in swift_files()}
+    on_disk = {p.name for p in swift_files()} | {p.name for p in (ROOT / "TalesTests").glob("*.swift")}
     for name in sorted(on_disk - referenced):
         failures.append(f"{name} exists on disk but is not in the Xcode project")
     for name in sorted(referenced - on_disk):
