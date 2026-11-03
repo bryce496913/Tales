@@ -43,7 +43,7 @@ Run from the repository root:
 python3 scripts/release_readiness_checks.py
 ```
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending IDs match their route enums. Hades page illustrations that have not been added yet are listed as pending instead of failing the check.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending IDs match their route enums.
 
 ## Release Readiness Notes
 
