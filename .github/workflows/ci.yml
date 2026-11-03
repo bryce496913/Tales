@@ -64,8 +64,10 @@ jobs:
             -scheme Tales \
             -destination "id=${{ steps.simulator.outputs.udid }}" \
             CODE_SIGNING_ALLOWED=NO \
-            | tee test.log | grep -E "error:|Test Case .* (passed|failed)|Executed|TEST (SUCCEEDED|FAILED)" || true
+            | tee test.log | grep -iE "error:|test case .* (passed|failed)|executed [0-9]+ test|TEST (SUCCEEDED|FAILED)" || true
           grep -q "TEST SUCCEEDED" test.log
+          # Make sure the tests actually ran, not just that nothing failed.
+          ! grep -qiE "executed 0 tests" test.log
       - name: Upload test log
         if: failure()
         uses: actions/upload-artifact@v4
