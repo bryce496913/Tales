@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
+enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable, BranchingRoute {
     case anu000 = "ANU-000"
     case anu001 = "ANU-001"
     case anu002 = "ANU-002"
@@ -50,13 +50,14 @@ enum TrialOfAnubisRoute: String, Codable, Hashable, CaseIterable {
     case anu046 = "ANU-046"
     case anu047 = "ANU-047"
 
+    /// First page of a new adventure.
+    static let start: TrialOfAnubisRoute = .anu000
+
     /// HOME hub that links to the three item paths.
     static let home: TrialOfAnubisRoute = .anu011
 
     /// HOME once the Feather Arm, Heart Pan and Balance Stone are all collected.
     static let endGame: TrialOfAnubisRoute = .anu026
-
-    var isEnding: Bool { endingID != nil }
 
     /// Stable ID recorded when a game-over page is reached.
     var endingID: String? {

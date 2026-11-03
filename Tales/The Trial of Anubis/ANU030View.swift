@@ -6,7 +6,6 @@ struct ANU030View: View {
 
     var body: some View {
         TrialOfAnubisOutcomeView(
-            endingID: "anubis_scales_restored",
             outcome: .win,
             title: "The Scales Restored",
             classification: "Best Ending",

@@ -6,7 +6,6 @@ struct HDS044View: View {
 
     var body: some View {
         DescentToHadesOutcomeView(
-            endingID: "hades_out_into_the_sun",
             outcome: .win,
             title: "Out Into the Sun",
             classification: "Best Ending",

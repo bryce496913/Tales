@@ -129,7 +129,7 @@ struct StorySelectionCard_Previews: PreviewProvider {
 
     private static func preview(for story: StorySelectionItem) -> some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
             StorySelectionCard(story: story) {}
                 .frame(width: 150)
                 .padding()

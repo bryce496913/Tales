@@ -7,6 +7,7 @@ struct ChoiceButton: View {
     let action: () -> Void
     @State private var isNavigating = false
     @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.storyTheme) private var theme
 
     init(_ title: String, width: CGFloat? = nil, height: CGFloat? = nil, action: @escaping () -> Void) {
         self.title = title; self.width = width; self.height = height; self.action = action
@@ -22,7 +23,7 @@ struct ChoiceButton: View {
         } label: {
             Text(title)
                 .font(.system(.headline, design: .serif).weight(.semibold))
-                .foregroundColor(AppTheme.buttonText)
+                .foregroundColor(theme.buttonText)
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
                 .minimumScaleFactor(0.82)

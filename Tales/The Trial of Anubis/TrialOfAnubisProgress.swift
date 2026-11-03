@@ -8,7 +8,7 @@ enum TrialOfAnubisItem: String, Codable, CaseIterable {
 }
 
 /// Choices the story remembers so later pages can react to them.
-enum TrialOfAnubisStoryFlag: String, Codable, CaseIterable {
+enum TrialOfAnubisStoryFlag: String, Codable, CaseIterable, BranchingStoryFlag {
     case freedSoul
     case abandonedSoul
     case acceptedRebel
@@ -21,26 +21,4 @@ enum TrialOfAnubisStoryFlag: String, Codable, CaseIterable {
         case .acceptedRebel: return nil
         }
     }
-}
-
-struct TrialOfAnubisProgress: Codable {
-    var currentNodeID: String
-    var visitedNodeIDs: Set<String>
-    var collectedItems: Set<TrialOfAnubisItem>
-    var storyFlags: Set<TrialOfAnubisStoryFlag>
-    var completedEndingIDs: Set<String>
-
-    var hasAllItems: Bool {
-        collectedItems.isSuperset(of: TrialOfAnubisItem.allCases)
-    }
-
-    static let initial = TrialOfAnubisProgress(
-        currentNodeID: TrialOfAnubisRoute.anu000.rawValue,
-        visitedNodeIDs: [
-            TrialOfAnubisRoute.anu000.rawValue
-        ],
-        collectedItems: [],
-        storyFlags: [],
-        completedEndingIDs: []
-    )
 }

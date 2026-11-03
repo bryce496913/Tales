@@ -4,10 +4,11 @@ struct AppMainMenuView: View {
     let pickAStory: () -> Void
 
     @State private var appeared = false
+    @State private var showingOptions = false
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
 
             ViewThatFits(in: .vertical) {
                 menuContent
@@ -15,6 +16,7 @@ struct AppMainMenuView: View {
             }
         }
         .onAppear { withAnimation(.easeOut(duration: 0.55)) { appeared = true } }
+        .optionsSheet(isPresented: $showingOptions)
     }
 
     private var menuContent: some View {
@@ -39,7 +41,7 @@ struct AppMainMenuView: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .goldCard()
+            .storyCard()
             .frame(maxWidth: AppTheme.maximumTextWidth)
 
             MenuButton(title: "Pick a Story") {
@@ -47,6 +49,11 @@ struct AppMainMenuView: View {
             }
             .accessibilityLabel("Pick a Story")
             .accessibilityHint("Opens the story selection screen.")
+
+            MenuButton(title: "Options") {
+                showingOptions = true
+            }
+            .accessibilityHint("Opens settings for text, transitions, haptics and sound.")
 
             Spacer(minLength: 32)
         }
@@ -58,6 +65,8 @@ struct AppMainMenuView: View {
 
 struct AppMainMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        AppMainMenuView {}
+        PreviewContainer {
+            AppMainMenuView {}
+        }
     }
 }

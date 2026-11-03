@@ -169,8 +169,8 @@ def check_story_routes(folder, enum_name, prefix, outcome_view, story_name):
             continue
         text = path.read_text()
         check(f"{outcome_view}(" in text, f"{path.name} is an ending but does not use {outcome_view}")
-        check(f'endingID: "{ending_id}"' in text,
-              f"{path.name} endingID does not match {enum_name} ({ending_id})")
+        # The route enum is the only copy of the ID; the engine records it on navigation.
+        check("endingID:" not in text, f"{path.name} passes an endingID; it now comes from {enum_name} alone")
     for path in sorted(folder.glob(f"{prefix}*View.swift")):
         if f"{outcome_view}(" in path.read_text():
             check(f"{lower}{path.stem[3:6]}" in mapping, f"{path.name} shows an outcome but has no ending ID in {enum_name}")

@@ -26,41 +26,6 @@ enum AppTheme {
     }
 }
 
-struct EgyptianBackground: View {
-    var body: some View {
-        ZStack {
-            AppTheme.background
-            RadialGradient(colors: [AppTheme.gold.opacity(0.20), .clear], center: .top, startRadius: 20, endRadius: 420)
-            LinearGradient(colors: [.clear, .black.opacity(0.32)], startPoint: .center, endPoint: .bottom)
-        }
-        .ignoresSafeArea()
-    }
-}
-
-struct GoldCardModifier: ViewModifier {
-    var padding: CGFloat = AppTheme.cardPadding
-
-    func body(content: Content) -> some View {
-        content
-            .padding(padding)
-            .background(
-                RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous)
-                    .fill(AppTheme.card)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous)
-                            .stroke(AppTheme.gold.opacity(0.55), lineWidth: 1)
-                    )
-                    .shadow(color: AppTheme.shadow, radius: 18, x: 0, y: 10)
-            )
-    }
-}
-
-extension View {
-    func goldCard(padding: CGFloat = AppTheme.cardPadding) -> some View {
-        modifier(GoldCardModifier(padding: padding))
-    }
-}
-
 extension Color {
     init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)

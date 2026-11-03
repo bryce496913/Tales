@@ -3,7 +3,6 @@ import SwiftUI
 struct HDS003View: View {
     var body: some View {
         DescentToHadesOutcomeView(
-            endingID: "hades_lost_to_the_sea",
             outcome: .death,
             title: "Lost to the Sea",
             classification: "Death",

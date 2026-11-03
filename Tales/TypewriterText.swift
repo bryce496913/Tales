@@ -1,45 +1,79 @@
 import SwiftUI
 
+/// Story text that types itself out. Tap (or use the accessibility action) to reveal it all at once.
+/// Shows the full text immediately when the typewriter is off or Reduce Motion is on.
 struct TypewriterText: View {
     let text: String
     var speed: TypewriterSpeed = .normal
     var startDelay: TimeInterval = 0.25
     var isEnabled: Bool = true
     var onComplete: (() -> Void)? = nil
+
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @State private var visible = ""
-    @State private var task: Task<Void, Never>?
+    @Environment(\.storyTheme) private var theme
+    @State private var visibleText = ""
+    @State private var typingTask: Task<Void, Never>?
+    @State private var didComplete = false
 
     var body: some View {
-        Text(displayText)
+        Text(showsFullText ? text : visibleText)
             .font(.system(.body, design: .serif))
-            .foregroundColor(AppTheme.warmText)
+            .foregroundColor(theme.text)
             .lineSpacing(6)
             .fixedSize(horizontal: false, vertical: true)
             .contentShape(Rectangle())
             .accessibilityLabel(Text(text))
-            .accessibilityValue(Text(""))
-            .onTapGesture { completeNow() }
+            .accessibilityAction(named: Text("Reveal full text")) { complete() }
+            .onTapGesture { complete() }
             .onAppear { start() }
-            .onDisappear { task?.cancel(); task = nil }
+            .onDisappear { cancelTyping() }
             .onChange(of: text) { _ in start() }
             .onChange(of: reduceMotion) { _ in start() }
+            .onChange(of: isEnabled) { _ in start() }
     }
-    private var displayText: String { (reduceMotion || !isEnabled) ? text : visible }
+
+    private var showsFullText: Bool {
+        reduceMotion || !isEnabled || didComplete
+    }
+
     private func start() {
-        task?.cancel()
-        if reduceMotion || !isEnabled { visible = text; onComplete?(); return }
-        visible = ""
-        task = Task { @MainActor in
-            try? await Task.sleep(nanoseconds: UInt64(startDelay * 1_000_000_000))
-            let chars = Array(text); var index = 0
-            while index < chars.count && !Task.isCancelled {
-                index = min(chars.count, index + speed.batch)
-                visible = String(chars.prefix(index))
+        cancelTyping()
+        didComplete = false
+        visibleText = ""
+
+        guard isEnabled, !reduceMotion else {
+            complete()
+            return
+        }
+
+        let characters = Array(text)
+        let speed = speed
+        let startDelay = startDelay
+        typingTask = Task { @MainActor in
+            if startDelay > 0 {
+                try? await Task.sleep(nanoseconds: UInt64(startDelay * 1_000_000_000))
+            }
+            var index = 0
+            while index < characters.count && !Task.isCancelled {
+                index = min(characters.count, index + speed.batch)
+                visibleText = String(characters.prefix(index))
                 try? await Task.sleep(nanoseconds: speed.delay)
             }
-            if !Task.isCancelled { visible = text; onComplete?() }
+            guard !Task.isCancelled else { return }
+            complete()
         }
     }
-    private func completeNow() { task?.cancel(); task = nil; visible = text; onComplete?() }
+
+    private func cancelTyping() {
+        typingTask?.cancel()
+        typingTask = nil
+    }
+
+    private func complete() {
+        cancelTyping()
+        visibleText = text
+        guard !didComplete else { return }
+        didComplete = true
+        onComplete?()
+    }
 }

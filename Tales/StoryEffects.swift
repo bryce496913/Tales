@@ -1,23 +1,51 @@
 import SwiftUI
 
-enum StoryTransitionStyle: Equatable { case sandFade, torchReveal, stoneDoor }
-enum TypewriterSpeed: Equatable { case slow, normal, fast
-    var delay: UInt64 { switch self { case .slow: 70_000_000; case .normal: 42_000_000; case .fast: 24_000_000 } }
-    var batch: Int { switch self { case .slow: 1; case .normal: 2; case .fast: 3 } }
+enum TypewriterSpeed: Equatable {
+    case slow, normal, fast
+
+    var delay: UInt64 {
+        switch self {
+        case .slow: return 70_000_000
+        case .normal: return 42_000_000
+        case .fast: return 24_000_000
+        }
+    }
+
+    var batch: Int {
+        switch self {
+        case .slow: return 1
+        case .normal: return 2
+        case .fast: return 3
+        }
+    }
 }
 
-struct StoryPageEffects {
-    var entryTransition: StoryTransitionStyle = .sandFade
-    var choicesWaitForText: Bool = true
-
-    static let standard = StoryPageEffects()
+enum StoryHaptic {
+    case success, warning, error
 }
 
+/// Plays haptics. `GameOptions` keeps `isEnabled` in sync with the Haptics setting, so this
+/// never reads preferences itself.
 final class HapticManager {
-    static let shared = HapticManager(); private init() {}
-    private var hapticsEnabled: Bool { UserDefaults.standard.object(forKey: "Tales.hapticsEnabled") as? Bool ?? true }
-    func playChoiceTap() { guard hapticsEnabled else { return }; UIImpactFeedbackGenerator(style: .medium).impactOccurred() }
-    func playWin() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.success) }
-    func playLose() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.warning) }
-    func playDeath() { guard hapticsEnabled else { return }; UINotificationFeedbackGenerator().notificationOccurred(.error) }
+    static let shared = HapticManager()
+
+    var isEnabled = true
+
+    private init() {}
+
+    func playChoiceTap() {
+        guard isEnabled else { return }
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+    }
+
+    func play(_ haptic: StoryHaptic) {
+        guard isEnabled else { return }
+        let type: UINotificationFeedbackGenerator.FeedbackType
+        switch haptic {
+        case .success: type = .success
+        case .warning: type = .warning
+        case .error: type = .error
+        }
+        UINotificationFeedbackGenerator().notificationOccurred(type)
+    }
 }
