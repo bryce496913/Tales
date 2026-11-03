@@ -268,6 +268,54 @@
 		FEB000000000000000000080 /* HDS047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007F /* HDS047View.swift */; };
 		FEB000000000000000000083 /* HDS-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000082 /* HDS-Icon.png */; };
 		FEB000000000000000000085 /* HDS-Title-Screen-Art.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000084 /* HDS-Title-Screen-Art.png */; };
+		FEB000000000000000000087 /* HDS000.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000086 /* HDS000.png */; };
+		FEB000000000000000000089 /* HDS001.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000088 /* HDS001.png */; };
+		FEB00000000000000000008B /* HDS002.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000008A /* HDS002.png */; };
+		FEB00000000000000000008D /* HDS003.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000008C /* HDS003.png */; };
+		FEB00000000000000000008F /* HDS004.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000008E /* HDS004.png */; };
+		FEB000000000000000000091 /* HDS005.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000090 /* HDS005.png */; };
+		FEB000000000000000000093 /* HDS006.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000092 /* HDS006.png */; };
+		FEB000000000000000000095 /* HDS007.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000094 /* HDS007.png */; };
+		FEB000000000000000000097 /* HDS008.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000096 /* HDS008.png */; };
+		FEB000000000000000000099 /* HDS009.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB000000000000000000098 /* HDS009.png */; };
+		FEB00000000000000000009B /* HDS010.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000009A /* HDS010.png */; };
+		FEB00000000000000000009D /* HDS011.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000009C /* HDS011.png */; };
+		FEB00000000000000000009F /* HDS012.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000009E /* HDS012.png */; };
+		FEB0000000000000000000A1 /* HDS013.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000A0 /* HDS013.png */; };
+		FEB0000000000000000000A3 /* HDS014.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000A2 /* HDS014.png */; };
+		FEB0000000000000000000A5 /* HDS015.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000A4 /* HDS015.png */; };
+		FEB0000000000000000000A7 /* HDS016.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000A6 /* HDS016.png */; };
+		FEB0000000000000000000A9 /* HDS017.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000A8 /* HDS017.png */; };
+		FEB0000000000000000000AB /* HDS018.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000AA /* HDS018.png */; };
+		FEB0000000000000000000AD /* HDS019.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000AC /* HDS019.png */; };
+		FEB0000000000000000000AF /* HDS020.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000AE /* HDS020.png */; };
+		FEB0000000000000000000B1 /* HDS021.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000B0 /* HDS021.png */; };
+		FEB0000000000000000000B3 /* HDS022.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000B2 /* HDS022.png */; };
+		FEB0000000000000000000B5 /* HDS023.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000B4 /* HDS023.png */; };
+		FEB0000000000000000000B7 /* HDS024.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000B6 /* HDS024.png */; };
+		FEB0000000000000000000B9 /* HDS025.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000B8 /* HDS025.png */; };
+		FEB0000000000000000000BB /* HDS026.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000BA /* HDS026.png */; };
+		FEB0000000000000000000BD /* HDS027.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000BC /* HDS027.png */; };
+		FEB0000000000000000000BF /* HDS028.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000BE /* HDS028.png */; };
+		FEB0000000000000000000C1 /* HDS029.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000C0 /* HDS029.png */; };
+		FEB0000000000000000000C3 /* HDS030.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000C2 /* HDS030.png */; };
+		FEB0000000000000000000C5 /* HDS031.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000C4 /* HDS031.png */; };
+		FEB0000000000000000000C7 /* HDS032.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000C6 /* HDS032.png */; };
+		FEB0000000000000000000C9 /* HDS033.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000C8 /* HDS033.png */; };
+		FEB0000000000000000000CB /* HDS034.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000CA /* HDS034.png */; };
+		FEB0000000000000000000CD /* HDS035.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000CC /* HDS035.png */; };
+		FEB0000000000000000000CF /* HDS036.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000CE /* HDS036.png */; };
+		FEB0000000000000000000D1 /* HDS037.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000D0 /* HDS037.png */; };
+		FEB0000000000000000000D3 /* HDS038.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000D2 /* HDS038.png */; };
+		FEB0000000000000000000D5 /* HDS039.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000D4 /* HDS039.png */; };
+		FEB0000000000000000000D7 /* HDS040.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000D6 /* HDS040.png */; };
+		FEB0000000000000000000D9 /* HDS041.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000D8 /* HDS041.png */; };
+		FEB0000000000000000000DB /* HDS042.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000DA /* HDS042.png */; };
+		FEB0000000000000000000DD /* HDS043.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000DC /* HDS043.png */; };
+		FEB0000000000000000000DF /* HDS044.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000DE /* HDS044.png */; };
+		FEB0000000000000000000E1 /* HDS045.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000E0 /* HDS045.png */; };
+		FEB0000000000000000000E3 /* HDS046.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000E2 /* HDS046.png */; };
+		FEB0000000000000000000E5 /* HDS047.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB0000000000000000000E4 /* HDS047.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -536,6 +584,54 @@
 		FEB000000000000000000081 /* The_Descent_to_Hades_Story_Map.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Descent_to_Hades_Story_Map.md; sourceTree = "<group>"; };
 		FEB000000000000000000082 /* HDS-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDS-Icon.png"; sourceTree = "<group>"; };
 		FEB000000000000000000084 /* HDS-Title-Screen-Art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDS-Title-Screen-Art.png"; sourceTree = "<group>"; };
+		FEB000000000000000000086 /* HDS000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS000.png; sourceTree = "<group>"; };
+		FEB000000000000000000088 /* HDS001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS001.png; sourceTree = "<group>"; };
+		FEB00000000000000000008A /* HDS002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS002.png; sourceTree = "<group>"; };
+		FEB00000000000000000008C /* HDS003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS003.png; sourceTree = "<group>"; };
+		FEB00000000000000000008E /* HDS004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS004.png; sourceTree = "<group>"; };
+		FEB000000000000000000090 /* HDS005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS005.png; sourceTree = "<group>"; };
+		FEB000000000000000000092 /* HDS006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS006.png; sourceTree = "<group>"; };
+		FEB000000000000000000094 /* HDS007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS007.png; sourceTree = "<group>"; };
+		FEB000000000000000000096 /* HDS008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS008.png; sourceTree = "<group>"; };
+		FEB000000000000000000098 /* HDS009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS009.png; sourceTree = "<group>"; };
+		FEB00000000000000000009A /* HDS010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS010.png; sourceTree = "<group>"; };
+		FEB00000000000000000009C /* HDS011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS011.png; sourceTree = "<group>"; };
+		FEB00000000000000000009E /* HDS012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS012.png; sourceTree = "<group>"; };
+		FEB0000000000000000000A0 /* HDS013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS013.png; sourceTree = "<group>"; };
+		FEB0000000000000000000A2 /* HDS014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS014.png; sourceTree = "<group>"; };
+		FEB0000000000000000000A4 /* HDS015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS015.png; sourceTree = "<group>"; };
+		FEB0000000000000000000A6 /* HDS016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS016.png; sourceTree = "<group>"; };
+		FEB0000000000000000000A8 /* HDS017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS017.png; sourceTree = "<group>"; };
+		FEB0000000000000000000AA /* HDS018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS018.png; sourceTree = "<group>"; };
+		FEB0000000000000000000AC /* HDS019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS019.png; sourceTree = "<group>"; };
+		FEB0000000000000000000AE /* HDS020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS020.png; sourceTree = "<group>"; };
+		FEB0000000000000000000B0 /* HDS021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS021.png; sourceTree = "<group>"; };
+		FEB0000000000000000000B2 /* HDS022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS022.png; sourceTree = "<group>"; };
+		FEB0000000000000000000B4 /* HDS023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS023.png; sourceTree = "<group>"; };
+		FEB0000000000000000000B6 /* HDS024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS024.png; sourceTree = "<group>"; };
+		FEB0000000000000000000B8 /* HDS025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS025.png; sourceTree = "<group>"; };
+		FEB0000000000000000000BA /* HDS026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS026.png; sourceTree = "<group>"; };
+		FEB0000000000000000000BC /* HDS027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS027.png; sourceTree = "<group>"; };
+		FEB0000000000000000000BE /* HDS028.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS028.png; sourceTree = "<group>"; };
+		FEB0000000000000000000C0 /* HDS029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS029.png; sourceTree = "<group>"; };
+		FEB0000000000000000000C2 /* HDS030.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS030.png; sourceTree = "<group>"; };
+		FEB0000000000000000000C4 /* HDS031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS031.png; sourceTree = "<group>"; };
+		FEB0000000000000000000C6 /* HDS032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS032.png; sourceTree = "<group>"; };
+		FEB0000000000000000000C8 /* HDS033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS033.png; sourceTree = "<group>"; };
+		FEB0000000000000000000CA /* HDS034.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS034.png; sourceTree = "<group>"; };
+		FEB0000000000000000000CC /* HDS035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS035.png; sourceTree = "<group>"; };
+		FEB0000000000000000000CE /* HDS036.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS036.png; sourceTree = "<group>"; };
+		FEB0000000000000000000D0 /* HDS037.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS037.png; sourceTree = "<group>"; };
+		FEB0000000000000000000D2 /* HDS038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS038.png; sourceTree = "<group>"; };
+		FEB0000000000000000000D4 /* HDS039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS039.png; sourceTree = "<group>"; };
+		FEB0000000000000000000D6 /* HDS040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS040.png; sourceTree = "<group>"; };
+		FEB0000000000000000000D8 /* HDS041.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS041.png; sourceTree = "<group>"; };
+		FEB0000000000000000000DA /* HDS042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS042.png; sourceTree = "<group>"; };
+		FEB0000000000000000000DC /* HDS043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS043.png; sourceTree = "<group>"; };
+		FEB0000000000000000000DE /* HDS044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS044.png; sourceTree = "<group>"; };
+		FEB0000000000000000000E0 /* HDS045.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS045.png; sourceTree = "<group>"; };
+		FEB0000000000000000000E2 /* HDS046.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS046.png; sourceTree = "<group>"; };
+		FEB0000000000000000000E4 /* HDS047.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HDS047.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -808,6 +904,54 @@
 			children = (
 				FEB000000000000000000082 /* HDS-Icon.png */,
 				FEB000000000000000000084 /* HDS-Title-Screen-Art.png */,
+				FEB000000000000000000086 /* HDS000.png */,
+				FEB000000000000000000088 /* HDS001.png */,
+				FEB00000000000000000008A /* HDS002.png */,
+				FEB00000000000000000008C /* HDS003.png */,
+				FEB00000000000000000008E /* HDS004.png */,
+				FEB000000000000000000090 /* HDS005.png */,
+				FEB000000000000000000092 /* HDS006.png */,
+				FEB000000000000000000094 /* HDS007.png */,
+				FEB000000000000000000096 /* HDS008.png */,
+				FEB000000000000000000098 /* HDS009.png */,
+				FEB00000000000000000009A /* HDS010.png */,
+				FEB00000000000000000009C /* HDS011.png */,
+				FEB00000000000000000009E /* HDS012.png */,
+				FEB0000000000000000000A0 /* HDS013.png */,
+				FEB0000000000000000000A2 /* HDS014.png */,
+				FEB0000000000000000000A4 /* HDS015.png */,
+				FEB0000000000000000000A6 /* HDS016.png */,
+				FEB0000000000000000000A8 /* HDS017.png */,
+				FEB0000000000000000000AA /* HDS018.png */,
+				FEB0000000000000000000AC /* HDS019.png */,
+				FEB0000000000000000000AE /* HDS020.png */,
+				FEB0000000000000000000B0 /* HDS021.png */,
+				FEB0000000000000000000B2 /* HDS022.png */,
+				FEB0000000000000000000B4 /* HDS023.png */,
+				FEB0000000000000000000B6 /* HDS024.png */,
+				FEB0000000000000000000B8 /* HDS025.png */,
+				FEB0000000000000000000BA /* HDS026.png */,
+				FEB0000000000000000000BC /* HDS027.png */,
+				FEB0000000000000000000BE /* HDS028.png */,
+				FEB0000000000000000000C0 /* HDS029.png */,
+				FEB0000000000000000000C2 /* HDS030.png */,
+				FEB0000000000000000000C4 /* HDS031.png */,
+				FEB0000000000000000000C6 /* HDS032.png */,
+				FEB0000000000000000000C8 /* HDS033.png */,
+				FEB0000000000000000000CA /* HDS034.png */,
+				FEB0000000000000000000CC /* HDS035.png */,
+				FEB0000000000000000000CE /* HDS036.png */,
+				FEB0000000000000000000D0 /* HDS037.png */,
+				FEB0000000000000000000D2 /* HDS038.png */,
+				FEB0000000000000000000D4 /* HDS039.png */,
+				FEB0000000000000000000D6 /* HDS040.png */,
+				FEB0000000000000000000D8 /* HDS041.png */,
+				FEB0000000000000000000DA /* HDS042.png */,
+				FEB0000000000000000000DC /* HDS043.png */,
+				FEB0000000000000000000DE /* HDS044.png */,
+				FEB0000000000000000000E0 /* HDS045.png */,
+				FEB0000000000000000000E2 /* HDS046.png */,
+				FEB0000000000000000000E4 /* HDS047.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -956,6 +1100,54 @@
 				FE02675E2B28A22F00F5C31D /* Three.png in Resources */,
 				FEB000000000000000000083 /* HDS-Icon.png in Resources */,
 				FEB000000000000000000085 /* HDS-Title-Screen-Art.png in Resources */,
+				FEB000000000000000000087 /* HDS000.png in Resources */,
+				FEB000000000000000000089 /* HDS001.png in Resources */,
+				FEB00000000000000000008B /* HDS002.png in Resources */,
+				FEB00000000000000000008D /* HDS003.png in Resources */,
+				FEB00000000000000000008F /* HDS004.png in Resources */,
+				FEB000000000000000000091 /* HDS005.png in Resources */,
+				FEB000000000000000000093 /* HDS006.png in Resources */,
+				FEB000000000000000000095 /* HDS007.png in Resources */,
+				FEB000000000000000000097 /* HDS008.png in Resources */,
+				FEB000000000000000000099 /* HDS009.png in Resources */,
+				FEB00000000000000000009B /* HDS010.png in Resources */,
+				FEB00000000000000000009D /* HDS011.png in Resources */,
+				FEB00000000000000000009F /* HDS012.png in Resources */,
+				FEB0000000000000000000A1 /* HDS013.png in Resources */,
+				FEB0000000000000000000A3 /* HDS014.png in Resources */,
+				FEB0000000000000000000A5 /* HDS015.png in Resources */,
+				FEB0000000000000000000A7 /* HDS016.png in Resources */,
+				FEB0000000000000000000A9 /* HDS017.png in Resources */,
+				FEB0000000000000000000AB /* HDS018.png in Resources */,
+				FEB0000000000000000000AD /* HDS019.png in Resources */,
+				FEB0000000000000000000AF /* HDS020.png in Resources */,
+				FEB0000000000000000000B1 /* HDS021.png in Resources */,
+				FEB0000000000000000000B3 /* HDS022.png in Resources */,
+				FEB0000000000000000000B5 /* HDS023.png in Resources */,
+				FEB0000000000000000000B7 /* HDS024.png in Resources */,
+				FEB0000000000000000000B9 /* HDS025.png in Resources */,
+				FEB0000000000000000000BB /* HDS026.png in Resources */,
+				FEB0000000000000000000BD /* HDS027.png in Resources */,
+				FEB0000000000000000000BF /* HDS028.png in Resources */,
+				FEB0000000000000000000C1 /* HDS029.png in Resources */,
+				FEB0000000000000000000C3 /* HDS030.png in Resources */,
+				FEB0000000000000000000C5 /* HDS031.png in Resources */,
+				FEB0000000000000000000C7 /* HDS032.png in Resources */,
+				FEB0000000000000000000C9 /* HDS033.png in Resources */,
+				FEB0000000000000000000CB /* HDS034.png in Resources */,
+				FEB0000000000000000000CD /* HDS035.png in Resources */,
+				FEB0000000000000000000CF /* HDS036.png in Resources */,
+				FEB0000000000000000000D1 /* HDS037.png in Resources */,
+				FEB0000000000000000000D3 /* HDS038.png in Resources */,
+				FEB0000000000000000000D5 /* HDS039.png in Resources */,
+				FEB0000000000000000000D7 /* HDS040.png in Resources */,
+				FEB0000000000000000000D9 /* HDS041.png in Resources */,
+				FEB0000000000000000000DB /* HDS042.png in Resources */,
+				FEB0000000000000000000DD /* HDS043.png in Resources */,
+				FEB0000000000000000000DF /* HDS044.png in Resources */,
+				FEB0000000000000000000E1 /* HDS045.png in Resources */,
+				FEB0000000000000000000E3 /* HDS046.png in Resources */,
+				FEB0000000000000000000E5 /* HDS047.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

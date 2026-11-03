@@ -30,9 +30,6 @@ SPHINX_ENDINGS = {
 }
 
 failures = []
-# Story pages may be built before their illustrations exist; they show a placeholder until then.
-pending_art = []
-PENDING_ART = re.compile(r"HDS\d{3}\.png")
 
 
 def check(condition, message):
@@ -122,11 +119,7 @@ def check_images():
         names = re.findall(r'(?:imageName|resourceName): "([^"]+\.png)"', text)
         names += re.findall(r'(?:Image|ImageName|StaticImage)\(imageName: "([^"]+\.png)"', text)
         for name in names:
-            if name in images:
-                continue
-            if PENDING_ART.fullmatch(name):
-                pending_art.append(name)
-            else:
+            if name not in images:
                 failures.append(f"{path.relative_to(ROOT)} references missing image {name}")
 
 
@@ -205,8 +198,6 @@ def main():
         for failure in failures:
             print(f"  - {failure}")
         return 1
-    if pending_art:
-        print(f"Pending illustrations (placeholder shown in the app): {', '.join(sorted(set(pending_art)))}")
     print("Release readiness checks passed.")
     return 0
 

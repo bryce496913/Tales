@@ -106,7 +106,7 @@ struct DescentToHadesChoicesStack<Content: View>: View {
     }
 }
 
-/// Shows a page illustration, or a placeholder until the art for that page has been added.
+/// Shows a page illustration, or a placeholder if the image is missing from the bundle.
 struct DescentToHadesStaticImage: View {
     let imageName: String
 
