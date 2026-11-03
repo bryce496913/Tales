@@ -3,7 +3,6 @@ import SwiftUI
 struct ANU047View: View {
     var body: some View {
         TrialOfAnubisOutcomeView(
-            endingID: "anubis_defy_the_gods",
             outcome: .darkWin,
             title: "Defy the Gods",
             classification: "Dark Ending",

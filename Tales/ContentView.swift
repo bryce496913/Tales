@@ -13,7 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
 
             if isSplashActive {
                 SplashScreen()
@@ -85,7 +85,7 @@ struct SplashScreen: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
             VStack(spacing: 20) {
                 Image(systemName: "book.pages.fill")
                     .font(.system(size: 72, weight: .semibold, design: .serif))

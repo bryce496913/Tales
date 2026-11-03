@@ -15,17 +15,26 @@ struct StorySaveState: Codable {
 
 @MainActor
 final class AppNavigationState: ObservableObject {
+    /// Saving happens when the path changes (every navigation), plus explicitly where only
+    /// other state changes, so each action writes once.
     @Published var path: [StoryRoute] = [] { didSet { persistProgress() } }
-    @Published var isAdventureActive = false { didSet { persistProgress() } }
+    @Published private(set) var isAdventureActive = false
     @Published var hasSavedProgress = false
     @Published private(set) var completedEndings: Set<String> = []
 
     private let saveKey = "Tales.story.save.v2"
     private let defaults: UserDefaults
+    private let now: () -> Date
     private var isRestoring = false
+    private var navigationUnlocksAt = Date.distantPast
 
-    init(defaults: UserDefaults = .standard) {
+    /// Minimum time between two navigations, so quick taps on two different choices during the
+    /// push animation can't open both pages.
+    static let navigationLockout: TimeInterval = 0.6
+
+    init(defaults: UserDefaults = .standard, now: @escaping () -> Date = { Date() }) {
         self.defaults = defaults
+        self.now = now
         loadSavedProgressFlag()
     }
 
@@ -44,8 +53,8 @@ final class AppNavigationState: ObservableObject {
 
     func startNewAdventure() {
         isAdventureActive = true
+        navigationUnlocksAt = .distantPast
         path = [.plot1]
-        persistProgress()
     }
 
     func continueAdventure() {
@@ -62,32 +71,36 @@ final class AppNavigationState: ObservableObject {
     }
 
     func navigate(to route: StoryRoute) {
-        guard isAdventureActive else { return }
+        let time = now()
+        guard isAdventureActive, time >= navigationUnlocksAt else { return }
+        navigationUnlocksAt = time.addingTimeInterval(Self.navigationLockout)
         path.append(route)
     }
 
     func markEndingReached(_ endingID: String) {
         var endings = completedEndings
         let inserted = endings.insert(endingID).inserted
+        let wasActive = isAdventureActive
         if inserted { completedEndings = endings }
-        if isAdventureActive { isAdventureActive = false }
-        if inserted || hasSavedProgress { persistProgress() }
+        isAdventureActive = false
+        if inserted || wasActive || hasSavedProgress { persistProgress() }
     }
 
     func resetToMainMenu() {
         isAdventureActive = false
         path = []
-        persistProgress()
     }
 
     func restartAdventure() { startNewAdventure() }
 
     func resetSavedProgress() {
-        defaults.removeObject(forKey: saveKey)
-        hasSavedProgress = false
+        isRestoring = true
         completedEndings.removeAll()
         isAdventureActive = false
         path = []
+        isRestoring = false
+        defaults.removeObject(forKey: saveKey)
+        hasSavedProgress = false
     }
 
     private func persistProgress() {

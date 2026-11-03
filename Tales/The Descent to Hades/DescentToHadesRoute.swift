@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum DescentToHadesRoute: String, Codable, Hashable, CaseIterable {
+enum DescentToHadesRoute: String, Codable, Hashable, CaseIterable, BranchingRoute {
     case hds000 = "HDS-000"
     case hds001 = "HDS-001"
     case hds002 = "HDS-002"
@@ -50,13 +50,14 @@ enum DescentToHadesRoute: String, Codable, Hashable, CaseIterable {
     case hds046 = "HDS-046"
     case hds047 = "HDS-047"
 
+    /// First page of a new adventure.
+    static let start: DescentToHadesRoute = .hds000
+
     /// HOME hub (the Crossroads of Judgment) that links to the three gift roads.
     static let home: DescentToHadesRoute = .hds015
 
     /// HOME once the Water of Lethe, Ember of Phlegethon and Golden Bough are all collected.
     static let endGame: DescentToHadesRoute = .hds040
-
-    var isEnding: Bool { endingID != nil }
 
     /// Stable ID recorded when a game-over page is reached.
     var endingID: String? {

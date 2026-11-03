@@ -21,7 +21,12 @@ final class GameOptions: ObservableObject {
 
     @Published var typewriterEnabled: Bool { didSet { defaults.set(typewriterEnabled, forKey: Key.typewriterEnabled) } }
     @Published var typewriterSpeed: TypewriterSpeedOption { didSet { defaults.set(typewriterSpeed.rawValue, forKey: Key.typewriterSpeed) } }
-    @Published var hapticsEnabled: Bool { didSet { defaults.set(hapticsEnabled, forKey: Key.hapticsEnabled) } }
+    @Published var hapticsEnabled: Bool {
+        didSet {
+            defaults.set(hapticsEnabled, forKey: Key.hapticsEnabled)
+            HapticManager.shared.isEnabled = hapticsEnabled
+        }
+    }
     @Published var pageTransitionsEnabled: Bool { didSet { defaults.set(pageTransitionsEnabled, forKey: Key.pageTransitionsEnabled) } }
     @Published var buttonGlowEnabled: Bool { didSet { defaults.set(buttonGlowEnabled, forKey: Key.buttonGlowEnabled) } }
     @Published var outcomeAnimationsEnabled: Bool { didSet { defaults.set(outcomeAnimationsEnabled, forKey: Key.outcomeAnimationsEnabled) } }
@@ -38,6 +43,7 @@ final class GameOptions: ObservableObject {
         buttonGlowEnabled = defaults.object(forKey: Key.buttonGlowEnabled) as? Bool ?? true
         outcomeAnimationsEnabled = defaults.object(forKey: Key.outcomeAnimationsEnabled) as? Bool ?? true
         backgroundMusicEnabled = defaults.object(forKey: Key.backgroundMusicEnabled) as? Bool ?? true
+        HapticManager.shared.isEnabled = hapticsEnabled
     }
 
     func resetToDefaults() {

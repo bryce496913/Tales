@@ -3,7 +3,6 @@ import SwiftUI
 struct ANU032View: View {
     var body: some View {
         TrialOfAnubisOutcomeView(
-            endingID: "anubis_devoured_by_ammit",
             outcome: .death,
             title: "Devoured by Ammit",
             classification: "Death",

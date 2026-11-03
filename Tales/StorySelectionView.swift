@@ -65,7 +65,7 @@ struct StorySelectionView: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
 
             ScrollView {
                 VStack(spacing: 18) {

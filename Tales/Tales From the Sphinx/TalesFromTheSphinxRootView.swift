@@ -48,7 +48,7 @@ struct MainMenu: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
             // The title art shrinks to fit at normal text sizes; accessibility sizes need room to scroll.
             if dynamicTypeSize.isAccessibilitySize {
                 ScrollView(showsIndicators: false) { menuContent }
@@ -82,7 +82,7 @@ struct MainMenu: View {
                     .foregroundColor(AppTheme.mutedText)
                     .multilineTextAlignment(.center)
             }
-            .goldCard()
+            .storyCard()
             .frame(maxWidth: AppTheme.maximumTextWidth)
 
             if navigationState.hasSavedProgress {
@@ -149,7 +149,7 @@ struct MissingStoryPageView: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
             VStack(spacing: 18) {
                 Text("This part of the tomb has crumbled away.")
                     .font(.system(.title3, design: .serif).weight(.bold))
@@ -161,7 +161,7 @@ struct MissingStoryPageView: View {
                     .multilineTextAlignment(.center)
                 AdventureResetButtons()
             }
-            .goldCard()
+            .storyCard()
             .frame(maxWidth: AppTheme.maximumTextWidth)
             .padding(AppTheme.screenPadding)
         }

@@ -7,7 +7,7 @@ struct OptionsView: View {
 
     var body: some View {
         ZStack {
-            EgyptianBackground()
+            StoryBackground()
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 18) {
                     Button {
@@ -64,7 +64,29 @@ struct OptionsView: View {
         VStack(alignment: .leading, spacing: 14) {
             Text(title).font(.system(.title3, design: .serif).weight(.bold)).foregroundColor(AppTheme.gold)
             content()
-        }.frame(maxWidth: .infinity, alignment: .leading).goldCard()
+        }.frame(maxWidth: .infinity, alignment: .leading).storyCard()
+    }
+}
+
+/// Presents Options from anywhere in the app, always in the app's default look.
+struct OptionsSheetModifier: ViewModifier {
+    @Binding var isPresented: Bool
+    @EnvironmentObject private var gameOptions: GameOptions
+
+    func body(content: Content) -> some View {
+        content.sheet(isPresented: $isPresented) {
+            NavigationStack {
+                OptionsView()
+            }
+            .environmentObject(gameOptions)
+            .environment(\.storyTheme, .egyptian)
+        }
+    }
+}
+
+extension View {
+    func optionsSheet(isPresented: Binding<Bool>) -> some View {
+        modifier(OptionsSheetModifier(isPresented: isPresented))
     }
 }
 
