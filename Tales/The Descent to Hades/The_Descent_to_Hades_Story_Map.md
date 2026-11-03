@@ -2,7 +2,7 @@
 
 **Story ID:** `descent-to-hades`  
 **Page prefix:** `HDS`  
-**Status:** Pages built (`HDS000View` … `HDS047View`). The Swift views in this folder are now the source of truth, and this file must be updated whenever a page, choice or ending changes. Page illustrations are still to come; until each `HDS###.png` is added, its page shows a placeholder.
+**Status:** Pages built (`HDS000View` … `HDS047View`). The Swift views in this folder are now the source of truth, and this file must be updated whenever a page, choice or ending changes. All page illustrations are in `Images/`. See `The_Descent_to_Hades_Test_Paths.md` for the on-device test paths.
 
 ---
 
@@ -160,7 +160,7 @@ Page names in conversation use the short number (`004`). In code, the view is `H
 
 **Outcome styles:** `win`, `darkWin`, `bittersweet`, `lose`, `death`.
 
-**Images:** every page uses its own illustration named after its number (`HDS000.png` … `HDS047.png`), plus `HDS-Icon.png` and `HDS-Title-Screen-Art.png`. Until the art exists, pages show a placeholder.
+**Images:** every page uses its own illustration named after its number (`HDS000.png` … `HDS047.png`), plus `HDS-Icon.png` and `HDS-Title-Screen-Art.png`. If an image is ever missing from the bundle, the page shows a placeholder.
 
 **Story selection blurb:** “Cross the river Styx, win the favour of the gods of the dead, and bring your brother home without looking back.”
 
