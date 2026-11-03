@@ -7,7 +7,7 @@ struct HDS031View: View {
             outcome: .death,
             title: "Chained in Tartarus",
             classification: "Death",
-            imageName: "HDS031.png",
+            imageName: "HDS031",
             storyText: """
             You squeeze into the crack and press yourself against the rock as the Furies’ screams pass overhead. It is quiet in here. Then the stone shifts. The crack was never a hiding place. It is a doorway to the deepest pit of Tartarus, where the Titans were chained when the world was young. Bronze chains rise from the dark and close around your wrists and ankles with a sound like a lock turning. A huge voice in the darkness rumbles with something like amusement. “A new neighbour.” The ember in your bowl gutters out. No one will ever come looking for you here.
             """,

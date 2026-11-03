@@ -10,7 +10,7 @@ struct ANU030View: View {
             outcome: .win,
             title: "The Scales Restored",
             classification: "Best Ending",
-            imageName: "ANU030.png",
+            imageName: "ANU030",
             storyText: storyText,
             outcomeText: """
             You restored the scales of judgment and faced them honestly.

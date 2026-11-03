@@ -7,7 +7,7 @@ struct HDS023View: View {
             outcome: .lose,
             title: "The Sweet Forgetting",
             classification: "Forgotten",
-            imageName: "HDS023.png",
+            imageName: "HDS023",
             storyText: """
             You drink. The water tastes of nothing at all, and then of nothing at all forever. The storm goes. The boat goes. Theo’s face blurs, then his name, then the fact that there was ever anyone to look for. It does not hurt. That is the strangest part. You stand up, smile at nothing and wander into the asphodel with the other shades, and you never once wonder why you came. A few fields away, a boy in a yellow jacket sits among the flowers. Neither of you looks up as you pass.
             """,

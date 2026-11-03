@@ -7,7 +7,7 @@ struct HDS039View: View {
             outcome: .bittersweet,
             title: "The Isles of the Blessed",
             classification: "Peaceful Rest",
-            imageName: "HDS039.png",
+            imageName: "HDS039",
             storyText: """
             You lie down in the shade and close your eyes, just for a moment. The grass is soft, the sea whispers somewhere below, and the warmth of the sun sinks into your bones. When you wake it is still afternoon, and it always will be. You have a place at the feast now, and a white house by the sea, and you will never be cold or frightened again. Sometimes you remember that there was someone you were supposed to find. Then the music starts again, and you forget to worry about it.
             """,

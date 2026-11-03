@@ -10,7 +10,7 @@ struct Page24View: View {
         StoryOutcomeView(
             endingID: "page24-death",
             outcome: .death,
-            imageName: "Twenty-Four.png",
+            imageName: "Twenty-Four",
             storyText: "You make it to the ladder and start to climb, yet your success is blanked by you slipping on one of the ladder’s steps, resulting in you falling into the blackness."
         )
     }

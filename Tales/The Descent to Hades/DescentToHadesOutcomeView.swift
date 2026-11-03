@@ -245,7 +245,7 @@ struct DescentToHadesOutcomeView_Previews: PreviewProvider {
                 outcome: outcome,
                 title: "Out Into the Sun",
                 classification: "Preview Classification",
-                imageName: "HDS044.png",
+                imageName: "HDS044",
                 storyText: "A preview ending narrative remains fully visible for accessibility and small devices.",
                 outcomeText: "A preview outcome text remains separate from the narrative."
             )

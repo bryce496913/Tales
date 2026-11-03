@@ -244,7 +244,7 @@ struct TrialOfAnubisOutcomeView_Previews: PreviewProvider {
                 outcome: outcome,
                 title: "The Scales Restored",
                 classification: "Preview Classification",
-                imageName: "ANU027.png",
+                imageName: "ANU027",
                 storyText: "A preview ending narrative remains fully visible for accessibility and small devices.",
                 outcomeText: "A preview outcome text remains separate from the narrative."
             )

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Twenty-Four.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -11,7 +11,7 @@ struct Page10View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Ten.png",
+            imageName: "Ten",
             text: "After a few steps into the room, you hear a click under your foot. You take a step back, just in time as the floor tile that was under your foot, disintegrates away to reveal a pit of darkness. Do you try making a run for it to reach the ladder at the other end, or would it be better to take it slowly."
         ) {
             StoryChoicesStack {

@@ -145,7 +145,7 @@ struct TrialOfAnubisPageLayout_Previews: PreviewProvider {
         Group {
             TrialOfAnubisPreviewContainer {
                 TrialOfAnubisPageLayout(
-                    imageName: "ANU001.png",
+                    imageName: "ANU001",
                     title: "The Silent Desert",
                     text: "The desert is completely silent.",
                     effects: TrialOfAnubisPageEffects(entryTransition: .sandFade, choicesWaitForText: true)
@@ -160,7 +160,7 @@ struct TrialOfAnubisPageLayout_Previews: PreviewProvider {
 
             TrialOfAnubisPreviewContainer {
                 TrialOfAnubisPageLayout(
-                    imageName: "ANU001.png",
+                    imageName: "ANU001",
                     title: "The Silent Desert",
                     text: "The desert is completely silent.",
                     effects: TrialOfAnubisPageEffects(entryTransition: .sandFade, choicesWaitForText: false)

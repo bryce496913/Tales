@@ -7,7 +7,7 @@ struct HDS003View: View {
             outcome: .death,
             title: "Lost to the Sea",
             classification: "Death",
-            imageName: "HDS003.png",
+            imageName: "HDS003",
             storyText: """
             You turn away from the stairs and dive toward the green light. The opening is further away than it looked. You swim until your lungs burn, then a little more, but the light never comes closer. When you finally break the surface, there is no cape, no coastline and no boat, only a flat grey sea beneath a sky without a sun. You float there for a long time, calling Theo’s name, until the cold settles into your bones and the water gently takes you. Far below, a stairway you chose not to climb waits in the dark.
             """,

@@ -6,7 +6,7 @@ struct ANU012View: View {
 
     var body: some View {
         TrialOfAnubisPageLayout(
-            imageName: "ANU012.png",
+            imageName: "ANU012",
             title: "Feather Arm Chamber",
             text: storyText,
             effects: TrialOfAnubisPageEffects(

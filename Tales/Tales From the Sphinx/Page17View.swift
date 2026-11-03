@@ -11,7 +11,7 @@ struct Page17View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Seventeen.png",
+            imageName: "Seventeen",
             text: "Once you have entered the room, you see a strong but thin beam of light coming from a crack in the ceiling, and reflecting off a silver plate that is attached upright on hinges in the centre of the room. It seems that the angle and rotation of the plate can be adjusted. Also, in the room there are two statues guarding two doors; one is the God Re and the other the God Thorth. Both statues have a square piece of coloured glass in their chests. Maybe we can reflect the beam of light into one of the statue’s chest?"
         ) {
             StoryChoicesStack {

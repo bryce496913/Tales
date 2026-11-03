@@ -3,7 +3,7 @@ import SwiftUI
 struct HDS029View: View {
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS029.png",
+            imageName: "HDS029",
             title: "The Furies Wake",
             text: """
             You lunge, scoop an ember into the bronze bowl and pull it back, smoking. The river roars as if you have robbed it, and all three Furies rise screaming from the walls of Tartarus: Tisiphone, Alecto and Megaera, their whips trailing fire. Between you and the bronze road lies a narrow bridge over the burning river. To your left, a dark crack in the rock leads underground, cool and silent and out of sight.

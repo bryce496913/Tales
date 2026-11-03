@@ -12,7 +12,7 @@ struct TrialOfAnubisMainMenuView: View {
 
             ScrollView {
                 VStack(spacing: 22) {
-                    TrialOfAnubisStaticImage(imageName: "ANU-Title-Screen-Art.png")
+                    TrialOfAnubisStaticImage(imageName: "ANU-Title-Screen-Art")
 
                     VStack(spacing: 10) {
                         Text("The Trial of Anubis")

@@ -11,7 +11,7 @@ struct Page16View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Sixteen.png",
+            imageName: "Sixteen",
             text: "The door is slightly stuck but you push harder and it slowly opens enough for you to slip through. The floor is sticky and your face brushes by, what felt like a cobweb. You hear scratching and shuffling. Your gaze is brought to the centre of the room when a deep voice whispers “hello there”. It is at that moment; you realise you are now face to face with a giant talking spider guarding a door."
         ) {
             StoryChoicesStack {

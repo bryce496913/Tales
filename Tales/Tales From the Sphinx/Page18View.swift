@@ -11,7 +11,7 @@ struct Page18View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Eighteen.png",
+            imageName: "Eighteen",
             text: "This is the darkest room you have entered. There is only one torch in this room, just off to your right. The only thing this torch is illuminating is a ladder that leads to an opening in the ceiling. Taking this torch would make exploring the rest of the room easier."
         ) {
             StoryChoicesStack {

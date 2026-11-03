@@ -5,6 +5,7 @@ Run from anywhere: python3 scripts/release_readiness_checks.py
 Exits non-zero and lists every failure if any check fails.
 """
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -103,24 +104,34 @@ def check_project_membership():
 
 
 def check_images():
-    images = {p.name for p in TALES.rglob("*.png")}
-    project = PBXPROJ.read_text()
-    registered = set(re.findall(r"path = \"?([^\";]+\.png)\"?;", project))
-    resources_phase = project.split("/* Begin PBXResourcesBuildPhase section */")[-1].split("/* End PBXResourcesBuildPhase section */")[0]
-    bundled = set(re.findall(r"/\* ([^*]+\.png) in Resources \*/,", resources_phase))
-    for name in sorted(images - registered):
-        failures.append(f"{name} exists on disk but is not in the Xcode project (add it with File > Add Files)")
-    for name in sorted(registered - images):
-        failures.append(f"{name} is in the Xcode project but missing on disk")
-    for name in sorted(registered - bundled):
-        failures.append(f"{name} is in the Xcode project but not in the app target's Copy Bundle Resources")
+    """Story art lives in Assets.xcassets (so App Thinning and the asset compiler handle it)."""
+    import json
+    catalog = TALES / "Assets.xcassets"
+    imagesets = {p.stem: p for p in catalog.rglob("*.imageset")}
+    for name, imageset in sorted(imagesets.items()):
+        try:
+            files = [i["filename"] for i in json.loads((imageset / "Contents.json").read_text())["images"] if "filename" in i]
+        except (OSError, ValueError, KeyError):
+            failures.append(f"{imageset.relative_to(ROOT)} has a missing or invalid Contents.json")
+            continue
+        check(files, f"{imageset.relative_to(ROOT)} has no image file")
+        for filename in files:
+            check((imageset / filename).exists(), f"{imageset.relative_to(ROOT)} lists missing file {filename}")
+
+    for path in sorted(TALES.rglob("*")):
+        if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".heic"} and ".xcassets" not in str(path) and "Preview Content" not in str(path):
+            failures.append(f"{path.relative_to(ROOT)} is a loose image; add it to Assets.xcassets instead")
+
+    referenced = set()
     for path in swift_files():
         text = path.read_text()
-        names = re.findall(r'(?:imageName|resourceName): "([^"]+\.png)"', text)
-        names += re.findall(r'(?:Image|ImageName|StaticImage)\(imageName: "([^"]+\.png)"', text)
+        names = re.findall(r'(?:imageName|iconImageName|titleImageName): "([^"]+)"', text)
+        names += re.findall(r'\bImage\("([^"]+)"\)', text)
         for name in names:
-            if name not in images:
-                failures.append(f"{path.relative_to(ROOT)} references missing image {name}")
+            referenced.add(name)
+            check(name in imagesets, f"{path.relative_to(ROOT)} references image '{name}', which is not in Assets.xcassets")
+    for name in sorted(set(imagesets) - referenced):
+        failures.append(f"Assets.xcassets image '{name}' is not used by any view (remove it to keep the app small)")
 
 
 def check_audio():
@@ -172,7 +183,7 @@ def check_story_routes(folder, enum_name, prefix, outcome_view, story_name):
             failures.append(f"missing {story_name} page file {path.name} for .{case}")
             continue
         images = re.findall(r'imageName: "([^"]+)"', path.read_text())
-        check(images == [f"{prefix}{number}.png"], f"{path.name} should use {prefix}{number}.png, found {images}")
+        check(images == [f"{prefix}{number}"], f"{path.name} should use image {prefix}{number}, found {images}")
 
 
 def check_anubis_routes():
@@ -181,6 +192,17 @@ def check_anubis_routes():
 
 def check_hades_routes():
     check_story_routes(HADES, "DescentToHadesRoute", "HDS", "DescentToHadesOutcomeView", "Hades")
+
+
+def check_tracked_junk():
+    # .gitignore keeps these out, but uploads through GitHub's web UI or Desktop can bypass it.
+    try:
+        tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.splitlines()
+    except (OSError, subprocess.CalledProcessError):
+        return
+    for path in tracked:
+        if path.endswith(".DS_Store") or "/xcuserdata/" in path or path.endswith(".xcuserstate"):
+            failures.append(f"{path} is committed; remove it with git rm --cached (it is personal/macOS state)")
 
 
 def main():
@@ -192,6 +214,7 @@ def main():
     check_audio()
     check_anubis_routes()
     check_hades_routes()
+    check_tracked_junk()
 
     if failures:
         print("Release readiness checks FAILED:")

@@ -153,7 +153,7 @@ struct DescentToHadesPageLayout_Previews: PreviewProvider {
         Group {
             DescentToHadesPreviewContainer {
                 DescentToHadesPageLayout(
-                    imageName: "HDS001.png",
+                    imageName: "HDS001",
                     title: "The Sea Cave",
                     text: "You wake on a shelf of black stone inside a cave.",
                     effects: DescentToHadesPageEffects(entryTransition: .mistFade, choicesWaitForText: true)
@@ -168,7 +168,7 @@ struct DescentToHadesPageLayout_Previews: PreviewProvider {
 
             DescentToHadesPreviewContainer {
                 DescentToHadesPageLayout(
-                    imageName: "HDS001.png",
+                    imageName: "HDS001",
                     title: "The Sea Cave",
                     text: "You wake on a shelf of black stone inside a cave.",
                     effects: DescentToHadesPageEffects(entryTransition: .mistFade, choicesWaitForText: false)
