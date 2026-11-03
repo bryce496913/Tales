@@ -42,6 +42,7 @@ struct BranchingStoryMenuView<Story: BranchingStory>: View {
     @Environment(\.returnToStorySelection) private var returnToStorySelection
     @State private var confirmingNewAdventure = false
     @State private var showingOptions = false
+    @State private var showingEndings = false
 
     var body: some View {
         ZStack {
@@ -81,6 +82,11 @@ struct BranchingStoryMenuView<Story: BranchingStory>: View {
                             }
                         }
 
+                        ChoiceButton("Endings (\(foundEndingCount)/\(Story.endings.count))") {
+                            showingEndings = true
+                        }
+                        .accessibilityLabel(EndingsGalleryView.summary(found: foundEndingCount, total: Story.endings.count))
+
                         ChoiceButton("Options") {
                             showingOptions = true
                         }
@@ -110,6 +116,17 @@ struct BranchingStoryMenuView<Story: BranchingStory>: View {
             Text("This replaces your unfinished \(Story.shortName) run but keeps completed \(Story.shortName) endings.")
         }
         .optionsSheet(isPresented: $showingOptions)
+        .endingsGallery(
+            isPresented: $showingEndings,
+            storyTitle: Story.title,
+            endings: Story.endings,
+            found: navigationState.progress.completedEndingIDs,
+            theme: theme
+        )
+    }
+
+    private var foundEndingCount: Int {
+        Story.endings.filter { navigationState.progress.completedEndingIDs.contains($0.id) }.count
     }
 }
 

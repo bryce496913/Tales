@@ -41,6 +41,8 @@ struct MainMenu: View {
     @EnvironmentObject private var navigationState: AppNavigationState
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var appeared = false
+    @State private var confirmingNewAdventure = false
+    @State private var showingEndings = false
 
     init(returnToStorySelection: @escaping () -> Void = {}) {
         self.returnToStorySelection = returnToStorySelection
@@ -57,6 +59,29 @@ struct MainMenu: View {
             }
         }
         .onAppear { withAnimation(.easeOut(duration: 0.55)) { appeared = true } }
+        .confirmationDialog(
+            "Start a new Sphinx adventure?",
+            isPresented: $confirmingNewAdventure,
+            titleVisibility: .visible
+        ) {
+            Button("Start New Adventure", role: .destructive) {
+                navigationState.startNewAdventure()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This replaces your unfinished Sphinx run but keeps completed Sphinx endings.")
+        }
+        .endingsGallery(
+            isPresented: $showingEndings,
+            storyTitle: "Tales From the Sphinx",
+            endings: TalesFromTheSphinx.endings,
+            found: navigationState.completedEndings,
+            theme: .egyptian
+        )
+    }
+
+    private var foundEndingCount: Int {
+        TalesFromTheSphinx.endings.filter { navigationState.completedEndings.contains($0.id) }.count
     }
 
     private var menuContent: some View {
@@ -93,7 +118,11 @@ struct MainMenu: View {
             }
 
             MenuButton(title: navigationState.hasSavedProgress ? "New Adventure" : "New Game") {
-                navigationState.startNewAdventure()
+                if navigationState.hasSavedProgress {
+                    confirmingNewAdventure = true
+                } else {
+                    navigationState.startNewAdventure()
+                }
             }
 
             NavigationLink(value: StoryRoute.options) {
@@ -108,6 +137,11 @@ struct MainMenu: View {
             .buttonStyle(StoryChoiceButtonStyle())
             .frame(maxWidth: 280)
 
+            MenuButton(title: "Endings (\(foundEndingCount)/\(TalesFromTheSphinx.endings.count))") {
+                showingEndings = true
+            }
+            .accessibilityLabel(EndingsGalleryView.summary(found: foundEndingCount, total: TalesFromTheSphinx.endings.count))
+
             MenuButton(title: "Back to Story Selection") {
                 returnToStorySelection()
             }
@@ -120,6 +154,24 @@ struct MainMenu: View {
         .opacity(appeared ? 1 : 0)
         .offset(y: appeared ? 0 : 18)
     }
+}
+
+/// Tales From the Sphinx's endings, in page order, for the endings gallery. The release
+/// checks keep this list in step with the ending pages.
+enum TalesFromTheSphinx {
+    static let endings: [EndingEntry] = [
+        EndingEntry(id: "page2-death", imageName: "Two"),
+        EndingEntry(id: "page7-lose", imageName: "Seven"),
+        EndingEntry(id: "page11-death", imageName: "Eleven"),
+        EndingEntry(id: "page13-win", imageName: "Thirteen"),
+        EndingEntry(id: "page14-death", imageName: "Fourteen"),
+        EndingEntry(id: "page15-lose", imageName: "Fifteen"),
+        EndingEntry(id: "page20-lose", imageName: "Twenty"),
+        EndingEntry(id: "page21-death", imageName: "Twenty-One"),
+        EndingEntry(id: "page22-lose", imageName: "Twenty-Two"),
+        EndingEntry(id: "page24-death", imageName: "Twenty-Four"),
+        EndingEntry(id: "page25-death", imageName: "Twenty-Five")
+    ]
 }
 
 struct StoryDestinationView: View {

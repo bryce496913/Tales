@@ -45,7 +45,9 @@ Run from the repository root:
 python3 scripts/release_readiness_checks.py
 ```
 
-CI (`.github/workflows/ci.yml`) runs these checks and a Release build for the iOS Simulator on every pull request and push to `main`.
+CI (`.github/workflows/ci.yml`) runs these checks, a Release build for the iOS Simulator and the unit tests on every pull request and push to `main`.
+
+Unit tests live in `TalesTests/` (navigation lockout, hub reset, endings, flags, saving and continuing, old-save compatibility, one write per action). Run them in Xcode with Product > Test (⌘U), using the shared `Tales` scheme.
 
 It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image is in the asset catalog (and every catalog image is used), no loose images sit outside it, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending pages take their ending ID only from their route enums.
 
