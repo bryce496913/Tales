@@ -83,7 +83,7 @@ struct StorySelectionArtworkImage: View {
     let fallbackSystemImageName: String
 
     var body: some View {
-        if let image = UIImage.storySelectionImage(named: imageName) {
+        if let image = UIImage(named: imageName) {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: contentMode)
@@ -107,21 +107,6 @@ struct StorySelectionArtworkImage: View {
                 .font(.system(size: 42, weight: .semibold))
                 .foregroundColor(AppTheme.gold)
         }
-    }
-}
-
-private extension UIImage {
-    static func storySelectionImage(named imageName: String) -> UIImage? {
-        if let image = UIImage(named: imageName) {
-            return image
-        }
-
-        let nameWithoutExtension = (imageName as NSString).deletingPathExtension
-        guard nameWithoutExtension != imageName else {
-            return nil
-        }
-
-        return UIImage(named: nameWithoutExtension)
     }
 }
 

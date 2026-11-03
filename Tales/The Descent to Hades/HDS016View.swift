@@ -3,7 +3,7 @@ import SwiftUI
 struct HDS016View: View {
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS016.png",
+            imageName: "HDS016",
             title: "The Asphodel Meadows",
             text: """
             The grey road fades into endless fields of pale asphodel. This is where most of the dead go: not good enough for Elysium, not wicked enough for Tartarus. They drift between the flowers like sleepwalkers, never speaking, never quite remembering who they were. Somewhere ahead you can hear running water. Then, among the drifting shades, you see a yellow jacket. Theo is sitting in the flowers with his knees pulled up, staring at nothing.

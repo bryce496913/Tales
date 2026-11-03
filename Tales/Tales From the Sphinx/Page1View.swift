@@ -11,7 +11,7 @@ struct Page1View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "One.png",
+            imageName: "One",
             text: "As you stand at the feet of this enormous Sphinx, you notice that the main doorway is open. You think to yourself, head inside to find help or head back in the direction where the road could be."
         ) {
             StoryChoicesStack {

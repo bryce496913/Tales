@@ -12,7 +12,7 @@ struct DescentToHadesMainMenuView: View {
 
             ScrollView {
                 VStack(spacing: 22) {
-                    DescentToHadesStaticImage(imageName: "HDS-Title-Screen-Art.png")
+                    DescentToHadesStaticImage(imageName: "HDS-Title-Screen-Art")
 
                     VStack(spacing: 10) {
                         Text("The Descent to Hades")

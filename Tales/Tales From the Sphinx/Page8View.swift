@@ -11,7 +11,7 @@ struct Page8View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Eight.png",
+            imageName: "Eight",
             text: "As you walk down the corridor, things get darker and darker. You think to yourself “I don’t like all this darkness.” And just like that, with each footstep sound, you see a little light glow. You walk closer to one of these little lights and notice it is a scarab beetle, resting on the ground. “What is that?” you mumble to yourself; again, a path of small glowing beetles appears and continues into the distance. With these little extra lights, you also notice a door to your right."
         ) {
             StoryChoicesStack {

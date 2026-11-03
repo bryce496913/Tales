@@ -10,7 +10,7 @@ struct Page20View: View {
         StoryOutcomeView(
             endingID: "page20-lose",
             outcome: .lose,
-            imageName: "Twenty.png",
+            imageName: "Twenty",
             storyText: "You wiggle, crawl, and shimmy your way through the winding path. The cat pauses frequently to be sure that you are still following. After several claustrophobic minutes, you tumble onto a white polished tiled floor. You look up to notice you are on the floor of a gift shop. A lady with the cat in hand walks to you and says, “sorry, we are not open for another hour.” You think to yourself, how cheap it is to exit through the gift shop."
         )
     }

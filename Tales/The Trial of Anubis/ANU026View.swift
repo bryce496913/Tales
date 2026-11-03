@@ -6,7 +6,7 @@ struct ANU026View: View {
 
     var body: some View {
         TrialOfAnubisPageLayout(
-            imageName: "ANU026.png",
+            imageName: "ANU026",
             title: "The Scales Made Whole",
             text: storyText,
             effects: TrialOfAnubisPageEffects(

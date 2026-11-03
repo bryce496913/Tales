@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Title-Screen-Art.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

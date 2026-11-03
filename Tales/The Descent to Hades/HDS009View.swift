@@ -3,7 +3,7 @@ import SwiftUI
 struct HDS009View: View {
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS009.png",
+            imageName: "HDS009",
             title: "Charon’s Question",
             text: """
             Charon closes his fingers over the ring and gestures you aboard. The boat moves without a sound. Halfway across, the souls around you fade into the mist until you are alone with the ferryman. Without turning his head, he speaks in a voice like stones grinding together. “You are warm. You are breathing. The living do not cross my river unless they are heroes, fools or thieves. Which are you, and why have you come?”

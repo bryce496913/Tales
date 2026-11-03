@@ -28,9 +28,10 @@ Cross the river Styx, win the favour of the gods of the dead, and bring your bro
 ## Project Layout
 
 - `Tales/` – shared app shell: main menu, story selection, options, theme, and the shared page/outcome components used by Tales From the Sphinx.
-- `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, images, and the story script.
-- `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), its own navigation/progress state and presentation components, images, and the story map.
-- `Tales/The Descent to Hades/` – Hades pages (`HDS000View`…`HDS047View`, game-over pages included), its own navigation/progress state, Greek colour theme (`DescentToHadesTheme`) and presentation components, images, and the story map.
+- `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, and the story script.
+- `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), its own navigation/progress state and presentation components, and the story map.
+- `Tales/The Descent to Hades/` – Hades pages (`HDS000View`…`HDS047View`, game-over pages included), its own navigation/progress state, Greek colour theme (`DescentToHadesTheme`) and presentation components, and the story map.
+- `Tales/Assets.xcassets/` – the app icon and all story art, one folder per story (`Sphinx`, `Anubis`, `Hades`). Page art is JPEG (85%, full colour resolution); add new art here as an image set named after the page (for example `ANU012`), and reference it without an extension.
 - `Tales/TalesAmbience.m4a` – looping background ambience, played by `AmbiencePlayer` and toggled under Options > Sound.
 - `scripts/audio/generate_ambience.py` – the script that synthesizes the ambience, for regenerating or tweaking it.
 - `scripts/release_readiness_checks.py` – static checks run before a release (see below).
@@ -45,7 +46,7 @@ python3 scripts/release_readiness_checks.py
 
 CI (`.github/workflows/ci.yml`) runs these checks and a Release build for the iOS Simulator on every pull request and push to `main`.
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image exists and every PNG is added to the Xcode project and bundled, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending IDs match their route enums.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image is in the asset catalog (and every catalog image is used), no loose images sit outside it, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending IDs match their route enums.
 
 ## Release Readiness Notes
 

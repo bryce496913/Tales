@@ -6,7 +6,7 @@ struct HDS028View: View {
 
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS028.png",
+            imageName: "HDS028",
             title: "The River of Fire",
             text: storyText,
             effects: DescentToHadesPageEffects(

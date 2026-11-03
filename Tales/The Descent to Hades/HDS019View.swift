@@ -7,7 +7,7 @@ struct HDS019View: View {
 
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS019.png",
+            imageName: "HDS019",
             title: "The Reflection",
             text: """
             You kneel and lower the flask. The surface goes still, and in it you see the boat, the storm and Theo’s hand slipping out of yours. Then the picture changes. This time you hold on. You pull him up, you both reach the shore, and you sit together on the warm rocks, laughing in the sun. The water whispers that this is how it should have been. All you have to do is drink, and the grief will go, and the other memory with it. Your mouth is so dry. It would be so easy.

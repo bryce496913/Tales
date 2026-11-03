@@ -10,7 +10,7 @@ struct Page2View: View {
         StoryOutcomeView(
             endingID: "page2-death",
             outcome: .death,
-            imageName: "Two.png",
+            imageName: "Two",
             storyText: "After hours of wandering in the desert heat, completely disoriented and unaware of how to get back to the Sphinx, you try to push on. Day turns to night and the heat turns to cold, you collapse in the sand. And as quickly as the night came, darkness takes your soul. Now just another statistic of deaths in the desert."
         )
     }

@@ -6,7 +6,7 @@ struct HDS043View: View {
 
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS043.png",
+            imageName: "HDS043",
             title: "The Last Stair",
             text: storyText,
             effects: DescentToHadesPageEffects(

@@ -94,13 +94,13 @@ struct StoryOutcomeView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             PreviewContainer {
-                StoryOutcomeView(endingID: "preview-win", outcome: .win, imageName: "Thirteen.png", storyText: "A preview victory ending demonstrates the shared outcome screen.")
+                StoryOutcomeView(endingID: "preview-win", outcome: .win, imageName: "Thirteen", storyText: "A preview victory ending demonstrates the shared outcome screen.")
             }
             PreviewContainer {
-                StoryOutcomeView(endingID: "preview-lose", outcome: .lose, imageName: "Seven.png", storyText: "A preview defeat ending demonstrates the shared outcome screen.")
+                StoryOutcomeView(endingID: "preview-lose", outcome: .lose, imageName: "Seven", storyText: "A preview defeat ending demonstrates the shared outcome screen.")
             }
             PreviewContainer {
-                StoryOutcomeView(endingID: "preview-death", outcome: .death, imageName: "Two.png", storyText: "A preview death ending demonstrates the shared outcome screen.")
+                StoryOutcomeView(endingID: "preview-death", outcome: .death, imageName: "Two", storyText: "A preview death ending demonstrates the shared outcome screen.")
             }
         }
     }

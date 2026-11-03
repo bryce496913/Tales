@@ -7,7 +7,7 @@ struct HDS012View: View {
             outcome: .death,
             title: "Torn by Cerberus",
             classification: "Death",
-            imageName: "HDS012.png",
+            imageName: "HDS012",
             storyText: """
             You sprint for the gate. You are fast, but Cerberus has three heads and has been guarding this gate since before the first city was built. The left head catches your jacket, the right head catches your arm, and the middle head does not need to catch anything at all. The last thing you hear is the iron gate swinging shut and, somewhere beyond it, very faintly, Theo calling your name.
             """,

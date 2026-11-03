@@ -11,12 +11,12 @@ struct Page19View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Nineteen.png",
+            imageName: "Nineteen",
             text: "This room is clearly light, and you are able to have a good look around. The room is lacking anything but two upright sarcophagi. On the floor in front of each sarcophagus is a set of hieroglyphics. You think to yourself, “This is just like those dumb emoji puzzles on Facebook; I am sure I can figure out which is the correct way to go.\""
         ) {
             StoryChoicesStack {
                 VStack {
-                    Image(uiImage: #imageLiteral(resourceName: "hieroglyphics_(Left).png"))
+                    Image("hieroglyphics_(Left)")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
@@ -25,7 +25,7 @@ struct Page19View: View {
                 }
 
                 VStack {
-                    Image(uiImage: #imageLiteral(resourceName: "hieroglyphics_(Right).png"))
+                    Image("hieroglyphics_(Right)")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)

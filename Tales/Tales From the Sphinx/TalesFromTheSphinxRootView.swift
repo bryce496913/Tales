@@ -63,7 +63,7 @@ struct MainMenu: View {
         VStack(spacing: 24) {
             Spacer(minLength: 20)
 
-            Image(uiImage:#imageLiteral(resourceName: "Title-Screen-Art.png"))
+            Image("Title-Screen-Art")
                 .resizable()
                 .scaledToFit()
                 .padding(10)

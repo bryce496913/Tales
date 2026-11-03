@@ -4,7 +4,7 @@ struct StaticStoryImage: View {
     let imageName: String
 
     var body: some View {
-        storyImage
+        Image(imageName)
             .resizable()
             .scaledToFill()
             .frame(maxWidth: AppTheme.maximumStoryContentWidth)
@@ -15,21 +15,6 @@ struct StaticStoryImage: View {
             .overlay(RoundedRectangle(cornerRadius: AppTheme.imageRadius, style: .continuous).stroke(AppTheme.gold.opacity(0.55), lineWidth: 1))
             .shadow(color: AppTheme.shadow, radius: 18, x: 0, y: 10)
             .accessibilityLabel("Story illustration")
-    }
-
-    private var storyImage: Image {
-        let nameWithoutExtension = (imageName as NSString).deletingPathExtension
-
-        if let uiImage = UIImage(named: imageName) ?? UIImage(named: nameWithoutExtension) {
-            return Image(uiImage: uiImage)
-        }
-
-        if let imageURL = Bundle.main.url(forResource: nameWithoutExtension, withExtension: "png"),
-           let uiImage = UIImage(contentsOfFile: imageURL.path) {
-            return Image(uiImage: uiImage)
-        }
-
-        return Image(imageName)
     }
 }
 
@@ -99,7 +84,7 @@ struct StoryChoicesStack<Content: View>: View {
 struct StoryPageLayout_Previews: PreviewProvider {
     static var previews: some View {
         PreviewContainer {
-            StoryPageLayout(imageName: "One.png", title: "Preview", text: "A normal story page preview with shared environment objects.") {
+            StoryPageLayout(imageName: "One", title: "Preview", text: "A normal story page preview with shared environment objects.") {
                 StoryNavigationButton(title: "Continue", route: .page(2))
             }
         }

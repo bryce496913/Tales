@@ -8,7 +8,7 @@ struct HDS040View: View {
 
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS040.png",
+            imageName: "HDS040",
             title: "The Throne of Hades",
             text: storyText,
             effects: DescentToHadesPageEffects(

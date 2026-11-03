@@ -16,8 +16,8 @@ extension StorySelectionItem {
         title: "Tales From the Sphinx",
         subtitle: "An Egyptian adventure of mystery, treasure, and danger.",
         statusText: "Available",
-        iconImageName: "Icon.png",
-        titleImageName: "Title-Screen-Art.png",
+        iconImageName: "Icon",
+        titleImageName: "Title-Screen-Art",
         actionTitle: "Open Story"
     )
 
@@ -26,8 +26,8 @@ extension StorySelectionItem {
         title: "The Trial of Anubis",
         subtitle: "Enter the Egyptian underworld, recover the sacred scales, and face the final judgment of your heart.",
         statusText: "Available",
-        iconImageName: "ANU-Icon.png",
-        titleImageName: "ANU-Title-Screen-Art.png",
+        iconImageName: "ANU-Icon",
+        titleImageName: "ANU-Title-Screen-Art",
         actionTitle: "Open Story"
     )
 
@@ -36,8 +36,8 @@ extension StorySelectionItem {
         title: "The Descent to Hades",
         subtitle: "Cross the river Styx, win the favour of the gods of the dead, and bring your brother home without looking back.",
         statusText: "Available",
-        iconImageName: "HDS-Icon.png",
-        titleImageName: "HDS-Title-Screen-Art.png",
+        iconImageName: "HDS-Icon",
+        titleImageName: "HDS-Title-Screen-Art",
         actionTitle: "Open Story"
     )
 }

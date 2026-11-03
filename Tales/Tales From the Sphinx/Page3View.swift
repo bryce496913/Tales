@@ -11,7 +11,7 @@ struct Page3View: View {
 
     var body: some View {
         StoryPageLayout(
-            imageName: "Three.png",
+            imageName: "Three",
             text: "After climbing the stairs of the Sphinx, you enter the main hall. Though empty, the room is dimly lit, hinting at the chance of more people inside. As your eyes adjust to the change of light, you notice, at the back, the hall splits in two different directions."
         ) {
             StoryChoicesStack {

@@ -10,7 +10,7 @@ struct HDS044View: View {
             outcome: .win,
             title: "Out Into the Sun",
             classification: "Best Ending",
-            imageName: "HDS044.png",
+            imageName: "HDS044",
             storyText: storyText,
             outcomeText: """
             You walked through the underworld and did not look back.

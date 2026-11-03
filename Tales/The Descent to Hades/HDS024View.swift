@@ -3,7 +3,7 @@ import SwiftUI
 struct HDS024View: View {
     var body: some View {
         DescentToHadesPageLayout(
-            imageName: "HDS024.png",
+            imageName: "HDS024",
             title: "The Gates of Tartarus",
             text: """
             The bronze road drops steeply into a canyon glowing red, where the river Phlegethon flows in a ring of liquid fire around a fortress of bronze walls. This is Tartarus, the prison of the Titans and of the worst of the dead. Its gates stand open, but on the tower above them sits a woman with wings like a bat’s, serpents in her hair and a whip of flame in her hand. She is Tisiphone, one of the Furies, the punishers of the guilty. She has already seen you. Further along, the fortress wall is lower, cracked and climbable.
