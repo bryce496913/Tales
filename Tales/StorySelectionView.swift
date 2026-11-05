@@ -40,12 +40,23 @@ extension StorySelectionItem {
         titleImageName: "HDS-Title-Screen-Art",
         actionTitle: "Open Story"
     )
+
+    static let caveOfAmaterasu = StorySelectionItem(
+        id: "cave-of-amaterasu",
+        title: "The Cave of Amaterasu",
+        subtitle: "Climb to the gods, recover the three sacred treasures, and coax the sun out of hiding before the night lasts forever.",
+        statusText: "Available",
+        iconImageName: "AMA-Icon",
+        titleImageName: "AMA-Title-Screen-Art",
+        actionTitle: "Open Story"
+    )
 }
 
 struct StorySelectionView: View {
     let openSphinx: () -> Void
     let openAnubis: () -> Void
     let openHades: () -> Void
+    let openAmaterasu: () -> Void
     let returnToMainMenu: () -> Void
 
     @State private var selectedStory: StorySelectionItem?
@@ -61,7 +72,7 @@ struct StorySelectionView: View {
         )
     ]
 
-    private let stories: [StorySelectionItem] = [.talesFromTheSphinx, .trialOfAnubis, .descentToHades]
+    private let stories: [StorySelectionItem] = [.talesFromTheSphinx, .trialOfAnubis, .descentToHades, .caveOfAmaterasu]
 
     var body: some View {
         ZStack {
@@ -155,6 +166,9 @@ struct StorySelectionView: View {
             case StorySelectionItem.descentToHades.id:
                 openHades()
 
+            case StorySelectionItem.caveOfAmaterasu.id:
+                openAmaterasu()
+
             default:
                 assertionFailure(
                     "Unknown story selection: \(story.id)"
@@ -167,15 +181,15 @@ struct StorySelectionView: View {
 struct StorySelectionView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, returnToMainMenu: {})
+            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, openAmaterasu: {}, returnToMainMenu: {})
                 .previewDisplayName("Two-column grid - iPhone SE")
                 .previewDevice("iPhone SE (3rd generation)")
 
-            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, returnToMainMenu: {})
+            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, openAmaterasu: {}, returnToMainMenu: {})
                 .previewDisplayName("Two-column grid - large iPhone")
                 .previewDevice("iPhone 15 Pro Max")
 
-            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, returnToMainMenu: {})
+            StorySelectionView(openSphinx: {}, openAnubis: {}, openHades: {}, openAmaterasu: {}, returnToMainMenu: {})
                 .previewDisplayName("Two-column grid - iPad portrait")
                 .previewDevice("iPad Pro (12.9-inch) (6th generation)")
                 .previewInterfaceOrientation(.portrait)

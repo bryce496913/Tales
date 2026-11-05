@@ -10,6 +10,8 @@ enum StoryTransitionStyle: Equatable {
     static var mistFade: StoryTransitionStyle { .fade }
     static var stoneDoor: StoryTransitionStyle { .doors }
     static var bronzeGate: StoryTransitionStyle { .doors }
+    static var inkFade: StoryTransitionStyle { .fade }
+    static var shojiSlide: StoryTransitionStyle { .doors }
 }
 
 /// Plays a page's entry effect in the current story's colours. Skipped when Page Transitions is

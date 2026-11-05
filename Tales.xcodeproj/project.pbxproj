@@ -171,6 +171,58 @@
 		FEB00000000000000000007C /* HDS045View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007B /* HDS045View.swift */; };
 		FEB00000000000000000007E /* HDS046View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007D /* HDS046View.swift */; };
 		FEB000000000000000000080 /* HDS047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB00000000000000000007F /* HDS047View.swift */; };
+		FEC000000000000000000003 /* CaveOfAmaterasuOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000002 /* CaveOfAmaterasuOutcome.swift */; };
+		FEC000000000000000000005 /* CaveOfAmaterasuProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000004 /* CaveOfAmaterasuProgress.swift */; };
+		FEC000000000000000000007 /* CaveOfAmaterasuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000006 /* CaveOfAmaterasuRoute.swift */; };
+		FEC000000000000000000009 /* CaveOfAmaterasuStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000008 /* CaveOfAmaterasuStory.swift */; };
+		FEC00000000000000000000B /* AMA000View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000000A /* AMA000View.swift */; };
+		FEC00000000000000000000D /* AMA001View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000000C /* AMA001View.swift */; };
+		FEC00000000000000000000F /* AMA002View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000000E /* AMA002View.swift */; };
+		FEC000000000000000000011 /* AMA003View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000010 /* AMA003View.swift */; };
+		FEC000000000000000000013 /* AMA004View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000012 /* AMA004View.swift */; };
+		FEC000000000000000000015 /* AMA005View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000014 /* AMA005View.swift */; };
+		FEC000000000000000000017 /* AMA006View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000016 /* AMA006View.swift */; };
+		FEC000000000000000000019 /* AMA007View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000018 /* AMA007View.swift */; };
+		FEC00000000000000000001B /* AMA008View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000001A /* AMA008View.swift */; };
+		FEC00000000000000000001D /* AMA009View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000001C /* AMA009View.swift */; };
+		FEC00000000000000000001F /* AMA010View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000001E /* AMA010View.swift */; };
+		FEC000000000000000000021 /* AMA011View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000020 /* AMA011View.swift */; };
+		FEC000000000000000000023 /* AMA012View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000022 /* AMA012View.swift */; };
+		FEC000000000000000000025 /* AMA013View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000024 /* AMA013View.swift */; };
+		FEC000000000000000000027 /* AMA014View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000026 /* AMA014View.swift */; };
+		FEC000000000000000000029 /* AMA015View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000028 /* AMA015View.swift */; };
+		FEC00000000000000000002B /* AMA016View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000002A /* AMA016View.swift */; };
+		FEC00000000000000000002D /* AMA017View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000002C /* AMA017View.swift */; };
+		FEC00000000000000000002F /* AMA018View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000002E /* AMA018View.swift */; };
+		FEC000000000000000000031 /* AMA019View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000030 /* AMA019View.swift */; };
+		FEC000000000000000000033 /* AMA020View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000032 /* AMA020View.swift */; };
+		FEC000000000000000000035 /* AMA021View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000034 /* AMA021View.swift */; };
+		FEC000000000000000000037 /* AMA022View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000036 /* AMA022View.swift */; };
+		FEC000000000000000000039 /* AMA023View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000038 /* AMA023View.swift */; };
+		FEC00000000000000000003B /* AMA024View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000003A /* AMA024View.swift */; };
+		FEC00000000000000000003D /* AMA025View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000003C /* AMA025View.swift */; };
+		FEC00000000000000000003F /* AMA026View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000003E /* AMA026View.swift */; };
+		FEC000000000000000000041 /* AMA027View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000040 /* AMA027View.swift */; };
+		FEC000000000000000000043 /* AMA028View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000042 /* AMA028View.swift */; };
+		FEC000000000000000000045 /* AMA029View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000044 /* AMA029View.swift */; };
+		FEC000000000000000000047 /* AMA030View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000046 /* AMA030View.swift */; };
+		FEC000000000000000000049 /* AMA031View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000048 /* AMA031View.swift */; };
+		FEC00000000000000000004B /* AMA032View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000004A /* AMA032View.swift */; };
+		FEC00000000000000000004D /* AMA033View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000004C /* AMA033View.swift */; };
+		FEC00000000000000000004F /* AMA034View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000004E /* AMA034View.swift */; };
+		FEC000000000000000000051 /* AMA035View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000050 /* AMA035View.swift */; };
+		FEC000000000000000000053 /* AMA036View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000052 /* AMA036View.swift */; };
+		FEC000000000000000000055 /* AMA037View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000054 /* AMA037View.swift */; };
+		FEC000000000000000000057 /* AMA038View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000056 /* AMA038View.swift */; };
+		FEC000000000000000000059 /* AMA039View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000058 /* AMA039View.swift */; };
+		FEC00000000000000000005B /* AMA040View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000005A /* AMA040View.swift */; };
+		FEC00000000000000000005D /* AMA041View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000005C /* AMA041View.swift */; };
+		FEC00000000000000000005F /* AMA042View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC00000000000000000005E /* AMA042View.swift */; };
+		FEC000000000000000000061 /* AMA043View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000060 /* AMA043View.swift */; };
+		FEC000000000000000000063 /* AMA044View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000062 /* AMA044View.swift */; };
+		FEC000000000000000000065 /* AMA045View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000064 /* AMA045View.swift */; };
+		FEC000000000000000000067 /* AMA046View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000066 /* AMA046View.swift */; };
+		FEC000000000000000000069 /* AMA047View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC000000000000000000068 /* AMA047View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -353,6 +405,59 @@
 		FEB00000000000000000007D /* HDS046View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS046View.swift; sourceTree = "<group>"; };
 		FEB00000000000000000007F /* HDS047View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDS047View.swift; sourceTree = "<group>"; };
 		FEB000000000000000000081 /* The_Descent_to_Hades_Story_Map.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Descent_to_Hades_Story_Map.md; sourceTree = "<group>"; };
+		FEC000000000000000000002 /* CaveOfAmaterasuOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveOfAmaterasuOutcome.swift; sourceTree = "<group>"; };
+		FEC000000000000000000004 /* CaveOfAmaterasuProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveOfAmaterasuProgress.swift; sourceTree = "<group>"; };
+		FEC000000000000000000006 /* CaveOfAmaterasuRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveOfAmaterasuRoute.swift; sourceTree = "<group>"; };
+		FEC000000000000000000008 /* CaveOfAmaterasuStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaveOfAmaterasuStory.swift; sourceTree = "<group>"; };
+		FEC00000000000000000000A /* AMA000View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA000View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000000C /* AMA001View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA001View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000000E /* AMA002View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA002View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000010 /* AMA003View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA003View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000012 /* AMA004View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA004View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000014 /* AMA005View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA005View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000016 /* AMA006View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA006View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000018 /* AMA007View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA007View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000001A /* AMA008View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA008View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000001C /* AMA009View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA009View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000001E /* AMA010View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA010View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000020 /* AMA011View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA011View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000022 /* AMA012View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA012View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000024 /* AMA013View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA013View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000026 /* AMA014View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA014View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000028 /* AMA015View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA015View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000002A /* AMA016View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA016View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000002C /* AMA017View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA017View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000002E /* AMA018View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA018View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000030 /* AMA019View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA019View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000032 /* AMA020View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA020View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000034 /* AMA021View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA021View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000036 /* AMA022View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA022View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000038 /* AMA023View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA023View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000003A /* AMA024View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA024View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000003C /* AMA025View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA025View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000003E /* AMA026View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA026View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000040 /* AMA027View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA027View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000042 /* AMA028View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA028View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000044 /* AMA029View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA029View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000046 /* AMA030View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA030View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000048 /* AMA031View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA031View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000004A /* AMA032View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA032View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000004C /* AMA033View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA033View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000004E /* AMA034View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA034View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000050 /* AMA035View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA035View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000052 /* AMA036View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA036View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000054 /* AMA037View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA037View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000056 /* AMA038View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA038View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000058 /* AMA039View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA039View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000005A /* AMA040View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA040View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000005C /* AMA041View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA041View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000005E /* AMA042View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA042View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000060 /* AMA043View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA043View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000062 /* AMA044View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA044View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000064 /* AMA045View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA045View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000066 /* AMA046View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA046View.swift; sourceTree = "<group>"; };
+		FEC000000000000000000068 /* AMA047View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMA047View.swift; sourceTree = "<group>"; };
+		FEC00000000000000000006A /* The_Cave_of_Amaterasu_Story_Map.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = The_Cave_of_Amaterasu_Story_Map.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +593,7 @@
 				FEA300002B300001000001 /* Tales From the Sphinx */,
 				FEA300012B300001000001 /* The Trial of Anubis */,
 				FEB000000000000000000001 /* The Descent to Hades */,
+				FEC000000000000000000001 /* The Cave of Amaterasu */,
 				FE0504AE2B289A510015CAFB /* Assets.xcassets */,
 				FE0504B02B289A510015CAFB /* Preview Content */,
 			);
@@ -560,6 +666,66 @@
 				FEB000000000000000000081 /* The_Descent_to_Hades_Story_Map.md */,
 			);
 			path = "The Descent to Hades";
+			sourceTree = "<group>";
+		};
+		FEC000000000000000000001 /* The Cave of Amaterasu */ = {
+			isa = PBXGroup;
+			children = (
+				FEC000000000000000000002 /* CaveOfAmaterasuOutcome.swift */,
+				FEC000000000000000000004 /* CaveOfAmaterasuProgress.swift */,
+				FEC000000000000000000006 /* CaveOfAmaterasuRoute.swift */,
+				FEC000000000000000000008 /* CaveOfAmaterasuStory.swift */,
+				FEC00000000000000000000A /* AMA000View.swift */,
+				FEC00000000000000000000C /* AMA001View.swift */,
+				FEC00000000000000000000E /* AMA002View.swift */,
+				FEC000000000000000000010 /* AMA003View.swift */,
+				FEC000000000000000000012 /* AMA004View.swift */,
+				FEC000000000000000000014 /* AMA005View.swift */,
+				FEC000000000000000000016 /* AMA006View.swift */,
+				FEC000000000000000000018 /* AMA007View.swift */,
+				FEC00000000000000000001A /* AMA008View.swift */,
+				FEC00000000000000000001C /* AMA009View.swift */,
+				FEC00000000000000000001E /* AMA010View.swift */,
+				FEC000000000000000000020 /* AMA011View.swift */,
+				FEC000000000000000000022 /* AMA012View.swift */,
+				FEC000000000000000000024 /* AMA013View.swift */,
+				FEC000000000000000000026 /* AMA014View.swift */,
+				FEC000000000000000000028 /* AMA015View.swift */,
+				FEC00000000000000000002A /* AMA016View.swift */,
+				FEC00000000000000000002C /* AMA017View.swift */,
+				FEC00000000000000000002E /* AMA018View.swift */,
+				FEC000000000000000000030 /* AMA019View.swift */,
+				FEC000000000000000000032 /* AMA020View.swift */,
+				FEC000000000000000000034 /* AMA021View.swift */,
+				FEC000000000000000000036 /* AMA022View.swift */,
+				FEC000000000000000000038 /* AMA023View.swift */,
+				FEC00000000000000000003A /* AMA024View.swift */,
+				FEC00000000000000000003C /* AMA025View.swift */,
+				FEC00000000000000000003E /* AMA026View.swift */,
+				FEC000000000000000000040 /* AMA027View.swift */,
+				FEC000000000000000000042 /* AMA028View.swift */,
+				FEC000000000000000000044 /* AMA029View.swift */,
+				FEC000000000000000000046 /* AMA030View.swift */,
+				FEC000000000000000000048 /* AMA031View.swift */,
+				FEC00000000000000000004A /* AMA032View.swift */,
+				FEC00000000000000000004C /* AMA033View.swift */,
+				FEC00000000000000000004E /* AMA034View.swift */,
+				FEC000000000000000000050 /* AMA035View.swift */,
+				FEC000000000000000000052 /* AMA036View.swift */,
+				FEC000000000000000000054 /* AMA037View.swift */,
+				FEC000000000000000000056 /* AMA038View.swift */,
+				FEC000000000000000000058 /* AMA039View.swift */,
+				FEC00000000000000000005A /* AMA040View.swift */,
+				FEC00000000000000000005C /* AMA041View.swift */,
+				FEC00000000000000000005E /* AMA042View.swift */,
+				FEC000000000000000000060 /* AMA043View.swift */,
+				FEC000000000000000000062 /* AMA044View.swift */,
+				FEC000000000000000000064 /* AMA045View.swift */,
+				FEC000000000000000000066 /* AMA046View.swift */,
+				FEC000000000000000000068 /* AMA047View.swift */,
+				FEC00000000000000000006A /* The_Cave_of_Amaterasu_Story_Map.md */,
+			);
+			path = "The Cave of Amaterasu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,6 +845,58 @@
 				E6573E592C1988627DCADC2C /* BranchingStory.swift in Sources */,
 				091C209413848279B694118D /* DescentToHadesOutcome.swift in Sources */,
 				E9A39A5BAE690B37CB56EA8E /* DescentToHadesStory.swift in Sources */,
+				FEC000000000000000000003 /* CaveOfAmaterasuOutcome.swift in Sources */,
+				FEC000000000000000000005 /* CaveOfAmaterasuProgress.swift in Sources */,
+				FEC000000000000000000007 /* CaveOfAmaterasuRoute.swift in Sources */,
+				FEC000000000000000000009 /* CaveOfAmaterasuStory.swift in Sources */,
+				FEC00000000000000000000B /* AMA000View.swift in Sources */,
+				FEC00000000000000000000D /* AMA001View.swift in Sources */,
+				FEC00000000000000000000F /* AMA002View.swift in Sources */,
+				FEC000000000000000000011 /* AMA003View.swift in Sources */,
+				FEC000000000000000000013 /* AMA004View.swift in Sources */,
+				FEC000000000000000000015 /* AMA005View.swift in Sources */,
+				FEC000000000000000000017 /* AMA006View.swift in Sources */,
+				FEC000000000000000000019 /* AMA007View.swift in Sources */,
+				FEC00000000000000000001B /* AMA008View.swift in Sources */,
+				FEC00000000000000000001D /* AMA009View.swift in Sources */,
+				FEC00000000000000000001F /* AMA010View.swift in Sources */,
+				FEC000000000000000000021 /* AMA011View.swift in Sources */,
+				FEC000000000000000000023 /* AMA012View.swift in Sources */,
+				FEC000000000000000000025 /* AMA013View.swift in Sources */,
+				FEC000000000000000000027 /* AMA014View.swift in Sources */,
+				FEC000000000000000000029 /* AMA015View.swift in Sources */,
+				FEC00000000000000000002B /* AMA016View.swift in Sources */,
+				FEC00000000000000000002D /* AMA017View.swift in Sources */,
+				FEC00000000000000000002F /* AMA018View.swift in Sources */,
+				FEC000000000000000000031 /* AMA019View.swift in Sources */,
+				FEC000000000000000000033 /* AMA020View.swift in Sources */,
+				FEC000000000000000000035 /* AMA021View.swift in Sources */,
+				FEC000000000000000000037 /* AMA022View.swift in Sources */,
+				FEC000000000000000000039 /* AMA023View.swift in Sources */,
+				FEC00000000000000000003B /* AMA024View.swift in Sources */,
+				FEC00000000000000000003D /* AMA025View.swift in Sources */,
+				FEC00000000000000000003F /* AMA026View.swift in Sources */,
+				FEC000000000000000000041 /* AMA027View.swift in Sources */,
+				FEC000000000000000000043 /* AMA028View.swift in Sources */,
+				FEC000000000000000000045 /* AMA029View.swift in Sources */,
+				FEC000000000000000000047 /* AMA030View.swift in Sources */,
+				FEC000000000000000000049 /* AMA031View.swift in Sources */,
+				FEC00000000000000000004B /* AMA032View.swift in Sources */,
+				FEC00000000000000000004D /* AMA033View.swift in Sources */,
+				FEC00000000000000000004F /* AMA034View.swift in Sources */,
+				FEC000000000000000000051 /* AMA035View.swift in Sources */,
+				FEC000000000000000000053 /* AMA036View.swift in Sources */,
+				FEC000000000000000000055 /* AMA037View.swift in Sources */,
+				FEC000000000000000000057 /* AMA038View.swift in Sources */,
+				FEC000000000000000000059 /* AMA039View.swift in Sources */,
+				FEC00000000000000000005B /* AMA040View.swift in Sources */,
+				FEC00000000000000000005D /* AMA041View.swift in Sources */,
+				FEC00000000000000000005F /* AMA042View.swift in Sources */,
+				FEC000000000000000000061 /* AMA043View.swift in Sources */,
+				FEC000000000000000000063 /* AMA044View.swift in Sources */,
+				FEC000000000000000000065 /* AMA045View.swift in Sources */,
+				FEC000000000000000000067 /* AMA046View.swift in Sources */,
+				FEC000000000000000000069 /* AMA047View.swift in Sources */,
 				C1B79B5C43CE4C5B0E59BD95 /* TrialOfAnubisOutcome.swift in Sources */,
 				5F9DCB2A4FBDC2FD522F2B5F /* TrialOfAnubisStory.swift in Sources */,
 				FEA500000000000000000002 /* ANU001View.swift in Sources */,

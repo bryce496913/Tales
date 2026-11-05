@@ -51,6 +51,9 @@ struct ContentView: View {
                 openHades: {
                     appScreen = .descentToHades
                 },
+                openAmaterasu: {
+                    appScreen = .caveOfAmaterasu
+                },
                 returnToMainMenu: {
                     appScreen = .mainMenu
                 }
@@ -72,6 +75,13 @@ struct ContentView: View {
 
         case .descentToHades:
             DescentToHadesRootView(
+                returnToStorySelection: {
+                    appScreen = .storySelection
+                }
+            )
+
+        case .caveOfAmaterasu:
+            CaveOfAmaterasuRootView(
                 returnToStorySelection: {
                     appScreen = .storySelection
                 }
