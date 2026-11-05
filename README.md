@@ -1,6 +1,6 @@
 # Tales
 
-An iOS collection of illustrated choose-your-own-adventure stories inspired by Egyptian and Greek mythology. Players pick a story from the Tales main menu, and each story keeps its own saved progress and completed endings.
+An iOS collection of illustrated choose-your-own-adventure stories inspired by Egyptian, Greek and Japanese mythology. Players pick a story from the Tales main menu, and each story keeps its own saved progress and completed endings.
 
 ## Creator
 Bryce Cameron
@@ -15,6 +15,9 @@ Enter the Egyptian underworld, recover the sacred scales, and face the final jud
 
 ### The Descent to Hades
 Cross the river Styx, win the favour of the gods of the dead, and bring your brother home without looking back. After a squall off Cape Tainaron drowns your brother Theo, you follow him into the Greek underworld. A branching story across 48 pages (`HDS-000`…`HDS-047`) built around the Crossroads of Judgment hub: collect the Water of Lethe, the Ember of Phlegethon and the Golden Bough as gifts for Hades, then face him on his throne. Five remembered choices change later pages. Eleven endings, listed below.
+
+### The Cave of Amaterasu
+Climb to the gods, recover the three sacred treasures, and coax the sun out of hiding before the night lasts forever. In old Japan the sun has not risen for three days: Amaterasu has shut herself inside the Heavenly Rock Cave, and your grandmother sends you up the Floating Bridge of Heaven with her shrine bell. A branching story across 48 pages (`AMA-000`…`AMA-047`) built around the Heavenly Rock Cave hub: recover the Eight-Hand Mirror from the Tengu King, the Curved Jewels from the Dragon Palace and the Sword of the Gathering Clouds from the eight-headed serpent, then bring the sun goddess out. Five remembered choices change later pages. Thirteen endings, listed below. Page art is placeholder for now.
 
 ## About
 "Tales From the Sphinx" is an engaging text-based choose-your-own-adventure game that transports players into a mysterious world inspired by Egyptian mythology. Immerse yourself in a captivating narrative where every decision influences the unfolding story. Navigate through beautifully illustrated scenarios, encountering various challenges, characters, and unexpected events. The game offers a unique and immersive experience, allowing players to shape their destiny by making crucial choices at every juncture.
@@ -32,7 +35,8 @@ Cross the river Styx, win the favour of the gods of the dead, and bring your bro
 - `Tales/Tales From the Sphinx/` – Sphinx pages (`Plot1View`, `Plot2View`, `Page1View`…`Page25View`), root view, and the story script.
 - `Tales/The Trial of Anubis/` – Anubis pages (`ANU000View`…`ANU047View`, game-over pages included), routes, items and flags, outcome kinds, `TrialOfAnubisStory.swift` (menu copy, theme, save key and the story-named type aliases the pages use), and the story map.
 - `Tales/The Descent to Hades/` – Hades pages (`HDS000View`…`HDS047View`, game-over pages included), routes, items and flags, outcome kinds, `DescentToHadesStory.swift` (menu copy, Greek theme, save key and type aliases), and the story map.
-- `Tales/Assets.xcassets/` – the app icon and all story art, one folder per story (`Sphinx`, `Anubis`, `Hades`). Page art is JPEG (85%, full colour resolution); add new art here as an image set named after the page (for example `ANU012`), and reference it without an extension.
+- `Tales/The Cave of Amaterasu/` – Amaterasu pages (`AMA000View`…`AMA047View`, game-over pages included), routes, treasures and flags, outcome kinds, `CaveOfAmaterasuStory.swift` (menu copy, Japanese theme, save key and type aliases), the story map and the on-device test paths.
+- `Tales/Assets.xcassets/` – the app icon and all story art, one folder per story (`Sphinx`, `Anubis`, `Hades`, `Amaterasu`). Page art is JPEG (85%, full colour resolution); add new art here as an image set named after the page (for example `ANU012`), and reference it without an extension.
 - `Tales/TalesAmbience.m4a` – looping background ambience, played by `AmbiencePlayer` and toggled under Options > Sound.
 - `scripts/audio/generate_ambience.py` – the script that synthesizes the ambience, for regenerating or tweaking it.
 - `scripts/release_readiness_checks.py` – static checks run before a release (see below).
@@ -49,7 +53,7 @@ CI (`.github/workflows/ci.yml`) runs these checks, a Release build for the iOS S
 
 Unit tests live in `TalesTests/` (navigation lockout, hub reset, endings, flags, saving and continuing, old-save compatibility, one write per action). Run them in Xcode with Product > Test (⌘U), using the shared `Tales` scheme.
 
-It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image is in the asset catalog (and every catalog image is used), no loose images sit outside it, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis route is handled and points somewhere valid, and Anubis and Hades ending pages take their ending ID only from their route enums.
+It verifies that every Swift file is in the Xcode project (and vice versa), every referenced image is in the asset catalog (and every catalog image is used), no loose images sit outside it, every referenced audio file exists and is bundled, Sphinx ending IDs match the table below, every Anubis, Hades and Amaterasu route is handled and points somewhere valid, each of their pages uses its own illustration, and their ending pages take their ending ID only from their route enums.
 
 ## Release Readiness Notes
 
@@ -104,5 +108,23 @@ Game-over pages are numbered story routes. See `Tales/The Descent to Hades/The_D
 - `HDS045View` (`HDS-045`, Looked Back): `hades_looked_back`
 - `HDS046View` (`HDS-046`, The Willing Exchange): `hades_willing_exchange`
 - `HDS047View` (`HDS-047`, Thief of the Dead): `hades_thief_of_the_dead`
+
+## The Cave of Amaterasu Ending ID Mapping
+
+Game-over pages are numbered story routes. See `Tales/The Cave of Amaterasu/The_Cave_of_Amaterasu_Story_Map.md` for the full story map.
+
+- `AMA003View` (`AMA-003`, The Endless Night): `amaterasu_endless_night`
+- `AMA004View` (`AMA-004`, Joined the Night Parade): `amaterasu_joined_the_night_parade`
+- `AMA008View` (`AMA-008`, Led Astray by Foxfire): `amaterasu_led_astray_by_foxfire`
+- `AMA011View` (`AMA-011`, The Endless Loom): `amaterasu_endless_loom`
+- `AMA013View` (`AMA-013`, Looked Upon the Sun): `amaterasu_looked_upon_the_sun`
+- `AMA021View` (`AMA-021`, Hidden by the Tengu): `amaterasu_hidden_by_the_tengu`
+- `AMA030View` (`AMA-030`, Three Hundred Years): `amaterasu_three_hundred_years`
+- `AMA038View` (`AMA-038`, Swallowed by Orochi): `amaterasu_swallowed_by_orochi`
+- `AMA043View` (`AMA-043`, Dawn Returns): `amaterasu_dawn_returns`
+- `AMA044View` (`AMA-044`, The Rock Stays Shut): `amaterasu_rock_stays_shut`
+- `AMA045View` (`AMA-045`, The Sun’s Companion): `amaterasu_suns_companion`
+- `AMA046View` (`AMA-046`, The Opened Box): `amaterasu_opened_box`
+- `AMA047View` (`AMA-047`, The Fox’s Wedding): `amaterasu_fox_wedding`
 
 Feel the suspense, make strategic decisions, and explore the world of "Tales From the Sphinx" – an interactive adventure that puts you in control of your destiny.

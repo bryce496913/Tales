@@ -173,12 +173,37 @@ final class BranchingStoryStateTests: XCTestCase {
 
     @MainActor
     func testEveryEndingAppearsInTheGalleryWithItsPageArt() {
-        for story in [TrialOfAnubis.endings, DescentToHades.endings] {
+        for story in [TrialOfAnubis.endings, DescentToHades.endings, CaveOfAmaterasu.endings] {
             XCTAssertFalse(story.isEmpty)
             XCTAssertEqual(Set(story.map(\.id)).count, story.count, "Ending IDs must be unique")
         }
         XCTAssertEqual(TrialOfAnubis.endings.count, TrialOfAnubisRoute.allCases.filter(\.isEnding).count)
         XCTAssertEqual(TrialOfAnubisRoute.anu012.imageName, "ANU012")
         XCTAssertEqual(DescentToHadesRoute.hds044.imageName, "HDS044")
+        XCTAssertEqual(CaveOfAmaterasu.endings.count, 13)
+        XCTAssertEqual(CaveOfAmaterasuRoute.ama043.imageName, "AMA043")
+    }
+
+    @MainActor
+    func testAmaterasuHomeOpensTheFestivalOnceEveryTreasureIsHeld() {
+        let state = CaveOfAmaterasuNavigationState(defaults: defaults, now: { [unowned self] in self.clock })
+        state.startNewAdventure()
+
+        let treasures: [(CaveOfAmaterasuRoute, CaveOfAmaterasuItem)] = [
+            (.ama020, .eightHandMirror), (.ama029, .curvedJewels), (.ama037, .cloudSword)
+        ]
+        for (index, (page, treasure)) in treasures.enumerated() {
+            clock += CaveOfAmaterasuNavigationState.navigationLockout + 0.1
+            state.navigate(to: page)
+            clock += CaveOfAmaterasuNavigationState.navigationLockout + 0.1
+            state.navigate(to: .ama014, collecting: treasure, marking: index == 1 ? .tookOtohimesBox : nil)
+        }
+
+        XCTAssertEqual(state.path, [.ama039])
+        XCTAssertTrue(state.progress.hasAllItems)
+        XCTAssertTrue(state.hasFlag(.tookOtohimesBox))
+        XCTAssertFalse(state.hasFlag(.toldFoxYourName))
+        XCTAssertNotNil(defaults.data(forKey: CaveOfAmaterasu.saveKey))
+        XCTAssertNil(defaults.data(forKey: DescentToHades.saveKey))
     }
 }

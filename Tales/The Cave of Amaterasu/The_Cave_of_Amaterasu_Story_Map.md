@@ -2,7 +2,7 @@
 
 **Story ID:** `cave-of-amaterasu`  
 **Page prefix:** `AMA`  
-**Status:** Draft story map. No Swift pages or art yet. Once the story is agreed, the pages (`AMA000View` … `AMA047View`) are built from this file on the shared story engine, and from then on the Swift views are the source of truth and this file must be kept in step with them.
+**Status:** Pages built (`AMA000View` … `AMA047View`) on the shared story engine. The Swift views in this folder are now the source of truth, and this file must be updated whenever a page, choice or ending changes. Page art is placeholder for now (each image shows its page number and title); replace each image set in `Assets.xcassets/Amaterasu/` with the final art under the same name. See `The_Cave_of_Amaterasu_Test_Paths.md` for the on-device test paths.
 
 ---
 
@@ -30,7 +30,7 @@
 
 Page names in conversation use the short number (`004`). In code, the view is `AMA004View` and the route is `.ama004` (`"AMA-004"`).
 
-**Swift names (planned):**
+**Swift names:**
 
 | Type | Name | Values |
 |---|---|---|
@@ -125,7 +125,7 @@ Page names in conversation use the short number (`004`). In code, the view is `A
 | `046` | The Opened Box | — | **Game Over** (Aged) |
 | `047` | The Fox’s Wedding | — | **Game Over** (Dark Ending) |
 
-The draft map was checked by a script that walks every reachable combination of page, treasures and remembered choices (1,666 states): all 48 pages and all 13 endings can be reached, and every non-ending page always shows at least one button.
+A script that reads every button from the `AMA###View.swift` files walks every reachable combination of page, treasures and remembered choices (1,666 states): all 48 pages, all 13 endings and all 66 choice buttons can be reached, and every non-ending page always shows at least one button.
 
 ---
 
@@ -176,6 +176,8 @@ The draft map was checked by a script that walks every reachable combination of 
 - `inkFade` — a wash of sumi ink (the shared `fade`; colours `4A4650`, `2A2630`, `121016`)
 - `torchReveal` — lantern light (kept as is; colours gold `E3B85C` and vermilion `C8402A`)
 - `shojiSlide` — paper screens sliding apart (the shared `doors`; colours `E9DFC8`, `B9A57E`, `5A4632`)
+
+Pages that list no transition use `inkFade`.
 
 **Outcome styles:**
 
@@ -705,7 +707,7 @@ You tell the Dragon King about the night. The rice is dying in the fields. The f
 **Art:** The traveller standing in bright sunlight on a forested hillside before a moss-covered stone carved with writing; in the distance, a town of stone and tile where a fishing village used to be.
 
 **Text:**  
-One more day. Then one more, and one more after that. On the third morning, homesick at last, you ask to go home, and Otohime sends you up to the shore on the back of a great silver sea bream, with tears in her eyes. The sun is shining. It is warm on your face, and you laugh out loud, because somebody brought it back after all. But the beach is different. The fishing village is a town of stone and tile. On the hillside where your village stood there is only forest, and where your grandmother’s shrine should be, you find a moss-covered stone with your name carved on it and the words: *Climbed to heaven and never came home.* Three days in the Dragon Palace. Three hundred years above.
+One more day. Then one more, and one more after that. On the third morning, homesick at last, you ask to go home, and Otohime sends you up to the shore on the back of a great silver sea bream, with tears in her eyes. The sun is shining. It is warm on your face, and you laugh out loud, because somebody brought it back after all. But the beach is different. The fishing village is a town of stone and tile. On the hillside where your village stood there is only forest, and where your grandmother’s shrine should be, you find a moss-covered stone with your name carved on it and the words: “Climbed to heaven and never came home.” Three days in the Dragon Palace. Three hundred years above.
 
 **Outcome text:**  
 You stayed too long in the Dragon Palace.  
@@ -814,6 +816,7 @@ One by one, the eight heads sway, droop and fall. The serpent’s snoring shakes
 
 **Image:** `AMA037`  
 **Reached from:** `036`  
+**Transition:** `torchReveal`  
 **Notes:** The ending changes if the player heard Susanoo out at `032`.  
 **Art:** A bright, straight steel sword sliding out of the serpent’s cut tail, crackling with faint storm light, as an old couple and their daughter bow in the background.
 
@@ -893,6 +896,7 @@ At your nod, the roosters crow all together, so loudly that the stars shake. Ame
 
 **Image:** `AMA041`  
 **Reached from:** `040`  
+**Transition:** `torchReveal`  
 **Notes:** A third choice appears if the player took Otohime’s box at `029`.  
 **Art:** The traveller holding up the bronze mirror to a gap in the boulder; on the other side, a tearful goddess with light pouring from her skin leans toward her own reflection, and golden light spills across the plain.
 
@@ -911,6 +915,7 @@ You lift the Eight-Hand Mirror toward the gap. A face appears on the other side:
 
 **Image:** `AMA042`  
 **Reached from:** `041`  
+**Transition:** `shojiSlide`  
 **Notes:** Sarutahiko’s line depends on the choice at `007`.  
 **Art:** The giant god of strength rolling the boulder aside as the sun goddess steps out, blinking, into a flood of golden light that pours over the edge of heaven onto the islands below.
 

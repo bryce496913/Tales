@@ -6,4 +6,5 @@ enum AppScreen: Equatable {
     case talesFromTheSphinx
     case trialOfAnubis
     case descentToHades
+    case caveOfAmaterasu
 }

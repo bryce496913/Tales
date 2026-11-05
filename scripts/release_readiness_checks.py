@@ -14,6 +14,7 @@ TALES = ROOT / "Tales"
 SPHINX = TALES / "Tales From the Sphinx"
 ANUBIS = TALES / "The Trial of Anubis"
 HADES = TALES / "The Descent to Hades"
+AMATERASU = TALES / "The Cave of Amaterasu"
 PBXPROJ = ROOT / "Tales.xcodeproj" / "project.pbxproj"
 
 SPHINX_ENDINGS = {
@@ -159,7 +160,7 @@ def check_audio():
 
 
 def check_story_routes(folder, enum_name, prefix, outcome_view, story_name):
-    """Checks a numbered-page story (ANU, HDS): routes, ending IDs and one illustration per page."""
+    """Checks a numbered-page story (ANU, HDS, AMA): routes, ending IDs and one illustration per page."""
     lower = prefix.lower()
     route_text = (folder / f"{enum_name}.swift").read_text()
     cases = re.findall(r"^\s*case (\w+) = \"", route_text, flags=re.M)
@@ -208,6 +209,10 @@ def check_hades_routes():
     check_story_routes(HADES, "DescentToHadesRoute", "HDS", "DescentToHadesOutcomeView", "Hades")
 
 
+def check_amaterasu_routes():
+    check_story_routes(AMATERASU, "CaveOfAmaterasuRoute", "AMA", "CaveOfAmaterasuOutcomeView", "Amaterasu")
+
+
 def check_tracked_junk():
     # .gitignore keeps these out, but uploads through GitHub's web UI or Desktop can bypass it.
     try:
@@ -228,6 +233,7 @@ def main():
     check_audio()
     check_anubis_routes()
     check_hades_routes()
+    check_amaterasu_routes()
     check_tracked_junk()
 
     if failures:
