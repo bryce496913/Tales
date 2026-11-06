@@ -17,7 +17,7 @@ Enter the Egyptian underworld, recover the sacred scales, and face the final jud
 Cross the river Styx, win the favour of the gods of the dead, and bring your brother home without looking back. After a squall off Cape Tainaron drowns your brother Theo, you follow him into the Greek underworld. A branching story across 48 pages (`HDS-000`…`HDS-047`) built around the Crossroads of Judgment hub: collect the Water of Lethe, the Ember of Phlegethon and the Golden Bough as gifts for Hades, then face him on his throne. Five remembered choices change later pages. Eleven endings, listed below.
 
 ### The Cave of Amaterasu
-Climb to the gods, recover the three sacred treasures, and coax the sun out of hiding before the night lasts forever. In old Japan the sun has not risen for three days: Amaterasu has shut herself inside the Heavenly Rock Cave, and your grandmother sends you up the Floating Bridge of Heaven with her shrine bell. A branching story across 48 pages (`AMA-000`…`AMA-047`) built around the Heavenly Rock Cave hub: recover the Eight-Hand Mirror from the Tengu King, the Curved Jewels from the Dragon Palace and the Sword of the Gathering Clouds from the eight-headed serpent, then bring the sun goddess out. Five remembered choices change later pages. Thirteen endings, listed below. Page art is placeholder for now.
+Climb to the gods, recover the three sacred treasures, and coax the sun out of hiding before the night lasts forever. In old Japan the sun has not risen for three days: Amaterasu has shut herself inside the Heavenly Rock Cave, and your grandmother sends you up the Floating Bridge of Heaven with her shrine bell. A branching story across 48 pages (`AMA-000`…`AMA-047`) built around the Heavenly Rock Cave hub: recover the Eight-Hand Mirror from the Tengu King, the Curved Jewels from the Dragon Palace and the Sword of the Gathering Clouds from the eight-headed serpent, then bring the sun goddess out. Five remembered choices change later pages. Thirteen endings, listed below.
 
 ## About
 "Tales From the Sphinx" is an engaging text-based choose-your-own-adventure game that transports players into a mysterious world inspired by Egyptian mythology. Immerse yourself in a captivating narrative where every decision influences the unfolding story. Navigate through beautifully illustrated scenarios, encountering various challenges, characters, and unexpected events. The game offers a unique and immersive experience, allowing players to shape their destiny by making crucial choices at every juncture.
@@ -26,7 +26,8 @@ Climb to the gods, recover the three sacred treasures, and coax the sun out of h
 **Build Settings:** Build the .ipa file from the Xcode project and install it on your iOS device directly from Xcode.  
 **Game Requires:** iOS 16.0+.  
 **Supported Devices:** iPhone and iPad.  
-**Game Tested On:** iPhone 14 Pro. iPad layout support was reviewed in code with adaptive maximum content widths for story content, text cards, and buttons; simulator execution still requires an Xcode/iOS Simulator host.
+**Game Tested On:** iPhone 14 Pro. CI builds the app and runs the unit tests on an iOS Simulator for every pull request; iPad layouts use adaptive maximum widths for story content, text cards and buttons.  
+**App Store:** `Tales/PrivacyInfo.xcprivacy` declares the app's only required-reason API (`UserDefaults`, reason CA92.1: saves stay on the device) and that it collects no data and does no tracking. `ITSAppUsesNonExemptEncryption = NO` answers the export-compliance question, since Tales uses no encryption.
 
 ## Project Layout
 
@@ -57,9 +58,9 @@ It verifies that every Swift file is in the Xcode project (and vice versa), ever
 
 ## Release Readiness Notes
 
-- Ending progress is recorded when shared outcome screens appear. Completed endings are stored as stable IDs, persist across launches, and do not force immediate navigation away from the visible outcome screen.
+- Endings are recorded as stable IDs that persist across launches: Tales From the Sphinx records one when its ending screen appears; the branching stories record it as soon as the ending page is navigated to. Every story menu shows them under Endings.
 - Completed outcome screens are not restored as unfinished adventures after relaunch. Reaching an ending marks the persisted adventure as no longer in progress, while the current in-memory screen remains visible until the player chooses Restart Adventure or Return to Main Menu.
-- Restart Adventure and Return to Main Menu preserve completed-ending history. Reset Story Progress clears completed endings along with the saved route.
+- Restart Adventure, New Adventure and Return to Main Menu preserve completed-ending history. Clearing endings is implemented and unit-tested (`AppNavigationState.resetSavedProgress()`, `BranchingStoryState.resetAllProgress()`) but has no button in the app yet.
 - `StoryPageEffects` contains only active page-specific presentation fields: `entryTransition` and `choicesWaitForText`.
 - `GameOptions` is the single source of truth for player-controlled effects, including typewriter enablement, typewriter speed, page transitions, haptics, button glow, outcome animations, and background ambience. Story navigation state stores only the route, in-progress flag, and completed endings.
 - SwiftUI previews use a shared `PreviewContainer` with isolated preview `UserDefaults` and required `GameOptions` and `AppNavigationState` environment objects.

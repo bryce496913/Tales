@@ -38,13 +38,14 @@ struct StoryTransitionContainer<Content: View>: View {
                     .accessibilityHidden(true)
             }
         }
-        .onAppear { runEntrance() }
+        .onAppear { runEntrance(style: style) }
         .onDisappear {
             animationTask?.cancel()
             animationTask = nil
             progress = 1
         }
-        .onChange(of: style) { _ in runEntrance() }
+        // Use the new style passed in: `style` itself can still be the old one here.
+        .onChange(of: style) { newStyle in runEntrance(style: newStyle) }
     }
 
     private var contentOpacity: Double {
@@ -105,7 +106,7 @@ struct StoryTransitionContainer<Content: View>: View {
             .shadow(color: .black.opacity(0.45), radius: 12)
     }
 
-    private var duration: TimeInterval {
+    private func duration(for style: StoryTransitionStyle) -> TimeInterval {
         if reduceMotion { return 0.12 }
         switch style {
         case .fade: return theme.fadeTransitionDuration
@@ -114,7 +115,7 @@ struct StoryTransitionContainer<Content: View>: View {
         }
     }
 
-    private func runEntrance() {
+    private func runEntrance(style: StoryTransitionStyle) {
         animationTask?.cancel()
         guard gameOptions.pageTransitionsEnabled else {
             progress = 1
@@ -122,10 +123,10 @@ struct StoryTransitionContainer<Content: View>: View {
         }
 
         progress = 0
-        let duration = duration
-        withAnimation(.easeInOut(duration: duration)) { progress = 1 }
+        let entryDuration = duration(for: style)
+        withAnimation(.easeInOut(duration: entryDuration)) { progress = 1 }
         animationTask = Task { @MainActor in
-            try? await Task.sleep(nanoseconds: UInt64(duration * 1_000_000_000))
+            try? await Task.sleep(nanoseconds: UInt64(entryDuration * 1_000_000_000))
             guard !Task.isCancelled else { return }
             progress = 1
             animationTask = nil
