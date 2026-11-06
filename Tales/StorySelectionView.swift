@@ -43,7 +43,7 @@ extension StorySelectionItem {
 
     static let caveOfAmaterasu = StorySelectionItem(
         id: "cave-of-amaterasu",
-        title: "The Cave of Amaterasu",
+        title: "Cave of Amaterasu",
         subtitle: "Climb to the gods, recover the three sacred treasures, and coax the sun out of hiding before the night lasts forever.",
         statusText: "Available",
         iconImageName: "AMA-Icon",
@@ -117,10 +117,7 @@ struct StorySelectionView: View {
                     openSelectedStory(story)
                 }
             )
-            .presentationDetents([
-                .medium,
-                .large
-            ])
+            .presentationDetents([.large])
             .presentationDragIndicator(.visible)
         }
     }
