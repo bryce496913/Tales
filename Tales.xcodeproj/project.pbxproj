@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B986C876E3EC44800452396 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E8A973F5AC92DEE5E654733D /* PrivacyInfo.xcprivacy */; };
 		1A0E58894AEB166A6EDFD6C4 /* AppNavigationStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1EC2C6CA9DA603A1F8ADB1 /* AppNavigationStateTests.swift */; };
 		2FCD0A4A88E00A0B6EAF8B11 /* BranchingStoryStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237D46884273827280209A6 /* BranchingStoryStateTests.swift */; };
 		132950168022AC15ABC5CB54 /* EndingsGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D625063EF53E32454A82E /* EndingsGalleryView.swift */; };
@@ -236,6 +237,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8A973F5AC92DEE5E654733D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6F9A1917669D5240DD64C7D3 /* TalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1EC2C6CA9DA603A1F8ADB1 /* AppNavigationStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationStateTests.swift; sourceTree = "<group>"; };
 		3237D46884273827280209A6 /* BranchingStoryStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchingStoryStateTests.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 		FE0504A92B289A4F0015CAFB /* Tales */ = {
 			isa = PBXGroup;
 			children = (
+				E8A973F5AC92DEE5E654733D /* PrivacyInfo.xcprivacy */,
 				8347B085A9D7684D1B5E82DB /* Story Engine */,
 				FE38B2182B289DD8004B8919 /* TalesApp.swift */,
 				FE0504AC2B289A4F0015CAFB /* ContentView.swift */,
@@ -818,6 +821,7 @@
 			files = (
 				FE0504B22B289A510015CAFB /* Preview Assets.xcassets in Resources */,
 				FE0504AF2B289A510015CAFB /* Assets.xcassets in Resources */,
+				0B986C876E3EC44800452396 /* PrivacyInfo.xcprivacy in Resources */,
 				FEA2000C2B300001000001 /* TalesAmbience.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1193,6 +1197,7 @@
 				DEVELOPMENT_TEAM = VUB8MS3A98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1223,6 +1228,7 @@
 				DEVELOPMENT_TEAM = VUB8MS3A98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

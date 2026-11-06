@@ -23,26 +23,28 @@ struct TypewriterText: View {
             .fixedSize(horizontal: false, vertical: true)
             .contentShape(Rectangle())
             .accessibilityLabel(Text(text))
-            .accessibilityAction(named: Text("Reveal full text")) { complete() }
-            .onTapGesture { complete() }
-            .onAppear { start() }
+            .accessibilityAction(named: Text("Reveal full text")) { complete(showing: text) }
+            .onTapGesture { complete(showing: text) }
+            .onAppear { start(text: text, isEnabled: isEnabled, reduceMotion: reduceMotion) }
             .onDisappear { cancelTyping() }
-            .onChange(of: text) { _ in start() }
-            .onChange(of: reduceMotion) { _ in start() }
-            .onChange(of: isEnabled) { _ in start() }
+            // Pass each new value along: inside these closures the view's own properties can
+            // still hold the values from before the change.
+            .onChange(of: text) { newText in start(text: newText, isEnabled: isEnabled, reduceMotion: reduceMotion) }
+            .onChange(of: reduceMotion) { newValue in start(text: text, isEnabled: isEnabled, reduceMotion: newValue) }
+            .onChange(of: isEnabled) { newValue in start(text: text, isEnabled: newValue, reduceMotion: reduceMotion) }
     }
 
     private var showsFullText: Bool {
         reduceMotion || !isEnabled || didComplete
     }
 
-    private func start() {
+    private func start(text: String, isEnabled: Bool, reduceMotion: Bool) {
         cancelTyping()
         didComplete = false
         visibleText = ""
 
         guard isEnabled, !reduceMotion else {
-            complete()
+            complete(showing: text)
             return
         }
 
@@ -60,7 +62,7 @@ struct TypewriterText: View {
                 try? await Task.sleep(nanoseconds: speed.delay)
             }
             guard !Task.isCancelled else { return }
-            complete()
+            complete(showing: text)
         }
     }
 
@@ -69,7 +71,7 @@ struct TypewriterText: View {
         typingTask = nil
     }
 
-    private func complete() {
+    private func complete(showing text: String) {
         cancelTyping()
         visibleText = text
         guard !didComplete else { return }

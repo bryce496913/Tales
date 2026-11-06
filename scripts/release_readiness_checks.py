@@ -213,6 +213,27 @@ def check_amaterasu_routes():
     check_story_routes(AMATERASU, "CaveOfAmaterasuRoute", "AMA", "CaveOfAmaterasuOutcomeView", "Amaterasu")
 
 
+def check_privacy_manifest():
+    """App Store Connect rejects uploads that use UserDefaults without declaring a reason."""
+    import plistlib
+    uses_defaults = any("UserDefaults" in p.read_text() for p in swift_files())
+    if not uses_defaults:
+        return
+    manifest = TALES / "PrivacyInfo.xcprivacy"
+    if not manifest.exists():
+        failures.append("Tales/PrivacyInfo.xcprivacy is missing; the app uses UserDefaults, a required-reason API")
+        return
+    project = PBXPROJ.read_text()
+    resources_phase = project.split("/* Begin PBXResourcesBuildPhase section */")[-1].split("/* End PBXResourcesBuildPhase section */")[0]
+    check("PrivacyInfo.xcprivacy in Resources" in resources_phase, "PrivacyInfo.xcprivacy is not in the app target's Copy Bundle Resources")
+    declared = {
+        entry.get("NSPrivacyAccessedAPIType"): entry.get("NSPrivacyAccessedAPITypeReasons", [])
+        for entry in plistlib.loads(manifest.read_bytes()).get("NSPrivacyAccessedAPITypes", [])
+    }
+    check(declared.get("NSPrivacyAccessedAPICategoryUserDefaults"),
+          "PrivacyInfo.xcprivacy must declare a reason for NSPrivacyAccessedAPICategoryUserDefaults")
+
+
 def check_tracked_junk():
     # .gitignore keeps these out, but uploads through GitHub's web UI or Desktop can bypass it.
     try:
@@ -235,6 +256,7 @@ def main():
     check_hades_routes()
     check_amaterasu_routes()
     check_tracked_junk()
+    check_privacy_manifest()
 
     if failures:
         print("Release readiness checks FAILED:")
