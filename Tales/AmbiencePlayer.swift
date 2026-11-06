@@ -15,7 +15,9 @@ final class AmbiencePlayer {
 
     private let queue = DispatchQueue(label: "Tales.AmbiencePlayer")
     private var player: AVAudioPlayer?
-    private var wantsPlayback = false
+    private var isEnabled = false
+    private var isAppActive = false
+    private var wantsPlayback: Bool { isEnabled && isAppActive }
     private var fadeGeneration = 0
 
     private init() {
@@ -31,9 +33,18 @@ final class AmbiencePlayer {
         }
     }
 
-    func setPlaying(_ playing: Bool) {
+    /// The Background Ambience option.
+    func setEnabled(_ enabled: Bool) {
         queue.async {
-            self.wantsPlayback = playing
+            self.isEnabled = enabled
+            self.refresh()
+        }
+    }
+
+    /// Whether the app is in the foreground; the ambience pauses in the switcher and background.
+    func setAppActive(_ active: Bool) {
+        queue.async {
+            self.isAppActive = active
             self.refresh()
         }
     }
